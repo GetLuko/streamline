@@ -2,7 +2,11 @@
   "name": "streamline",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "sandbox:start":"yarn nx run streamline:start",
+    "sandbox:test":"yarn nx run streamline:test",
+    "streamline:test":"yarn nx run @getluko/streamline:test"
+  },
   "private": true,
   "dependencies": {
     "@expo/metro-config": "0.5.2",

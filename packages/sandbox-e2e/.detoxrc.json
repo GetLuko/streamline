@@ -1,0 +1,100 @@
+{
+  "testRunner": "jest",
+  "runnerConfig": "jest.config.json",
+  "apps": {
+    "ios.debug": {
+      "type": "ios.app",
+      "build": "cd ../../packages/sandbox/ios && xcodebuild -workspace Sandbox.xcworkspace -scheme Sandbox -configuration Debug -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14' -derivedDataPath ./build -quiet",
+      "binaryPath": "../../packages/sandbox/ios/build/Build/Products/Debug-iphonesimulator/Sandbox.app"
+    },
+    "ios.release": {
+      "type": "ios.app",
+      "build": "cd ../../packages/sandbox/ios && xcodebuild -workspace Sandbox.xcworkspace -scheme Sandbox -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14' -derivedDataPath ./build -quiet",
+      "binaryPath": "../../packages/sandbox/ios/build/Build/Products/Release-iphonesimulator/Sandbox.app"
+    },
+
+    "ios.eas": {
+      "type": "ios.app",
+      "build": "npx nx run sandbox:download --platform ios --distribution simulator --output=packages/sandbox/dist/",
+      "binaryPath": "../../packages/sandbox/dist/Sandbox.app"
+    },
+    "ios.local": {
+      "type": "ios.app",
+      "build": "npx nx run sandbox:build --platform ios --profile preview --wait --local --no-interactive --output=packages/sandbox/dist/",
+      "binaryPath": "../../packages/sandbox/dist/Sandbox.app"
+    },
+
+    "android.debug": {
+      "type": "android.apk",
+      "build": "cd ../../packages/sandbox/android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug",
+      "binaryPath": "../../packages/sandbox/android/app/build/outputs/apk/debug/app-debug.apk"
+    },
+    "android.release": {
+      "type": "android.apk",
+      "build": "cd ../../packages/sandbox/android && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release",
+      "binaryPath": "../../packages/sandbox/android/app/build/outputs/apk/release/app-release.apk"
+    },
+
+    "android.eas": {
+      "type": "ios.app",
+      "build": "npx nx run sandbox:download --platform android --output=packages/sandbox/dist/",
+      "binaryPath": "../../packages/sandbox/dist/Sandbox.apk"
+    },
+    "android.local": {
+      "type": "ios.app",
+      "build": "npx nx run sandbox:build --platform android --profile preview --wait --local --no-interactive --output=packages/sandbox/dist/",
+      "binaryPath": "../../packages/sandbox/dist/Sandbox.apk"
+    }
+  },
+  "devices": {
+    "simulator": {
+      "type": "ios.simulator",
+      "device": {
+        "type": "iPhone 14"
+      }
+    },
+    "emulator": {
+      "type": "android.emulator",
+      "device": {
+        "avdName": "Pixel_4a_API_30"
+      }
+    }
+  },
+  "configurations": {
+    "ios.sim.release": {
+      "device": "simulator",
+      "app": "ios.release"
+    },
+    "ios.sim.debug": {
+      "device": "simulator",
+      "app": "ios.debug"
+    },
+
+    "ios.sim.eas": {
+      "device": "simulator",
+      "app": "ios.eas"
+    },
+    "ios.sim.local": {
+      "device": "simulator",
+      "app": "ios.local"
+    },
+
+    "android.emu.release": {
+      "device": "emulator",
+      "app": "android.release"
+    },
+    "android.emu.debug": {
+      "device": "emulator",
+      "app": "android.debug"
+    },
+
+    "android.emu.eas": {
+      "device": "simulator",
+      "app": "android.eas"
+    },
+    "android.emu.local": {
+      "device": "simulator",
+      "app": "android.local"
+    }
+  }
+}

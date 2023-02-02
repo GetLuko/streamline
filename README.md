@@ -24,6 +24,12 @@ Start expo
 yarn nx run sandbox:start
 ```
 
+Run test
+
+```
+yarn nx run sandbox:test
+```
+
 # Sandbox-E2E
 
 Let's ignore this folder for now. Could be usefull later.

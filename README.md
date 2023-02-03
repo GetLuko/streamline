@@ -15,3 +15,15 @@ Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and 
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
+
+# Sandbox
+
+Start expo
+
+```
+yarn nx run sandbox:start
+```
+
+# Sandbox-E2E
+
+Let's ignore this folder for now. Could be usefull later.

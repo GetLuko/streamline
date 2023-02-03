@@ -21,7 +21,19 @@ Visit the [Nx Documentation](https://nx.dev) to learn more.
 Start expo
 
 ```
-yarn nx run sandbox:start
+yarn sandbox:start
+```
+
+Run test
+
+```
+yarn sandbox:test
+```
+
+# Streamline library
+
+```
+yarn streamline:test
 ```
 
 # Sandbox-E2E

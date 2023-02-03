@@ -6,9 +6,9 @@
   },
   "exclude": [
     "jest.config.ts",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
+    "src/**/*.spec.ts",
+    "src/**/*.spec.tsx",
     "test-setup.ts"
   ],
-  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "@getluko/streamline"]
+  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"]
 }

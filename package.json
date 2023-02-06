@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "sandbox:start":"yarn nx run streamline:start",
-    "sandbox:test":"yarn nx run streamline:test",
-    "streamline:test":"yarn nx run @getluko/streamline:test"
+    "sandbox:start": "yarn nx run sandbox:start",
+    "sandbox:test": "yarn nx run streamline:test",
+    "streamline:test": "yarn nx run @getluko/streamline:test",
+    "streamline:build":"yarn nx build streamline",
+    "streamline:publish":"cd dist/packages/streamline && npm publish"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +35,7 @@
     "@nrwl/linter": "15.6.3",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/react-native": "15.6.3",
+    "@nrwl/web": "^15.6.3",
     "@nrwl/workspace": "15.6.3",
     "@react-native-async-storage/async-storage": "1.17.11",
     "@react-native-community/cli": "10.1.3",

@@ -1,10 +1,29 @@
 {
-  "name": "@getluko/streamline",
+  "name": "streamline",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/streamline/src",
   "projectType": "library",
   "tags": [],
   "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/streamline",
+        "tsConfig": "packages/streamline/tsconfig.lib.json",
+        "project": "packages/streamline/package.json",
+        "entryFile": "packages/streamline/src/index.ts",
+        "external": ["react/jsx-runtime", "react-native"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "assets": [
+          {
+            "glob": "packages/streamline/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

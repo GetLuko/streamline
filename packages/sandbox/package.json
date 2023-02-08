@@ -3,17 +3,18 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@expo/metro-config": "*",
+    "@expo/webpack-config": "*",
     "@getluko/streamline": "*",
+    "@nrwl/expo": "*",
     "@testing-library/jest-native": "*",
     "@testing-library/react-native": "*",
     "expo": "*",
+    "expo-font": "~11.0.1",
+    "react": "*",
     "react-native": "*",
     "react-native-svg": "*",
-    "react-native-web": "*",
-    "@nrwl/expo": "*",
-    "@expo/metro-config": "*",
-    "react": "*",
-    "@expo/webpack-config": "*"
+    "react-native-web": "*"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && cp package-lock.json ./packages/sandbox/",

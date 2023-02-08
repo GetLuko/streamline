@@ -3,11 +3,11 @@ import { createTheme, useTheme } from "@shopify/restyle";
 import { colors } from "./colors";
 import { radius } from "./radius";
 import { spacings } from "./spacings";
+import { fonts } from "./fonts";
+export { fonts, TextVariants as TextVariant}  from "./fonts";
 
 export const theme = createTheme({
-    textVariants: {
-        defaults: { fontWeight: 0} // TODO typography
-    },
+    textVariants: fonts,
     colors: {
         ...colors.PRIMARY,
         ...colors.GREY,
@@ -19,16 +19,11 @@ export const theme = createTheme({
         ...colors.GOLD,
         ...colors.TERRA,
     },
-    spacing:{
-        ...spacings
-    },
+    spacing: spacings,
     breakpoints: {
         phone: 0,
-        tablet: 768,
     },
-    borderRadii: {
-        ...radius
-    }
+    borderRadii: radius
 })
 
 

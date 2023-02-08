@@ -1,15 +1,15 @@
-import { Box } from '../../box/box';
+import { Box } from '../box/box';
 import React from 'react';
 
-import { ICON_SIZE } from '../icon.constants';
-import { IconsName, Size } from '../icon.types';
+import { ICON_SIZE } from './icon.constants';
+import { IconsName, Size } from './icon.types';
 import {
   isCorrectRegularIconName,
   isCorrectSmallIconName,
   sanitizeIconName,
-} from '../icon.utils';
-import * as RegularIcons from './regular';
-import * as SmallIcons from './small';
+} from './icon.utils';
+import * as RegularIcons from './generated/regular';
+import * as SmallIcons from './generated/small';
 
 type Props = {
   color?: string;

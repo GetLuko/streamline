@@ -20,10 +20,10 @@ jobs:
           token: ${{ secrets.EXPO_TOKEN }}
 
       - name: 📦 Install dependencies
-        run: yarn install
+        run: cd packages/sandbox/ && yarn
 
       - name: 🚀 Publish preview
-        run: expo publish --release-channel=pr-${{ github.event.number }} --non-interactive
+        run: cd packages/sandbox/ && expo publish --release-channel=pr-${{ github.event.number }} --non-interactive
 
       - name: 💬 Comment preview
         uses: expo/expo-github-action/preview-comment@v7

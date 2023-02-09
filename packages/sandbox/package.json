@@ -11,7 +11,6 @@
     "@testing-library/react-native": "*",
     "expo": "*",
     "expo-font": "~11.0.1",
-    "expo-updates": "^0.15.6",
     "react": "*",
     "react-native": "*",
     "react-native-svg": "*",

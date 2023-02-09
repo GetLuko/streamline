@@ -1,6 +1,6 @@
 {
-  "node": "14.15.4",
   "build": {
+    "node": "12.16.1",
     "production": {
       "android": {
         "buildType": "app-bundle"

@@ -1,5 +1,5 @@
 name: Publish a preview from PR
-on: [pull_request]
+on: [pull_request, push]
 jobs:
   publish:
     runs-on: ubuntu-latest

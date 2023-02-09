@@ -23,7 +23,7 @@ jobs:
         run: yarn
 
       - name: 🚀 Publish preview
-        run: yarn nx run sandbox:publish --release-channel=pr-${{ github.event.number }} --non-interactive
+        run: yarn nx run sandbox:publish --release-channel=pr-${{ github.event.number }} --non-interactive --config=./packages/sandbox/app.json
 
       - name: 💬 Comment preview
         uses: expo/expo-github-action/preview-comment@v7

@@ -29,4 +29,4 @@ jobs:
         uses: expo/expo-github-action/preview-comment@v7
         with:
           channel: pr-${{ github.event.number }}
-          message: '<a href="{projectQR}"><img src="{projectQR}" height="200px" width="200px"></a>'
+          message: '<a href="https://qr.expo.dev/expo-go?owner=lukoapp&slug=sandbox&releaseChannel=pr-${{ github.event.number }}"><img src="https://qr.expo.dev/expo-go?owner=lukoapp&slug=sandbox&releaseChannel=pr-${{ github.event.number }}" height="200px" width="200px"></a>'

@@ -20,7 +20,7 @@ jobs:
           token: ${{ secrets.EXPO_TOKEN }}
 
       - name: 📦 Install dependencies
-        run: cd packages/sandbox/ && yarn
+        run: yarn
 
       - name: 🚀 Publish preview
         run: cd packages/sandbox/ && expo publish --release-channel=pr-${{ github.event.number }} --non-interactive

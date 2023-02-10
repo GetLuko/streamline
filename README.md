@@ -36,6 +36,19 @@ yarn sandbox:test
 yarn streamline:test
 ```
 
+Generate icons
+
+```
+yarn streamline:generate:icons:regular
+yarn streamline:generate:icons:small
+```
+
+Generate components
+
+```
+yarn streamline:generate:component
+```
+
 # Sandbox-E2E
 
 Let's ignore this folder for now. Could be usefull later.

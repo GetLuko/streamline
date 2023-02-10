@@ -26,7 +26,7 @@ export const theme = createTheme({
     borderRadii: radius
 })
 
-
+export type ColorTheme = keyof Theme['colors'];
 export type Theme = typeof theme;
 
 export const useStreamlineTheme = () => useTheme<Theme>();

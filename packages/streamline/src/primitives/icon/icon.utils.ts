@@ -1,5 +1,5 @@
-import * as RegularIcons from './svgs/regular';
-import * as SmallIcons from './svgs/small';
+import * as RegularIcons from './generated/regular';
+import * as SmallIcons from './generated/small';
 import {
   IconsName,
   RegularIconsName,

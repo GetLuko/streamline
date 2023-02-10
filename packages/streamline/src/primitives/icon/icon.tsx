@@ -6,7 +6,7 @@ import {
   ViewStyle,
 } from 'react-native';
 
-import { IconSvg } from './svgs/IconSvg';
+import { IconSvg } from './IconSvg';
 import { ICON_SIZE } from './icon.constants';
 import { IconsName, Size } from './icon.types';
 import { ColorTheme, useStreamlineTheme } from '../../theme';

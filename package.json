@@ -8,7 +8,9 @@
     "streamline:test": "yarn nx run streamline:test",
     "streamline:build": "yarn nx build streamline",
     "streamline:publish": "cd dist/packages/streamline && npm publish",
-    "streamline:generate:component": "yarn nx g @nrwl/react-native:component text --project=streamline --export --directory components"
+    "streamline:generate:component": "yarn nx g @nrwl/react-native:component text --project=streamline --export --directory components",
+    "streamline:generate:icons:regular":"yarn nx run streamline:icons:generate:regular",
+    "streamline:generate:icons:small":"yarn nx run streamline:icons:generate:small"
   },
   "private": true,
   "dependencies": {

@@ -9,8 +9,8 @@
     "streamline:build": "yarn nx build streamline",
     "streamline:publish": "cd dist/packages/streamline && npm publish",
     "streamline:generate:component": "yarn nx g @nrwl/react-native:component text --project=streamline --export --directory components",
-    "streamline:generate:icons:regular":"yarn nx run streamline:icons:generate:regular",
-    "streamline:generate:icons:small":"yarn nx run streamline:icons:generate:small",
+    "streamline:generate:icons:regular": "yarn nx run streamline:icons:generate:regular",
+    "streamline:generate:icons:small": "yarn nx run streamline:icons:generate:small",
     "lint": "yarn nx run-many --target=lint --ext '.js,.jsx,.ts,.tsx' --all --parallel",
     "test": "yarn nx run-many --target=test --all --parallel"
   },
@@ -68,10 +68,12 @@
     "eslint-plugin-react": "7.31.11",
     "eslint-plugin-react-hooks": "4.6.0",
     "expo-cli": "6.1.0",
+    "husky": "^8.0.3",
     "jest": "28.1.1",
     "jest-circus": "28.1.1",
     "jest-environment-jsdom": "28.1.1",
     "jest-react-native": "18.0.0",
+    "lint-staged": "^13.1.1",
     "metro": "0.74.1",
     "metro-babel-register": "0.74.1",
     "metro-react-native-babel-preset": "0.74.1",
@@ -84,5 +86,15 @@
     "ts-jest": "28.0.5",
     "ts-node": "10.9.1",
     "typescript": "~4.8.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,tsx,ts,json}": [
+      "yarn format --uncommitted"
+    ]
   }
 }

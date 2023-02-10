@@ -10,4 +10,3 @@ const SolarPanel = ({ color = '#2D50E6', ...props }: SvgProps) => (
   </Svg>
 );
 export default SolarPanel;
-export default SolarPanel;

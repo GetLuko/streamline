@@ -1,10 +1,10 @@
 import React, { useCallback } from 'react';
 import { Alert, TouchableOpacity, View } from 'react-native';
 
-import * as RegularIcons from '../../../../streamline/src/primitives/icon/generated/regular';
-import { Icon, IconProps } from '../../../../streamline/src/primitives/icon/icon';
+import { GeneratedRegularIcons } from '@getluko/streamline';
+import { Icon, IconProps } from '@getluko/streamline';
 
-const iconNames = [...Object.keys(RegularIcons)] as IconProps['iconName'][];
+const iconNames = [...Object.keys(GeneratedRegularIcons)] as IconProps['iconName'][];
 
 export const IconsSandbox = () => {
   const onPress = useCallback(

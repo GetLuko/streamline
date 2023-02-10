@@ -1,0 +1,17 @@
+{
+    "plugins": [
+      {
+        "name": "preset-default",
+        "params": {
+          "overrides": {
+            "removeViewBox": false
+          }
+        }
+      },
+      {
+        "active": true,
+        "name": "removeXMLNS"
+      }
+    ]
+  }
+  

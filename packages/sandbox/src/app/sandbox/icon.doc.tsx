@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { Alert, TouchableOpacity, View } from 'react-native';
 
-import * as RegularIcons from '../../../../streamline/src/primitives/icon/svgs/regular';
+import * as RegularIcons from '../../../../streamline/src/primitives/icon/generated/regular';
 import { Icon, IconProps } from '../../../../streamline/src/primitives/icon/icon';
 
 const iconNames = [...Object.keys(RegularIcons)] as IconProps['iconName'][];

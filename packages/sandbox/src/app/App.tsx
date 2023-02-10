@@ -3,8 +3,6 @@ import {
   Box,
   Text,
   StreamlineThemeProvider,
-  fonts,
-  TextVariant,
 } from '@getluko/streamline';
 import React, { useRef } from 'react';
 import { useFonts } from 'expo-font';
@@ -16,10 +14,8 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import NxDocumentation from './NxDocumentation';
-
-const typoContent =
-  'ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz1234567890@#$%^&*_+=-/|~`!?.,:;"\'(){}[]<>€£¥§©®™°∞Ωμ∑π√№';
-const fontsKeys = Object.keys(fonts).sort() as TextVariant[];
+import { IconsSandbox } from './sandbox/icon.doc';
+import { TypoSandbox } from './sandbox/text.doc';
 
 export const App = () => {
   const scrollViewRef = useRef<null | ScrollView>(null);
@@ -52,16 +48,8 @@ export const App = () => {
             <Text fontFamily="CircularXX-Book" fontSize={30}>
               Hello there,
             </Text>
-            <Box margin="md">
-              {fontsKeys.map((key) => (
-                <>
-                  <Text variant="bodyBold" color="BLUKO_1000" marginVertical="sm" style={{backgroundColor: '#FFF4DE'}}>
-                    ----- {key} -----
-                  </Text>
-                  <Text variant={key} style={{backgroundColor: '#EAE9E3'}}>{typoContent}</Text>
-                </>
-              ))}
-            </Box>
+            <TypoSandbox />
+            <IconsSandbox />
           </StreamlineThemeProvider>
           <NxDocumentation />
         </ScrollView>
@@ -71,7 +59,7 @@ export const App = () => {
 };
 const styles = StyleSheet.create({
   scrollView: {
-    backgroundColor: '#ffffff',
+    backgroundColor: '#F4F3EF',
   },
 });
 

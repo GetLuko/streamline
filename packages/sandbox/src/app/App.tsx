@@ -41,7 +41,6 @@ export const App = () => {
           <StreamlineThemeProvider>
             <SandBox />
           </StreamlineThemeProvider>
-          {/*<NxDocumentation />*/}
         </ScrollView>
       </SafeAreaView>
     </>

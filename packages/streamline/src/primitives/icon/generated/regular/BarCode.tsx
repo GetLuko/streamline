@@ -10,4 +10,3 @@ const BarCode = ({ color = '#2D50E6', ...props }: SvgProps) => (
   </Svg>
 );
 export default BarCode;
-

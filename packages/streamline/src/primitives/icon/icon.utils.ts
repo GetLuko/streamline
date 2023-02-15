@@ -1,10 +1,6 @@
 import * as RegularIcons from './generated/regular';
 import * as SmallIcons from './generated/small';
-import {
-  IconsName,
-  RegularIconsName,
-  SmallIconName,
-} from './icon.types';
+import { IconsName, RegularIconsName, SmallIconName } from './icon.types';
 import { stringCapitalize } from '../../utils/string.utils';
 import { isDefined, isObjKey } from '../../types';
 

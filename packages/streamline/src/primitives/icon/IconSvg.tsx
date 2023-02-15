@@ -36,7 +36,9 @@ export const IconSvg = ({ iconName, size, color }: Props) => {
       height: totalIconSize,
     });
   }
-  console.log(`Icon not found ${iconName}, sanitized as ${sanitizedIconName} for ${size} size`);
+  console.log(
+    `Icon not found ${iconName}, sanitized as ${sanitizedIconName} for ${size} size`
+  );
 
   return React.createElement(Box, {
     width: totalIconSize,

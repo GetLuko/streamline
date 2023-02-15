@@ -4,7 +4,9 @@ import { Alert, TouchableOpacity, View } from 'react-native';
 import { GeneratedRegularIcons } from '@getluko/streamline';
 import { Icon, IconProps } from '@getluko/streamline';
 
-const iconNames = [...Object.keys(GeneratedRegularIcons)] as IconProps['iconName'][];
+const iconNames = [
+  ...Object.keys(GeneratedRegularIcons),
+] as IconProps['iconName'][];
 
 export const IconsSandbox = () => {
   const onPress = useCallback(

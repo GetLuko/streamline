@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
-import { Box, Text, StreamlineThemeProvider } from '@getluko/streamline';
+import { StreamlineThemeProvider } from '@getluko/streamline';
 import React, { useRef } from 'react';
 import { useFonts } from 'expo-font';
 import {
@@ -9,9 +9,7 @@ import {
   StatusBar,
   ActivityIndicator,
 } from 'react-native';
-import NxDocumentation from './NxDocumentation';
-import { IconsSandbox } from './sandbox/icon.doc';
-import { TypoSandbox } from './sandbox/text.doc';
+import { SandBox } from './sandbox/Sandbox';
 
 export const App = () => {
   const scrollViewRef = useRef<null | ScrollView>(null);
@@ -31,23 +29,19 @@ export const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
+      <SafeAreaView style={{ flex: 1 }}>
         <ScrollView
           ref={(ref) => {
             scrollViewRef.current = ref;
           }}
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}
+          contentContainerStyle={{ flex: 0 }}
         >
           <StreamlineThemeProvider>
-            <Box backgroundColor="BLUKO_500" width={200} height={200} />
-            <Text fontFamily="CircularXX-Book" fontSize={30}>
-              Hello there,
-            </Text>
-            <TypoSandbox />
-            <IconsSandbox />
+            <SandBox />
           </StreamlineThemeProvider>
-          <NxDocumentation />
+          {/*<NxDocumentation />*/}
         </ScrollView>
       </SafeAreaView>
     </>
@@ -56,6 +50,7 @@ export const App = () => {
 const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: '#F4F3EF',
+    flex: 1,
   },
 });
 

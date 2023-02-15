@@ -2,7 +2,7 @@
     "*.{ts,tsx,js,jsx}": [
       "prettier --write",
       "eslint --ext '.js,.jsx,.ts,.tsx' --fix --quiet",
-      "jest --bail --findRelatedTests"
+      "jest --bail --findRelatedTests --passWithNoTests"
     ]
   }
   

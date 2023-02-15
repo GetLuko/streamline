@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "prepare": "husky install",
     "sandbox:start": "yarn nx run sandbox:start",
     "sandbox:test": "yarn nx run streamline:test",
     "streamline:test": "yarn nx run streamline:test",
@@ -13,6 +14,7 @@
     "streamline:generate:icons:small": "yarn nx run streamline:icons:generate:small",
     "lint": "yarn nx run-many --target=lint --ext '.js,.jsx,.ts,.tsx' --all --parallel",
     "test": "yarn nx run-many --target=test --all --parallel",
+    "type:check" : "yarn nx run-many --target=type:check --all --parallel",
     "format": "yarn nx format:write --all"
   },
   "private": true,
@@ -69,10 +71,12 @@
     "eslint-plugin-react": "7.31.11",
     "eslint-plugin-react-hooks": "4.6.0",
     "expo-cli": "6.1.0",
+    "husky": "^8.0.3",
     "jest": "28.1.1",
     "jest-circus": "28.1.1",
     "jest-environment-jsdom": "28.1.1",
     "jest-react-native": "18.0.0",
+    "lint-staged": "^13.1.2",
     "metro": "0.74.1",
     "metro-babel-register": "0.74.1",
     "metro-react-native-babel-preset": "0.74.1",

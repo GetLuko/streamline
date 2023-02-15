@@ -24,6 +24,12 @@
         ]
       }
     },
+    "type:check": {
+      "executor": "nx:run-script",
+      "options": {
+          "script": "type:check"
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

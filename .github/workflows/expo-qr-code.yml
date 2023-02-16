@@ -39,18 +39,12 @@ jobs:
         with:
           xcode-version: latest
 
-      - name: Install Maestro CLI
-        run: curl -Ls "https://get.maestro.mobile.dev" | bash
-      
-      - name: Install idb
-        run: brew tap facebook/fb; brew install facebook/fb/idb-companion
-
       - name: Run tests
-        run: expo url https://qr.expo.dev/expo-go?owner=lukoapp&slug=sandbox&releaseChannel=pr-${{ github.event.number }}
-
-      - name: Visual regression test
-        run: yarn sandbox:test:visual
-
-      - name: Visual regression compare
-        run: yarn sandbox:test:visual:compare
-
+        run: |
+          curl -Ls "https://get.maestro.mobile.dev" | bash
+          brew tap facebook/fb
+          brew install facebook/fb/idb-companion
+          yarn
+          expo client:install:ios --latest
+          yarn sandbox:test:visual
+          yarn sandbox:test:visual:compare

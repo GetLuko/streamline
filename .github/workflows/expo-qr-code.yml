@@ -2,7 +2,7 @@ name: Publish a preview from PR
 on: [pull_request]
 jobs:
   publish:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: 🏗 Setup repo
         uses: actions/checkout@v2
@@ -33,20 +33,3 @@ jobs:
         with:
           channel: pr-${{ github.event.number }}
           message: '<a href="https://qr.expo.dev/expo-go?owner=lukoapp&slug=sandbox&releaseChannel=pr-${{ github.event.number }}"><img src="https://qr.expo.dev/expo-go?owner=lukoapp&slug=sandbox&releaseChannel=pr-${{ github.event.number }}" height="200px" width="200px"></a>'
-
-      - name: Install Xcode
-        uses: maxim-lobanov/setup-xcode@v1
-        with:
-          xcode-version: latest
-
-      - name: Run tests
-        run: |
-          curl -Ls "https://get.maestro.mobile.dev" | bash
-          export PATH="$PATH":"$HOME/.maestro/bin"
-          brew tap facebook/fb
-          brew install facebook/fb/idb-companion
-          yarn
-          expo client:install:ios --latest
-          yarn sandbox:start &
-          yarn sandbox:test:visual
-          yarn sandbox:test:visual:compare

@@ -39,6 +39,6 @@ jobs:
           brew tap facebook/fb
           brew install facebook/fb/idb-companion
           expo client:install:ios --latest
-          yarn sandbox:start &
+          yarn sandbox:start --ios &
           yarn sandbox:test:visual
           yarn sandbox:test:visual:compare

@@ -1,20 +1,20 @@
 appId: host.exp.Exponent
 ---
-- launchApp
-- tapOn: "Sandbox"
-- waitForAnimationToEnd:
-    timeout: 5000
-- tapOn: "Box >"
+# - launchApp
+#- tapOn: 'Sandbox'
+#- waitForAnimationToEnd:
+#    timeout: 5000
+- tapOn: 'Box >'
 - waitForAnimationToEnd:
     timeout: 10000
 - takeScreenshot: e2e/tempScreenshots/Box
-- tapOn: "Box"
-- tapOn: "Icons >"
+- tapOn: 'Box'
+- tapOn: 'Icons >'
 - extendedWaitUntil:
-    visible: "Icons"
+    visible: 'Icons'
     timeout: 5000
 - takeScreenshot: e2e/tempScreenshots/Icons
-- tapOn: "Icons"
-- tapOn: "Typo >"
+- tapOn: 'Icons'
+- tapOn: 'Typo >'
 - takeScreenshot: e2e/tempScreenshots/Typo
-- tapOn: "Typo"
+- tapOn: 'Typo'

@@ -129,6 +129,18 @@
           "codeCoverage": true
         }
       }
+    },
+    "test:visual": {
+      "executor": "nx:run-script",
+      "options": {
+          "script": "test:visual"
+      }
+    },
+    "test:visual:compare": {
+      "executor": "nx:run-script",
+      "options": {
+          "script": "test:visual:compare"
+      }
     }
   },
   "tags": []

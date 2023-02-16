@@ -6,6 +6,7 @@
     "prepare": "husky install",
     "sandbox:start": "yarn nx run sandbox:start",
     "sandbox:test": "yarn nx run streamline:test",
+    "sandbox:test:visual": "maestro test .maestro/flow.yml",
     "streamline:test": "yarn nx run streamline:test",
     "streamline:build": "yarn nx build streamline",
     "streamline:publish": "cd dist/packages/streamline && npm publish",

@@ -21,6 +21,11 @@ jobs:
           arch: x86_64
           ram-size: 2048M
           target: default
-          script: |
-          expo client:install:ios --latest
-          maestro test --format=junit --output=report.xml --no-ansi packages/sandbox/e2e
+          script: expo client:install:ios --latest && maestro test --format=junit --output=report.xml --no-ansi packages/sandbox/e2e
+      - name: Test Report
+        uses: dorny/test-reporter@v1
+        if: success() || failure() # run this step even if previous step failed
+        with:
+          name: JEST Tests # Name of the check run which will be created
+          path: report.xml # Path to test results
+          reporter: jest-junit

@@ -12,6 +12,9 @@ jobs:
       - uses: futureware-tech/simulator-action@v2
         with:
           model: 'iPhone 14 Pro'
+      - name: Install Expo
+        run: |
+          expo client:install:ios --latest
       - uses: dniHze/maestro-test-action@v1
         with:
           flow: packages/sandbox/e2e

@@ -1,0 +1,19 @@
+name: tests iOS
+on: [pull_request]
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+      - uses: dniHze/maestro-test-action@v1
+      - uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 29
+          arch: x86_64
+          ram-size: 2048M
+          target: default
+          script: maestro test --format=junit --output=report.xml --no-ansi packages/sandbox/e2e

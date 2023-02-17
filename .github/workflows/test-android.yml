@@ -1,4 +1,4 @@
-name: tests iOS
+name: tests Android
 on: [pull_request]
 jobs:
   test:
@@ -10,6 +10,11 @@ jobs:
           distribution: 'adopt'
           java-version: '11'
       - uses: dniHze/maestro-test-action@v1
+      - name: 🏗 Setup Expo
+        uses: expo/expo-github-action@v7
+        with:
+          expo-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
       - uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 29

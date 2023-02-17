@@ -1,9 +1,12 @@
 appId: host.exp.Exponent
 ---
-# - launchApp
-#- tapOn: 'Sandbox'
-#- waitForAnimationToEnd:
-#    timeout: 5000
+- launchApp
+# - stopApp: host.exp.Exponent
+# - openLink: 'exp://exp.host/@lukoapp/sandbox?release-channel=pr-16'
+- tapOn: 'Sandbox Channel: pr-16'
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn: 'Foundation'
 - tapOn: 'Box >'
 - waitForAnimationToEnd:
     timeout: 10000

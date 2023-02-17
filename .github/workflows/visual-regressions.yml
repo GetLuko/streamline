@@ -39,8 +39,8 @@ jobs:
           brew tap facebook/fb
           brew install facebook/fb/idb-companion
           expo client:install:ios --latest
-          xcrun simctl openurl booted "exp://exp.host/@lukoapp/sandbox?release-channel=pr-16"
-          yarn sandbox:test:visual --verbose
+          # xcrun simctl openurl booted "exp://exp.host/@lukoapp/sandbox?release-channel=pr-16"
+          yarn sandbox:test:visual
           yarn sandbox:test:visual:compare
 
       # yarn sandbox:start --ios &

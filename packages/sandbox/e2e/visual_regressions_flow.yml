@@ -1,16 +1,7 @@
 appId: host.exp.Exponent
 ---
-- waitForAnimationToEnd:
-    timeout: 5000
 - launchApp
-- launchApp:
-    appId: 'host.exp.Exponent'
-    clearState: true
-    clearKeychain: true # optional: clear *entire* iOS keychain
-    stopApp: true
-# - stopApp: host.exp.Exponent
-# - openLink: 'exp://exp.host/@lukoapp/sandbox?release-channel=pr-16'
-- tapOn: 'Sandbox Channel: pr-16'
+- tapOn: 'Sandbox'
 - waitForAnimationToEnd:
     timeout: 5000
 - tapOn: 'Foundation'
@@ -28,3 +19,7 @@ appId: host.exp.Exponent
 - tapOn: 'Typo >'
 - takeScreenshot: e2e/tempScreenshots/Typo
 - tapOn: 'Typo'
+##
+## CI tests
+# - stopApp: host.exp.Exponent
+# - openLink: 'exp://exp.host/@lukoapp/sandbox?release-channel=pr-16'

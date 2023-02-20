@@ -8,6 +8,7 @@ import {
   ScrollView,
   StatusBar,
   ActivityIndicator,
+  Platform,
 } from 'react-native';
 import { SandBox } from './sandbox/Sandbox';
 
@@ -28,7 +29,9 @@ export const App = () => {
   }
   return (
     <>
-      <StatusBar barStyle="light-content" />
+      <StatusBar
+        barStyle={Platform.OS === 'ios' ? 'light-content' : 'dark-content'}
+      />
       <SafeAreaView style={{ flex: 1 }}>
         <ScrollView
           ref={(ref) => {

@@ -1,23 +1,21 @@
-appId: host.exp.Exponent
+appId: ${APPID}
 ---
 - launchApp
 - tapOn: 'Sandbox'
-- waitForAnimationToEnd:
-    timeout: 5000
 - tapOn: 'Foundation'
 - tapOn: 'Box >'
 - waitForAnimationToEnd:
     timeout: 10000
-- takeScreenshot: e2e/tempScreenshots/Box
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Box
 - tapOn: 'Box'
 - tapOn: 'Icons >'
 - extendedWaitUntil:
     visible: 'Icons'
     timeout: 5000
-- takeScreenshot: e2e/tempScreenshots/Icons
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Icons
 - tapOn: 'Icons'
 - tapOn: 'Typo >'
-- takeScreenshot: e2e/tempScreenshots/Typo
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Typo
 - tapOn: 'Typo'
 ##
 ## CI tests

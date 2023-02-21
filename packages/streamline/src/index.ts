@@ -1,4 +1,6 @@
 import * as GeneratedRegularIcons from './primitives/icon/generated/regular';
+export * from './buttons/button/button';
+export * from './primitives/animated-box/animated-box';
 export * from './primitives/box/box';
 export * from './primitives/text/text';
 export * from './primitives/icon/icon';

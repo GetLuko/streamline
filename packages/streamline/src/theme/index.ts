@@ -4,6 +4,7 @@ import { colors } from './colors';
 import { radius } from './radius';
 import { spacings } from './spacings';
 import { fonts } from './fonts';
+import { appearDuration, appearEntering, appearExiting, opacityDuration, onPressScale } from './animation';
 export { fonts, TextVariants as TextVariant } from './fonts';
 
 export const theme = createTheme({
@@ -24,6 +25,13 @@ export const theme = createTheme({
     phone: 0,
   },
   borderRadii: radius,
+  animation: {
+    appearDuration,
+    appearEntering,
+    appearExiting,
+    opacityDuration,
+    onPressScale,
+  },
 });
 
 export type ColorTheme = keyof Theme['colors'];

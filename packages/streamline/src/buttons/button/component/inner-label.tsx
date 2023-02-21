@@ -2,31 +2,31 @@ import React from 'react';
 import { ActivityIndicator } from 'react-native';
 import { FadeIn } from 'react-native-reanimated';
 
-import { ButtonProps, ButtonVariant } from '../button.types';
+import { ButtonProps, ButtonAppearance } from '../button.types';
 import { getTextColor } from '../button.utils';
 import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
 import { Text } from '../../../primitives/text/text';
 import { theme, useStreamlineTheme } from '../../../theme';
 import { Box } from '../../../primitives/box/box';
 import PlaceholderAnimation from '../../../placeholder/placeholder-animation/placeholder-animation';
-import { stringCapitalize } from 'packages/streamline/src/utils/string.utils';
+import { stringCapitalize } from '../../../utils/string.utils';
 
 const placeholder_WIDTH_MINI = 82;
 const LABEL_CONTAINER_HEIGHT = 24;
 
 const InnerLabel = ({
   isLoading,
-  variant,
+  appearance,
   type,
   text,
-}: Pick<ButtonProps, 'isLoading' | 'variant' | 'type' | 'text'>) => {
-  const styles = useStyles(variant);
+}: Pick<ButtonProps, 'isLoading' | 'appearance' | 'type' | 'text'>) => {
+  const styles = useStyles(appearance);
 
   switch (true) {
-    case type === 'mini' && variant === 'placeholder': {
+    case type === 'mini' && appearance === 'placeholder': {
       return null;
     }
-    case variant === 'placeholder': {
+    case appearance === 'placeholder': {
       return (
         <Box
           style={{
@@ -68,7 +68,7 @@ const InnerLabel = ({
           <Text
             textAlign="center"
             variant="bodyBold"
-            color={getTextColor(variant)}
+            color={getTextColor(appearance)}
             numberOfLines={1}
           >
             {stringCapitalize(text)}
@@ -79,7 +79,7 @@ const InnerLabel = ({
   }
 };
 
-const useStyles = (variant?: ButtonVariant) => {
+const useStyles = (variant?: ButtonAppearance) => {
   const { colors, animation } = useStreamlineTheme();
 
   return {

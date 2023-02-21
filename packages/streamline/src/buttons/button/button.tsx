@@ -6,13 +6,16 @@ import { AnimatedBox } from '../../primitives/animated-box/animated-box';
 import { useStreamlineTheme } from '../../theme';
 
 import { ButtonProps } from './button.types';
-import { getInnerVariant, getPressableBackgroundColor } from './button.utils';
+import {
+  getInnerAppearance,
+  getPressableBackgroundColor,
+} from './button.utils';
 import InnerIcon from './component/inner-icon';
 import InnerLabel from './component/inner-label';
 import { useLoadingAnimation } from './hook/useLoadingAnimation';
 
 export const Button = ({
-  variant = 'primary',
+  appearance = 'primary',
   isLoading,
   isDisabled,
   type = 'full',
@@ -21,18 +24,21 @@ export const Button = ({
   onPress,
   text,
 }: ButtonProps) => {
-  const innerVariantValue = getInnerVariant({
+  const inneAppearanceValue = getInnerAppearance({
     isDisabled,
-    variant,
+    appearance,
   });
-  const styles = useStyles(type, innerVariantValue);
+  const styles = useStyles(type, inneAppearanceValue);
 
   if (!isNil(iconName) && type !== 'mini') {
     console.warn('Icon is only supported for mini buttons');
   }
 
-  const isPlaceholder = variant === 'placeholder';
-  const { animatedStyle, onLayout } = useLoadingAnimation({ type, isPlaceholder });
+  const isPlaceholder = appearance === 'placeholder';
+  const { animatedStyle, onLayout } = useLoadingAnimation({
+    type,
+    isPlaceholder,
+  });
 
   const [handlePress, isResolving] = usePress({ onPress });
 
@@ -61,14 +67,14 @@ export const Button = ({
       >
         <InnerIcon
           isLoading={isResolving || isLoading}
-          variant={innerVariantValue}
+          appearance={inneAppearanceValue}
           iconName={iconName}
           type={type}
         />
         <InnerLabel
           isLoading={isResolving || isLoading}
           type={type}
-          variant={innerVariantValue}
+          appearance={inneAppearanceValue}
           text={text}
         />
       </AnimatedBox>
@@ -78,14 +84,17 @@ export const Button = ({
 
 const useStyles = (
   type?: ButtonProps['type'],
-  variant?: ButtonProps['variant']
+  appearance?: ButtonProps['appearance']
 ): {
   pressable: ViewStyle;
   activityIndicator: TextStyle;
   pressableBackgroundColor: ReturnType<typeof getPressableBackgroundColor>;
 } => {
   const { colors, borderRadii } = useStreamlineTheme();
-  const pressableBackgroundColor = getPressableBackgroundColor(colors, variant);
+  const pressableBackgroundColor = getPressableBackgroundColor(
+    colors,
+    appearance
+  );
 
   return {
     pressable: {
@@ -93,7 +102,7 @@ const useStyles = (
       alignSelf: type === 'mini' ? 'flex-start' : undefined,
     },
     activityIndicator: {
-      color: variant === 'secondary' ? colors.BLACK : colors.PURE_WHITE_1000,
+      color: appearance === 'secondary' ? colors.BLACK : colors.PURE_WHITE_1000,
     },
     pressableBackgroundColor,
   };

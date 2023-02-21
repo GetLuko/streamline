@@ -1,7 +1,7 @@
 import { PressableProps } from 'react-native';
 import { SmallIconName } from '../../primitives/icon/icon.types';
 
-export type ButtonVariant =
+export type ButtonAppearance =
   | 'primary'
   | 'secondary'
   | 'danger'
@@ -27,9 +27,9 @@ export type ButtonProps = {
    */
   isTouched?: boolean;
   /**
-   * The variant of the button. Can be one of `primary`, `secondary`, `danger`, `disabled` or `skeleton`.
+   * The variant of the button. Can be one of `primary`, `secondary`, `danger`, `neutral` or `placeholder`.
    */
-  variant?: ButtonVariant;
+  appearance?: ButtonAppearance;
   /**
    * The type of the button. Can be one of `full` or `mini`.
    */

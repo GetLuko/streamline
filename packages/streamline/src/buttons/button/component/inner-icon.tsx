@@ -12,16 +12,16 @@ import { theme } from '../../../theme';
 const InnerIcon = ({
   isLoading,
   iconName,
-  variant,
+  appearance,
   type,
-}: Pick<ButtonProps, 'isLoading' | 'variant' | 'type' | 'iconName'>) => {
+}: Pick<ButtonProps, 'isLoading' | 'appearance' | 'type' | 'iconName'>) => {
   switch (true) {
     case isLoading:
     case type !== 'mini':
-    case iconName === undefined && variant !== 'placeholder': {
+    case iconName === undefined && appearance !== 'placeholder': {
       return null;
     }
-    case variant === 'placeholder': {
+    case appearance === 'placeholder': {
       return (
         <Box
           flexDirection="row"
@@ -66,9 +66,13 @@ const InnerIcon = ({
           paddingRight="xs"
         >
           <Icon
+            // We already check if iconName is undefined above
+            // type inferance don't work well with switch case
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
             iconName={iconName}
             size="small"
-            color={getTextColor(variant)}
+            color={getTextColor(appearance)}
           />
         </AnimatedBox>
       );

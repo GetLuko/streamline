@@ -18,9 +18,15 @@ appId: ${APPID}
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Typo
 - tapOn: 'Typo'
 - tapOn: 'Button >'
+- extendedWaitUntil:
+    visible: 'Button'
+    timeout: 5000
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Button
 - tapOn: 'Button'
 - tapOn: 'Button Mini >'
+- extendedWaitUntil:
+    visible: 'Button Mini'
+    timeout: 5000
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/ButtonMini
 - tapOn: 'Button Mini'
 ##

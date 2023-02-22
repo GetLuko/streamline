@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Box } from './box';
+import { AnimatedBox } from './animated-box';
 import { renderWithProvider } from '../../testing/render-with-provider';
 
-describe('Box', () => {
+describe('AnimatedBox', () => {
   it('should render successfully', () => {
-    const { container } = renderWithProvider(<Box />);
+    const { container } = renderWithProvider(<AnimatedBox />);
     expect(container).toBeTruthy();
   });
 });

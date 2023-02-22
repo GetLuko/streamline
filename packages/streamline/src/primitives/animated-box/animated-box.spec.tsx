@@ -1,8 +1,7 @@
 import React from 'react';
-import { render } from '@testing-library/react-native';
 
 import { AnimatedBox } from './animated-box';
-import { renderWithProvider } from '../../utils/render-with-provider';
+import { renderWithProvider } from '../../testing/render-with-provider';
 
 describe('AnimatedBox', () => {
   it('should render successfully', () => {

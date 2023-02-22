@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Text } from './text';
-import { renderWithProvider } from '../../utils/render-with-provider';
+import { renderWithProvider } from '../../testing/render-with-provider';
 
 describe('Text', () => {
   it('should render successfully', () => {

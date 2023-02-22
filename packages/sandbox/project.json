@@ -130,16 +130,28 @@
         }
       }
     },
-    "test:visual": {
+    "test-visual-ios": {
       "executor": "nx:run-script",
       "options": {
-          "script": "test:visual"
+        "script": "test:visual:ios"
       }
     },
-    "test:visual:compare": {
+    "test-visual-ios-compare": {
       "executor": "nx:run-script",
       "options": {
-          "script": "test:visual:compare"
+        "script": "test:visual:ios:compare"
+      }
+    },
+    "test-visual-android": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "test:visual:android"
+      }
+    },
+    "test-visual-android-compare": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "test:visual:android:compare"
       }
     }
   },

@@ -9,16 +9,16 @@ import { ButtonProps } from '../button.types';
 
 export const useLoadingAnimation = ({
   isPlaceholder,
-  type,
+  size,
 }: {
-  type: ButtonProps['type'];
+  size: ButtonProps['size'];
   isPlaceholder: boolean;
 }) => {
   const initialWidth = useSharedValue(0);
   const initialPlaceholderWidth = useSharedValue(0);
 
   const animatedStyle = useAnimatedStyle(() => {
-    if (type === 'full') {
+    if (size === 'full') {
       return {
         width: undefined,
       };
@@ -36,10 +36,10 @@ export const useLoadingAnimation = ({
   });
 
   const onLayout = (event: LayoutChangeEvent) => {
-    if (type === 'mini' && initialWidth.value === 0 && !isPlaceholder) {
+    if (size === 'mini' && initialWidth.value === 0 && !isPlaceholder) {
       initialWidth.value = event.nativeEvent.layout.width;
     }
-    if (type === 'mini' && initialPlaceholderWidth.value === 0) {
+    if (size === 'mini' && initialPlaceholderWidth.value === 0) {
       initialPlaceholderWidth.value = event.nativeEvent.layout.width;
     }
   };

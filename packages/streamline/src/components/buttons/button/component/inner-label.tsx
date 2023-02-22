@@ -1,15 +1,16 @@
 import React from 'react';
-import { ActivityIndicator } from 'react-native';
 import { FadeIn } from 'react-native-reanimated';
 
-import { ButtonProps, ButtonAppearance } from '../button.types';
+import { ButtonProps } from '../button.types';
 import { getTextColor } from '../button.utils';
-import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
-import { Text } from '../../../primitives/text/text';
-import { theme, useStreamlineTheme } from '../../../theme';
-import { Box } from '../../../primitives/box/box';
+import { AnimatedBox } from '../../../../primitives/animated-box/animated-box';
+import { Text } from '../../../../primitives/text/text';
+import { theme, useStreamlineTheme } from '../../../../theme';
+import { Box } from '../../../../primitives/box/box';
 import PlaceholderAnimation from '../../../placeholder/placeholder-animation/placeholder-animation';
-import { stringCapitalize } from '../../../utils/string.utils';
+import { stringCapitalize } from '../../../../utils/string.utils';
+import { Appearance } from '../../../../theme/appearance';
+import Spinner from '../../../spinner/spinner';
 
 const placeholder_WIDTH_MINI = 82;
 const LABEL_CONTAINER_HEIGHT = 24;
@@ -17,13 +18,13 @@ const LABEL_CONTAINER_HEIGHT = 24;
 const InnerLabel = ({
   isLoading,
   appearance,
-  type,
+  size,
   text,
-}: Pick<ButtonProps, 'isLoading' | 'appearance' | 'type' | 'text'>) => {
+}: Pick<ButtonProps, 'isLoading' | 'appearance' | 'size' | 'text'>) => {
   const styles = useStyles(appearance);
 
   switch (true) {
-    case type === 'mini' && appearance === 'placeholder': {
+    case size === 'mini' && appearance === 'placeholder': {
       return null;
     }
     case appearance === 'placeholder': {
@@ -33,7 +34,7 @@ const InnerLabel = ({
             borderRadius: theme.borderRadii.lg,
           }}
           height={LABEL_CONTAINER_HEIGHT}
-          width={type === 'mini' ? placeholder_WIDTH_MINI : undefined}
+          width={size === 'mini' ? placeholder_WIDTH_MINI : undefined}
           backgroundColor="GREY_200"
           overflow="hidden"
           flex={1}
@@ -51,11 +52,7 @@ const InnerLabel = ({
           alignItems="center"
           entering={FadeIn.duration(styles.duration)}
         >
-          <ActivityIndicator
-            testID="activity-indicator"
-            size="small"
-            color={styles.activityIndicator.color}
-          />
+          <Spinner />
         </AnimatedBox>
       );
     }
@@ -79,7 +76,7 @@ const InnerLabel = ({
   }
 };
 
-const useStyles = (variant?: ButtonAppearance) => {
+const useStyles = (variant?: Appearance) => {
   const { colors, animation } = useStreamlineTheme();
 
   return {

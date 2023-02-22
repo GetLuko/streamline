@@ -2,23 +2,35 @@ import { Box, Button } from '@getluko/streamline';
 
 export const ButtonSandbox = () => (
   <Box paddingHorizontal="xl">
-    <Box paddingVertical="xs">
-      <Button appearance="primary" text="hello world" />
+    <Box paddingVertical="xxs">
+      <Button appearance="primary" text="Primary" />
     </Box>
-    <Box paddingVertical="xs">
-      <Button appearance="primary" isDisabled text="hello world" />
+    <Box paddingVertical="xxs">
+      <Button appearance="primary" isDisabled text="Disabled" />
     </Box>
-    <Box paddingVertical="xs">
-      <Button appearance="secondary" text="hello world" />
+    <Box paddingVertical="xxs">
+      <Button appearance="secondary" text="Secondary" />
     </Box>
-    <Box paddingVertical="xs">
-      <Button appearance="neutral" text="hello world" />
+    <Box paddingVertical="xxs">
+      <Button appearance="neutral" text="Neutral" />
     </Box>
-    <Box paddingVertical="xs">
-      <Button appearance="danger" text="hello world" />
+    <Box paddingVertical="xxs">
+      <Button appearance="danger" text="Danger" />
     </Box>
-    <Box paddingVertical="xs">
-      <Button appearance="placeholder" text="hello world" />
+    <Box paddingVertical="xxs">
+      <Button appearance="placeholder" text="Placeholder" />
+    </Box>
+    <Box paddingVertical="xxs">
+      <Button isLoading appearance="primary" />
+    </Box>
+    <Box paddingVertical="xxs">
+      <Button isLoading appearance="secondary" />
+    </Box>
+    <Box paddingVertical="xxs">
+      <Button isLoading appearance="neutral" />
+    </Box>
+    <Box paddingVertical="xxs">
+      <Button isLoading appearance="danger" />
     </Box>
   </Box>
 );

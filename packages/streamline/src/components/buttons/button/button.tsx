@@ -1,9 +1,9 @@
 import React from 'react';
 import isNil from 'lodash.isnil';
 import { Pressable, TextStyle, ViewStyle } from 'react-native';
-import { usePress } from '../../hooks/usePress';
-import { AnimatedBox } from '../../primitives/animated-box/animated-box';
-import { useStreamlineTheme } from '../../theme';
+import { usePress } from '../../../hooks/use-press.hook';
+import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
+import { useStreamlineTheme } from '../../../theme';
 
 import { ButtonProps } from './button.types';
 import {
@@ -18,7 +18,7 @@ export const Button = ({
   appearance = 'primary',
   isLoading,
   isDisabled,
-  type = 'full',
+  size = 'full',
   iconName,
   isTouched,
   onPress,
@@ -28,15 +28,16 @@ export const Button = ({
     isDisabled,
     appearance,
   });
-  const styles = useStyles(type, inneAppearanceValue);
+  const styles = useStyles(size, inneAppearanceValue);
+  const isMini = size === 'mini';
 
-  if (!isNil(iconName) && type !== 'mini') {
+  if (!isNil(iconName) && !isMini) {
     console.warn('Icon is only supported for mini buttons');
   }
 
   const isPlaceholder = appearance === 'placeholder';
   const { animatedStyle, onLayout } = useLoadingAnimation({
-    type,
+    size,
     isPlaceholder,
   });
 
@@ -61,19 +62,19 @@ export const Button = ({
         flexDirection="row"
         alignItems="center"
         justifyContent="center"
-        paddingVertical="sm"
-        paddingHorizontal="lg"
+        paddingVertical={isMini ? 'xs' : 'sm'}
+        paddingHorizontal={isMini ? 'sm' : 'lg'}
         style={animatedStyle}
       >
         <InnerIcon
           isLoading={isResolving || isLoading}
           appearance={inneAppearanceValue}
           iconName={iconName}
-          type={type}
+          size={size}
         />
         <InnerLabel
           isLoading={isResolving || isLoading}
-          type={type}
+          size={size}
           appearance={inneAppearanceValue}
           text={text}
         />
@@ -83,7 +84,7 @@ export const Button = ({
 };
 
 const useStyles = (
-  type?: ButtonProps['type'],
+  size?: ButtonProps['size'],
   appearance?: ButtonProps['appearance']
 ): {
   pressable: ViewStyle;
@@ -99,7 +100,7 @@ const useStyles = (
   return {
     pressable: {
       borderRadius: borderRadii.lg,
-      alignSelf: type === 'mini' ? 'flex-start' : undefined,
+      alignSelf: size === 'mini' ? 'flex-start' : undefined,
     },
     activityIndicator: {
       color: appearance === 'secondary' ? colors.BLACK : colors.PURE_WHITE_1000,

@@ -1,13 +1,6 @@
 import { PressableProps } from 'react-native';
-import { SmallIconName } from '../../primitives/icon/icon.types';
-
-export type ButtonAppearance =
-  | 'primary'
-  | 'secondary'
-  | 'danger'
-  | 'neutral'
-  | 'disabled'
-  | 'placeholder';
+import { SmallIconName } from '../../../primitives/icon/icon.types';
+import { Appearance } from '../../../theme/appearance';
 
 export type ButtonProps = {
   /**
@@ -29,11 +22,11 @@ export type ButtonProps = {
   /**
    * The variant of the button. Can be one of `primary`, `secondary`, `danger`, `neutral` or `placeholder`.
    */
-  appearance?: ButtonAppearance;
+  appearance?: Appearance;
   /**
    * The type of the button. Can be one of `full` or `mini`.
    */
-  type?: 'full' | 'mini';
+  size?: 'full' | 'mini';
   /**
    * The name of the icon to display. Button support only small icon. Button type "Full" don't support icon.
    */

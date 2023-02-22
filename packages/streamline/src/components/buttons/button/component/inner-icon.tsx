@@ -3,21 +3,21 @@ import { FadeIn } from 'react-native-reanimated';
 
 import { ButtonProps } from '../button.types';
 import { getTextColor } from '../button.utils';
-import { Box } from '../../../primitives/box/box';
-import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
-import { Icon } from '../../../primitives/icon/icon';
+import { Box } from '../../../../primitives/box/box';
+import { AnimatedBox } from '../../../../primitives/animated-box/animated-box';
+import { Icon } from '../../../../primitives/icon/icon';
 import PlaceholderAnimation from '../../../placeholder/placeholder-animation/placeholder-animation';
-import { theme } from '../../../theme';
+import { theme } from '../../../../theme';
 
 const InnerIcon = ({
   isLoading,
   iconName,
   appearance,
-  type,
-}: Pick<ButtonProps, 'isLoading' | 'appearance' | 'type' | 'iconName'>) => {
+  size,
+}: Pick<ButtonProps, 'isLoading' | 'appearance' | 'size' | 'iconName'>) => {
   switch (true) {
     case isLoading:
-    case type !== 'mini':
+    case size !== 'mini':
     case iconName === undefined && appearance !== 'placeholder': {
       return null;
     }

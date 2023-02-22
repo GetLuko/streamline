@@ -1,16 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react-native';
 
 import { Box } from './box';
-import { StreamlineThemeProvider } from '../../theme/ThemeProvider';
+import { renderWithProvider } from '../../utils/render-with-provider';
 
 describe('Box', () => {
   it('should render successfully', () => {
-    const { container } = render(
-      <StreamlineThemeProvider>
-        <Box />
-      </StreamlineThemeProvider>
-    );
+    const { container } = renderWithProvider(<Box />);
     expect(container).toBeTruthy();
   });
 });

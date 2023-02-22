@@ -1,15 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react-native';
-import { StreamlineThemeProvider } from '../../theme/ThemeProvider';
+
 import { Text } from './text';
+import { renderWithProvider } from '../../utils/render-with-provider';
 
 describe('Text', () => {
   it('should render successfully', () => {
-    const { getByText } = render(
-      <StreamlineThemeProvider>
-        <Text>Hello</Text>
-      </StreamlineThemeProvider>
-    );
+    const { getByText } = renderWithProvider(<Text>Hello</Text>);
     expect(getByText('Hello')).toBeTruthy();
   });
 });

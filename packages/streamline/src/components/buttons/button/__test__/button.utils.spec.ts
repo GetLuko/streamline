@@ -1,4 +1,4 @@
-import { theme } from '../../../theme';
+import { theme } from '../../../../theme';
 import { ButtonProps } from '../button.types';
 import {
   getInnerAppearance,

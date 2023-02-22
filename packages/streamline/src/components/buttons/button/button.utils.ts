@@ -1,7 +1,8 @@
 import { PressableStateCallbackType } from 'react-native';
-import { Theme } from '../../theme';
+import { Theme } from '../../../theme';
+import { Appearance } from '../../../theme/appearance';
 
-import { ButtonProps, ButtonAppearance } from './button.types';
+import { ButtonProps } from './button.types';
 
 export const getPressableBackgroundColor =
   (colors: Theme['colors'], variant: ButtonProps['appearance']) =>
@@ -56,7 +57,7 @@ export const getInnerAppearance = ({
   appearance,
 }: {
   isDisabled: boolean | undefined;
-  appearance: ButtonAppearance;
+  appearance: Appearance;
 }) => {
   if (isDisabled) {
     return 'disabled';

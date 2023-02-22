@@ -17,6 +17,12 @@ appId: ${APPID}
 - tapOn: 'Typo >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Typo
 - tapOn: 'Typo'
+- tapOn: 'Button >'
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Button
+- tapOn: 'Button'
+- tapOn: 'Button Mini >'
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/ButtonMini
+- tapOn: 'Button Mini'
 ##
 ## CI tests
 # - stopApp: host.exp.Exponent

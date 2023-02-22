@@ -1,0 +1,23 @@
+appId: ${APPID}
+---
+- launchApp
+- tapOn: 'Sandbox'
+- tapOn: 'Foundation'
+- tapOn: 'Box >'
+- waitForAnimationToEnd:
+    timeout: 10000
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Box
+- tapOn: 'Box'
+- tapOn: 'Icons >'
+- extendedWaitUntil:
+    visible: 'Icons'
+    timeout: 5000
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Icons
+- tapOn: 'Icons'
+- tapOn: 'Typo >'
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Typo
+- tapOn: 'Typo'
+##
+## CI tests
+# - stopApp: host.exp.Exponent
+# - openLink: 'exp://exp.host/@lukoapp/sandbox?release-channel=pr-16'

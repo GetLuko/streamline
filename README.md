@@ -49,6 +49,30 @@ Generate components
 yarn streamline:generate:component
 ```
 
+# Visual regression with Maestro
+
+[Maestro installation requirement](https://maestro.mobile.dev/getting-started/installing-maestro)
+
+- Run iPhone `14 Pro Max` simulator or `Pixel 4a API 33` emulator
+
+- Start expo
+
+```
+yarn sandbox:start
+```
+
+- re-generate screenshots with maestro
+
+```
+yarn sandbox:test:visual
+```
+
+- Compare screenshots with reg-cli
+
+```
+yarn sandbox:test:visual:compare
+```
+
 # Sandbox-E2E
 
-Let's ignore this folder for now. Could be usefull later.
+Let's ignore this folder for now. Will probably be replace by maestro.

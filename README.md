@@ -53,24 +53,24 @@ yarn streamline:generate:component
 
 [Maestro installation requirement](https://maestro.mobile.dev/getting-started/installing-maestro)
 
-- Run iPhone `14 Pro Max` simulator or `Pixel 4a API 33` emulator
+- Run iPhone `12` simulator or `Pixel 4a API 33` emulator
 
 - Start expo
 
 ```
-yarn sandbox:start
+yarn sandbox:start:e2e
 ```
 
 - re-generate screenshots with maestro
 
 ```
-yarn sandbox:test:visual
+yarn sandbox:test:visual:[ios|android]
 ```
 
 - Compare screenshots with reg-cli
 
 ```
-yarn sandbox:test:visual:compare
+yarn sandbox:test:visual:[ios|android]:compare
 ```
 
 # Sandbox-E2E

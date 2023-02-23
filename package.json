@@ -5,6 +5,7 @@
   "scripts": {
     "prepare": "husky install",
     "sandbox:start": "yarn nx run sandbox:start",
+    "sandbox:start:e2e": "yarn nx run sandbox:start:e2e",
     "sandbox:start:clear": "yarn nx run sandbox:start --clear",
     "sandbox:test": "yarn nx run streamline:test",
     "sandbox:test:visual:ios": "yarn nx run sandbox:test-visual-ios",
@@ -69,6 +70,7 @@
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
     "babel-jest": "28.1.1",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "babel-preset-expo": "~9.2.2",
     "detox": "20.1.1",
     "eas-cli": "3.3.2",

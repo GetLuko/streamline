@@ -22,6 +22,7 @@ const InnerLabel = ({
   text,
 }: Pick<ButtonProps, 'isLoading' | 'appearance' | 'size' | 'text'>) => {
   const styles = useStyles(appearance);
+  const textColor = getTextColor(appearance);
 
   switch (true) {
     case size === 'mini' && appearance === 'placeholder': {
@@ -52,7 +53,7 @@ const InnerLabel = ({
           alignItems="center"
           entering={FadeIn.duration(styles.duration)}
         >
-          <Spinner />
+          <Spinner size="regular" color={textColor} />
         </AnimatedBox>
       );
     }
@@ -65,7 +66,7 @@ const InnerLabel = ({
           <Text
             textAlign="center"
             variant="bodyBold"
-            color={getTextColor(appearance)}
+            color={textColor}
             numberOfLines={1}
           >
             {stringCapitalize(text)}

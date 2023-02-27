@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-native-ama/dist/commonjs/internal/logger.js b/node_modules/react-native-ama/dist/commonjs/internal/logger.js
+index cc224c8..65c49d3 100644
+--- a/node_modules/react-native-ama/dist/commonjs/internal/logger.js
++++ b/node_modules/react-native-ama/dist/commonjs/internal/logger.js
+@@ -7,7 +7,7 @@ exports.shouldIgnoreContrastCheckForDisabledElement = exports.logFailure = expor
+ 
+ var _logger = require("./logger.rules");
+ 
+-const overrideRules = require('./../../ama.rules.json');
++const overrideRules = {};
+ 
+ const getRuleAction = __DEV__ ? rule => {
+   var _overrideRules$rules;

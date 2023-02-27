@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "prepare": "husky install",
+    "postinstall": "patch-package",
     "sandbox:start": "yarn nx run sandbox:start",
     "sandbox:start:clear": "yarn nx run sandbox:start --clear",
     "sandbox:test": "yarn nx run streamline:test",
@@ -93,6 +94,7 @@
     "metro-react-native-babel-transformer": "0.74.1",
     "metro-resolver": "0.74.1",
     "nx": "15.6.3",
+    "patch-package": "^6.5.1",
     "prettier": "^2.6.2",
     "react-native-config": "1.4.12",
     "react-test-renderer": "18.2.0",

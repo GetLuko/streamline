@@ -68,7 +68,9 @@
     },
     "publish": {
       "executor": "@nrwl/expo:publish",
-      "options": {}
+      "options": {
+        "clear": true
+      }
     },
     "publish-set": {
       "executor": "@nrwl/expo:publish-set",

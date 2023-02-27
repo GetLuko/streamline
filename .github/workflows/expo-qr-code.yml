@@ -23,7 +23,7 @@ jobs:
         run: yarn
       
       - name: Pre-build
-        run: yarn nx reset; echo "{}" >> ama.rules.json; echo "{}" >> ../../ama.rules.json
+        run: pwd; yarn nx reset; echo "{}" >> ama.rules.json; echo "{}" >> ../../ama.rules.json
 
       - name: 🏗 Build
         run: yarn streamline:build

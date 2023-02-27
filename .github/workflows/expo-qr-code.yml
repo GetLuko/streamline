@@ -22,8 +22,8 @@ jobs:
       - name: 📦 Install dependencies
         run: yarn
       
-      - name: 🏗 Build
-        run: echo "{}" >> ama.rules.json; echo "{}" >> ../../ama.rules.json
+      - name: Pre-build
+        run: yarn nx reset; echo "{}" >> ama.rules.json; echo "{}" >> ../../ama.rules.json
 
       - name: 🏗 Build
         run: yarn streamline:build

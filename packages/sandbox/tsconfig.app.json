@@ -9,7 +9,6 @@
     "**/*.spec.ts",
     "**/*.spec.tsx",
     "test-setup.ts",
-    "../../ama.rules.json",
   ],
   "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
 }

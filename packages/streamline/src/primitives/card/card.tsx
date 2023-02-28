@@ -79,8 +79,8 @@ export const Card = ({
               flexGrow={1}
               flexShrink={1}
               backgroundColor={backgroundColor}
-              {...rest}
               {...(shadows ? getShadowsStyle(shadows) : {})}
+              {...rest}
             >
               {React.Children.map(children, (child) =>
                 React.isValidElement(child) ? React.cloneElement(child) : child

@@ -67,6 +67,7 @@ export const Button = ({
         flexDirection="row"
         alignItems="center"
         justifyContent="center"
+        /* xs: creates accessibility issue */
         paddingVertical={isMini ? 'xs' : 'sm'}
         paddingHorizontal={isMini ? 'sm' : 'lg'}
         style={animatedStyle}

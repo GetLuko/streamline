@@ -16,7 +16,7 @@ module.exports = (async () => {
     // Useful if you have issues resolving modules
     debug: false,
     // all the file extensions used for imports other than 'ts', 'tsx', 'js', 'jsx'
-    extensions: ['json'],
+    extensions: [],
     // the project root to start the metro server
     projectRoot: __dirname,
     // Specify any additional (to projectRoot) watch folders, this is used to know which files to watch

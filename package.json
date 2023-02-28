@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "prepare": "husky install",
+    "postinstall": "patch-package",
     "sandbox:start": "yarn nx run sandbox:start",
     "sandbox:start:clear": "yarn nx run sandbox:start --clear",
     "sandbox:test": "yarn nx run streamline:test",
@@ -35,6 +36,8 @@
     "react": "18.1.0",
     "react-dom": "18.2.0",
     "react-native": "0.70.5",
+    "react-native-ama": "^0.6.17",
+    "react-native-gesture-handler": "^2.9.0",
     "react-native-reanimated": "2.8.0",
     "react-native-svg": "13.4.0",
     "react-native-svg-transformer": "1.0.0",
@@ -91,12 +94,14 @@
     "metro-react-native-babel-transformer": "0.74.1",
     "metro-resolver": "0.74.1",
     "nx": "15.6.3",
+    "patch-package": "^6.5.1",
     "prettier": "^2.6.2",
     "react-native-config": "1.4.12",
     "react-test-renderer": "18.2.0",
     "reg-cli": "^0.17.7",
     "ts-jest": "28.0.5",
     "ts-node": "10.9.1",
-    "typescript": "~4.8.2"
+    "typescript": "~4.8.2",
+    "wcag-color": "^1.1.1"
   }
 }

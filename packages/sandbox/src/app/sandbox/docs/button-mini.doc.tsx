@@ -37,16 +37,16 @@ export const ButtonMiniSandbox = () => (
       />
     </Box>
     <Box paddingVertical="xxs">
-      <Button size="mini" isLoading appearance="primary" />
+      <Button text="Primary" size="mini" isLoading appearance="primary" />
     </Box>
     <Box paddingVertical="xxs">
-      <Button size="mini" isLoading appearance="secondary" />
+      <Button text="secondary" size="mini" isLoading appearance="secondary" />
     </Box>
     <Box paddingVertical="xxs">
-      <Button size="mini" isLoading appearance="neutral" />
+      <Button text="neutral" size="mini" isLoading appearance="neutral" />
     </Box>
     <Box paddingVertical="xxs">
-      <Button size="mini" isLoading appearance="danger" />
+      <Button text="danger" size="mini" isLoading appearance="danger" />
     </Box>
   </Box>
 );

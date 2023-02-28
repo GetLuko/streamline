@@ -11,6 +11,7 @@ import {
   Platform,
 } from 'react-native';
 import { SandBox } from './sandbox/Sandbox';
+import { isMaestro } from './utils/isMaestro';
 
 export const App = () => {
   const scrollViewRef = useRef<null | ScrollView>(null);
@@ -18,6 +19,9 @@ export const App = () => {
     'CircularXX-Bold': require('./fonts/CircularXX-Bold.otf'),
     'CircularXX-Book': require('./fonts/CircularXX-Book.otf'),
   });
+
+  const disableAnimation = isMaestro();
+
   if (!fontsLoaded) {
     return (
       <ActivityIndicator
@@ -41,7 +45,7 @@ export const App = () => {
           style={styles.scrollView}
           contentContainerStyle={{ flex: 0 }}
         >
-          <StreamlineThemeProvider>
+          <StreamlineThemeProvider disableAnimation={disableAnimation}>
             <SandBox />
           </StreamlineThemeProvider>
         </ScrollView>

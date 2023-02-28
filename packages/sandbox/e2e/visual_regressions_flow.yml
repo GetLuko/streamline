@@ -17,6 +17,9 @@ appId: ${APPID}
 - tapOn: 'Typo >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Typo
 - tapOn: 'Typo'
+- tapOn: 'Spinner >'
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Spinner
+- tapOn: 'Spinner'
 - tapOn: 'Button >'
 - extendedWaitUntil:
     visible: 'Button'

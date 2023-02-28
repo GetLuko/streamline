@@ -1,6 +1,7 @@
 import React from 'react';
 import isNil from 'lodash.isnil';
-import { Pressable, TextStyle, ViewStyle } from 'react-native';
+import { Pressable } from 'react-native-ama';
+import { TextStyle, ViewStyle } from 'react-native';
 import { usePress } from '../../../hooks/use-press.hook';
 import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
 import { useStreamlineTheme } from '../../../theme';
@@ -43,11 +44,15 @@ export const Button = ({
 
   const [handlePress, isResolving] = usePress({ onPress });
 
+  const buttonIsDisabled =
+    isPlaceholder || isDisabled || isLoading || isTouched || isResolving;
+
   return (
     <Pressable
-      disabled={
-        isPlaceholder || isDisabled || isLoading || isTouched || isResolving
-      }
+      accessibilityRole="button"
+      accessibilityLabel={text}
+      disabled={buttonIsDisabled}
+      busy={buttonIsDisabled}
       style={(pressableState) => [
         styles.pressable,
         styles.pressableBackgroundColor({
@@ -62,6 +67,7 @@ export const Button = ({
         flexDirection="row"
         alignItems="center"
         justifyContent="center"
+        /* xs: creates accessibility issue */
         paddingVertical={isMini ? 'xs' : 'sm'}
         paddingHorizontal={isMini ? 'sm' : 'lg'}
         style={animatedStyle}

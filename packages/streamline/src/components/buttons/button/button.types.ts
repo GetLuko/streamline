@@ -6,7 +6,7 @@ export type ButtonProps = {
   /**
    * The text to display. Upper first char automaticaly.
    */
-  text?: string;
+  text: string;
   /**
    * Whether the press behavior is disabled.
    */

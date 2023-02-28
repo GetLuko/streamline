@@ -7,6 +7,7 @@ import {
   withTiming,
 } from 'react-native-reanimated';
 import { useStreamlineTheme } from '../../theme';
+import { getShadowsStyle } from '../../theme/shadows';
 import { AnimatedBox } from '../animated-box/animated-box';
 import { Box } from '../box/box';
 
@@ -22,7 +23,7 @@ export const Card = ({
   accessible,
   backgroundColor,
   disabled,
-  withShadow,
+  shadows,
   withPadding = true,
   animated = true,
   ...rest
@@ -30,13 +31,6 @@ export const Card = ({
   const pressInAnimatedValue = useSharedValue(0);
 
   const { animation } = useStreamlineTheme();
-
-  const total = React.Children.count(children);
-  const siblings = React.Children.map(children, (child) =>
-    React.isValidElement(child) && child.type
-      ? (child.type as any).displayName
-      : null
-  );
 
   const handlePressIn = () => {
     pressInAnimatedValue.value = 1;
@@ -76,32 +70,20 @@ export const Card = ({
         testID={testID}
         accessible={accessible}
       >
-        <Box
-          width={rest.width}
-          height={rest.height}
-          shadowOffset={withShadow ? { width: 0, height: 10 } : undefined}
-          shadowOpacity={withShadow ? 0.12 : undefined}
-          shadowRadius={withShadow ? 20 : undefined}
-          shadowColor={withShadow ? 'GREY_1000' : undefined}
-        >
+        <Box width={rest.width} height={rest.height}>
           <AnimatedBox style={[animatedStyle]}>
             <Box
               borderRadius="lg"
-              paddingHorizontal={withPadding ? "md" : undefined}
-              paddingVertical={withPadding ? "md" : undefined}
+              paddingHorizontal={withPadding ? 'md' : undefined}
+              paddingVertical={withPadding ? 'md' : undefined}
               flexGrow={1}
               flexShrink={1}
               backgroundColor={backgroundColor}
               {...rest}
+              {...(shadows ? getShadowsStyle(shadows) : {})}
             >
-              {React.Children.map(children, (child, index) =>
-                React.isValidElement(child)
-                  ? React.cloneElement(child, {
-                      index,
-                      total,
-                      siblings,
-                    })
-                  : child
+              {React.Children.map(children, (child) =>
+                React.isValidElement(child) ? React.cloneElement(child) : child
               )}
             </Box>
           </AnimatedBox>

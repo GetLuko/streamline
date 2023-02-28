@@ -1,11 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react-native';
 
-import Card from './card';
+import { Card } from './card';
+import { renderWithProvider } from '../../testing/render-with-provider';
 
 describe('Card', () => {
   it('should render successfully', () => {
-    const { container } = render(<Card />);
+    const { container } = renderWithProvider(<Card />);
     expect(container).toBeTruthy();
   });
 });

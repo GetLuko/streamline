@@ -27,6 +27,10 @@ export const shadows = {
     },
     shadowRadius: 20,
     shadowOpacity: 0.12,
-    elevation: 4,
+    elevation: 12,
   },
 };
+
+export type ShadowTheme = keyof typeof shadows;
+
+export const getShadowsStyle = (shadow: ShadowTheme) => shadows[shadow];

@@ -1,4 +1,5 @@
-import { Box } from "../box/box";
+import { ShadowTheme } from '../../theme/shadows';
+import { Box } from '../box/box';
 
 export type CardProps = {
   onLongPress?: () => void;
@@ -6,7 +7,7 @@ export type CardProps = {
   onPressIn?: () => void;
   onPressOut?: () => void;
   disabled?: boolean;
-  withShadow?: boolean;
+  shadows?: ShadowTheme;
   withPadding?: boolean;
   animated?: boolean;
 } & React.ComponentProps<typeof Box>;

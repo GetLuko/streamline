@@ -4,13 +4,9 @@ import { Appearance } from '../../../theme/appearance';
 
 export type ButtonProps = {
   /**
-   * The accessibilityLabel property is the first thing announced by the screen reader when the elements gain the focus; then, it announces its role. If the property is omitted, the user might have little to no clue what could happen if the element is triggered.
-   */
-  accessibilityLabel: string;
-  /**
    * The text to display. Upper first char automaticaly.
    */
-  text?: string;
+  text: string;
   /**
    * Whether the press behavior is disabled.
    */

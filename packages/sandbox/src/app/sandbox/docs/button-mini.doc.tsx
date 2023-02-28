@@ -3,17 +3,10 @@ import { Box, Button } from '@getluko/streamline';
 export const ButtonMiniSandbox = () => (
   <Box paddingHorizontal="xl">
     <Box paddingVertical="xxs">
-      <Button
-        accessibilityLabel="label"
-        iconName="Bear"
-        size="mini"
-        appearance="primary"
-        text="Primary"
-      />
+      <Button iconName="Bear" size="mini" appearance="primary" text="Primary" />
     </Box>
     <Box paddingVertical="xxs">
       <Button
-        accessibilityLabel="label"
         iconName="Bear"
         size="mini"
         appearance="primary"
@@ -23,7 +16,6 @@ export const ButtonMiniSandbox = () => (
     </Box>
     <Box paddingVertical="xxs">
       <Button
-        accessibilityLabel="label"
         iconName="Bear"
         size="mini"
         appearance="secondary"
@@ -31,26 +23,13 @@ export const ButtonMiniSandbox = () => (
       />
     </Box>
     <Box paddingVertical="xxs">
-      <Button
-        accessibilityLabel="label"
-        iconName="Bear"
-        size="mini"
-        appearance="neutral"
-        text="Neutral"
-      />
+      <Button iconName="Bear" size="mini" appearance="neutral" text="Neutral" />
+    </Box>
+    <Box paddingVertical="xxs">
+      <Button iconName="Bear" size="mini" appearance="danger" text="Danger" />
     </Box>
     <Box paddingVertical="xxs">
       <Button
-        accessibilityLabel="label"
-        iconName="Bear"
-        size="mini"
-        appearance="danger"
-        text="Danger"
-      />
-    </Box>
-    <Box paddingVertical="xxs">
-      <Button
-        accessibilityLabel="label"
         iconName="Bear"
         size="mini"
         appearance="placeholder"
@@ -58,36 +37,16 @@ export const ButtonMiniSandbox = () => (
       />
     </Box>
     <Box paddingVertical="xxs">
-      <Button
-        accessibilityLabel="label"
-        size="mini"
-        isLoading
-        appearance="primary"
-      />
+      <Button text="Primary" size="mini" isLoading appearance="primary" />
     </Box>
     <Box paddingVertical="xxs">
-      <Button
-        accessibilityLabel="label"
-        size="mini"
-        isLoading
-        appearance="secondary"
-      />
+      <Button text="secondary" size="mini" isLoading appearance="secondary" />
     </Box>
     <Box paddingVertical="xxs">
-      <Button
-        accessibilityLabel="label"
-        size="mini"
-        isLoading
-        appearance="neutral"
-      />
+      <Button text="neutral" size="mini" isLoading appearance="neutral" />
     </Box>
     <Box paddingVertical="xxs">
-      <Button
-        accessibilityLabel="label"
-        size="mini"
-        isLoading
-        appearance="danger"
-      />
+      <Button text="danger" size="mini" isLoading appearance="danger" />
     </Box>
   </Box>
 );

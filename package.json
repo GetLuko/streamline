@@ -13,7 +13,7 @@
     "sandbox:test:visual:android": "yarn nx run sandbox:test-visual-android",
     "sandbox:test:visual:android:compare": "yarn nx run sandbox:test-visual-android-compare",
     "streamline:test": "yarn nx run streamline:test",
-    "streamline:build": "yarn nx reset; yarn nx build streamline --clear",
+    "streamline:build": "yarn nx build streamline",
     "streamline:publish": "cd dist/packages/streamline && npm publish",
     "streamline:generate:component": "yarn nx g @nrwl/react-native:component $C --project=streamline --export --directory components",
     "streamline:generate:icons:regular": "yarn nx run streamline:icons:generate:regular",

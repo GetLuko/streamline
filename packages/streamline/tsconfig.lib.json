@@ -11,5 +11,5 @@
     "test-setup.ts",
     "src/testing/render-with-provider.tsx"
   ],
-  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx", "ama.rules.json", "../../ama.rules.json"]
+  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"]
 }

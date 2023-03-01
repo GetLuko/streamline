@@ -11,7 +11,6 @@ import {
   opacityDuration,
   onPressScale,
 } from './animation';
-import { shadows } from './shadows';
 export { fonts, TextVariants as TextVariant } from './fonts';
 
 export const theme = createTheme({
@@ -39,7 +38,6 @@ export const theme = createTheme({
     opacityDuration,
     onPressScale,
   },
-  shadows: shadows,
 });
 
 export type ColorTheme = keyof Theme['colors'];

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Pressable } from 'react-native';
 import {
   interpolate,
@@ -6,6 +6,7 @@ import {
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
+import { AnimationContext } from '../../contexts/disable-animation.context';
 import { useStreamlineTheme } from '../../theme';
 import { getShadowsStyle } from '../../theme/shadows';
 import { AnimatedBox } from '../animated-box/animated-box';
@@ -29,6 +30,9 @@ export const Card = ({
   ...rest
 }: CardProps) => {
   const pressInAnimatedValue = useSharedValue(0);
+
+  const { disableAnimation } = useContext(AnimationContext);
+  const isAnimationDisabled = disableAnimation || !animated;
 
   const { animation } = useStreamlineTheme();
 
@@ -58,8 +62,8 @@ export const Card = ({
 
   return (
     <AnimatedBox
-      entering={animated ? animation.appearEntering : undefined}
-      exiting={animated ? animation.appearExiting : undefined}
+      entering={isAnimationDisabled ? animation.appearEntering : undefined}
+      exiting={isAnimationDisabled ? animation.appearExiting : undefined}
     >
       <Pressable
         disabled={!(onPress || onLongPress) || disabled}

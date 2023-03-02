@@ -16,6 +16,7 @@ import InnerLabel from './component/inner-label';
 import { useLoadingAnimation } from './hook/useLoadingAnimation';
 
 export const Button = ({
+  testID,
   appearance = 'primary',
   isLoading,
   isDisabled,
@@ -49,6 +50,7 @@ export const Button = ({
 
   return (
     <Pressable
+      testID={testID}
       accessibilityRole="button"
       accessibilityLabel={text}
       disabled={buttonIsDisabled}

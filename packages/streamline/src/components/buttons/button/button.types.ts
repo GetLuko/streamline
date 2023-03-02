@@ -4,6 +4,10 @@ import { Appearance } from '../../../theme/appearance';
 
 export type ButtonProps = {
   /**
+   * TestID for the button
+   */
+  testID?: string;
+  /**
    * The text to display. Upper first char automaticaly.
    */
   text: string;

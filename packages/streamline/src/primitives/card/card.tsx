@@ -31,9 +31,6 @@ export const Card = ({
 }: CardProps) => {
   const pressInAnimatedValue = useSharedValue(0);
 
-  const { disableAnimation } = useContext(AnimationContext);
-  const isAnimationDisabled = disableAnimation || !animated;
-
   const { animation } = useStreamlineTheme();
 
   const handlePressIn = () => {
@@ -62,8 +59,8 @@ export const Card = ({
 
   return (
     <AnimatedBox
-      entering={isAnimationDisabled ? animation.appearEntering : undefined}
-      exiting={isAnimationDisabled ? animation.appearExiting : undefined}
+      entering={animated ? animation.appearEntering : undefined}
+      exiting={animated ? animation.appearExiting : undefined}
     >
       <Pressable
         disabled={!(onPress || onLongPress) || disabled}

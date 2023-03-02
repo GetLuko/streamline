@@ -4,16 +4,10 @@ import { colors } from './colors';
 import { radius } from './radius';
 import { spacings } from './spacings';
 import { fonts } from './fonts';
-import {
-  appearDuration,
-  appearEntering,
-  appearExiting,
-  opacityDuration,
-  onPressScale,
-} from './animation';
+import { getAnimationValues } from './animation';
 export { fonts, TextVariants as TextVariant } from './fonts';
 
-export const theme = createTheme({
+const baseTheme = {
   textVariants: fonts,
   colors: {
     ...colors.PRIMARY,
@@ -31,14 +25,15 @@ export const theme = createTheme({
     phone: 0,
   },
   borderRadii: radius,
-  animation: {
-    appearDuration,
-    appearEntering,
-    appearExiting,
-    opacityDuration,
-    onPressScale,
-  },
+  animation: getAnimationValues(false),
+};
+
+export const disabledAnimationTheme = createTheme({
+  ...baseTheme,
+  animation: getAnimationValues(true),
 });
+
+export const theme = createTheme(baseTheme);
 
 export type ColorTheme = keyof Theme['colors'];
 export type Theme = typeof theme;

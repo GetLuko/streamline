@@ -1,4 +1,4 @@
-import { Keyframe } from "react-native-reanimated";
+import { Keyframe } from 'react-native-reanimated';
 
 export const opacityDuration = 350;
 export const appearDuration = 250;
@@ -12,7 +12,7 @@ export const appearEntering = new Keyframe({
     opacity: 1,
     transform: [{ scale: 1 }],
   },
-}).duration(appearDuration);
+}).duration(opacityDuration);
 
 export const appearExiting = new Keyframe({
   from: {
@@ -30,3 +30,11 @@ export const onPressScale = {
   end: 0.95,
   duration: 250,
 };
+
+export const getAnimationValues = (disableAnimation: boolean) => ({
+  opacityDuration: disableAnimation ? 0 : opacityDuration,
+  appearDuration: disableAnimation ? 0 : appearDuration,
+  appearEntering: disableAnimation ? undefined : appearEntering,
+  appearExiting: disableAnimation ? undefined : appearExiting,
+  onPressScale,
+});

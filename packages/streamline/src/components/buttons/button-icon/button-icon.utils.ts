@@ -48,11 +48,6 @@ export const getButtonIconColors: GetButtonIconColors = ({
           color: 'PURE_WHITE_1000',
           backgroundColor: 'GREY_400',
         };
-      case 'placeholder':
-        return {
-          color: 'PURE_WHITE_1000',
-          backgroundColor: 'GREY_400',
-        };
     }
   }
   switch (realAppearance) {
@@ -73,10 +68,6 @@ export const getButtonIconColors: GetButtonIconColors = ({
         color: 'PURE_WHITE_1000',
       };
     case 'disabled':
-      return {
-        color: 'PURE_WHITE_1000',
-      };
-    case 'placeholder':
       return {
         color: 'PURE_WHITE_1000',
       };

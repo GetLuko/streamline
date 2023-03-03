@@ -10,7 +10,6 @@ import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
 import Spinner from '../../spinner/spinner';
 
 export function ButtonIcon({
-  testID,
   accessibilityLabel,
   iconName,
   onPress,
@@ -32,7 +31,6 @@ export function ButtonIcon({
 
   return (
     <TouchableOpacity
-      testID={testID}
       accessibilityLabel={accessibilityLabel}
       accessibilityRole="button"
       onPress={handlePress}

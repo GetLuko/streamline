@@ -19,10 +19,9 @@ describe('ButtonIcon', () => {
   it('should call onPress when pressed', () => {
     // Given
     const onPress = jest.fn();
-    const { getByTestId } = renderWithProvider(
+    const { getByLabelText } = renderWithProvider(
       <ButtonIcon
         onPress={onPress}
-        testID="test-id"
         accessibilityLabel="test"
         iconName="Cross"
         appearance="primary"
@@ -30,7 +29,7 @@ describe('ButtonIcon', () => {
     );
 
     // When
-    fireEvent.press(getByTestId('test-id'));
+    fireEvent.press(getByLabelText('test'));
 
     // Then
     expect(onPress).toHaveBeenCalledTimes(1);
@@ -38,10 +37,9 @@ describe('ButtonIcon', () => {
   it('should not call onPress when Loading', () => {
     // Given
     const onPress = jest.fn();
-    const { getByTestId } = renderWithProvider(
+    const { getByLabelText } = renderWithProvider(
       <ButtonIcon
         onPress={onPress}
-        testID="test-id"
         accessibilityLabel="test"
         iconName="Cross"
         appearance="primary"
@@ -50,7 +48,7 @@ describe('ButtonIcon', () => {
     );
 
     // When
-    fireEvent.press(getByTestId('test-id'));
+    fireEvent.press(getByLabelText('test'));
 
     // Then
     expect(onPress).toHaveBeenCalledTimes(0);
@@ -59,10 +57,9 @@ describe('ButtonIcon', () => {
   it('should not call onPress when Disabled', () => {
     // Given
     const onPress = jest.fn();
-    const { getByTestId } = renderWithProvider(
+    const { getByLabelText } = renderWithProvider(
       <ButtonIcon
         onPress={onPress}
-        testID="test-id"
         accessibilityLabel="test"
         iconName="Cross"
         appearance="primary"
@@ -71,7 +68,7 @@ describe('ButtonIcon', () => {
     );
 
     // When
-    fireEvent.press(getByTestId('test-id'));
+    fireEvent.press(getByLabelText('test'));
 
     // Then
     expect(onPress).toHaveBeenCalledTimes(0);

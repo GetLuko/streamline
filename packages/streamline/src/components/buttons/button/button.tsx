@@ -16,7 +16,6 @@ import InnerLabel from './component/inner-label';
 import { useLoadingAnimation } from './hook/useLoadingAnimation';
 
 export const Button = ({
-  testID,
   appearance = 'primary',
   isLoading,
   isDisabled,
@@ -25,19 +24,19 @@ export const Button = ({
   isTouched,
   onPress,
   text,
+  isPlaceholder = false,
 }: ButtonProps) => {
-  const inneAppearanceValue = getInnerAppearance({
+  const innerAppearanceValue = getInnerAppearance({
     isDisabled,
     appearance,
   });
-  const styles = useStyles(size, inneAppearanceValue);
+  const styles = useStyles(size, innerAppearanceValue);
   const isMini = size === 'mini';
 
   if (!isNil(iconName) && !isMini) {
     console.warn('Icon is only supported for mini buttons');
   }
 
-  const isPlaceholder = appearance === 'placeholder';
   const { animatedStyle, onLayout } = useLoadingAnimation({
     size,
     isPlaceholder,
@@ -50,7 +49,6 @@ export const Button = ({
 
   return (
     <Pressable
-      testID={testID}
       accessibilityRole="button"
       accessibilityLabel={text}
       disabled={buttonIsDisabled}
@@ -60,6 +58,7 @@ export const Button = ({
         styles.pressableBackgroundColor({
           pressed: pressableState.pressed,
           isTouched,
+          isPlaceholder,
         }),
       ]}
       onPress={handlePress}
@@ -76,15 +75,17 @@ export const Button = ({
       >
         <InnerIcon
           isLoading={isResolving || isLoading}
-          appearance={inneAppearanceValue}
+          appearance={innerAppearanceValue}
           iconName={iconName}
           size={size}
+          isPlaceholder={isPlaceholder}
         />
         <InnerLabel
           isLoading={isResolving || isLoading}
           size={size}
-          appearance={inneAppearanceValue}
+          appearance={innerAppearanceValue}
           text={text}
+          isPlaceholder={isPlaceholder}
         />
       </AnimatedBox>
     </Pressable>

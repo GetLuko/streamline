@@ -10,3 +10,22 @@ export * from './primitives/icon/icon';
 export * from './theme';
 export * from './theme/ThemeProvider';
 export { GeneratedRegularIcons };
+
+export type InteractionType = {
+  /**
+   * Accessibility label for the button
+   */
+  accessibilityLabel: string;
+  /**
+   * If true, the button state will be set to loading
+   */
+  isLoading?: boolean;
+  /**
+   * If true, the button will be disabled
+   */
+  isDisabled?: boolean;
+  /**
+   * Callback when pressed
+   */
+  onPress?: () => void;
+};

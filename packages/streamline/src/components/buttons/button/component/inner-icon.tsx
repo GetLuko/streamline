@@ -11,17 +11,21 @@ import { theme } from '../../../../theme';
 
 const InnerIcon = ({
   isLoading,
+  isPlaceholder,
   iconName,
   appearance,
   size,
-}: Pick<ButtonProps, 'isLoading' | 'appearance' | 'size' | 'iconName'>) => {
+}: Pick<
+  ButtonProps,
+  'isLoading' | 'appearance' | 'isPlaceholder' | 'size' | 'iconName'
+>) => {
   switch (true) {
     case isLoading:
     case size !== 'mini':
-    case iconName === undefined && appearance !== 'placeholder': {
+    case iconName === undefined && !isPlaceholder: {
       return null;
     }
-    case appearance === 'placeholder': {
+    case isPlaceholder: {
       return (
         <Box
           flexDirection="row"

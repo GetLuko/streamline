@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@shopify/restyle';
-import { theme } from '.';
+import { disabledAnimationTheme, theme } from '.';
 import AnimationContextProvider from '../contexts/disable-animation.context';
 
 type StreamlineThemeProviderProps = {
@@ -15,6 +15,8 @@ export const StreamlineThemeProvider = ({
   disableAnimation = false,
 }: StreamlineThemeProviderProps) => (
   <AnimationContextProvider disableAnimation={disableAnimation}>
-    <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    <ThemeProvider theme={disableAnimation ? disabledAnimationTheme : theme}>
+      {children}
+    </ThemeProvider>
   </AnimationContextProvider>
 );

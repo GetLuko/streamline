@@ -19,6 +19,7 @@ export const Tag = ({
   return (
     <Box
       backgroundColor={colors.backgroundColor}
+      borderRadius="round"
       alignItems="center"
       flexDirection="row"
       paddingHorizontal="xs"

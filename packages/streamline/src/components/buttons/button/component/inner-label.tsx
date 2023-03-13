@@ -20,15 +20,19 @@ const InnerLabel = ({
   appearance,
   size,
   text,
-}: Pick<ButtonProps, 'isLoading' | 'appearance' | 'size' | 'text'>) => {
+  isPlaceholder,
+}: Pick<
+  ButtonProps,
+  'isLoading' | 'appearance' | 'isPlaceholder' | 'size' | 'text'
+>) => {
   const styles = useStyles(appearance);
   const textColor = getTextColor(appearance);
 
   switch (true) {
-    case size === 'mini' && appearance === 'placeholder': {
+    case size === 'mini' && isPlaceholder: {
       return null;
     }
-    case appearance === 'placeholder': {
+    case isPlaceholder: {
       return (
         <Box
           style={{

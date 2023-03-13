@@ -9,8 +9,10 @@ export const getPressableBackgroundColor =
   ({
     pressed,
     isTouched,
+    isPlaceholder,
   }: {
     isTouched?: boolean;
+    isPlaceholder?: boolean;
     pressed: PressableStateCallbackType['pressed'];
   }) => {
     let backgroundColor: string;
@@ -32,7 +34,6 @@ export const getPressableBackgroundColor =
       }
     } else {
       switch (variant) {
-        case 'placeholder':
         case 'neutral':
         case 'disabled':
           backgroundColor = colors.GREY_100;
@@ -47,6 +48,10 @@ export const getPressableBackgroundColor =
         default:
           backgroundColor = colors.BLUKO_500;
       }
+    }
+
+    if (isPlaceholder) {
+      backgroundColor = colors.GREY_100;
     }
 
     return { backgroundColor };

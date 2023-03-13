@@ -24,6 +24,7 @@ export const Button = ({
   isTouched,
   onPress,
   text,
+  isPlaceholder = false,
 }: ButtonProps) => {
   const innerAppearanceValue = getInnerAppearance({
     isDisabled,
@@ -36,7 +37,6 @@ export const Button = ({
     console.warn('Icon is only supported for mini buttons');
   }
 
-  const isPlaceholder = appearance === 'placeholder';
   const { animatedStyle, onLayout } = useLoadingAnimation({
     size,
     isPlaceholder,
@@ -58,6 +58,7 @@ export const Button = ({
         styles.pressableBackgroundColor({
           pressed: pressableState.pressed,
           isTouched,
+          isPlaceholder,
         }),
       ]}
       onPress={handlePress}
@@ -77,12 +78,14 @@ export const Button = ({
           appearance={innerAppearanceValue}
           iconName={iconName}
           size={size}
+          isPlaceholder={isPlaceholder}
         />
         <InnerLabel
           isLoading={isResolving || isLoading}
           size={size}
           appearance={innerAppearanceValue}
           text={text}
+          isPlaceholder={isPlaceholder}
         />
       </AnimatedBox>
     </Pressable>

@@ -1,20 +1,13 @@
+import { InteractionType } from '../../../';
 import { PressableProps } from 'react-native';
 import { SmallIconName } from '../../../primitives/icon/icon.types';
 import { Appearance } from '../../../theme/appearance';
 
-export type ButtonProps = {
+export type ButtonProps = Omit<InteractionType, 'accessibilityLabel'> & {
   /**
    * The text to display. Upper first char automaticaly.
    */
   text: string;
-  /**
-   * Whether the press behavior is disabled.
-   */
-  isDisabled?: boolean;
-  /**
-   * Whether the button is loading.
-   */
-  isLoading?: boolean;
   /**
    * Whether the button is touched.
    */
@@ -35,4 +28,8 @@ export type ButtonProps = {
    * The delay in ms before the onPress callback is called.
    */
   debounceDelay?: number;
+  /**
+   * Display as a Placeholder.
+   */
+  isPlaceholder?: boolean;
 } & Omit<PressableProps, 'children' | 'disabled' | 'style'>;

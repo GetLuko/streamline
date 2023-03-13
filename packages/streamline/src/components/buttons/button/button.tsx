@@ -25,11 +25,11 @@ export const Button = ({
   onPress,
   text,
 }: ButtonProps) => {
-  const inneAppearanceValue = getInnerAppearance({
+  const innerAppearanceValue = getInnerAppearance({
     isDisabled,
     appearance,
   });
-  const styles = useStyles(size, inneAppearanceValue);
+  const styles = useStyles(size, innerAppearanceValue);
   const isMini = size === 'mini';
 
   if (!isNil(iconName) && !isMini) {
@@ -74,14 +74,14 @@ export const Button = ({
       >
         <InnerIcon
           isLoading={isResolving || isLoading}
-          appearance={inneAppearanceValue}
+          appearance={innerAppearanceValue}
           iconName={iconName}
           size={size}
         />
         <InnerLabel
           isLoading={isResolving || isLoading}
           size={size}
-          appearance={inneAppearanceValue}
+          appearance={innerAppearanceValue}
           text={text}
         />
       </AnimatedBox>

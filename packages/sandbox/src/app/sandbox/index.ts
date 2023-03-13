@@ -4,6 +4,7 @@ import { ButtonSandbox } from './docs/button.doc';
 import { CardSandbox } from './docs/card.doc';
 import { IconsSandbox } from './docs/icon.doc';
 import { SpinnerSandbox } from './docs/spinner.doc';
+import { TagSandbox } from './docs/tag.doc';
 import { TypoSandbox } from './docs/text.doc';
 
 type SandBoxItemType = {
@@ -23,10 +24,16 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'Box', SandBox: BoxSandbox },
       { title: 'Icons', SandBox: IconsSandbox },
       { title: 'Typo', SandBox: TypoSandbox },
-      { title: 'Spinner', SandBox: SpinnerSandbox },
+      { title: 'Card', SandBox: CardSandbox },
+    ],
+  },
+  {
+    title: 'Components',
+    items: [
       { title: 'Button', SandBox: ButtonSandbox },
       { title: 'Button Mini', SandBox: ButtonMiniSandbox },
-      { title: 'Card', SandBox: CardSandbox },
+      { title: 'Spinner', SandBox: SpinnerSandbox },
+      { title: 'Tag', SandBox: TagSandbox },
     ],
   },
 ];

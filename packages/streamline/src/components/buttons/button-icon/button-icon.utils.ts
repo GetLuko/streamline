@@ -79,6 +79,7 @@ export const getButtonIconSize = (size: Size) => {
     case 'regular':
       return { width: 36, height: 36 };
     case 'small':
+    case 'extraSmall':
       return { width: 24, height: 24 };
   }
 };

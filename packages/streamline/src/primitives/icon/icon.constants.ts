@@ -1,4 +1,5 @@
 export const ICON_SIZE = {
-  small: 12,
+  extraSmall: 12,
+  small: 16,
   regular: 20,
 };

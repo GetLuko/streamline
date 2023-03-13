@@ -21,7 +21,10 @@ export const IconSvg = ({ iconName, size, color }: Props) => {
   const totalIconSize = ICON_SIZE[size];
   const sanitizedIconName = sanitizeIconName(iconName);
 
-  if (size === 'small' && isCorrectSmallIconName(sanitizedIconName)) {
+  if (
+    (size === 'small' || size === 'extraSmall') &&
+    isCorrectSmallIconName(sanitizedIconName)
+  ) {
     return React.createElement(SmallIcons[sanitizedIconName], {
       color,
       width: totalIconSize,

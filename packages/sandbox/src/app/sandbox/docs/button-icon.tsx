@@ -67,37 +67,37 @@ export const ButtonIconSandbox = () => (
     </Box>
     <Box>
       <ButtonIcon
-        size="small"
+        size="extraSmall"
         accessibilityLabel="test"
         iconName="Cross"
         appearance="primary"
       />
       <ButtonIcon
-        size="small"
+        size="extraSmall"
         accessibilityLabel="test"
         iconName="Cross"
         appearance="secondary"
       />
       <ButtonIcon
-        size="small"
+        size="extraSmall"
         accessibilityLabel="test"
         iconName="Cross"
         appearance="neutral"
       />
       <ButtonIcon
-        size="small"
+        size="extraSmall"
         accessibilityLabel="test"
         iconName="Cross"
         appearance="danger"
       />
       <ButtonIcon
-        size="small"
+        size="extraSmall"
         accessibilityLabel="test"
         iconName="Cross"
         isLoading
       />
       <ButtonIcon
-        size="small"
+        size="extraSmall"
         accessibilityLabel="test"
         iconName="Cross"
         isDisabled
@@ -105,42 +105,42 @@ export const ButtonIconSandbox = () => (
     </Box>
     <Box>
       <ButtonIcon
-        size="small"
+        size="extraSmall"
         withContainer
         accessibilityLabel="test"
         iconName="Cross"
         appearance="primary"
       />
       <ButtonIcon
-        size="small"
+        size="extraSmall"
         withContainer
         accessibilityLabel="test"
         iconName="Cross"
         appearance="secondary"
       />
       <ButtonIcon
-        size="small"
+        size="extraSmall"
         withContainer
         accessibilityLabel="test"
         iconName="Cross"
         appearance="neutral"
       />
       <ButtonIcon
-        size="small"
+        size="extraSmall"
         withContainer
         accessibilityLabel="test"
         iconName="Cross"
         appearance="danger"
       />
       <ButtonIcon
-        size="small"
+        size="extraSmall"
         withContainer
         accessibilityLabel="test"
         iconName="Cross"
         isLoading
       />
       <ButtonIcon
-        size="small"
+        size="extraSmall"
         withContainer
         accessibilityLabel="test"
         iconName="Cross"

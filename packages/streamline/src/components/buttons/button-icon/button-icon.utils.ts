@@ -44,6 +44,7 @@ export const getButtonIconColors: GetButtonIconColors = ({
           backgroundColor: 'GREY_600',
         };
       case 'disabled':
+      default:
         return {
           color: 'PURE_WHITE_1000',
           backgroundColor: 'GREY_400',
@@ -64,10 +65,8 @@ export const getButtonIconColors: GetButtonIconColors = ({
         color: 'TERRA_500',
       };
     case 'neutral':
-      return {
-        color: 'PURE_WHITE_1000',
-      };
     case 'disabled':
+    default:
       return {
         color: 'PURE_WHITE_1000',
       };

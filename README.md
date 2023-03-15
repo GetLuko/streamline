@@ -46,7 +46,7 @@ yarn streamline:generate:icons:small
 Generate components
 
 ```
-yarn streamline:generate:component
+C=component-name yarn streamline:generate:component
 ```
 
 # Visual regression with Maestro
@@ -72,6 +72,10 @@ yarn sandbox:test:visual:[ios|android]
 ```
 yarn sandbox:test:visual:[ios|android]:compare
 ```
+
+📺 All good with your new screenshots?
+Then move them from `e2e/android/tempScreenshots` to `e2e/android/screenshots`
+And commit them to be reviewable in your Pull Request
 
 # Sandbox-E2E
 

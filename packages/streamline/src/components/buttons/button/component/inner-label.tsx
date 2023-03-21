@@ -12,7 +12,7 @@ import { stringCapitalize } from '../../../../utils/string.utils';
 import { Appearance } from '../../../../theme/appearance';
 import Spinner from '../../../spinner/spinner';
 
-const placeholder_WIDTH_MINI = 82;
+const MIN_WIDTH = 82;
 const LABEL_CONTAINER_HEIGHT = 24;
 
 const InnerLabel = ({
@@ -39,7 +39,7 @@ const InnerLabel = ({
             borderRadius: theme.borderRadii.lg,
           }}
           height={LABEL_CONTAINER_HEIGHT}
-          width={size === 'mini' ? placeholder_WIDTH_MINI : undefined}
+          width={size === 'mini' ? MIN_WIDTH : undefined}
           backgroundColor="GREY_200"
           overflow="hidden"
           flex={1}
@@ -51,7 +51,7 @@ const InnerLabel = ({
     case isLoading: {
       return (
         <AnimatedBox
-          width={LABEL_CONTAINER_HEIGHT}
+          width={MIN_WIDTH}
           height={LABEL_CONTAINER_HEIGHT}
           justifyContent="center"
           alignItems="center"

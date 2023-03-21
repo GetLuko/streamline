@@ -1,4 +1,4 @@
-import { Size } from '../../../primitives/icon/icon.types';
+import { GenericSize } from '../../../primitives/icon/icon.types';
 import { ColorTheme } from '../../../theme/';
 import { Appearance } from '../../../theme/appearance';
 
@@ -73,12 +73,11 @@ export const getButtonIconColors: GetButtonIconColors = ({
   }
 };
 
-export const getButtonIconSize = (size: Size) => {
+export const getButtonIconSize = (size: GenericSize) => {
   switch (size) {
-    case 'regular':
+    case 'large':
       return { width: 36, height: 36 };
-    case 'small':
-    case 'extraSmall':
+    case 'regular':
       return { width: 24, height: 24 };
   }
 };

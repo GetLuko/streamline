@@ -7,7 +7,8 @@ import * as SmallIcons from './generated/small';
 export type RegularIconsName = keyof typeof RegularIcons;
 export type SmallIconName = keyof typeof SmallIcons;
 
-export type Size = 'extraSmall' | 'small' | 'regular';
+export type GenericSize = 'regular' | 'large';
+export type Size = 'small' | GenericSize;
 
 export type RestyleProps = ColorProps<Theme>;
 export type IconsName = RegularIconsName | SmallIconName;

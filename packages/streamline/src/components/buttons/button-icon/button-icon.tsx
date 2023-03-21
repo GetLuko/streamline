@@ -27,6 +27,7 @@ export function ButtonIcon({
     isDisabled,
   });
   const buttonSize = getButtonIconSize(size);
+  const spinnerSize = size === 'large' ? 'regular' : 'small';
   const isBusy = isLoading || isResolving || isDisabled;
 
   return (
@@ -45,7 +46,7 @@ export function ButtonIcon({
         {...buttonSize}
       >
         {isLoading || isResolving ? (
-          <Spinner size={size} color={colors?.color} />
+          <Spinner size={spinnerSize} color={colors?.color} />
         ) : (
           <Icon iconName={iconName} size={size} color={colors?.color} />
         )}

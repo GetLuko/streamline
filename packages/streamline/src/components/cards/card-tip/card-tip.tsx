@@ -18,7 +18,7 @@ export const CardTip = ({
       flexDirection="row"
       alignItems="center"
     >
-      <Icon color={colors.iconColor} iconName={iconName} size="regular" />
+      <Icon color={colors.iconColor} iconName={iconName} size="large" />
       <Text color={colors.descriptionColor} marginLeft="md" variant="body">
         {description}
       </Text>

@@ -38,6 +38,9 @@ appId: ${APPID}
 - tapOn: 'Card >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Card
 - tapOn: 'Card'
+- tapOn: 'Tag >'
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Tag
+- tapOn: 'Tag'
 ##
 ## CI tests
 # - stopApp: host.exp.Exponent

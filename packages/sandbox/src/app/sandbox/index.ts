@@ -1,5 +1,5 @@
 import { BoxSandbox } from './docs/box.doc';
-import { ButtonIconSandbox } from './docs/button-icon';
+import { ButtonIconSandbox } from './docs/button-icon.doc';
 import { ButtonMiniSandbox } from './docs/button-mini.doc';
 import { ButtonSandbox } from './docs/button.doc';
 import { CardSandbox } from './docs/card.doc';

@@ -12,7 +12,7 @@ export const Tag = ({
   isSmall = false,
   text,
 }: TagProps) => {
-  const iconSize = isSmall ? 'extraSmall' : 'small';
+  const iconSize = isSmall ? 'small' : 'regular';
   const textVariant = isSmall ? 'captionBold' : 'subBodyBold';
   const colors = getTagColors({ appearance });
 

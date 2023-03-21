@@ -1,5 +1,11 @@
 export const ICON_SIZE = {
-  extraSmall: 12,
+  small: 12,
+  regular: 16,
+  large: 24,
+};
+
+export const SPINNER_SIZE = {
   small: 16,
-  regular: 20,
+  regular: 24,
+  large: 48,
 };

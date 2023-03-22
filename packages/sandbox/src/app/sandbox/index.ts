@@ -5,6 +5,8 @@ import { ButtonSandbox } from './docs/button.doc';
 import { CardSandbox } from './docs/card.doc';
 import { CardTipSandbox } from './docs/card-tip.doc';
 import { IconsSandbox } from './docs/icon.doc';
+import { InputTextTypesSandbox } from './docs/input-text-types.doc';
+import { InputTextSandbox } from './docs/input-text.doc';
 import { SpinnerSandbox } from './docs/spinner.doc';
 import { TagSandbox } from './docs/tag.doc';
 import { TypoSandbox } from './docs/text.doc';
@@ -24,20 +26,33 @@ export const sandboxItems: SandBoxSectionType[] = [
     title: 'Foundation',
     items: [
       { title: 'Box', SandBox: BoxSandbox },
-      { title: 'Card', SandBox: CardSandbox },
       { title: 'Icons', SandBox: IconsSandbox },
       { title: 'Typo', SandBox: TypoSandbox },
+      { title: 'Spinner', SandBox: SpinnerSandbox },
     ],
   },
   {
-    title: 'Components',
+    title: 'Buttons',
     items: [
       { title: 'Button', SandBox: ButtonSandbox },
       { title: 'Button Icon', SandBox: ButtonIconSandbox },
       { title: 'Button Mini', SandBox: ButtonMiniSandbox },
-      { title: 'CardTip', SandBox: CardTipSandbox },
       { title: 'Spinner', SandBox: SpinnerSandbox },
       { title: 'Tag', SandBox: TagSandbox },
+    ],
+  },
+  {
+    title: 'Cards',
+    items: [
+      { title: 'Card', SandBox: CardSandbox },
+      { title: 'CardTip', SandBox: CardTipSandbox },
+    ],
+  },
+  {
+    title: 'Inputs',
+    items: [
+      { title: 'InputText', SandBox: InputTextSandbox },
+      { title: 'InputText Types', SandBox: InputTextTypesSandbox },
     ],
   },
 ];

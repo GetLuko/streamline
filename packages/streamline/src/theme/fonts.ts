@@ -56,7 +56,6 @@ const regulars: Record<TextVariantRegular, TextStyle> = {
   body: {
     fontFamily: FontFamily.Default,
     fontSize: 16,
-    lineHeight: 24,
   },
   subBody: {
     fontFamily: FontFamily.Default,

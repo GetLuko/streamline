@@ -13,12 +13,12 @@ import { Box } from '../../primitives/box/box';
 import { SPINNER_SIZE } from '../../primitives/icon/icon.constants';
 import { Size } from '../../primitives/icon/icon.types';
 import { IconSvg } from '../../primitives/icon/IconSvg';
-import { ColorTheme, useStreamlineTheme } from '../../theme';
+import { ColorTheme } from '../../theme';
 
 export interface SpinnerProps {
   color?: ColorTheme;
-  size?: Size;
   testID?: string;
+  size?: Size;
 }
 
 export function Spinner({
@@ -26,13 +26,11 @@ export function Spinner({
   color = 'BLACK',
   testID,
 }: SpinnerProps) {
-  const theme = useStreamlineTheme();
   const { disableAnimation } = useContext(AnimationContext);
 
   const rotation = useSharedValue(0);
 
   const totalSize = SPINNER_SIZE[size];
-  const hexaColor = color ? theme.colors?.[color] : undefined;
 
   const animatedStyles = useAnimatedStyle(() => {
     return {
@@ -68,7 +66,7 @@ export function Spinner({
         alignItems="center"
         testID={testID}
       >
-        <IconSvg color={hexaColor} iconName="Loader" isSpinner size={size} />
+        <IconSvg color={color} iconName="Loader" isSpinner size={size} />
       </Box>
     </Animated.View>
   );

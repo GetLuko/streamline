@@ -20,19 +20,19 @@ const InnerLabel = ({
   appearance,
   size,
   text,
-  isPlaceholder,
+  isSkeleton,
 }: Pick<
   ButtonProps,
-  'isLoading' | 'appearance' | 'isPlaceholder' | 'size' | 'text'
+  'isLoading' | 'appearance' | 'isSkeleton' | 'size' | 'text'
 >) => {
   const styles = useStyles(appearance);
-  const textColor = getTextColor(appearance);
+  const textColor = getTextColor({ appearance, isSkeleton });
 
   switch (true) {
-    case size === 'mini' && isPlaceholder: {
+    case size === 'mini' && isSkeleton: {
       return null;
     }
-    case isPlaceholder: {
+    case isSkeleton: {
       return (
         <Box
           style={{

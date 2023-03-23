@@ -11,21 +11,21 @@ import { theme } from '../../../../theme';
 
 const InnerIcon = ({
   isLoading,
-  isPlaceholder,
+  isSkeleton,
   iconName,
   appearance,
   size,
 }: Pick<
   ButtonProps,
-  'isLoading' | 'appearance' | 'isPlaceholder' | 'size' | 'iconName'
+  'isLoading' | 'appearance' | 'isSkeleton' | 'size' | 'iconName'
 >) => {
   switch (true) {
     case isLoading:
     case size !== 'mini':
-    case iconName === undefined && !isPlaceholder: {
+    case iconName === undefined && !isSkeleton: {
       return null;
     }
-    case isPlaceholder: {
+    case isSkeleton: {
       return (
         <Box
           flexDirection="row"
@@ -75,7 +75,7 @@ const InnerIcon = ({
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             iconName={iconName}
-            color={getTextColor(appearance)}
+            color={getTextColor({ appearance, isSkeleton })}
           />
         </AnimatedBox>
       );

@@ -8,11 +8,11 @@ import {
 import { ButtonProps } from '../button.types';
 
 export const useLoadingAnimation = ({
-  isPlaceholder,
+  isSkeleton,
   size,
 }: {
   size: ButtonProps['size'];
-  isPlaceholder: boolean;
+  isSkeleton: boolean;
 }) => {
   const initialWidth = useSharedValue(0);
   const initialPlaceholderWidth = useSharedValue(0);
@@ -29,14 +29,14 @@ export const useLoadingAnimation = ({
       };
     }
     return {
-      width: isPlaceholder
+      width: isSkeleton
         ? withTiming(initialPlaceholderWidth.value)
         : withTiming(initialWidth.value),
     };
   });
 
   const onLayout = (event: LayoutChangeEvent) => {
-    if (size === 'mini' && initialWidth.value === 0 && !isPlaceholder) {
+    if (size === 'mini' && initialWidth.value === 0 && !isSkeleton) {
       initialWidth.value = event.nativeEvent.layout.width;
     }
     if (size === 'mini' && initialPlaceholderWidth.value === 0) {

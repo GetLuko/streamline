@@ -33,6 +33,9 @@ appId: ${APPID}
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/ButtonMini
 - tapOn: 'Button Mini'
 - tapOn: 'Button Icon >'
+- extendedWaitUntil:
+    visible: 'Button Icon'
+    timeout: 5000
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/ButtonIcon
 - tapOn: 'Button Icon'
 - tapOn: 'Card >'

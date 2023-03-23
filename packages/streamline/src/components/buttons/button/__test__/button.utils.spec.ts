@@ -73,7 +73,7 @@ describe('Button.utils', () => {
       // GIVEN
       const appearance: ButtonProps['appearance'] = 'primary';
       // WHEN
-      const result = getTextColor(appearance);
+      const result = getTextColor({ appearance });
       // THEN
       expect(result).toEqual('PURE_WHITE_1000');
     });
@@ -81,7 +81,7 @@ describe('Button.utils', () => {
       // GIVEN
       const appearance: ButtonProps['appearance'] = 'secondary';
       // WHEN
-      const result = getTextColor(appearance);
+      const result = getTextColor({ appearance });
       // THEN
       expect(result).toEqual('BLUKO_600');
     });
@@ -89,15 +89,16 @@ describe('Button.utils', () => {
       // GIVEN
       const appearance: ButtonProps['appearance'] = 'danger';
       // WHEN
-      const result = getTextColor(appearance);
+      const result = getTextColor({ appearance });
       // THEN
       expect(result).toEqual('PURE_WHITE_1000');
     });
-    it('should return color when variant is skeleton', () => {
+    it('should return color when is skeleton', () => {
       // GIVEN
-      const appearance: ButtonProps['appearance'] = 'placeholder';
+      const appearance: ButtonProps['appearance'] = 'secondary';
+      const isSkeleton = true;
       // WHEN
-      const result = getTextColor(appearance);
+      const result = getTextColor({ appearance, isSkeleton });
       // THEN
       expect(result).toEqual('PURE_WHITE_1000');
     });
@@ -105,7 +106,7 @@ describe('Button.utils', () => {
       // GIVEN
       const appearance: ButtonProps['appearance'] = 'disabled';
       // WHEN
-      const result = getTextColor(appearance);
+      const result = getTextColor({ appearance });
       // THEN
       expect(result).toEqual('GREY_400');
     });

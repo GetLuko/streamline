@@ -24,7 +24,7 @@ export const Button = ({
   isTouched,
   onPress,
   text,
-  isPlaceholder = false,
+  isSkeleton = false,
 }: ButtonProps) => {
   const innerAppearanceValue = getInnerAppearance({
     isDisabled,
@@ -39,13 +39,13 @@ export const Button = ({
 
   const { animatedStyle, onLayout } = useLoadingAnimation({
     size,
-    isPlaceholder,
+    isSkeleton,
   });
 
   const [handlePress, isResolving] = usePress({ onPress });
 
   const buttonIsDisabled =
-    isPlaceholder || isDisabled || isLoading || isTouched || isResolving;
+    isSkeleton || isDisabled || isLoading || isTouched || isResolving;
 
   return (
     <Pressable
@@ -58,7 +58,7 @@ export const Button = ({
         styles.pressableBackgroundColor({
           pressed: pressableState.pressed,
           isTouched,
-          isPlaceholder,
+          isSkeleton,
         }),
       ]}
       onPress={handlePress}
@@ -78,14 +78,14 @@ export const Button = ({
           appearance={innerAppearanceValue}
           iconName={iconName}
           size={size}
-          isPlaceholder={isPlaceholder}
+          isSkeleton={isSkeleton}
         />
         <InnerLabel
           isLoading={isResolving || isLoading}
           size={size}
           appearance={innerAppearanceValue}
           text={text}
-          isPlaceholder={isPlaceholder}
+          isSkeleton={isSkeleton}
         />
       </AnimatedBox>
     </Pressable>

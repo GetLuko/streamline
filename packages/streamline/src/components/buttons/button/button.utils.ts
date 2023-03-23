@@ -9,13 +9,17 @@ export const getPressableBackgroundColor =
   ({
     pressed,
     isTouched,
-    isPlaceholder,
+    isSkeleton,
   }: {
     isTouched?: boolean;
-    isPlaceholder?: boolean;
+    isSkeleton?: boolean;
     pressed: PressableStateCallbackType['pressed'];
   }) => {
     let backgroundColor: string;
+
+    if (isSkeleton) {
+      return { backgroundColor: colors.GREY_100 };
+    }
 
     if (pressed || isTouched) {
       switch (variant) {
@@ -50,10 +54,6 @@ export const getPressableBackgroundColor =
       }
     }
 
-    if (isPlaceholder) {
-      backgroundColor = colors.GREY_100;
-    }
-
     return { backgroundColor };
   };
 
@@ -71,8 +71,18 @@ export const getInnerAppearance = ({
   return appearance;
 };
 
-export const getTextColor = (variant: ButtonProps['appearance']) => {
-  switch (variant) {
+const DEFAULT_TEXT_COLOR = 'PURE_WHITE_1000';
+export const getTextColor = ({
+  appearance,
+  isSkeleton,
+}: {
+  appearance: ButtonProps['appearance'];
+  isSkeleton?: boolean;
+}) => {
+  if (isSkeleton) {
+    return DEFAULT_TEXT_COLOR;
+  }
+  switch (appearance) {
     case 'neutral':
       return 'GREY_1000';
     case 'secondary':
@@ -82,6 +92,6 @@ export const getTextColor = (variant: ButtonProps['appearance']) => {
     case 'danger':
     case 'primary':
     default:
-      return 'PURE_WHITE_1000';
+      return DEFAULT_TEXT_COLOR;
   }
 };

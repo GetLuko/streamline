@@ -18,7 +18,7 @@ export const ButtonSandbox = () => (
       <Button appearance="danger" text="Danger" />
     </Box>
     <Box paddingVertical="xxs">
-      <Button isPlaceholder text="Placeholder" />
+      <Button isSkeleton text="Placeholder" />
     </Box>
     <Box paddingVertical="xxs">
       <Button text="primary" isLoading appearance="primary" />

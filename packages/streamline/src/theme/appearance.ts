@@ -4,6 +4,5 @@ export type Appearance =
   | 'danger'
   | 'neutral'
   | 'disabled'
-  | 'placeholder'
   | 'success'
   | 'warning';

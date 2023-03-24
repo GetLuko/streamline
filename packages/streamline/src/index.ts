@@ -2,6 +2,7 @@ import * as GeneratedRegularIcons from './primitives/icon/generated/regular';
 
 export * from './components/buttons/button/button';
 export * from './components/buttons/button-icon/button-icon';
+export * from './components/cards/card-callout/card-callout';
 export * from './components/spinner/spinner';
 export * from './components/tag/tag';
 export * from './primitives/animated-box/animated-box';

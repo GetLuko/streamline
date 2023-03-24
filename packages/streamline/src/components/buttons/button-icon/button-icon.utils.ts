@@ -13,6 +13,8 @@ type GetButtonIconColors = ({
 }) => {
   color: ColorTheme;
   backgroundColor?: ColorTheme;
+  opacity?: number;
+  backgroundOpacity?: number;
 };
 
 export const getButtonIconColors: GetButtonIconColors = ({
@@ -30,8 +32,10 @@ export const getButtonIconColors: GetButtonIconColors = ({
         };
       case 'secondary':
         return {
-          color: 'GREY_500',
-          backgroundColor: 'GREY_100',
+          color: 'GREY_1000',
+          backgroundColor: 'GREY_1000',
+          opacity: 0.4,
+          backgroundOpacity: 0.1,
         };
       case 'danger':
         return {

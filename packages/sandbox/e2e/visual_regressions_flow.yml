@@ -41,6 +41,9 @@ appId: ${APPID}
 - tapOn: 'Card >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Card
 - tapOn: 'Card'
+- tapOn: 'Card Callout >'
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/CardCallout
+- tapOn: 'Card Callout'
 - tapOn: 'Tag >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Tag
 - tapOn: 'Tag'

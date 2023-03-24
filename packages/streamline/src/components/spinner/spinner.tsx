@@ -17,6 +17,7 @@ import { ColorTheme, useStreamlineTheme } from '../../theme';
 
 export interface SpinnerProps {
   color?: ColorTheme;
+  opacity?: number;
   size?: Size;
   testID?: string;
 }
@@ -24,6 +25,7 @@ export interface SpinnerProps {
 export function Spinner({
   size = 'regular',
   color = 'BLACK',
+  opacity = 1,
   testID,
 }: SpinnerProps) {
   const theme = useStreamlineTheme();
@@ -66,6 +68,7 @@ export function Spinner({
         height={totalSize}
         justifyContent="center"
         alignItems="center"
+        opacity={opacity}
         testID={testID}
       >
         <IconSvg color={hexaColor} iconName="Loader" isSpinner size={size} />

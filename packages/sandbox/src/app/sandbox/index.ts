@@ -2,6 +2,7 @@ import { BoxSandbox } from './docs/box.doc';
 import { ButtonIconSandbox } from './docs/button-icon.doc';
 import { ButtonMiniSandbox } from './docs/button-mini.doc';
 import { ButtonSandbox } from './docs/button.doc';
+import { CardCalloutSandbox } from './docs/card-callout.doc';
 import { CardSandbox } from './docs/card.doc';
 import { IconsSandbox } from './docs/icon.doc';
 import { SpinnerSandbox } from './docs/spinner.doc';
@@ -34,6 +35,7 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'Button', SandBox: ButtonSandbox },
       { title: 'Button Icon', SandBox: ButtonIconSandbox },
       { title: 'Button Mini', SandBox: ButtonMiniSandbox },
+      { title: 'Card Callout', SandBox: CardCalloutSandbox },
       { title: 'Spinner', SandBox: SpinnerSandbox },
       { title: 'Tag', SandBox: TagSandbox },
     ],

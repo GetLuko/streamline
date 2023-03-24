@@ -37,18 +37,32 @@ export function ButtonIcon({
       onPress={handlePress}
       busy={isBusy}
       disabled={isBusy}
+      activeOpacity={0.7}
     >
-      <AnimatedBox
-        alignItems="center"
-        justifyContent="center"
-        backgroundColor={withContainer ? colors?.backgroundColor : undefined}
-        borderRadius={withContainer ? 'round' : undefined}
-        {...buttonSize}
-      >
+      <AnimatedBox alignItems="center" justifyContent="center" {...buttonSize}>
+        <AnimatedBox
+          position="absolute"
+          top={0}
+          right={0}
+          bottom={0}
+          left={0}
+          backgroundColor={withContainer ? colors?.backgroundColor : undefined}
+          borderRadius={withContainer ? 'round' : undefined}
+          opacity={colors.backgroundOpacity}
+        />
         {isLoading || isResolving ? (
-          <Spinner size={spinnerSize} color={colors?.color} />
+          <Spinner
+            size={spinnerSize}
+            color={colors?.color}
+            opacity={colors.opacity}
+          />
         ) : (
-          <Icon iconName={iconName} size={size} color={colors?.color} />
+          <Icon
+            iconName={iconName}
+            size={size}
+            color={colors?.color}
+            opacity={colors.opacity}
+          />
         )}
       </AnimatedBox>
     </TouchableOpacity>

@@ -5,7 +5,7 @@ import { ButtonProps } from '../button.types';
 import { getTextColor } from '../button.utils';
 import { AnimatedBox } from '../../../../primitives/animated-box/animated-box';
 import { Text } from '../../../../primitives/text/text';
-import { theme, useStreamlineTheme } from '../../../../theme';
+import { useStreamlineTheme } from '../../../../theme';
 import { Box } from '../../../../primitives/box/box';
 import PlaceholderAnimation from '../../../placeholder/placeholder-animation/placeholder-animation';
 import { stringCapitalize } from '../../../../utils/string.utils';
@@ -35,9 +35,7 @@ const InnerLabel = ({
     case isSkeleton: {
       return (
         <Box
-          style={{
-            borderRadius: theme.borderRadii.lg,
-          }}
+          borderRadius="md"
           height={LABEL_CONTAINER_HEIGHT}
           width={size === 'mini' ? MIN_WIDTH : undefined}
           backgroundColor="GREY_200"

@@ -27,14 +27,14 @@ export const getPressableBackgroundColor =
           backgroundColor = colors.BLUKO_150;
           break;
         case 'danger':
-          backgroundColor = colors.TERRA_400;
+          backgroundColor = colors.TERRA_600;
           break;
         case 'neutral':
           backgroundColor = colors.GREY_150;
           break;
         case 'primary':
         default:
-          backgroundColor = colors.BLUKO_400;
+          backgroundColor = colors.BLUKO_600;
       }
     } else {
       switch (variant) {

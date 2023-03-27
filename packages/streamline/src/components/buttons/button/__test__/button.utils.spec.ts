@@ -46,7 +46,7 @@ describe('Button.utils', () => {
         isTouched,
       });
       // THEN
-      expect(result).toEqual({ backgroundColor: '#5875EC' });
+      expect(result).toEqual({ backgroundColor: '#2441C5' });
     });
     it('should return backgroundColor when pressed is false', () => {
       // GIVEN

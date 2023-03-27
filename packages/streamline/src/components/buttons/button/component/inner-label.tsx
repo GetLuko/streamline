@@ -7,7 +7,7 @@ import { AnimatedBox } from '../../../../primitives/animated-box/animated-box';
 import { Text } from '../../../../primitives/text/text';
 import { useStreamlineTheme } from '../../../../theme';
 import { Box } from '../../../../primitives/box/box';
-import PlaceholderAnimation from '../../../placeholder/placeholder-animation/placeholder-animation';
+import { SkeletonAnimation } from '../../../skeleton/skeleton-animation/skeleton-animation';
 import { stringCapitalize } from '../../../../utils/string.utils';
 import { Appearance } from '../../../../theme/appearance';
 import Spinner from '../../../spinner/spinner';
@@ -42,7 +42,7 @@ const InnerLabel = ({
           overflow="hidden"
           flex={1}
         >
-          <PlaceholderAnimation />
+          <SkeletonAnimation />
         </Box>
       );
     }

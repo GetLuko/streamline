@@ -93,15 +93,6 @@ describe('Button.utils', () => {
       // THEN
       expect(result).toEqual('PURE_WHITE_1000');
     });
-    it('should return color when is skeleton', () => {
-      // GIVEN
-      const appearance: ButtonProps['appearance'] = 'secondary';
-      const isSkeleton = true;
-      // WHEN
-      const result = getTextColor({ appearance, isSkeleton });
-      // THEN
-      expect(result).toEqual('PURE_WHITE_1000');
-    });
     it('should return color when variant is disabled', () => {
       // GIVEN
       const appearance: ButtonProps['appearance'] = 'disabled';

@@ -17,7 +17,7 @@ export const InputTextOutline = ({
     <>
       {hasActiveOutline && (
         <Box
-          borderRadius="md"
+          borderRadius="lg"
           position="absolute"
           top={FOCUS_OUTLINE_OVERFLOW_OFFSET}
           left={FOCUS_OUTLINE_OVERFLOW_OFFSET}
@@ -36,7 +36,7 @@ export const InputTextOutline = ({
         bottom={0}
         backgroundColor={backgroundColor}
         borderColor={hasActiveOutline ? activeColor : outlineColor}
-        borderRadius="md"
+        borderRadius="lg"
         borderWidth={OUTLINE_WIDTH}
       />
     </>

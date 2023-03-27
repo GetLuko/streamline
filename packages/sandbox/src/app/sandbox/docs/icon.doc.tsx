@@ -21,9 +21,17 @@ export const IconsSandbox = () => {
     >
       {iconNames.map((iconName) => (
         <TouchableOpacity key={iconName} onPress={onPress(iconName)}>
-          <Icon iconName={iconName} size="regular" />
+          <Icon iconName={iconName} size="small" />
         </TouchableOpacity>
       ))}
+
+      <View style={{ marginTop: 40, flexDirection: 'row', flexWrap: 'wrap' }}>
+        {iconNames.map((iconName) => (
+          <TouchableOpacity key={iconName} onPress={onPress(iconName)}>
+            <Icon iconName={iconName} size="regular" />
+          </TouchableOpacity>
+        ))}
+      </View>
 
       <View style={{ marginTop: 40, flexDirection: 'row', flexWrap: 'wrap' }}>
         {iconNames.map((iconName) => (

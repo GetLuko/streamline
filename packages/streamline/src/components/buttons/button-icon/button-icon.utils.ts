@@ -1,4 +1,4 @@
-import { Size } from '../../../primitives/icon/icon.types';
+import { GenericSize } from '../../../primitives/icon/icon.types';
 import { ColorTheme } from '../../../theme/';
 import { Appearance } from '../../../theme/appearance';
 
@@ -44,6 +44,7 @@ export const getButtonIconColors: GetButtonIconColors = ({
           backgroundColor: 'GREY_600',
         };
       case 'disabled':
+      default:
         return {
           color: 'PURE_WHITE_1000',
           backgroundColor: 'GREY_400',
@@ -64,21 +65,19 @@ export const getButtonIconColors: GetButtonIconColors = ({
         color: 'TERRA_500',
       };
     case 'neutral':
-      return {
-        color: 'PURE_WHITE_1000',
-      };
     case 'disabled':
+    default:
       return {
         color: 'PURE_WHITE_1000',
       };
   }
 };
 
-export const getButtonIconSize = (size: Size) => {
+export const getButtonIconSize = (size: GenericSize) => {
   switch (size) {
-    case 'regular':
+    case 'large':
       return { width: 36, height: 36 };
-    case 'small':
+    case 'regular':
       return { width: 24, height: 24 };
   }
 };

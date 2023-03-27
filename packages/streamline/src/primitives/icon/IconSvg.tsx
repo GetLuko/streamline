@@ -1,7 +1,7 @@
 import { Box } from '../box/box';
 import React from 'react';
 
-import { ICON_SIZE } from './icon.constants';
+import { ICON_SIZE, SPINNER_SIZE } from './icon.constants';
 import { IconsName, Size } from './icon.types';
 import {
   isCorrectRegularIconName,
@@ -15,13 +15,22 @@ type Props = {
   color?: string;
   size: Size;
   iconName?: IconsName;
+  isSpinner?: boolean;
 };
 
-export const IconSvg = ({ iconName, size, color }: Props) => {
-  const totalIconSize = ICON_SIZE[size];
+export const IconSvg = ({
+  iconName,
+  size,
+  color,
+  isSpinner = false,
+}: Props) => {
+  const totalIconSize = isSpinner ? SPINNER_SIZE[size] : ICON_SIZE[size];
   const sanitizedIconName = sanitizeIconName(iconName);
 
-  if (size === 'small' && isCorrectSmallIconName(sanitizedIconName)) {
+  if (
+    (size === 'small' || size === 'regular') &&
+    isCorrectSmallIconName(sanitizedIconName)
+  ) {
     return React.createElement(SmallIcons[sanitizedIconName], {
       color,
       width: totalIconSize,

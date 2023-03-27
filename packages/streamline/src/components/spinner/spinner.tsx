@@ -9,19 +9,30 @@ import Animated, {
 } from 'react-native-reanimated';
 import { AnimationContext } from '../../contexts/disable-animation.context';
 
-import { Icon } from '../../primitives/icon/icon';
+import { Box } from '../../primitives/box/box';
+import { SPINNER_SIZE } from '../../primitives/icon/icon.constants';
 import { Size } from '../../primitives/icon/icon.types';
-import { ColorTheme } from '../../theme';
+import { IconSvg } from '../../primitives/icon/IconSvg';
+import { ColorTheme, useStreamlineTheme } from '../../theme';
 
 export interface SpinnerProps {
-  size?: Size;
   color?: ColorTheme;
+  size?: Size;
+  testID?: string;
 }
 
-export function Spinner({ size = 'regular', color = 'BLACK' }: SpinnerProps) {
+export function Spinner({
+  size = 'regular',
+  color = 'BLACK',
+  testID,
+}: SpinnerProps) {
+  const theme = useStreamlineTheme();
   const { disableAnimation } = useContext(AnimationContext);
 
   const rotation = useSharedValue(0);
+
+  const totalSize = SPINNER_SIZE[size];
+  const hexaColor = color ? theme.colors?.[color] : undefined;
 
   const animatedStyles = useAnimatedStyle(() => {
     return {
@@ -50,7 +61,15 @@ export function Spinner({ size = 'regular', color = 'BLACK' }: SpinnerProps) {
 
   return (
     <Animated.View style={animatedStyles}>
-      <Icon size={size} color={color} iconName="Loader" />
+      <Box
+        width={totalSize}
+        height={totalSize}
+        justifyContent="center"
+        alignItems="center"
+        testID={testID}
+      >
+        <IconSvg color={hexaColor} iconName="Loader" isSpinner size={size} />
+      </Box>
     </Animated.View>
   );
 }

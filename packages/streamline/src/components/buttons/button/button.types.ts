@@ -29,7 +29,7 @@ export type ButtonProps = Omit<InteractionType, 'accessibilityLabel'> & {
    */
   debounceDelay?: number;
   /**
-   * Display as a Skeleton placeholder.
+   * Display as a Skeleton.
    */
   isSkeleton?: boolean;
 } & Omit<PressableProps, 'children' | 'disabled' | 'style'>;

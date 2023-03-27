@@ -54,6 +54,10 @@ export const getPressableBackgroundColor =
       }
     }
 
+    if (isSkeleton) {
+      backgroundColor = colors.GREY_100;
+    }
+
     return { backgroundColor };
   };
 

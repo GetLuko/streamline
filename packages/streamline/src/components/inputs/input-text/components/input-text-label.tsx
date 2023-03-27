@@ -27,11 +27,11 @@ const getColor = ({
   error?: boolean;
   disabled?: boolean;
 }) => {
-  let color: ColorTheme = 'GREY_1000';
   if (error) {
-    color = 'TERRA_500';
-  } else if (disabled) {
-    color = 'GREY_300';
+    return 'TERRA_500';
   }
-  return color;
+  if (disabled) {
+    return 'GREY_300';
+  }
+  return 'GREY_1000';
 };

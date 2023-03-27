@@ -38,13 +38,6 @@ describe('InputText', () => {
     expect(getByText('Kw/h')).toBeTruthy();
   });
 
-  it('should render InputText with loading', () => {
-    const { getByTestId } = renderWithProvider(
-      <InputText label="label" isLoading />
-    );
-    expect(getByTestId('input-text-icon-loading')).toBeTruthy();
-  });
-
   it('should update InputText', async () => {
     // Given
     const onChangeTextMock = jest.fn();

@@ -18,6 +18,7 @@ export function ButtonIcon({
   size = 'regular',
   isLoading = false,
   isDisabled = false,
+  testID,
 }: ButtonIconProps) {
   const [handlePress, isResolving] = usePress({ onPress });
 
@@ -37,6 +38,7 @@ export function ButtonIcon({
       onPress={handlePress}
       busy={isBusy}
       disabled={isBusy}
+      testID={testID}
     >
       <AnimatedBox
         alignItems="center"

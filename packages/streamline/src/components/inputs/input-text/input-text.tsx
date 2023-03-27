@@ -17,7 +17,6 @@ export const InputText = React.forwardRef<RefNativeTextInput, TextInputProps>(
       isEditable = true,
       isFocused = false,
       multiline = false,
-      isLoading = false,
       numberOfLines = 1,
       placeholder = '',
       secureTextEntry,
@@ -80,7 +79,7 @@ export const InputText = React.forwardRef<RefNativeTextInput, TextInputProps>(
           root = ref;
         }}
         accessibilityLabel={props.label}
-        isDisabled={isDisabled || isLoading}
+        isDisabled={isDisabled}
         isFocused={innerFocused}
         onBlur={handleBlur}
         onChangeText={handleChangeText}
@@ -92,8 +91,7 @@ export const InputText = React.forwardRef<RefNativeTextInput, TextInputProps>(
           props.type,
           pointerEvents,
           secureEntry,
-          handleSecureEntry,
-          isLoading
+          handleSecureEntry
         )}
         secureTextEntry={secureEntry}
         value={value}
@@ -111,16 +109,14 @@ const getRightComponent = (
   inputType?: string,
   pointerEvents?: ViewProps['pointerEvents'],
   secureEntry?: boolean,
-  handleSecureEntry?: () => void,
-  isLoading?: boolean
+  handleSecureEntry?: () => void
 ) => {
-  let rightComponent;
   if (rightIconName) {
-    rightComponent = <InputTextIcon name={rightIconName} />;
+    return <InputTextIcon name={rightIconName} />;
   }
 
   if (inputType === 'calendar') {
-    rightComponent = (
+    return (
       <InputTextIcon
         name="Calendar"
         forceTextInputFocus={true}
@@ -129,7 +125,7 @@ const getRightComponent = (
     );
   }
   if (inputType === 'password') {
-    rightComponent = (
+    return (
       <InputTextIcon
         name={secureEntry ? 'EyeClosed' : 'EyeOpen'}
         onPress={handleSecureEntry}
@@ -139,28 +135,17 @@ const getRightComponent = (
     );
   }
   if (inputType === 'select') {
-    rightComponent = (
+    return (
       <InputTextIcon
         name="ChevronDown"
         forceTextInputFocus={false}
         pointerEvents={pointerEvents}
-        loading={isLoading}
-      />
-    );
-  }
-  if (isLoading) {
-    rightComponent = (
-      <InputTextIcon
-        name="ChevronDown"
-        forceTextInputFocus={false}
-        pointerEvents={pointerEvents}
-        loading={isLoading}
       />
     );
   }
 
   if (unit) {
-    rightComponent = (
+    return (
       <Box paddingLeft="xs" paddingTop="xxs" pointerEvents="none">
         <Text variant="body" color="GREY_700">
           {unit}
@@ -168,5 +153,5 @@ const getRightComponent = (
       </Box>
     );
   }
-  return rightComponent;
+  return undefined;
 };

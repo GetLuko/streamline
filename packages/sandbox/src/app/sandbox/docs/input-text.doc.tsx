@@ -17,7 +17,6 @@ const docs: JSX.Element[] = [
     description="Description"
   />,
   <InputText label="Unit" placeholder="Placeholder" unit="Kw/h" />,
-  <InputText label="Loading" placeholder="Placeholder" isLoading />,
 ];
 
 export const InputTextSandbox = () => <DocList docs={docs} />;

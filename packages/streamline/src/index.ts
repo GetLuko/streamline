@@ -34,4 +34,8 @@ export type InteractionType = {
    * Callback when pressed
    */
   onPress?: () => void;
+  /**
+   * Id for tests
+   */
+  testID?: string;
 };

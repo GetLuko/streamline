@@ -30,7 +30,6 @@ export type TextInputProps = Omit<NativeTextInputProps, 'editable'> & {
   placeholder?: string;
   secureTextEntry?: boolean;
   type?: 'calendar' | 'password' | 'select';
-  isLoading?: boolean;
   value?: string;
   defaultValue?: string;
   render?: (props: any) => JSX.Element;

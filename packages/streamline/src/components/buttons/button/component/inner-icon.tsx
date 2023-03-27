@@ -6,7 +6,7 @@ import { getTextColor } from '../button.utils';
 import { Box } from '../../../../primitives/box/box';
 import { AnimatedBox } from '../../../../primitives/animated-box/animated-box';
 import { Icon } from '../../../../primitives/icon/icon';
-import PlaceholderAnimation from '../../../placeholder/placeholder-animation/placeholder-animation';
+import { SkeletonAnimation } from '../../../skeleton/skeleton-animation/skeleton-animation';
 import { theme } from '../../../../theme';
 
 const InnerIcon = ({
@@ -42,7 +42,7 @@ const InnerIcon = ({
                 backgroundColor="GREY_200"
                 overflow="hidden"
               >
-                <PlaceholderAnimation />
+                <SkeletonAnimation />
               </Box>
               <Box paddingRight="xs" />
             </>
@@ -54,7 +54,7 @@ const InnerIcon = ({
             backgroundColor="GREY_200"
             overflow="hidden"
           >
-            <PlaceholderAnimation />
+            <SkeletonAnimation />
           </Box>
         </Box>
       );

@@ -13,7 +13,7 @@ export type ButtonProps = Omit<InteractionType, 'accessibilityLabel'> & {
    */
   isTouched?: boolean;
   /**
-   * The variant of the button. Can be one of `primary`, `secondary`, `danger` or `neutral`.
+   * The variant of the button. Can be one of `primary`, `secondary`, `danger`, `neutral`.
    */
   appearance?: Appearance;
   /**
@@ -29,7 +29,7 @@ export type ButtonProps = Omit<InteractionType, 'accessibilityLabel'> & {
    */
   debounceDelay?: number;
   /**
-   * Display as a Skeleton placeholder.
+   * Display as a Skeleton.
    */
   isSkeleton?: boolean;
 } & Omit<PressableProps, 'children' | 'disabled' | 'style'>;

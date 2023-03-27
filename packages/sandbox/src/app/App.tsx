@@ -17,6 +17,7 @@ export const App = () => {
   const scrollViewRef = useRef<null | ScrollView>(null);
   const [fontsLoaded] = useFonts({
     'CircularXX-Bold': require('./fonts/CircularXX-Bold.otf'),
+    'CircularXX-Medium': require('./fonts/CircularXX-Medium.otf'),
     'CircularXX-Book': require('./fonts/CircularXX-Book.otf'),
   });
 

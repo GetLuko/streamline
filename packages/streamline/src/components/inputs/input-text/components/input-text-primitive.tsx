@@ -93,7 +93,7 @@ export const InputTextPrimitive = ({
   );
   return (
     <View style={containerStyle} pointerEvents={pointerEvents}>
-      {!!label && (
+      {label ? (
         <Box paddingBottom="xs">
           <InputTextLabel
             label={label}
@@ -101,7 +101,7 @@ export const InputTextPrimitive = ({
             disabled={isDisabled}
           />
         </Box>
-      )}
+      ) : null}
       <Box flexDirection={'row'} width={width} height={height}>
         {left ? (
           <View>

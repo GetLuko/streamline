@@ -127,6 +127,7 @@ export const InputTextPrimitive = ({
             <>
               <InputTextOutline
                 hasActiveOutline={isFocused}
+                backgroundColor={isDisabled ? 'GREY_25' : undefined}
                 {...getOutlineStyle({ error: isError })}
               />
               <Box

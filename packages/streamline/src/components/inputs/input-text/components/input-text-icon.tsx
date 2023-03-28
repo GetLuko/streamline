@@ -1,4 +1,4 @@
-import { IconsName } from '../../../../primitives/icon/icon.types';
+import { IconsName, Size } from '../../../../primitives/icon/icon.types';
 import React from 'react';
 import { ViewProps, StyleProp, ViewStyle } from 'react-native';
 import { Icon } from '../../../../primitives/icon/icon';
@@ -43,20 +43,17 @@ const getConfig = ({
 }: {
   disabled?: boolean;
   name: string;
-}) => {
-  let color: ColorTheme = 'BLUKO_500';
-  let extraStyle: StyleProp<ViewStyle>;
+}): { color: ColorTheme; extraStyle?: StyleProp<ViewStyle>; size?: Size } => {
   if (disabled) {
-    color = 'GREY_500';
+    return { color: 'GREY_500', size: 'large' };
   }
   if (name === 'ChevronDown') {
-    color = 'GREY_400';
-    extraStyle = { paddingTop: 4 };
+    return { color: 'GREY_400', extraStyle: { paddingTop: 4 }, size: 'large' };
   }
   if (name === 'ChevronDown' && disabled) {
-    color = 'GREY_300';
+    return { color: 'GREY_300', size: 'regular' };
   }
-  return { color, extraStyle };
+  return { color: 'BLUKO_500', size: 'large' };
 };
 
 export default function InputTextIcon({
@@ -90,7 +87,7 @@ export default function InputTextIcon({
         <Icon
           iconName={name}
           color={config.color}
-          size="large"
+          size={config.size}
           testID={'input-text-icon-' + name}
         />
       </TouchableOpacity>

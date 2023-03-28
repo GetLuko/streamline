@@ -1,8 +1,18 @@
 appId: ${APPID}
 ---
 - launchApp
-- tapOn: 'Sandbox'
-- tapOn: 'Foundation'
+- stopApp
+- openLink:
+    link: exp://192.168.31.62:19000
+    autoVerify: true
+- tapOn:
+    # bypass expo onboarding modal if you run the test on a fresh env
+    text: 'Got it'
+    optional: true
+- tapOn:
+    # bypass expo onboarding modal if you run the test on a fresh env
+    text: 'Foundation'
+    optional: true
 - tapOn: 'Box >'
 - waitForAnimationToEnd:
     timeout: 10000

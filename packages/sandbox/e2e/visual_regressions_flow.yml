@@ -41,6 +41,10 @@ appId: ${APPID}
 - tapOn: 'Card >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Card
 - tapOn: 'Card'
+- scrollUntilVisible:
+    element:
+      text: 'Inputs'
+    direction: DOWN
 - tapOn: 'CardTip >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/CardTip
 - tapOn: 'CardTip'

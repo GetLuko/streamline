@@ -9,7 +9,7 @@ export const TypoSandbox = () => (
     {fontsKeys.map((key) => (
       <Box key={key}>
         <Text
-          variant="bodyBold"
+          variant="body"
           color="BLUKO_1000"
           marginVertical="sm"
           style={{ backgroundColor: '#FFF4DE' }}

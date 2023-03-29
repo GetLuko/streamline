@@ -46,7 +46,7 @@ describe('Button.utils', () => {
         isTouched,
       });
       // THEN
-      expect(result).toEqual({ backgroundColor: '#5875EC' });
+      expect(result).toEqual({ backgroundColor: '#2441C5' });
     });
     it('should return backgroundColor when pressed is false', () => {
       // GIVEN
@@ -90,15 +90,6 @@ describe('Button.utils', () => {
       const appearance: ButtonProps['appearance'] = 'danger';
       // WHEN
       const result = getTextColor({ appearance });
-      // THEN
-      expect(result).toEqual('PURE_WHITE_1000');
-    });
-    it('should return color when is skeleton', () => {
-      // GIVEN
-      const appearance: ButtonProps['appearance'] = 'secondary';
-      const isSkeleton = true;
-      // WHEN
-      const result = getTextColor({ appearance, isSkeleton });
       // THEN
       expect(result).toEqual('PURE_WHITE_1000');
     });

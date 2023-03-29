@@ -15,7 +15,7 @@ export const useLoadingAnimation = ({
   isSkeleton: boolean;
 }) => {
   const initialWidth = useSharedValue(0);
-  const initialPlaceholderWidth = useSharedValue(0);
+  const initialSkeletonWidth = useSharedValue(0);
 
   const animatedStyle = useAnimatedStyle(() => {
     if (size === 'full') {
@@ -23,14 +23,14 @@ export const useLoadingAnimation = ({
         width: undefined,
       };
     }
-    if (initialWidth.value === 0 || initialPlaceholderWidth.value === 0) {
+    if (initialWidth.value === 0 || initialSkeletonWidth.value === 0) {
       return {
         width: undefined,
       };
     }
     return {
       width: isSkeleton
-        ? withTiming(initialPlaceholderWidth.value)
+        ? withTiming(initialSkeletonWidth.value)
         : withTiming(initialWidth.value),
     };
   });
@@ -39,8 +39,8 @@ export const useLoadingAnimation = ({
     if (size === 'mini' && initialWidth.value === 0 && !isSkeleton) {
       initialWidth.value = event.nativeEvent.layout.width;
     }
-    if (size === 'mini' && initialPlaceholderWidth.value === 0) {
-      initialPlaceholderWidth.value = event.nativeEvent.layout.width;
+    if (size === 'mini' && initialSkeletonWidth.value === 0) {
+      initialSkeletonWidth.value = event.nativeEvent.layout.width;
     }
   };
 

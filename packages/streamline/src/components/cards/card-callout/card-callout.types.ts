@@ -9,7 +9,7 @@ export type CardCalloutProps = {
   isSkeleton?: boolean;
   numberOfSkeletonLines?: number;
 } & Pick<HeaderProps, 'dismissAction' | 'header' | 'iconName'> &
-  CardProps;
+  Pick<CardProps, 'onLongPress' | 'onPress' | 'onPressIn' | 'onPressOut'>;
 
 export type HeaderProps = {
   colors: CardCalloutColors;

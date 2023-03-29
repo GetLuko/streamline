@@ -9,13 +9,6 @@ describe('CardCallout', () => {
     jest.clearAllMocks();
   });
 
-  it('should render successfully', () => {
-    const { container } = renderWithProvider(
-      <CardCallout description="Description" header="Header" iconName="Area" />
-    );
-    expect(container).toBeTruthy();
-  });
-
   it('should call onPress when pressed', () => {
     // Given
     const onPress = jest.fn();

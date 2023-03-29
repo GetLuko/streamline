@@ -5,6 +5,7 @@ import { TextStyle } from 'react-native';
  */
 const FontFamily = {
   Default: 'CircularXX-Book',
+  Medium: 'CircularXX-Medium',
   Bold: 'CircularXX-Bold',
 };
 
@@ -51,7 +52,6 @@ const regulars: Record<TextVariantRegular, TextStyle> = {
     fontFamily: FontFamily.Default,
     fontSize: 18,
     lineHeight: 24,
-    letterSpacing: -1,
   },
   body: {
     fontFamily: FontFamily.Default,
@@ -78,26 +78,26 @@ export const fonts: Record<TextVariants, TextStyle> = {
   },
   titleMediumBold: {
     ...regulars.titleMedium,
-    fontFamily: FontFamily.Bold,
+    fontFamily: FontFamily.Medium,
   },
   titleSmallBold: {
     ...regulars.titleSmall,
-    fontFamily: FontFamily.Bold,
+    fontFamily: FontFamily.Medium,
   },
   headlineBold: {
     ...regulars.headline,
-    fontFamily: FontFamily.Bold,
+    fontFamily: FontFamily.Medium,
   },
   bodyBold: {
     ...regulars.body,
-    fontFamily: FontFamily.Bold,
+    fontFamily: FontFamily.Medium,
   },
   subBodyBold: {
     ...regulars.subBody,
-    fontFamily: FontFamily.Bold,
+    fontFamily: FontFamily.Medium,
   },
   captionBold: {
     ...regulars.caption,
-    fontFamily: FontFamily.Bold,
+    fontFamily: FontFamily.Medium,
   },
 };

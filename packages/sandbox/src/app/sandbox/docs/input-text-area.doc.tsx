@@ -2,7 +2,11 @@ import { InputTextArea } from '@getluko/streamline';
 import { DocList } from '../components/DocList';
 
 const docs: JSX.Element[] = [
-  <InputTextArea label="Title" placeholder="Placeholder" />,
+  <InputTextArea
+    label="Title"
+    placeholder="Placeholder"
+    description="Description"
+  />,
   <InputTextArea label="Focus" placeholder="Placeholder" isFocused />,
   <InputTextArea
     label="Error"

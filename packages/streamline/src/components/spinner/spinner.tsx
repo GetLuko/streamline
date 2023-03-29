@@ -28,13 +28,13 @@ export function Spinner({
   opacity = 1,
   testID,
 }: SpinnerProps) {
-  const theme = useStreamlineTheme();
   const { disableAnimation } = useContext(AnimationContext);
+  const theme = useStreamlineTheme();
+  const hexaColor = color ? theme.colors?.[color] : undefined;
 
   const rotation = useSharedValue(0);
 
   const totalSize = SPINNER_SIZE[size];
-  const hexaColor = color ? theme.colors?.[color] : undefined;
 
   const animatedStyles = useAnimatedStyle(() => {
     return {

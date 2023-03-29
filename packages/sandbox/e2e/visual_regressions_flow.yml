@@ -41,9 +41,34 @@ appId: ${APPID}
 - tapOn: 'Card >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Card
 - tapOn: 'Card'
-- tapOn: 'Card Callout >'
+- scrollUntilVisible:
+    element:
+      text: 'CardTip >'
+    direction: DOWN
+- tapOn: 'CardCallout >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/CardCallout
-- tapOn: 'Card Callout'
+- tapOn: 'CardCallout'
+- tapOn: 'CardTip >'
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/CardTip
+- tapOn: 'CardTip'
+- scrollUntilVisible:
+    element:
+      text: 'InputText >'
+    direction: DOWN
+- tapOn: 'InputText >'
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputText
+- tapOn: 'InputText'
+- scrollUntilVisible:
+    element:
+      text: 'InputText Types >'
+    direction: DOWN
+- tapOn: 'InputText Types >'
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextTypes
+- tapOn: 'InputText Types'
+- scrollUntilVisible:
+    element:
+      text: 'Tag >'
+    direction: DOWN
 - tapOn: 'Tag >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Tag
 - tapOn: 'Tag'

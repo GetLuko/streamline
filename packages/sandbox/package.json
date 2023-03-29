@@ -20,6 +20,7 @@
     "eas-build-pre-install": "cd ../../ && cp package-lock.json ./packages/sandbox/",
     "postinstall": "rm -r node_modules && cd ../../ && npm install && npx nx sync-deps sandbox && npx nx ensure-symlink sandbox",
     "start:e2e": "E2E=true expo start --clear",
+    "start": "expo start --clear",
     "test:visual:ios": "maestro test e2e/visual_regressions_flow.yml -e APPID=host.exp.Exponent -e PLATFORM=ios",
     "test:visual:ios:compare": "reg-cli e2e/ios/screenshots e2e/ios/tempScreenshots e2e/ios/diffScreenshots -T 0.0001 -R e2e/ios/diffScreenshots/report.html -J e2e/ios/diffScreenshots/result.json",
     "test:visual:android": "maestro test e2e/visual_regressions_flow.yml -e APPID=host.exp.exponent -e PLATFORM=android",

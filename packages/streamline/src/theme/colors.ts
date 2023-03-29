@@ -24,6 +24,8 @@ const PRIMARY = {
 };
 
 const PURPLE = {
+  PURPLE_25: '#FBF7F9',
+  PURPLE_50: '#F8EFF4',
   // Palette : Purple
   PURPLE_75: '#F4E7EF',
   PURPLE_100: '#F2DFEC',
@@ -36,7 +38,8 @@ const PURPLE = {
 
 const TEAL = {
   // Palette : Teal
-  TEAL_75: '#E7F4F5',
+  TEAL_25: '#F7FBFB',
+  TEAL_50: '#EFF8F8',
   TEAL_100: '#D8F1F3',
   TEAL_150: '#CFEAEC',
   TEAL_400: '#61C4CD',
@@ -60,6 +63,7 @@ const GREY = {
   GREY_100: '#EAE9E3',
   GREY_75: '#EFEEE9',
   GREY_50: '#F4F3EF',
+  GREY_25: '#F9F9F7',
 };
 
 const BLUKO = {
@@ -77,6 +81,7 @@ const BLUKO = {
   BLUKO_100: '#D6E3FD',
   BLUKO_75: '#E0ECFE',
   BLUKO_50: '#EBF5FF',
+  BLUKO_25: '#F5FAFF',
 };
 
 const ORANGE = {
@@ -94,6 +99,7 @@ const ORANGE = {
   ORANGE_100: '#FCE1D2',
   ORANGE_75: '#FEE7DA',
   ORANGE_50: '#FFEDE3',
+  ORANGE_25: '#FFF2EB',
 };
 
 const TERRA = {
@@ -111,6 +117,7 @@ const TERRA = {
   TERRA_100: '#FBD8DB',
   TERRA_75: '#FDE0E2',
   TERRA_50: '#FFE8EA',
+  TERRA_25: '#FFF3F4',
 };
 
 const GOLD = {
@@ -128,6 +135,7 @@ const GOLD = {
   GOLD_100: '#FDEECF',
   GOLD_75: '#FEF1D6',
   GOLD_50: '#FFF4DE',
+  GOLD_25: '#FFF9EE',
 };
 
 const MINT = {
@@ -145,6 +153,7 @@ const MINT = {
   MINT_100: '#D5E9E6',
   MINT_75: '#E0EFEC',
   MINT_50: '#EBF5F3',
+  MINT_25: '#F5FAF9',
 };
 
 /**

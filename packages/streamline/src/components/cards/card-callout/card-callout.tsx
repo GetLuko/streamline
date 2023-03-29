@@ -16,10 +16,10 @@ export const CardCallout = ({
   iconName,
   isSkeleton,
   numberOfSkeletonLines,
+  onLongPress,
   onPress,
   onPressIn,
   onPressOut,
-  ...rest
 }: CardCalloutProps) => {
   const colors = getCardCalloutColors({ appearance });
 
@@ -44,10 +44,10 @@ export const CardCallout = ({
   return (
     <Card
       backgroundColor={backgroundColor}
+      onLongPress={onLongPress}
       onPress={onPress}
       onPressIn={innerOnPressIn}
       onPressOut={innerOnPressOut}
-      {...rest}
     >
       <Header
         colors={colors}

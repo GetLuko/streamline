@@ -29,7 +29,7 @@ export const ButtonMiniSandbox = () => (
       <Button iconName="Bear" size="mini" appearance="danger" text="Danger" />
     </Box>
     <Box paddingVertical="xxs">
-      <Button iconName="Bear" size="mini" isSkeleton text="Placeholder" />
+      <Button iconName="Bear" size="mini" isSkeleton text="Skeleton" />
     </Box>
     <Box paddingVertical="xxs">
       <Button text="Primary" size="mini" isLoading appearance="primary" />

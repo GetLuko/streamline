@@ -1,5 +1,8 @@
 import * as GeneratedRegularIcons from './primitives/icon/generated/regular';
 
+export * from './components/inputs/input-text/input-text';
+
+export * from './components/spinner/spinner';
 export * from './components/buttons/button/button';
 export * from './components/buttons/button-icon/button-icon';
 export * from './components/cards/card-tip/card-tip';
@@ -31,4 +34,8 @@ export type InteractionType = {
    * Callback when pressed
    */
   onPress?: () => void;
+  /**
+   * Id for tests
+   */
+  testID?: string;
 };

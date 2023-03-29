@@ -17,8 +17,8 @@ import { ColorTheme, useStreamlineTheme } from '../../theme';
 
 export interface SpinnerProps {
   color?: ColorTheme;
-  size?: Size;
   testID?: string;
+  size?: Size;
 }
 
 export function Spinner({
@@ -26,13 +26,13 @@ export function Spinner({
   color = 'BLACK',
   testID,
 }: SpinnerProps) {
-  const theme = useStreamlineTheme();
   const { disableAnimation } = useContext(AnimationContext);
+  const theme = useStreamlineTheme();
+  const hexaColor = color ? theme.colors?.[color] : undefined;
 
   const rotation = useSharedValue(0);
 
   const totalSize = SPINNER_SIZE[size];
-  const hexaColor = color ? theme.colors?.[color] : undefined;
 
   const animatedStyles = useAnimatedStyle(() => {
     return {

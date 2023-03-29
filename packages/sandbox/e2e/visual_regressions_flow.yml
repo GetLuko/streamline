@@ -47,6 +47,20 @@ appId: ${APPID}
 - tapOn: 'Tag >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Tag
 - tapOn: 'Tag'
+- scrollUntilVisible:
+    element:
+      text: 'InputText >'
+    direction: DOWN
+- tapOn: 'InputText >'
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputText
+- tapOn: 'InputText'
+- scrollUntilVisible:
+    element:
+      text: 'InputText Types >'
+    direction: DOWN
+- tapOn: 'InputText Types >'
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextTypes
+- tapOn: 'InputText Types'
 ##
 ## CI tests
 # - stopApp: host.exp.Exponent

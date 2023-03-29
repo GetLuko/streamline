@@ -9,6 +9,7 @@ import {
   StatusBar,
   ActivityIndicator,
   Platform,
+  KeyboardAvoidingView,
 } from 'react-native';
 import { SandBox } from './sandbox/Sandbox';
 import { isMaestro } from './utils/isMaestro';
@@ -38,18 +39,20 @@ export const App = () => {
         barStyle={Platform.OS === 'ios' ? 'light-content' : 'dark-content'}
       />
       <SafeAreaView style={{ flex: 1 }}>
-        <ScrollView
-          ref={(ref) => {
-            scrollViewRef.current = ref;
-          }}
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}
-          contentContainerStyle={{ flex: 0 }}
-        >
-          <StreamlineThemeProvider disableAnimation={disableAnimation}>
-            <SandBox />
-          </StreamlineThemeProvider>
-        </ScrollView>
+        <KeyboardAvoidingView behavior="padding" style={{ flex: 1 }}>
+          <ScrollView
+            ref={(ref) => {
+              scrollViewRef.current = ref;
+            }}
+            contentInsetAdjustmentBehavior="automatic"
+            style={styles.scrollView}
+            contentContainerStyle={{ flex: 0 }}
+          >
+            <StreamlineThemeProvider disableAnimation={disableAnimation}>
+              <SandBox />
+            </StreamlineThemeProvider>
+          </ScrollView>
+        </KeyboardAvoidingView>
       </SafeAreaView>
     </>
   );

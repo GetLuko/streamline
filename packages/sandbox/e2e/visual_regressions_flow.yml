@@ -1,7 +1,7 @@
 appId: ${APPID}
 ---
 - launchApp
-- tapOn: 'Sandbox'
+
 - tapOn: 'Foundation'
 - tapOn: 'Box >'
 - waitForAnimationToEnd:
@@ -65,6 +65,17 @@ appId: ${APPID}
 - tapOn: 'InputText Types >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextTypes
 - tapOn: 'InputText Types'
+- scrollUntilVisible:
+    element:
+      text: 'InputTextArea >'
+    direction: DOWN
+- tapOn: 'InputTextArea >'
+- scrollUntilVisible:
+    element:
+      text: 'InputTextArea'
+    direction: UP
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextArea
+- tapOn: 'InputTextArea'
 ##
 ## CI tests
 # - stopApp: host.exp.Exponent

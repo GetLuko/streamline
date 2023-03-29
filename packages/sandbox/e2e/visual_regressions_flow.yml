@@ -1,9 +1,13 @@
 appId: ${APPID}
 ---
-- launchApp
-- stopApp
+- launchApp:
+    stopApp: true # stop the app before launching it
+- runFlow:
+    when:
+      true: ${PLATFORM == 'ios'}
+    file: subflow/stopApp.yaml # workaround to handle ios deeplink correctly to run the test
 - openLink:
-    link: exp://192.168.31.62:19000
+    link: exp://localhost:19000
     autoVerify: true
 - tapOn:
     # bypass expo onboarding modal if you run the test on a fresh env

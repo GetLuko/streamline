@@ -1,0 +1,4 @@
+appId: ${APPID}
+---
+# workaround to handle ios deeplink correctly to run the test
+- stopApp

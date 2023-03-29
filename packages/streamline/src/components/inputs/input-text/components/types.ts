@@ -1,7 +1,7 @@
 import { ColorTheme } from '../../../../theme';
-import { TextInputProps } from '../types';
+import { InputTextProps } from '../types';
 
-export type TextInputPrimitiveProps = TextInputProps & {
+export type TextInputPrimitiveProps = InputTextProps & {
   left?: JSX.Element;
   right?: JSX.Element;
   forceFocus: () => void;

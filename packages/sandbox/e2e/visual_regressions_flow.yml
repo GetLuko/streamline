@@ -41,6 +41,10 @@ appId: ${APPID}
 - tapOn: 'Card >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Card
 - tapOn: 'Card'
+- scrollUntilVisible:
+    element:
+      text: 'Inputs'
+    direction: DOWN
 - tapOn: 'CardTip >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/CardTip
 - tapOn: 'CardTip'
@@ -61,6 +65,17 @@ appId: ${APPID}
 - tapOn: 'InputText Types >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextTypes
 - tapOn: 'InputText Types'
+- scrollUntilVisible:
+    element:
+      text: 'InputTextArea >'
+    direction: DOWN
+- tapOn: 'InputTextArea >'
+- scrollUntilVisible:
+    element:
+      text: 'InputTextArea'
+    direction: UP
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextArea
+- tapOn: 'InputTextArea'
 ##
 ## CI tests
 # - stopApp: host.exp.Exponent

@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
-import { StreamlineThemeProvider } from '@getluko/streamline';
+import { isIOS, StreamlineThemeProvider } from '@getluko/streamline';
 import React, { useRef } from 'react';
 import { useFonts } from 'expo-font';
 import {
@@ -8,7 +8,6 @@ import {
   ScrollView,
   StatusBar,
   ActivityIndicator,
-  Platform,
   KeyboardAvoidingView,
 } from 'react-native';
 import { SandBox } from './sandbox/Sandbox';
@@ -35,11 +34,13 @@ export const App = () => {
   }
   return (
     <>
-      <StatusBar
-        barStyle={Platform.OS === 'ios' ? 'light-content' : 'dark-content'}
-      />
+      <StatusBar barStyle={isIOS ? 'light-content' : 'dark-content'} />
       <SafeAreaView style={{ flex: 1 }}>
-        <KeyboardAvoidingView behavior="padding" style={{ flex: 1 }}>
+        <KeyboardAvoidingView
+          behavior="padding"
+          style={{ flex: 1 }}
+          enabled={isIOS}
+        >
           <ScrollView
             ref={(ref) => {
               scrollViewRef.current = ref;

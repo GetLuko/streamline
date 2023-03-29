@@ -14,7 +14,7 @@ export type RefNativeTextInput =
   | undefined
   | null;
 
-export type TextInputProps = Omit<NativeTextInputProps, 'editable'> & {
+export type InputTextProps = Omit<NativeTextInputProps, 'editable'> & {
   isDisabled?: boolean;
   isError?: boolean;
   description?: string;

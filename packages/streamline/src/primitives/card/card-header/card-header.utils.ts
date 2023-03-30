@@ -15,4 +15,4 @@ export const hasValidValue = (
 
 export const hasValidRightAction = (
   rightAction: CardHeaderProps['rightAction']
-): rightAction is 'navigate' => rightAction !== null;
+): rightAction is 'navigate' => rightAction != null;

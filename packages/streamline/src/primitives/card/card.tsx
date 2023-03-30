@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Pressable } from 'react-native';
 import {
   interpolate,
@@ -6,7 +6,6 @@ import {
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
-import { AnimationContext } from '../../contexts/disable-animation.context';
 import { useStreamlineTheme } from '../../theme';
 import { getShadowsStyle } from '../../theme/shadows';
 import { AnimatedBox } from '../animated-box/animated-box';

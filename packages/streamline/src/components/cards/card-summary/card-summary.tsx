@@ -22,6 +22,9 @@ export const CardSummary = (props: CardSummaryProps) => {
     description,
     buttonLabel,
     testID,
+    isLoading,
+    onPress,
+    isSkeleton,
   } = props;
 
   const { contentColors, headerColors, containerColors } = getCardSummaryColors(
@@ -30,19 +33,22 @@ export const CardSummary = (props: CardSummaryProps) => {
 
   const hasContent = hasValidContent({ title, description });
   const hasButton = hasValidButton(buttonLabel);
+  const isBusy = isLoading || isSkeleton;
 
   return (
     <Card
       backgroundColor={containerColors.backgroundColor}
-      // testID={testID}
-      // accessibilityRole="button"
-      // accessibilityLabel="summary card"
-      // accessibilityState={{ busy: false }}
+      testID={testID}
+      accessibilityRole="button"
+      accessibilityLabel="summary card"
+      accessibilityState={{ busy: isBusy }}
+      onPress={onPress}
+      disabled={isBusy}
     >
       <CardHeader
         colors={headerColors}
         header={header}
-        iconName={iconName}
+        iconName={isBusy ? 'Loader' : iconName}
         value={value}
         rightAction={rightAction}
       />
@@ -58,6 +64,7 @@ export const CardSummary = (props: CardSummaryProps) => {
       {hasButton && (
         <Box paddingTop="md">
           <Button
+            pointerEvents="none"
             text="Label"
             appearance={appearance === 'neutral' ? 'secondary' : 'primary'}
           />

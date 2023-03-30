@@ -3,7 +3,7 @@ import { IconsName } from '../../../primitives/icon/icon.types';
 import { ColorTheme } from '../../../theme';
 import { Appearance } from '../../../theme/appearance';
 
-export type CardSummaryProps = Pick<CardProps, 'testID'> & {
+export type CardSummaryProps = Pick<CardProps, 'testID' | 'onPress'> & {
   appearance?: Extract<Appearance, 'neutral' | 'bluko'>;
   iconName?: IconsName;
   rightAction?: 'navigate';
@@ -12,6 +12,8 @@ export type CardSummaryProps = Pick<CardProps, 'testID'> & {
   title?: string;
   description?: string;
   buttonLabel?: string;
+  isLoading?: boolean;
+  isSkeleton?: boolean;
 };
 
 type HeaderColors = {

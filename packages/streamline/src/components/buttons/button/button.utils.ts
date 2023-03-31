@@ -29,6 +29,9 @@ export const getPressableBackgroundColor =
         case 'danger':
           backgroundColor = colors.TERRA_600;
           break;
+        case 'warning':
+          backgroundColor = colors.ORANGE_600;
+          break;
         case 'neutral':
           backgroundColor = colors.GREY_150;
           break;
@@ -47,6 +50,9 @@ export const getPressableBackgroundColor =
           break;
         case 'danger':
           backgroundColor = colors.TERRA_500;
+          break;
+        case 'warning':
+          backgroundColor = colors.ORANGE_500;
           break;
         case 'primary':
         default:

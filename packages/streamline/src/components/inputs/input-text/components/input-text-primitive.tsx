@@ -133,6 +133,7 @@ export const InputTextPrimitive = ({
               <Box
                 paddingHorizontal="md"
                 flexDirection="row"
+                paddingTop={multiline ? 'xs' : undefined}
                 style={[
                   noPadding && { paddingHorizontal: 0, paddingVertical: 0 },
                   !multiline && { height: TEXT_INPUT_HEIGHT_WITHOUT_LABEL },

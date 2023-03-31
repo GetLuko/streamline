@@ -6,6 +6,7 @@ import { CardCalloutSandbox } from './docs/card-callout.doc';
 import { CardSandbox } from './docs/card.doc';
 import { CardTipSandbox } from './docs/card-tip.doc';
 import { IconsSandbox } from './docs/icon.doc';
+import { InputTextAreaSandbox } from './docs/input-text-area.doc';
 import { InputTextTypesSandbox } from './docs/input-text-types.doc';
 import { InputTextSandbox } from './docs/input-text.doc';
 import { SpinnerSandbox } from './docs/spinner.doc';
@@ -53,6 +54,7 @@ export const sandboxItems: SandBoxSectionType[] = [
     items: [
       { title: 'InputText', SandBox: InputTextSandbox },
       { title: 'InputText Types', SandBox: InputTextTypesSandbox },
+      { title: 'InputTextArea', SandBox: InputTextAreaSandbox },
     ],
   },
   {

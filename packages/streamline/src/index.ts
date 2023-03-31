@@ -1,5 +1,7 @@
 import * as GeneratedRegularIcons from './primitives/icon/generated/regular';
 
+export * from './components/inputs/input-text-area/input-text-area';
+
 export * from './components/inputs/input-text/input-text';
 
 export * from './components/spinner/spinner';
@@ -16,6 +18,7 @@ export * from './primitives/icon/icon';
 export * from './primitives/card/card';
 export * from './theme';
 export * from './theme/ThemeProvider';
+export * from './utils/platform';
 export { GeneratedRegularIcons };
 
 export type InteractionType = {

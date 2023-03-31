@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import React from 'react';
 
-import { TextInputProps } from './types';
+import { InputTextProps } from './types';
 
-export const useTextInput = (props: TextInputProps) => {
+export const useTextInput = (props: InputTextProps) => {
   const defaultSecureTextEntry =
     props.type === 'password' && props.secureTextEntry === undefined
       ? true

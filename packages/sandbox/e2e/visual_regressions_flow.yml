@@ -1,8 +1,22 @@
 appId: ${APPID}
 ---
-- launchApp
-- tapOn: 'Sandbox'
-- tapOn: 'Foundation'
+- launchApp:
+    stopApp: true # stop the app before launching it
+- runFlow:
+    when:
+      true: ${PLATFORM == 'ios'}
+    file: subflow/stopApp.yaml # workaround to handle ios deeplink correctly to run the test
+- openLink:
+    link: exp://localhost:19000
+    autoVerify: true
+- tapOn:
+    # bypass expo onboarding modal if you run the test on a fresh env
+    text: 'Got it'
+    optional: true
+- tapOn:
+    # bypass expo onboarding modal if you run the test on a fresh env
+    text: 'Foundation'
+    optional: true
 - tapOn: 'Box >'
 - waitForAnimationToEnd:
     timeout: 10000
@@ -43,17 +57,29 @@ appId: ${APPID}
 - tapOn: 'Card'
 - scrollUntilVisible:
     element:
-      text: 'CardTip >'
+      text: 'CardCallout >'
     direction: DOWN
 - tapOn: 'CardCallout >'
+- scrollUntilVisible:
+    element:
+      text: 'CardCallout'
+    direction: UP
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/CardCallout
 - tapOn: 'CardCallout'
+- scrollUntilVisible:
+    element:
+      text: 'CardTip >'
+    direction: DOWN
 - tapOn: 'CardTip >'
+- scrollUntilVisible:
+    element:
+      text: 'CardTip'
+    direction: UP
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/CardTip
 - tapOn: 'CardTip'
 - scrollUntilVisible:
     element:
-      text: 'InputText >'
+      text: 'Inputs'
     direction: DOWN
 - tapOn: 'InputText >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputText
@@ -65,6 +91,26 @@ appId: ${APPID}
 - tapOn: 'InputText Types >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextTypes
 - tapOn: 'InputText Types'
+- scrollUntilVisible:
+    element:
+      text: 'InputTextArea >'
+    direction: DOWN
+- tapOn: 'InputTextArea >'
+- scrollUntilVisible:
+    element:
+      text: 'InputTextArea'
+    direction: UP
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextArea
+- tapOn: 'InputTextArea'-
+      text: 'InputTextArea >'
+    direction: DOWN
+- tapOn: 'InputTextArea >'
+- scrollUntilVisible:
+    element:
+      text: 'InputTextArea'
+    direction: UP
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextArea
+- tapOn: 'InputTextArea'
 - scrollUntilVisible:
     element:
       text: 'Tag >'

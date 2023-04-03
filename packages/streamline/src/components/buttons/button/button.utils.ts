@@ -1,6 +1,5 @@
 import { PressableStateCallbackType } from 'react-native';
 import { Theme } from '../../../theme';
-import { Appearance } from '../../../theme/appearance';
 
 import { ButtonProps } from './button.types';
 
@@ -10,14 +9,16 @@ export const getPressableBackgroundColor =
     pressed,
     isTouched,
     isSkeleton,
+    isDisabled,
   }: {
     isTouched?: boolean;
     isSkeleton?: boolean;
+    isDisabled?: boolean;
     pressed: PressableStateCallbackType['pressed'];
   }) => {
     let backgroundColor: string;
 
-    if (isSkeleton) {
+    if (isSkeleton || isDisabled) {
       return { backgroundColor: colors.GREY_100 };
     }
 
@@ -42,7 +43,6 @@ export const getPressableBackgroundColor =
     } else {
       switch (variant) {
         case 'neutral':
-        case 'disabled':
           backgroundColor = colors.GREY_100;
           break;
         case 'secondary':
@@ -67,38 +67,27 @@ export const getPressableBackgroundColor =
     return { backgroundColor };
   };
 
-export const getInnerAppearance = ({
-  isDisabled,
-  appearance,
-}: {
-  isDisabled: boolean | undefined;
-  appearance: Appearance;
-}) => {
-  if (isDisabled) {
-    return 'disabled';
-  }
-
-  return appearance;
-};
-
 const DEFAULT_TEXT_COLOR = 'PURE_WHITE_1000';
 export const getTextColor = ({
   appearance,
   isSkeleton,
+  isDisabled,
 }: {
   appearance: ButtonProps['appearance'];
   isSkeleton?: boolean;
+  isDisabled?: boolean;
 }) => {
   if (isSkeleton) {
     return DEFAULT_TEXT_COLOR;
+  }
+  if (isDisabled) {
+    return 'GREY_400';
   }
   switch (appearance) {
     case 'neutral':
       return 'GREY_1000';
     case 'secondary':
       return 'BLUKO_600';
-    case 'disabled':
-      return 'GREY_400';
     case 'danger':
     case 'primary':
     default:

@@ -7,10 +7,7 @@ import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
 import { useStreamlineTheme } from '../../../theme';
 
 import { ButtonProps } from './button.types';
-import {
-  getInnerAppearance,
-  getPressableBackgroundColor,
-} from './button.utils';
+import { getPressableBackgroundColor } from './button.utils';
 import InnerIcon from './component/inner-icon';
 import InnerLabel from './component/inner-label';
 import { useLoadingAnimation } from './hook/useLoadingAnimation';
@@ -26,11 +23,7 @@ export const Button = ({
   text,
   isSkeleton = false,
 }: ButtonProps) => {
-  const innerAppearanceValue = getInnerAppearance({
-    isDisabled,
-    appearance,
-  });
-  const styles = useStyles(size, innerAppearanceValue);
+  const styles = useStyles(size, appearance);
   const isMini = size === 'mini';
 
   if (!isNil(iconName) && !isMini) {
@@ -59,6 +52,7 @@ export const Button = ({
           pressed: pressableState.pressed,
           isTouched,
           isSkeleton,
+          isDisabled,
         }),
       ]}
       onPress={handlePress}
@@ -75,17 +69,19 @@ export const Button = ({
       >
         <InnerIcon
           isLoading={isResolving || isLoading}
-          appearance={innerAppearanceValue}
+          appearance={appearance}
           iconName={iconName}
           size={size}
           isSkeleton={isSkeleton}
+          isDisabled={isDisabled}
         />
         <InnerLabel
           isLoading={isResolving || isLoading}
           size={size}
-          appearance={innerAppearanceValue}
+          appearance={appearance}
           text={text}
           isSkeleton={isSkeleton}
+          isDisabled={isDisabled}
         />
       </AnimatedBox>
     </Pressable>

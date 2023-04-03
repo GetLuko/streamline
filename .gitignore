@@ -54,8 +54,6 @@ web-build/
 cache/
 
 
-packages/sandbox-e2e/artifacts
-
 # React Native
 
 # OSX

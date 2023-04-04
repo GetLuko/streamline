@@ -75,7 +75,12 @@ export const Skeleton = ({
   const borderRadius = size === 'sm' ? 'sm' : 'md';
 
   return (
-    <AnimatedBox height={height} width={width} borderRadius={borderRadius}>
+    <AnimatedBox
+      height={height}
+      width={width}
+      borderRadius={borderRadius}
+      overflow="hidden"
+    >
       <LinearGradient
         colors={[colors.GREY_150, colors.GREY_200]}
         start={{ x: START_X, y: Y }}
@@ -96,7 +101,6 @@ export const Skeleton = ({
 const useStyles = (): { [key: string]: StyleProp<ViewStyle> } => {
   return {
     container: {
-      overflow: 'hidden',
       position: 'absolute',
       top: 0,
       bottom: 0,

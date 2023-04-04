@@ -14,14 +14,16 @@ import { useLoadingAnimation } from './hook/useLoadingAnimation';
 
 export const Button = ({
   appearance = 'primary',
-  isLoading,
-  isDisabled,
-  size = 'full',
   iconName,
+  isDisabled,
+  isLoading,
+  isSkeleton = false,
   isTouched,
   onPress,
+  testID,
+  pointerEvents,
+  size = 'full',
   text,
-  isSkeleton = false,
 }: ButtonProps) => {
   const styles = useStyles(size, appearance);
   const isMini = size === 'mini';
@@ -42,6 +44,8 @@ export const Button = ({
 
   return (
     <Pressable
+      testID={testID}
+      pointerEvents={pointerEvents}
       accessibilityRole="button"
       accessibilityLabel={text}
       disabled={buttonIsDisabled}

@@ -27,15 +27,15 @@ export { GeneratedRegularIcons };
 
 export type InteractionType = {
   /**
-   * Accessibility label for the button
+   * Accessibility label
    */
   accessibilityLabel: string;
   /**
-   * If true, the button state will be set to loading
+   * If true, the element state will be set to loading
    */
   isLoading?: boolean;
   /**
-   * If true, the button will be disabled
+   * If true, the element will be disabled
    */
   isDisabled?: boolean;
   /**

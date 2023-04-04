@@ -2,18 +2,25 @@ import { CardProps } from '../../../primitives/card/card.types';
 import { IconsName } from '../../../primitives/icon/icon.types';
 import { ColorTheme } from '../../../theme';
 import { Appearance } from '../../../theme/appearance';
+import { ButtonProps } from '../../buttons/button/button.types';
 
-export type CardSummaryProps = Pick<CardProps, 'testID' | 'onPress'> & {
-  appearance?: Extract<Appearance, 'neutral' | 'bluko'>;
+export type CardSummaryProps = Pick<
+  CardProps,
+  'accessibilityLabel' | 'testID' | 'onPress' | 'onPressIn' | 'onPressOut'
+> & {
+  appearance?: Extract<
+    Appearance,
+    'neutral' | 'primary' | 'warning' | 'danger'
+  >;
   iconName?: IconsName;
   rightAction?: 'navigate';
   value?: string;
   header?: string;
   title?: string;
   description?: string;
-  buttonLabel?: string;
   isLoading?: boolean;
   isSkeleton?: boolean;
+  buttonProps?: Omit<ButtonProps, 'appearance' | 'pointerEvents'>;
 };
 
 type HeaderColors = {
@@ -30,6 +37,7 @@ type ContentColors = {
 
 type ContainerColors = {
   backgroundColor: ColorTheme;
+  pressBackgroundColor: ColorTheme;
 };
 
 export type CardSummaryColors = {

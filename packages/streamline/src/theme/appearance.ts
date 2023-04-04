@@ -4,5 +4,4 @@ export type Appearance =
   | 'danger'
   | 'neutral'
   | 'success'
-  | 'warning'
-  | 'bluko';
+  | 'warning';

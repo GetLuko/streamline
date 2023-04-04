@@ -2,6 +2,7 @@ import React from 'react';
 import { Pressable } from 'react-native';
 import {
   interpolate,
+  interpolateColor,
   useAnimatedStyle,
   useSharedValue,
   withTiming,
@@ -22,15 +23,17 @@ export const Card = ({
   testID,
   accessible,
   backgroundColor,
+  pressedBackgroundColor,
   disabled,
   shadows,
   withPadding = true,
   animated = true,
+  style,
   ...rest
 }: CardProps) => {
   const pressInAnimatedValue = useSharedValue(0);
 
-  const { animation } = useStreamlineTheme();
+  const { animation, colors } = useStreamlineTheme();
 
   const handlePressIn = () => {
     pressInAnimatedValue.value = 1;
@@ -51,8 +54,25 @@ export const Card = ({
       ),
       { duration: animation.onPressScale.duration }
     );
+
+    const hasColorInterpolation =
+      backgroundColor != null && pressedBackgroundColor != null;
+
+    const innerBackgroundColor = hasColorInterpolation
+      ? withTiming(
+          interpolateColor(
+            pressInAnimatedValue.value,
+            [0, 1],
+            [colors[backgroundColor], colors[pressedBackgroundColor]]
+          )
+        )
+      : backgroundColor
+      ? colors[backgroundColor]
+      : undefined;
+
     return {
       transform: [{ scale }],
+      backgroundColor: innerBackgroundColor,
     };
   });
 
@@ -71,21 +91,19 @@ export const Card = ({
         accessible={accessible}
       >
         <Box width={rest.width} height={rest.height}>
-          <AnimatedBox style={[animatedStyle]}>
-            <Box
-              borderRadius="lg"
-              paddingHorizontal={withPadding ? 'md' : undefined}
-              paddingVertical={withPadding ? 'md' : undefined}
-              flexGrow={1}
-              flexShrink={1}
-              backgroundColor={backgroundColor}
-              {...(shadows ? getShadowsStyle(shadows) : {})}
-              {...rest}
-            >
-              {React.Children.map(children, (child) =>
-                React.isValidElement(child) ? React.cloneElement(child) : child
-              )}
-            </Box>
+          <AnimatedBox
+            borderRadius="lg"
+            paddingHorizontal={withPadding ? 'md' : undefined}
+            paddingVertical={withPadding ? 'md' : undefined}
+            flexGrow={1}
+            flexShrink={1}
+            style={[style, animatedStyle]}
+            {...(shadows ? getShadowsStyle(shadows) : {})}
+            {...rest}
+          >
+            {React.Children.map(children, (child) =>
+              React.isValidElement(child) ? React.cloneElement(child) : child
+            )}
           </AnimatedBox>
         </Box>
       </Pressable>

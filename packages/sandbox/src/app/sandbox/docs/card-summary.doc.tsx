@@ -7,14 +7,15 @@ export const CardSummarySandbox = () => {
   >('Default');
 
   const handlePressIn = () => {
-    console.log("I'm touched");
     setDescriptionText('Touch');
   };
 
   const sleep = async () =>
-    setTimeout(() => {
-      return true;
-    }, 2000);
+    new Promise((resolve) =>
+      setTimeout(() => {
+        resolve(undefined);
+      }, 2000)
+    );
 
   const asyncFunc = async () => {
     setDescriptionText('Loading');
@@ -38,7 +39,6 @@ export const CardSummarySandbox = () => {
           }}
           onPress={asyncFunc}
           onPressIn={handlePressIn}
-          isLoading={descriptionText === 'Loading'}
         />
       </Box>
       <Box paddingVertical="xxs">
@@ -93,7 +93,7 @@ export const CardSummarySandbox = () => {
         <CardSummary isSkeleton />
       </Box>
       <Box paddingTop={'md'} />
-      <Text variant={'titleSmall'}>CTA has a onPress</Text>
+      <Text variant={'titleSmall'}>CTA has an onPress action</Text>
       <Box paddingVertical="xxs">
         <CardSummary
           appearance="primary"

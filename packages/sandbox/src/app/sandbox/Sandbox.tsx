@@ -91,7 +91,6 @@ export const SandBox = () => {
                 testID={title}
                 onAction={() => {
                   setPage({ groupIndex, index });
-                  console.log('ok ok:: ', groupIndex, index);
                 }}
               />
             ))}

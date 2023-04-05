@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pressable } from 'react-native';
+import { GestureResponderEvent, Pressable } from 'react-native';
 import {
   interpolate,
   interpolateColor,
@@ -35,14 +35,14 @@ export const Card = ({
 
   const { animation, colors } = useStreamlineTheme();
 
-  const handlePressIn = () => {
+  const handlePressIn = (e: GestureResponderEvent) => {
     pressInAnimatedValue.value = 1;
-    onPressIn?.();
+    onPressIn?.(e);
   };
 
-  const handlePressOut = () => {
+  const handlePressOut = (e: GestureResponderEvent) => {
     pressInAnimatedValue.value = 0;
-    onPressOut?.();
+    onPressOut?.(e);
   };
 
   const animatedStyle = useAnimatedStyle(() => {

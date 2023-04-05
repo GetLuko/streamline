@@ -11,6 +11,8 @@ import {
   hasValidContent,
 } from './card-summary.utils';
 import { Button } from '../../buttons/button/button';
+import { CardSummarySkeleton } from './card-summary-skeleton';
+import { usePress } from '../../../hooks/use-press.hook';
 
 export const CardSummary = (props: CardSummaryProps) => {
   const {
@@ -29,6 +31,7 @@ export const CardSummary = (props: CardSummaryProps) => {
     isSkeleton,
     buttonProps,
     accessibilityLabel,
+    isBusy,
   } = props;
 
   const { contentColors, headerColors, containerColors } = getCardSummaryColors(
@@ -38,31 +41,23 @@ export const CardSummary = (props: CardSummaryProps) => {
   const hasContent = hasValidContent({ title, description });
   const hasButton = hasValidButton(buttonProps);
   const hasButtonAction = hasValidButtonAction(buttonProps);
-  const isBusy = isLoading || isSkeleton;
+
+  const [handlePress, isResolving] = usePress({ onPress: onPress });
+
+  const [handleButtonPress, isButtonResolving] = usePress({
+    onPress: buttonProps?.onPress,
+  });
+
+  const isInnerBusy =
+    isLoading || isSkeleton || isButtonResolving || isBusy || isResolving;
 
   if (isSkeleton) {
     return (
-      <Card
-        backgroundColor="GREY_100"
+      <CardSummarySkeleton
+        title={title}
         testID={testID}
-        accessibilityRole="button"
-        accessibilityLabel={accessibilityLabel || title}
-        accessibilityState={{ busy: true }}
-      >
-        <Box
-          height={24}
-          width={24}
-          backgroundColor={'GREY_200'}
-          borderRadius={'md'}
-        />
-        <Box paddingTop={'md'} />
-        <Box
-          height={24}
-          width={'100%'}
-          backgroundColor={'GREY_200'}
-          borderRadius={'md'}
-        />
-      </Card>
+        accessibilityLabel={accessibilityLabel}
+      />
     );
   }
 
@@ -73,16 +68,17 @@ export const CardSummary = (props: CardSummaryProps) => {
       testID={testID}
       accessibilityRole="button"
       accessibilityLabel={accessibilityLabel || title}
-      accessibilityState={{ busy: isBusy }}
-      onPress={onPress}
+      accessibilityState={{ busy: isInnerBusy }}
+      onPress={handlePress}
       onPressIn={onPressIn}
       onPressOut={onPressOut}
-      disabled={isBusy}
+      disabled={isInnerBusy}
     >
       <CardHeader
         colors={headerColors}
         header={header}
-        iconName={isLoading ? 'Loader' : iconName}
+        isLoading={isLoading || isResolving}
+        iconName={iconName}
         value={value}
         rightAction={rightAction}
       />
@@ -101,6 +97,11 @@ export const CardSummary = (props: CardSummaryProps) => {
             pointerEvents={hasButtonAction ? undefined : 'none'}
             appearance={appearance === 'neutral' ? 'secondary' : appearance}
             {...buttonProps}
+            onPress={(e) => {
+              handleButtonPress(e);
+            }}
+            isBusy={isInnerBusy}
+            isLoading={isButtonResolving}
           />
         </Box>
       )}

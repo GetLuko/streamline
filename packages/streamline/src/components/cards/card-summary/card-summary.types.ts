@@ -1,5 +1,5 @@
+import { CardHeaderProps } from '../../../primitives/card/card-header/card-header.types';
 import { CardProps } from '../../../primitives/card/card.types';
-import { IconsName } from '../../../primitives/icon/icon.types';
 import { ColorTheme } from '../../../theme';
 import { Appearance } from '../../../theme/appearance';
 import { ButtonProps } from '../../buttons/button/button.types';
@@ -7,21 +7,37 @@ import { ButtonProps } from '../../buttons/button/button.types';
 export type CardSummaryProps = Pick<
   CardProps,
   'accessibilityLabel' | 'testID' | 'onPress' | 'onPressIn' | 'onPressOut'
-> & {
-  appearance?: Extract<
-    Appearance,
-    'neutral' | 'primary' | 'warning' | 'danger'
-  >;
-  iconName?: IconsName;
-  rightAction?: 'navigate';
-  value?: string;
-  header?: string;
-  title?: string;
-  description?: string;
-  isLoading?: boolean;
-  isSkeleton?: boolean;
-  buttonProps?: Omit<ButtonProps, 'appearance' | 'pointerEvents'>;
-};
+> &
+  Omit<CardHeaderProps, 'colors'> & {
+    /**
+     * Card appearance.
+     */
+    appearance?: Extract<
+      Appearance,
+      'neutral' | 'primary' | 'warning' | 'danger'
+    >;
+    /**
+     * Card title.
+     */
+    title?: string;
+    /**
+     * Card description.
+     */
+    description?: string;
+    /**
+     * Indicates if the card is in a busy state.
+     */
+    isBusy?: boolean;
+    /**
+     * Indicates if the card is in a skeleton state.
+     */
+    isSkeleton?: boolean;
+    /**
+     * Button props. If not provided, the button will not be displayed.
+     * All button props are available except appearance and pointerEvents.
+     */
+    buttonProps?: Omit<ButtonProps, 'appearance' | 'pointerEvents'>;
+  };
 
 type HeaderColors = {
   rightIconColor: ColorTheme;

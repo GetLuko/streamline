@@ -24,6 +24,7 @@ export const Button = ({
   pointerEvents,
   size = 'full',
   text,
+  isBusy,
 }: ButtonProps) => {
   const styles = useStyles(size, appearance);
   const isMini = size === 'mini';
@@ -40,7 +41,7 @@ export const Button = ({
   const [handlePress, isResolving] = usePress({ onPress });
 
   const buttonIsDisabled =
-    isSkeleton || isDisabled || isLoading || isTouched || isResolving;
+    isSkeleton || isDisabled || isLoading || isTouched || isResolving || isBusy;
 
   return (
     <Pressable
@@ -48,6 +49,7 @@ export const Button = ({
       pointerEvents={pointerEvents}
       accessibilityRole="button"
       accessibilityLabel={text}
+      accessibilityState={{ busy: buttonIsDisabled }}
       disabled={buttonIsDisabled}
       busy={buttonIsDisabled}
       style={(pressableState) => [

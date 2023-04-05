@@ -13,6 +13,10 @@ export type ButtonProps = Pick<InteractionType, 'isLoading' | 'isDisabled'> & {
    */
   isTouched?: boolean;
   /**
+   * When present, informs accessible tools if the element is busy
+   */
+  isBusy?: boolean;
+  /**
    * The variant of the button. Can be one of `primary`, `secondary`, `danger`, `neutral`.
    */
   appearance?: Appearance;

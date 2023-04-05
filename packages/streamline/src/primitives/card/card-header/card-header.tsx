@@ -9,9 +9,10 @@ import {
   hasValidRightAction,
   hasValidValue,
 } from './card-header.utils';
+import Spinner from '../../../components/spinner/spinner';
 
 export const CardHeader = (props: CardHeaderProps) => {
-  const { colors, iconName, header, value, rightAction } = props;
+  const { colors, iconName, header, value, rightAction, isLoading } = props;
 
   const hasIconName = hasValidIconName(iconName);
   const hasHeader = hasValidHeader(header);
@@ -26,9 +27,10 @@ export const CardHeader = (props: CardHeaderProps) => {
       justifyContent="space-between"
     >
       <Box flexDirection="row" alignItems="center">
-        {hasIconName && (
+        {hasIconName && !isLoading && (
           <Icon color={colors.leftIconColor} iconName={iconName} size="large" />
         )}
+        {isLoading && <Spinner color={colors.leftIconColor} />}
         {hasHeader && (
           <Text
             color={colors.headerColor}

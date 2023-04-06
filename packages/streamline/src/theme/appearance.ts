@@ -3,6 +3,5 @@ export type Appearance =
   | 'secondary'
   | 'danger'
   | 'neutral'
-  | 'disabled'
   | 'success'
   | 'warning';

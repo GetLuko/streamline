@@ -16,7 +16,7 @@ export const Header = ({
   const showAction = hasAction || dismissAction;
   return (
     <Box alignItems="center" flexDirection="row">
-      <Icon color={colors.iconColor} iconName={iconName} size="regular" />
+      <Icon color={colors.iconColor} iconName={iconName} size="large" />
       <Box flex={1}>
         <Text color={colors.headerColor} marginLeft="md" variant="body">
           {header}

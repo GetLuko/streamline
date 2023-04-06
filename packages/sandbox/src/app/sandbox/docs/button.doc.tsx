@@ -1,36 +1,19 @@
-import { Box, Button } from '@getluko/streamline';
+import { Button } from '@getluko/streamline';
+import { DocList } from '../components/DocList';
 
-export const ButtonSandbox = () => (
-  <Box paddingHorizontal="xl">
-    <Box paddingVertical="xxs">
-      <Button appearance="primary" text="Primary" />
-    </Box>
-    <Box paddingVertical="xxs">
-      <Button appearance="primary" isDisabled text="Disabled" />
-    </Box>
-    <Box paddingVertical="xxs">
-      <Button appearance="secondary" text="Secondary" />
-    </Box>
-    <Box paddingVertical="xxs">
-      <Button appearance="neutral" text="Neutral" />
-    </Box>
-    <Box paddingVertical="xxs">
-      <Button appearance="danger" text="Danger" />
-    </Box>
-    <Box paddingVertical="xxs">
-      <Button isSkeleton text="Skeleton" />
-    </Box>
-    <Box paddingVertical="xxs">
-      <Button text="primary" isLoading appearance="primary" />
-    </Box>
-    <Box paddingVertical="xxs">
-      <Button text="secondary" isLoading appearance="secondary" />
-    </Box>
-    <Box paddingVertical="xxs">
-      <Button text="neutral" isLoading appearance="neutral" />
-    </Box>
-    <Box paddingVertical="xxs">
-      <Button text="danger" isLoading appearance="danger" />
-    </Box>
-  </Box>
-);
+const docs: JSX.Element[] = [
+  <Button appearance="primary" text="Primary" />,
+  <Button appearance="primary" isDisabled text="Disabled" />,
+  <Button appearance="secondary" text="Secondary" />,
+  <Button appearance="neutral" text="Neutral" />,
+  <Button appearance="danger" text="Danger" />,
+  <Button appearance="warning" text="Warning" />,
+  <Button isSkeleton text="Skeleton" />,
+  <Button text="primary" isLoading appearance="primary" />,
+  <Button text="secondary" isLoading appearance="secondary" />,
+  <Button text="neutral" isLoading appearance="neutral" />,
+  <Button text="danger" isLoading appearance="danger" />,
+  <Button text="warning" isLoading appearance="warning" />,
+];
+
+export const ButtonSandbox = () => <DocList docs={docs} />;

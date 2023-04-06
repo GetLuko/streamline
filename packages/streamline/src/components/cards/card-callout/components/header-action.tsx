@@ -23,7 +23,7 @@ export const HeaderAction = ({
       />
     );
   }
-  return <Icon color={color} iconName="ChevronFarRight" size="small" />;
+  return <Icon color={color} iconName="ChevronFarRight" size="regular" />;
 };
 
 export default HeaderAction;

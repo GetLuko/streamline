@@ -21,12 +21,13 @@ const InnerLabel = ({
   size,
   text,
   isSkeleton,
+  isDisabled,
 }: Pick<
   ButtonProps,
-  'isLoading' | 'appearance' | 'isSkeleton' | 'size' | 'text'
+  'isLoading' | 'appearance' | 'isSkeleton' | 'isDisabled' | 'size' | 'text'
 >) => {
   const styles = useStyles(appearance);
-  const textColor = getTextColor({ appearance, isSkeleton });
+  const textColor = getTextColor({ appearance, isSkeleton, isDisabled });
 
   switch (true) {
     case size === 'mini' && isSkeleton: {

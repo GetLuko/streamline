@@ -12,12 +12,13 @@ import { theme } from '../../../../theme';
 const InnerIcon = ({
   isLoading,
   isSkeleton,
+  isDisabled,
   iconName,
   appearance,
   size,
 }: Pick<
   ButtonProps,
-  'isLoading' | 'appearance' | 'isSkeleton' | 'size' | 'iconName'
+  'isLoading' | 'appearance' | 'isSkeleton' | 'isDisabled' | 'size' | 'iconName'
 >) => {
   switch (true) {
     case isLoading:
@@ -75,7 +76,7 @@ const InnerIcon = ({
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             iconName={iconName}
-            color={getTextColor({ appearance, isSkeleton })}
+            color={getTextColor({ appearance, isSkeleton, isDisabled })}
           />
         </AnimatedBox>
       );

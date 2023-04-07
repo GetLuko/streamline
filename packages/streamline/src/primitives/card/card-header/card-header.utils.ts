@@ -6,7 +6,7 @@ export const hasValidIconName = (
 ): iconName is IconsName => Boolean(iconName);
 
 export const hasValidHeader = (
-  header: CardHeaderProps['header']
+  header: CardHeaderProps['title']
 ): header is string => Boolean(header);
 
 export const hasValidValue = (

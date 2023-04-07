@@ -5,7 +5,7 @@ export type CardHeaderProps = {
   /**
    * Header content.
    */
-  header?: string;
+  title?: string;
   /**
    * The name of the icon to display on the top left corner
    */

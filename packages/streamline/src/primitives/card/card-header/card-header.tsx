@@ -12,10 +12,10 @@ import {
 import Spinner from '../../../components/spinner/spinner';
 
 export const CardHeader = (props: CardHeaderProps) => {
-  const { colors, iconName, header, value, rightAction, isLoading } = props;
+  const { colors, iconName, title, value, rightAction, isLoading } = props;
 
   const hasIconName = hasValidIconName(iconName);
-  const hasHeader = hasValidHeader(header);
+  const hasHeader = hasValidHeader(title);
   const hasValue = hasValidValue(value);
   const hasRightAction = hasValidRightAction(rightAction);
 
@@ -37,7 +37,7 @@ export const CardHeader = (props: CardHeaderProps) => {
             paddingLeft={hasIconName ? 'md' : undefined}
             variant="body"
           >
-            {header}
+            {title}
           </Text>
         )}
       </Box>

@@ -28,12 +28,15 @@ appId: ${APPID}
     timeout: 5000
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Icons
 - tapOn: 'Icons'
+
 - tapOn: 'Typo >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Typo
 - tapOn: 'Typo'
+
 - tapOn: 'Spinner >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Spinner
 - tapOn: 'Spinner'
+
 - tapOn: 'Button >'
 - extendedWaitUntil:
     visible: 'Button'
@@ -52,6 +55,10 @@ appId: ${APPID}
     timeout: 5000
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/ButtonIcon
 - tapOn: 'Button Icon'
+- scrollUntilVisible:
+    element:
+      text: 'Inputs'
+    direction: DOWN
 - tapOn: 'Card >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Card
 - tapOn: 'Card'
@@ -79,6 +86,7 @@ appId: ${APPID}
 - tapOn: 'InputText Types >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextTypes
 - tapOn: 'InputText Types'
+
 - scrollUntilVisible:
     element:
       text: 'InputTextArea >'
@@ -90,6 +98,14 @@ appId: ${APPID}
     direction: UP
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextArea
 - tapOn: 'InputTextArea'
+
+- scrollUntilVisible:
+    element:
+      text: 'Bottom'
+    direction: DOWN
+- tapOn: 'CheckBox >'
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Checkbox
+- tapOn: 'CheckBox'
 ##
 ## CI tests
 # - stopApp: host.exp.Exponent

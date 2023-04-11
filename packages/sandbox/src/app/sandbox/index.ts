@@ -40,7 +40,6 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'Button Icon', SandBox: ButtonIconSandbox },
       { title: 'Button Mini', SandBox: ButtonMiniSandbox },
       { title: 'Tag', SandBox: TagSandbox },
-      { title: 'Checkbox', SandBox: CheckboxSandbox },
     ],
   },
   {
@@ -56,6 +55,7 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'InputText', SandBox: InputTextSandbox },
       { title: 'InputText Types', SandBox: InputTextTypesSandbox },
       { title: 'InputTextArea', SandBox: InputTextAreaSandbox },
+      { title: 'CheckBox', SandBox: CheckboxSandbox },
     ],
   },
 ];

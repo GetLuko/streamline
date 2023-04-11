@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
-import { isIOS, StreamlineThemeProvider } from '@getluko/streamline';
+import { isIOS, StreamlineThemeProvider, Text } from '@getluko/streamline';
 import React, { useRef } from 'react';
 import { useFonts } from 'expo-font';
 import {

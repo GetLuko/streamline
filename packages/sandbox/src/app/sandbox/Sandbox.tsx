@@ -97,6 +97,7 @@ export const SandBox = () => {
             ))}
           </GroupItem>
         ))}
+        <Text>Bottom</Text>
       </>
     ),
     [sections]

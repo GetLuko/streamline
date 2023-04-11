@@ -57,17 +57,29 @@ appId: ${APPID}
 - tapOn: 'Card'
 - scrollUntilVisible:
     element:
-      text: 'Inputs'
+      text: 'CardCallout >'
     direction: DOWN
-- tapOn: 'CardTip >'
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/CardTip
-- tapOn: 'CardTip'
-- tapOn: 'Tag >'
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Tag
-- tapOn: 'Tag'
+- tapOn: 'CardCallout >'
 - scrollUntilVisible:
     element:
-      text: 'InputText >'
+      text: 'CardCallout'
+    direction: UP
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/CardCallout
+- tapOn: 'CardCallout'
+- scrollUntilVisible:
+    element:
+      text: 'CardTip >'
+    direction: DOWN
+- tapOn: 'CardTip >'
+- scrollUntilVisible:
+    element:
+      text: 'CardTip'
+    direction: UP
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/CardTip
+- tapOn: 'CardTip'
+- scrollUntilVisible:
+    element:
+      text: 'Inputs'
     direction: DOWN
 - tapOn: 'InputText >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputText
@@ -89,7 +101,23 @@ appId: ${APPID}
       text: 'InputTextArea'
     direction: UP
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextArea
+- tapOn: 'InputTextArea'-
+      text: 'InputTextArea >'
+    direction: DOWN
+- tapOn: 'InputTextArea >'
+- scrollUntilVisible:
+    element:
+      text: 'InputTextArea'
+    direction: UP
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextArea
 - tapOn: 'InputTextArea'
+- scrollUntilVisible:
+    element:
+      text: 'Tag >'
+    direction: DOWN
+- tapOn: 'Tag >'
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Tag
+- tapOn: 'Tag'
 ##
 ## CI tests
 # - stopApp: host.exp.Exponent

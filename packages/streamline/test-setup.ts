@@ -5,3 +5,7 @@ const globalAny: any = global;
 globalAny.ReanimatedDataMock = {
   now: () => 0,
 };
+
+jest.mock('expo-linear-gradient', () => ({
+  LinearGradient: () => null,
+}));

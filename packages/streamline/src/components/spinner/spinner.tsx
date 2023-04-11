@@ -17,13 +17,15 @@ import { ColorTheme, useStreamlineTheme } from '../../theme';
 
 export interface SpinnerProps {
   color?: ColorTheme;
-  testID?: string;
+  opacity?: number;
   size?: Size;
+  testID?: string;
 }
 
 export function Spinner({
   size = 'regular',
   color = 'BLACK',
+  opacity = 1,
   testID,
 }: SpinnerProps) {
   const { disableAnimation } = useContext(AnimationContext);
@@ -66,6 +68,7 @@ export function Spinner({
         height={totalSize}
         justifyContent="center"
         alignItems="center"
+        opacity={opacity}
         testID={testID}
       >
         <IconSvg color={hexaColor} iconName="Loader" isSpinner size={size} />

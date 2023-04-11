@@ -11,6 +11,7 @@ export type IconProps = {
   color?: ColorTheme;
   containerStyle?: StyleProp<ViewStyle>;
   iconName: IconsName;
+  opacity?: number;
   size?: Size;
   testID?: string;
 };
@@ -20,6 +21,7 @@ export const Icon = React.memo(
     color,
     containerStyle,
     iconName,
+    opacity = 1,
     size = 'regular',
     testID,
   }: IconProps) => {
@@ -33,6 +35,7 @@ export const Icon = React.memo(
         height={totalIconSize}
         justifyContent="center"
         alignItems="center"
+        opacity={opacity}
         style={[containerStyle]}
         testID={testID}
       >

@@ -30,6 +30,7 @@
     "@expo/webpack-config": "~0.17.4",
     "@shopify/restyle": "2.0.0",
     "expo": "47.0.13",
+    "expo-linear-gradient": "~12.0.1",
     "expo-splash-screen": "~0.17.5",
     "expo-status-bar": "~1.4.2",
     "expo-updates": "~0.15.6",

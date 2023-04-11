@@ -112,15 +112,6 @@ appId: ${APPID}
       text: 'InputTextArea'
     direction: UP
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextArea
-- tapOn: 'InputTextArea'-
-      text: 'InputTextArea >'
-    direction: DOWN
-- tapOn: 'InputTextArea >'
-- scrollUntilVisible:
-    element:
-      text: 'InputTextArea'
-    direction: UP
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextArea
 - tapOn: 'InputTextArea'
 - scrollUntilVisible:
     element:

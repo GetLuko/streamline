@@ -12,6 +12,7 @@ import { InputTextSandbox } from './docs/input-text.doc';
 import { SpinnerSandbox } from './docs/spinner.doc';
 import { TagSandbox } from './docs/tag.doc';
 import { TypoSandbox } from './docs/text.doc';
+import { SkeletonSandbox } from './docs/skeleton.doc';
 
 type SandBoxItemType = {
   title: string;
@@ -30,6 +31,7 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'Box', SandBox: BoxSandbox },
       { title: 'Icons', SandBox: IconsSandbox },
       { title: 'Typo', SandBox: TypoSandbox },
+      { title: 'Skeleton', SandBox: SkeletonSandbox },
       { title: 'Spinner', SandBox: SpinnerSandbox },
     ],
   },

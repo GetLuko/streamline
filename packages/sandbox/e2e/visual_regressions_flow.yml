@@ -31,6 +31,9 @@ appId: ${APPID}
 - tapOn: 'Typo >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Typo
 - tapOn: 'Typo'
+- tapOn: 'Skeleton >'
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Skeleton
+- tapOn: 'Skeleton'
 - tapOn: 'Spinner >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Spinner
 - tapOn: 'Spinner'

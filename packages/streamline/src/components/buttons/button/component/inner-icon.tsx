@@ -3,10 +3,10 @@ import { FadeIn } from 'react-native-reanimated';
 
 import { ButtonProps } from '../button.types';
 import { getTextColor } from '../button.utils';
-import { Box } from '../../../../primitives/box/box';
 import { AnimatedBox } from '../../../../primitives/animated-box/animated-box';
+import { Box } from '../../../../primitives/box/box';
 import { Icon } from '../../../../primitives/icon/icon';
-import { SkeletonAnimation } from '../../../skeleton/skeleton-animation/skeleton-animation';
+import { Skeleton } from '../../../../primitives/skeleton/skeleton';
 import { theme } from '../../../../theme';
 
 const InnerIcon = ({
@@ -27,38 +27,11 @@ const InnerIcon = ({
       return null;
     }
     case isSkeleton: {
-      return (
-        <Box
-          flexDirection="row"
-          justifyContent="center"
-          alignItems="center"
-          testID="button-skeleton"
-        >
-          {iconName !== undefined && (
-            <>
-              <Box
-                width={16}
-                height={16}
-                style={{ borderRadius: theme.borderRadii.lg }}
-                backgroundColor="GREY_200"
-                overflow="hidden"
-              >
-                <SkeletonAnimation />
-              </Box>
-              <Box paddingRight="xs" />
-            </>
-          )}
-          <Box
-            style={{ borderRadius: theme.borderRadii.lg }}
-            height={24}
-            width={82}
-            backgroundColor="GREY_200"
-            overflow="hidden"
-          >
-            <SkeletonAnimation />
-          </Box>
+      return iconName !== undefined ? (
+        <Box paddingRight="xs">
+          <Skeleton shape="square" size="sm" />
         </Box>
-      );
+      ) : null;
     }
 
     default: {

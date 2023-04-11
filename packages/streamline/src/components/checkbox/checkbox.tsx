@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, ViewStyle } from 'react-native';
+import { Pressable, ViewStyle } from 'react-native';
 import { CheckboxProps } from './checkbox.types';
 import { getCheckboxColors } from './checkbox.utils';
 import { Box } from '../../primitives/box/box';

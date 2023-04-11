@@ -6,16 +6,28 @@ export const CheckboxSandbox = () => {
   const [dangerChecked, setDangerChecked] = useState(false);
   return (
     <Box margin={'md'}>
-      <Checkbox value={checked} onChange={(v) => setChecked(v)} />
-      <Checkbox
-        appearance="danger"
-        value={dangerChecked}
-        onChange={(v) => setDangerChecked(v)}
-      />
-      <Checkbox value={true} disabled />
-      <Checkbox value={false} disabled />
-      <Checkbox appearance="danger" value={false} disabled />
-      <Checkbox appearance="danger" value={true} disabled />
+      <Box margin={'md'}>
+        <Checkbox value={checked} onChange={(v) => setChecked(v)} />
+      </Box>
+      <Box margin={'md'}>
+        <Checkbox
+          appearance="danger"
+          value={dangerChecked}
+          onChange={(v) => setDangerChecked(v)}
+        />
+      </Box>
+      <Box margin={'md'}>
+        <Checkbox value={true} disabled />
+      </Box>
+      <Box margin={'md'}>
+        <Checkbox value={false} disabled />
+      </Box>
+      <Box margin={'md'}>
+        <Checkbox appearance="danger" value={false} disabled />
+      </Box>
+      <Box margin={'md'}>
+        <Checkbox appearance="danger" value={true} disabled />
+      </Box>
     </Box>
   );
 };

@@ -1,7 +1,8 @@
 import React from 'react';
 
+import { Box } from '../../../../primitives/box/box';
 import { Card } from '../../../../primitives/card/card';
-import { Line, Square } from '../../../skeleton';
+import { Skeleton } from '../../../../primitives/skeleton/skeleton';
 
 export const CardCalloutSkeleton = ({
   numberOfLines = 1,
@@ -9,9 +10,11 @@ export const CardCalloutSkeleton = ({
   numberOfLines?: number;
 }) => (
   <Card backgroundColor="GREY_100">
-    <Square />
+    <Skeleton shape="square" />
     {[...Array(numberOfLines)].map((_, index) => (
-      <Line key={index} marginTop="md" />
+      <Box key={index} marginTop="md">
+        <Skeleton />
+      </Box>
     ))}
   </Card>
 );

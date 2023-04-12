@@ -77,7 +77,6 @@ export const Button = ({
         />
         <InnerLabel
           isLoading={isResolving || isLoading}
-          size={size}
           appearance={appearance}
           text={text}
           isSkeleton={isSkeleton}

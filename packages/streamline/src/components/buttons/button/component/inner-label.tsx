@@ -4,10 +4,9 @@ import { FadeIn } from 'react-native-reanimated';
 import { ButtonProps } from '../button.types';
 import { getTextColor } from '../button.utils';
 import { AnimatedBox } from '../../../../primitives/animated-box/animated-box';
+import { Skeleton } from '../../../../primitives/skeleton/skeleton';
 import { Text } from '../../../../primitives/text/text';
 import { useStreamlineTheme } from '../../../../theme';
-import { Box } from '../../../../primitives/box/box';
-import { SkeletonAnimation } from '../../../skeleton/skeleton-animation/skeleton-animation';
 import { stringCapitalize } from '../../../../utils/string.utils';
 import { Appearance } from '../../../../theme/appearance';
 import Spinner from '../../../spinner/spinner';
@@ -18,33 +17,22 @@ const LABEL_CONTAINER_HEIGHT = 24;
 const InnerLabel = ({
   isLoading,
   appearance,
-  size,
   text,
   isSkeleton,
   isDisabled,
 }: Pick<
   ButtonProps,
-  'isLoading' | 'appearance' | 'isSkeleton' | 'isDisabled' | 'size' | 'text'
+  'isLoading' | 'appearance' | 'isSkeleton' | 'isDisabled' | 'text'
 >) => {
   const styles = useStyles(appearance);
   const textColor = getTextColor({ appearance, isSkeleton, isDisabled });
 
   switch (true) {
-    case size === 'mini' && isSkeleton: {
-      return null;
-    }
     case isSkeleton: {
       return (
-        <Box
-          borderRadius="md"
-          height={LABEL_CONTAINER_HEIGHT}
-          width={size === 'mini' ? MIN_WIDTH : undefined}
-          backgroundColor="GREY_200"
-          overflow="hidden"
-          flex={1}
-        >
-          <SkeletonAnimation />
-        </Box>
+        <AnimatedBox width={MIN_WIDTH}>
+          <Skeleton />
+        </AnimatedBox>
       );
     }
     case isLoading: {

@@ -15,7 +15,7 @@ describe('Checkbox', () => {
     );
     const checkbox = getByTestId('Checkbox');
     fireEvent.press(checkbox);
-    expect(mockOnChange).toHaveBeenCalledTimes(1);
+    expect(mockOnChange).toHaveBeenNthCalledWith(1, false);
   });
 
   it('should not trigger mockOnChange', () => {

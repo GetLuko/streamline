@@ -16,6 +16,7 @@ export * from './primitives/box/box';
 export * from './primitives/text/text';
 export * from './primitives/icon/icon';
 export * from './primitives/card/card';
+export * from './components/radio/radio';
 export * from './primitives/skeleton/skeleton';
 export * from './theme';
 export * from './theme/ThemeProvider';

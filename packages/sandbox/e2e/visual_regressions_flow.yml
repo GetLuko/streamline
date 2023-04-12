@@ -121,6 +121,14 @@ appId: ${APPID}
 - tapOn: 'Tag >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Tag
 - tapOn: 'Tag'
+
+- scrollUntilVisible:
+    element:
+      text: 'Radio >'
+    direction: DOWN
+- tapOn: 'Radio >'
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Radio
+- tapOn: 'Radio'
 ##
 ## CI tests
 # - stopApp: host.exp.Exponent

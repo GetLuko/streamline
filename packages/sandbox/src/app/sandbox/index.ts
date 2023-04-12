@@ -65,4 +65,11 @@ export const sandboxItems: SandBoxSectionType[] = [
     title: 'Tags',
     items: [{ title: 'Tag', SandBox: TagSandbox }],
   },
+  {
+    title: 'Boolean Buttons',
+    items: [
+      { title: 'Radio', SandBox: RadioSandbox },
+      { title: 'Checkbox', SandBox: CheckboxSandbox },
+    ],
+  },
 ];

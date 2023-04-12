@@ -15,7 +15,7 @@ describe('Radio', () => {
     );
     const radio = getByTestId('Radio');
     fireEvent.press(radio);
-    expect(mockOnChange).toHaveBeenCalledTimes(1);
+    expect(mockOnChange).toHaveBeenNthCalledWith(1, false);
   });
 
   it('should not trigger mockOnChange', () => {

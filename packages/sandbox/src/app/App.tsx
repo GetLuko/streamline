@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
-import { isIOS, StreamlineThemeProvider } from '@getluko/streamline';
+import { isIOS, StreamlineThemeProvider, Text } from '@getluko/streamline';
 import React, { useRef } from 'react';
 import { useFonts } from 'expo-font';
 import {
@@ -35,26 +35,25 @@ export const App = () => {
   return (
     <>
       <StatusBar barStyle={isIOS ? 'light-content' : 'dark-content'} />
-      <SafeAreaView style={{ flex: 1 }}>
-        <KeyboardAvoidingView
-          behavior="padding"
-          style={{ flex: 1 }}
-          enabled={isIOS}
+      <SafeAreaView style={{ flex: 0 }} />
+      <KeyboardAvoidingView
+        behavior="padding"
+        style={{ flex: 1 }}
+        enabled={isIOS}
+      >
+        <ScrollView
+          ref={(ref) => {
+            scrollViewRef.current = ref;
+          }}
+          contentInsetAdjustmentBehavior="automatic"
+          style={styles.scrollView}
+          contentContainerStyle={{ flex: 0 }}
         >
-          <ScrollView
-            ref={(ref) => {
-              scrollViewRef.current = ref;
-            }}
-            contentInsetAdjustmentBehavior="automatic"
-            style={styles.scrollView}
-            contentContainerStyle={{ flex: 0 }}
-          >
-            <StreamlineThemeProvider disableAnimation={disableAnimation}>
-              <SandBox />
-            </StreamlineThemeProvider>
-          </ScrollView>
-        </KeyboardAvoidingView>
-      </SafeAreaView>
+          <StreamlineThemeProvider disableAnimation={disableAnimation}>
+            <SandBox />
+          </StreamlineThemeProvider>
+        </ScrollView>
+      </KeyboardAvoidingView>
     </>
   );
 };

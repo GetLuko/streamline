@@ -94,17 +94,9 @@ appId: ${APPID}
 - tapOn: 'InputText Types >'
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextTypes
 - tapOn: 'InputText Types'
+
 - scrollUntilVisible:
     element:
-      text: 'InputTextArea >'
-    direction: DOWN
-- tapOn: 'InputTextArea >'
-- scrollUntilVisible:
-    element:
-      text: 'InputTextArea'
-    direction: UP
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextArea
-- tapOn: 'InputTextArea'-
       text: 'InputTextArea >'
     direction: DOWN
 - tapOn: 'InputTextArea >'
@@ -114,6 +106,7 @@ appId: ${APPID}
     direction: UP
 - takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextArea
 - tapOn: 'InputTextArea'
+
 - scrollUntilVisible:
     element:
       text: 'Tag >'

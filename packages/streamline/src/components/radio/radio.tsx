@@ -2,6 +2,11 @@ import { Pressable, StyleSheet } from 'react-native';
 import { RadioProps } from './radio.types';
 import { getRadioColors } from './radio.utils';
 import { Box } from '../../primitives/box/box';
+import {
+  RADIO_BORDER_CONTAINER_SIZE,
+  RADIO_CONTAINER_SIZE,
+  RADIO_SHADOW_CONTAINER_SIZE,
+} from './radio.constants';
 
 export const Radio = ({
   appearance = 'primary',
@@ -28,8 +33,8 @@ export const Radio = ({
         <Box
           alignItems={'center'}
           justifyContent={'center'}
-          height={24}
-          width={24}
+          height={RADIO_SHADOW_CONTAINER_SIZE}
+          width={RADIO_SHADOW_CONTAINER_SIZE}
           borderRadius={'round'}
         >
           <Box
@@ -43,8 +48,8 @@ export const Radio = ({
             borderRadius={'round'}
           />
           <Box
-            height={20}
-            width={20}
+            height={RADIO_BORDER_CONTAINER_SIZE}
+            width={RADIO_BORDER_CONTAINER_SIZE}
             alignItems={'center'}
             justifyContent={'center'}
             backgroundColor={
@@ -53,8 +58,8 @@ export const Radio = ({
             borderRadius={'round'}
           >
             <Box
-              height={16}
-              width={16}
+              height={RADIO_CONTAINER_SIZE}
+              width={RADIO_CONTAINER_SIZE}
               alignItems={'center'}
               justifyContent={'center'}
               backgroundColor={
@@ -78,8 +83,8 @@ export const Radio = ({
 
 const styles = StyleSheet.create({
   container: {
-    height: 24,
-    width: 24,
+    height: RADIO_SHADOW_CONTAINER_SIZE,
+    width: RADIO_SHADOW_CONTAINER_SIZE,
   },
 });
 

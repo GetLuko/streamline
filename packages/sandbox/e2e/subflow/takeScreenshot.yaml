@@ -5,8 +5,6 @@ appId: ${APPID}
       text: ${COMPONENT} >
     direction: DOWN
 - tapOn: ${COMPONENT} >
-# - waitForAnimationToEnd:
-# timeout: 10000
 - scrollUntilVisible:
     element:
       text: ${COMPONENT}

@@ -15647,10 +15647,10 @@ react-is@^17.0.1:
   resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
-react-native-ama@^0.6.17:
-  version "0.6.17"
-  resolved "https://registry.yarnpkg.com/react-native-ama/-/react-native-ama-0.6.17.tgz#c7907fc4b3f37a5a4c040f3098ba32f9124c5331"
-  integrity sha512-UclvRdzsEIFIAXFF1eCXjpFxTw5rT/2/RXUw4BNqI7AKzWvIlA9ZIx0r7xTDVacq8F/Kqqg7AMnjtBL5A5TXqg==
+react-native-ama@0.6.20:
+  version "0.6.20"
+  resolved "https://registry.npmjs.org/react-native-ama/-/react-native-ama-0.6.20.tgz#451a3c59884ee2f7731a134afc75193681c1b455"
+  integrity sha512-E6SItDHYOCU43YQk1NNJeUfpgss+m8fq1UFe77dBXSB6SS8Gk3eEab/31oy54l2QX1EEflNk77CK887CAY/+Zw==
 
 react-native-codegen@^0.70.6:
   version "0.70.6"

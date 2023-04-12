@@ -4,6 +4,13 @@ import { getCheckboxColors } from './checkbox.utils';
 import { Box } from '../../primitives/box/box';
 import { Icon } from '../../primitives/icon/icon';
 import { useStreamlineTheme } from '../../theme';
+import {
+  CHECKBOX_BORDER_CONTAINER_SIZE,
+  CHECKBOX_BORDER_WIDTH,
+  CHECKBOX_CONTAINER_SIZE,
+  CHECKBOX_SHADOW_CONTAINER_SIZE,
+  CHECKBOX_SHADOW_WIDTH,
+} from './checkbox.constants';
 
 export const Checkbox = ({
   appearance = 'primary',
@@ -31,8 +38,8 @@ export const Checkbox = ({
         <Box
           alignItems={'center'}
           justifyContent={'center'}
-          height={24}
-          width={24}
+          height={CHECKBOX_SHADOW_CONTAINER_SIZE}
+          width={CHECKBOX_SHADOW_CONTAINER_SIZE}
         >
           <Box
             position={'absolute'}
@@ -45,8 +52,8 @@ export const Checkbox = ({
             opacity={pressed ? 1 : 0}
           />
           <Box
-            height={20}
-            width={20}
+            height={CHECKBOX_BORDER_CONTAINER_SIZE}
+            width={CHECKBOX_BORDER_CONTAINER_SIZE}
             alignItems={'center'}
             justifyContent={'center'}
             backgroundColor={
@@ -55,8 +62,8 @@ export const Checkbox = ({
             style={styles.border}
           >
             <Box
-              height={16}
-              width={16}
+              height={CHECKBOX_CONTAINER_SIZE}
+              width={CHECKBOX_CONTAINER_SIZE}
               alignItems={'center'}
               justifyContent={'center'}
               backgroundColor={
@@ -81,13 +88,13 @@ const useStyles = (): {
 } => {
   const { borderRadii } = useStreamlineTheme();
 
-  const shadowRaddi = borderRadii.sm + 2;
-  const containerRaddi = borderRadii.sm - 2;
+  const shadowRaddi = borderRadii.sm + CHECKBOX_SHADOW_WIDTH;
+  const containerRaddi = borderRadii.sm - CHECKBOX_BORDER_WIDTH;
 
   return {
     pressable: {
-      height: 24,
-      width: 24,
+      height: CHECKBOX_SHADOW_CONTAINER_SIZE,
+      width: CHECKBOX_SHADOW_CONTAINER_SIZE,
     },
     shadow: {
       borderRadius: shadowRaddi,

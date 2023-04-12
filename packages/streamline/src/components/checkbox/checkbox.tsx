@@ -88,8 +88,17 @@ const useStyles = (): {
 } => {
   const { borderRadii } = useStreamlineTheme();
 
-  const shadowRaddi = borderRadii.sm + CHECKBOX_SHADOW_WIDTH;
-  const containerRaddi = borderRadii.sm - CHECKBOX_BORDER_WIDTH;
+  /**
+   * In order to have the perfect border radius, we use the following formula:
+   * innerRadius + distance = outerRadius
+   * Also we cannot use the borderWidth property, because their is a bug in react-native that causes the border to be cut off.
+   * Related issues:
+   * https://github.com/facebook/react-native/issues/36566
+   * https://github.com/facebook/react-native/issues/33060
+   */
+  const borderRadius = borderRadii.sm;
+  const shadowRaddi = borderRadius + CHECKBOX_SHADOW_WIDTH;
+  const containerRaddi = borderRadius - CHECKBOX_BORDER_WIDTH;
 
   return {
     pressable: {
@@ -100,7 +109,7 @@ const useStyles = (): {
       borderRadius: shadowRaddi,
     },
     border: {
-      borderRadius: borderRadii.sm,
+      borderRadius: borderRadius,
     },
     container: {
       borderRadius: containerRaddi,

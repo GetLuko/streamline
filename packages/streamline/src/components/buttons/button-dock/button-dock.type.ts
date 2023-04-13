@@ -1,10 +1,10 @@
 import { ButtonProps } from '../button/button.types';
 
 export interface ButtonDockProps {
-  primaryButton: ButtonProps & {
+  primary: ButtonProps & {
     appearance: 'primary' | 'danger' | 'warning';
   };
-  secondaryButton?: ButtonProps & {
+  secondary?: ButtonProps & {
     appearance: 'neutral' | 'secondary';
   };
   isFloating?: boolean;

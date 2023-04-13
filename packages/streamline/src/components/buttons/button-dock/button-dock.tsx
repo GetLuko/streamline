@@ -4,16 +4,16 @@ import { Box } from '../../../primitives/box/box';
 import { ButtonDockProps } from './button-dock.type';
 
 export const ButtonDock = ({
-  primaryButton,
-  secondaryButton,
+  primary,
+  secondary,
   isFloating = false,
 }: ButtonDockProps) => {
   return (
     <Box padding={'md'}>
-      <Button {...primaryButton} isFloating={isFloating} />
-      {secondaryButton && (
+      <Button {...primary} isFloating={isFloating} />
+      {secondary && (
         <Box marginTop={'xs'}>
-          <Button {...secondaryButton} isFloating={isFloating} />
+          <Button {...secondary} isFloating={isFloating} />
         </Box>
       )}
     </Box>

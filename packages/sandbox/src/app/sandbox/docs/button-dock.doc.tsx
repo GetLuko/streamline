@@ -3,7 +3,7 @@ import { DocList } from '../components/DocList';
 
 const docs: JSX.Element[] = [
   <ButtonDock
-    primaryButton={{
+    primary={{
       text: 'Primary Default',
       onPress: () => {
         console.log('Primary button pressed');
@@ -12,14 +12,14 @@ const docs: JSX.Element[] = [
     }}
   />,
   <ButtonDock
-    primaryButton={{
+    primary={{
       text: 'Primary Default',
       onPress: () => {
         console.log('Primary button pressed');
       },
       appearance: 'primary',
     }}
-    secondaryButton={{
+    secondary={{
       text: 'Secondary Default',
       onPress: () => {
         console.log('Primary button pressed');
@@ -29,7 +29,7 @@ const docs: JSX.Element[] = [
   />,
   <ButtonDock
     isFloating
-    primaryButton={{
+    primary={{
       text: 'Danger Default',
       onPress: () => {
         console.log('Primary button pressed');
@@ -39,14 +39,14 @@ const docs: JSX.Element[] = [
   />,
   <ButtonDock
     isFloating
-    primaryButton={{
+    primary={{
       text: 'Danger Default',
       onPress: () => {
         console.log('Primary button pressed');
       },
       appearance: 'danger',
     }}
-    secondaryButton={{
+    secondary={{
       text: 'Neutral Default',
       onPress: () => {
         console.log('Primary button pressed');

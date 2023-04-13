@@ -5,12 +5,12 @@ import { renderWithProvider } from '../../../testing/render-with-provider';
 import { ButtonDockProps } from './button-dock.type';
 
 const props: ButtonDockProps = {
-  primaryButton: {
+  primary: {
     onPress: jest.fn(),
     text: 'Primary Button',
     appearance: 'primary',
   },
-  secondaryButton: {
+  secondary: {
     onPress: jest.fn(),
     text: 'Secondary Button',
     appearance: 'neutral',
@@ -20,33 +20,33 @@ const props: ButtonDockProps = {
 describe('ButtonDock', () => {
   it('renders correctly', () => {
     const { queryByText } = renderWithProvider(<ButtonDock {...props} />);
-    const primaryButton = queryByText('Primary Button');
-    const secondaryButton = queryByText('Secondary Button');
-    expect(primaryButton).toBeDefined();
-    expect(secondaryButton).toBeDefined();
+    const primary = queryByText('Primary Button');
+    const secondary = queryByText('Secondary Button');
+    expect(primary).toBeDefined();
+    expect(secondary).toBeDefined();
   });
 
   it('calls onPress function when primary button is pressed', () => {
     const { getByText } = renderWithProvider(
-      <ButtonDock primaryButton={props.primaryButton} />
+      <ButtonDock primary={props.primary} />
     );
-    const primaryButton = getByText('Primary Button');
-    fireEvent.press(primaryButton);
-    expect(props.primaryButton.onPress).toHaveBeenCalled();
+    const primary = getByText('Primary Button');
+    fireEvent.press(primary);
+    expect(props.primary.onPress).toHaveBeenCalled();
   });
 
   it('calls onPress function when secondary button is pressed', () => {
     const { getByText } = renderWithProvider(<ButtonDock {...props} />);
-    const secondaryButton = getByText('Secondary Button');
-    fireEvent.press(secondaryButton);
-    expect(props.secondaryButton?.onPress).toHaveBeenCalledTimes(1);
+    const secondary = getByText('Secondary Button');
+    fireEvent.press(secondary);
+    expect(props.secondary?.onPress).toHaveBeenCalledTimes(1);
   });
 
   it('does not render secondary button when it is not passed as a prop', () => {
     const { queryByText } = renderWithProvider(
-      <ButtonDock primaryButton={props.primaryButton} />
+      <ButtonDock primary={props.primary} />
     );
-    const secondaryButton = queryByText('Secondary Button');
-    expect(secondaryButton).toBeNull();
+    const secondary = queryByText('Secondary Button');
+    expect(secondary).toBeNull();
   });
 });

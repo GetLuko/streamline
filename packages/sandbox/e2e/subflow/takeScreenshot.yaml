@@ -1,0 +1,16 @@
+appId: ${APPID}
+---
+- scrollUntilVisible:
+    element:
+      text: ${COMPONENT} >
+    direction: DOWN
+- tapOn: ${COMPONENT} >
+- scrollUntilVisible:
+    element:
+      text: ${COMPONENT}
+    direction: UP
+- extendedWaitUntil:
+    visible: ${COMPONENT}
+    timeout: 5000
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/${COMPONENT}
+- tapOn: ${COMPONENT}

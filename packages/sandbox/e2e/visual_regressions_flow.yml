@@ -81,6 +81,10 @@ appId: ${APPID}
     file: subflow/takeScreenshot.yaml
     env:
       COMPONENT: Checkbox
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Radio
 ##
 ## CI tests
 # - stopApp: host.exp.Exponent

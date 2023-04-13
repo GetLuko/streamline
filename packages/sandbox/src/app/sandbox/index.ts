@@ -13,6 +13,7 @@ import { SpinnerSandbox } from './docs/spinner.doc';
 import { TagSandbox } from './docs/tag.doc';
 import { TypoSandbox } from './docs/text.doc';
 import { SkeletonSandbox } from './docs/skeleton.doc';
+import { RadioSandbox } from './docs/radio.doc';
 import { CheckboxSandbox } from './docs/checkbox.doc';
 
 type SandBoxItemType = {
@@ -58,11 +59,17 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'InputText', SandBox: InputTextSandbox },
       { title: 'InputText Types', SandBox: InputTextTypesSandbox },
       { title: 'InputTextArea', SandBox: InputTextAreaSandbox },
-      { title: 'CheckBox', SandBox: CheckboxSandbox },
     ],
   },
   {
     title: 'Tags',
     items: [{ title: 'Tag', SandBox: TagSandbox }],
+  },
+  {
+    title: 'Boolean Buttons',
+    items: [
+      { title: 'Radio', SandBox: RadioSandbox },
+      { title: 'Checkbox', SandBox: CheckboxSandbox },
+    ],
   },
 ];

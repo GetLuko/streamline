@@ -1,17 +1,7 @@
 import React from 'react';
 import { Button } from '../button/button';
 import { Box } from '../../../primitives/box/box';
-import { ButtonProps } from '../button/button.types';
-
-interface ButtonDockProps {
-  primaryButton: ButtonProps & {
-    appearance: 'primary' | 'danger' | 'warning';
-  };
-  secondaryButton?: ButtonProps & {
-    appearance: 'neutral' | 'secondary';
-  };
-  isFloating?: boolean;
-}
+import { ButtonDockProps } from './button-dock.type';
 
 export const ButtonDock = ({
   primaryButton,

@@ -22,8 +22,9 @@ export const Button = ({
   onPress,
   text,
   isSkeleton = false,
+  isFloating = false,
 }: ButtonProps) => {
-  const styles = useStyles(size, appearance);
+  const styles = useStyles(size, appearance, isFloating);
   const isMini = size === 'mini';
 
   if (!isNil(iconName) && !isMini) {
@@ -89,7 +90,8 @@ export const Button = ({
 
 const useStyles = (
   size?: ButtonProps['size'],
-  appearance?: ButtonProps['appearance']
+  appearance?: ButtonProps['appearance'],
+  isFloating?: ButtonProps['isFloating']
 ): {
   pressable: ViewStyle;
   activityIndicator: TextStyle;
@@ -102,10 +104,23 @@ const useStyles = (
   );
 
   return {
-    pressable: {
-      borderRadius: borderRadii.lg,
-      alignSelf: size === 'mini' ? 'flex-start' : undefined,
-    },
+    pressable: isFloating
+      ? {
+          shadowColor: '#000',
+          shadowOffset: {
+            width: 0,
+            height: 8,
+          },
+          shadowOpacity: 0.16,
+          shadowRadius: 16,
+          elevation: 3,
+          borderRadius: borderRadii.lg,
+          alignSelf: size === 'mini' ? 'flex-start' : undefined,
+        }
+      : {
+          borderRadius: borderRadii.lg,
+          alignSelf: size === 'mini' ? 'flex-start' : undefined,
+        },
     activityIndicator: {
       color: appearance === 'secondary' ? colors.BLACK : colors.PURE_WHITE_1000,
     },

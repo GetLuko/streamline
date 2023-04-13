@@ -7,6 +7,7 @@ export * from './components/inputs/input-text/input-text';
 export * from './components/spinner/spinner';
 export * from './components/buttons/button/button';
 export * from './components/buttons/button-icon/button-icon';
+export * from './components/buttons/button-dock/button-dock';
 export * from './components/cards/card-callout/card-callout';
 export * from './components/cards/card-tip/card-tip';
 export * from './components/checkbox/checkbox';

@@ -15,6 +15,7 @@ import { TypoSandbox } from './docs/text.doc';
 import { SkeletonSandbox } from './docs/skeleton.doc';
 import { RadioSandbox } from './docs/radio.doc';
 import { CheckboxSandbox } from './docs/checkbox.doc';
+import { ButtonDockSandbox } from './docs/button-dock.doc';
 
 type SandBoxItemType = {
   title: string;
@@ -43,6 +44,7 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'Button', SandBox: ButtonSandbox },
       { title: 'Button Icon', SandBox: ButtonIconSandbox },
       { title: 'Button Mini', SandBox: ButtonMiniSandbox },
+      { title: 'Button Dock', SandBox: ButtonDockSandbox },
     ],
   },
   {

@@ -32,4 +32,9 @@ export type ButtonProps = Omit<InteractionType, 'accessibilityLabel'> & {
    * Display as a Skeleton.
    */
   isSkeleton?: boolean;
+
+  /**
+   * Display with a box shadow to have a floating style.
+   */
+  isFloating?: boolean;
 } & Omit<PressableProps, 'children' | 'disabled' | 'style'>;

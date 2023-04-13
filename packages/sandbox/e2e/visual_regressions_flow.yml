@@ -17,110 +17,74 @@ appId: ${APPID}
     # bypass expo onboarding modal if you run the test on a fresh env
     text: 'Foundation'
     optional: true
-- tapOn: 'Box >'
-- waitForAnimationToEnd:
-    timeout: 10000
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Box
-- tapOn: 'Box'
-- tapOn: 'Icons >'
-- extendedWaitUntil:
-    visible: 'Icons'
-    timeout: 5000
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Icons
-- tapOn: 'Icons'
-- tapOn: 'Typo >'
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Typo
-- tapOn: 'Typo'
-- tapOn: 'Skeleton >'
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Skeleton
-- tapOn: 'Skeleton'
-- tapOn: 'Spinner >'
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Spinner
-- tapOn: 'Spinner'
-- tapOn: 'Button >'
-- extendedWaitUntil:
-    visible: 'Button'
-    timeout: 5000
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Button
-- tapOn: 'Button'
-- tapOn: 'Button Mini >'
-- extendedWaitUntil:
-    visible: 'Button Mini'
-    timeout: 5000
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/ButtonMini
-- tapOn: 'Button Mini'
-- tapOn: 'Button Icon >'
-- extendedWaitUntil:
-    visible: 'Button Icon'
-    timeout: 5000
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/ButtonIcon
-- tapOn: 'Button Icon'
-- tapOn: 'Card >'
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Card
-- tapOn: 'Card'
-- scrollUntilVisible:
-    element:
-      text: 'CardCallout >'
-    direction: DOWN
-- tapOn: 'CardCallout >'
-- scrollUntilVisible:
-    element:
-      text: 'CardCallout'
-    direction: UP
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/CardCallout
-- tapOn: 'CardCallout'
-- scrollUntilVisible:
-    element:
-      text: 'CardTip >'
-    direction: DOWN
-- tapOn: 'CardTip >'
-- scrollUntilVisible:
-    element:
-      text: 'CardTip'
-    direction: UP
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/CardTip
-- tapOn: 'CardTip'
-- scrollUntilVisible:
-    element:
-      text: 'Inputs'
-    direction: DOWN
-- tapOn: 'InputText >'
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputText
-- tapOn: 'InputText'
-- scrollUntilVisible:
-    element:
-      text: 'InputText Types >'
-    direction: DOWN
-- tapOn: 'InputText Types >'
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextTypes
-- tapOn: 'InputText Types'
-- scrollUntilVisible:
-    element:
-      text: 'InputTextArea >'
-    direction: DOWN
-- tapOn: 'InputTextArea >'
-- scrollUntilVisible:
-    element:
-      text: 'InputTextArea'
-    direction: UP
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextArea
-- tapOn: 'InputTextArea'-
-      text: 'InputTextArea >'
-    direction: DOWN
-- tapOn: 'InputTextArea >'
-- scrollUntilVisible:
-    element:
-      text: 'InputTextArea'
-    direction: UP
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/InputTextArea
-- tapOn: 'InputTextArea'
-- scrollUntilVisible:
-    element:
-      text: 'Tag >'
-    direction: DOWN
-- tapOn: 'Tag >'
-- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/Tag
-- tapOn: 'Tag'
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Box
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Icons
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Typo
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Skeleton
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Spinner
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Button
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Button Mini
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Button Icon
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Card
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: CardCallout
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: CardTip
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: InputText
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: InputText Types
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: InputTextArea
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Checkbox
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: ListItem
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Tag
 ##
 ## CI tests
 # - stopApp: host.exp.Exponent

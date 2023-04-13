@@ -55,6 +55,14 @@ const LIST_ITEMS: JSX.Element[] = [
     showDivider
     title="Title"
   />,
+  <ListItem
+    description="Skeleton list item"
+    header="Header"
+    iconName={ICON_NAME}
+    isSkeleton
+    key="Skeleton list item"
+    title="Title"
+  />,
 ];
 
 export const ListItemSandbox = () => <DocList docs={LIST_ITEMS} margin="md" />;

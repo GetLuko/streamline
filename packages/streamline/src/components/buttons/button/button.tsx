@@ -11,6 +11,7 @@ import { getPressableBackgroundColor } from './button.utils';
 import InnerIcon from './component/inner-icon';
 import InnerLabel from './component/inner-label';
 import { useLoadingAnimation } from './hook/useLoadingAnimation';
+import { getShadowsStyle } from '../../../theme/shadows';
 
 export const Button = ({
   appearance = 'primary',
@@ -104,23 +105,11 @@ const useStyles = (
   );
 
   return {
-    pressable: isFloating
-      ? {
-          shadowColor: '#000',
-          shadowOffset: {
-            width: 0,
-            height: 8,
-          },
-          shadowOpacity: 0.16,
-          shadowRadius: 16,
-          elevation: 3,
-          borderRadius: borderRadii.lg,
-          alignSelf: size === 'mini' ? 'flex-start' : undefined,
-        }
-      : {
-          borderRadius: borderRadii.lg,
-          alignSelf: size === 'mini' ? 'flex-start' : undefined,
-        },
+    pressable: {
+      borderRadius: borderRadii.lg,
+      alignSelf: size === 'mini' ? 'flex-start' : undefined,
+      ...(isFloating ? getShadowsStyle('strong') : {}),
+    },
     activityIndicator: {
       color: appearance === 'secondary' ? colors.BLACK : colors.PURE_WHITE_1000,
     },

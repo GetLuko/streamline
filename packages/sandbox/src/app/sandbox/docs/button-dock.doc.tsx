@@ -47,7 +47,7 @@ const docs: JSX.Element[] = [
       appearance: 'danger',
     }}
     secondaryButton={{
-      text: 'Secondary Default',
+      text: 'Neutral Default',
       onPress: () => {
         console.log('Primary button pressed');
       },

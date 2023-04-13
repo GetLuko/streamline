@@ -52,6 +52,10 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: Button Dock
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: Card
 - runFlow:
     file: subflow/takeScreenshot.yaml

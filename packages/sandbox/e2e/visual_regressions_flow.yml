@@ -76,15 +76,19 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: Checkbox
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
       COMPONENT: ListItem
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
       COMPONENT: Tag
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Checkbox
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Radio
 ##
 ## CI tests
 # - stopApp: host.exp.Exponent

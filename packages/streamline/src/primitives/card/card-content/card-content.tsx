@@ -21,7 +21,7 @@ export const CardContent = (props: CardContentProps) => {
         </Text>
       )}
       {hasDescription && (
-        <Text variant="body" color={colors?.descriptionColor}>
+        <Text variant="bodyBold" color={colors?.descriptionColor}>
           {description}
         </Text>
       )}

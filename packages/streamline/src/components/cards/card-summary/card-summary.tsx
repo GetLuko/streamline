@@ -17,7 +17,7 @@ import { usePress } from '../../../hooks/use-press.hook';
 export const CardSummary = (props: CardSummaryProps) => {
   const {
     appearance = 'primary',
-    title: header,
+    header,
     iconName,
     value,
     rightAction,

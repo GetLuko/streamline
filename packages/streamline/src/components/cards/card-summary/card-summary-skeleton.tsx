@@ -2,6 +2,7 @@ import React from 'react';
 import { Box } from '../../../primitives/box/box';
 import { Card } from '../../../primitives/card/card';
 import { CardSummaryProps } from './card-summary.types';
+import { Skeleton } from '../../../primitives/skeleton/skeleton';
 
 export const CardSummarySkeleton = (
   props: Pick<CardSummaryProps, 'title' | 'accessibilityLabel' | 'testID'>
@@ -17,19 +18,10 @@ export const CardSummarySkeleton = (
         busy: true,
       }}
     >
-      <Box
-        height={24}
-        width={24}
-        backgroundColor={'GREY_200'}
-        borderRadius={'md'}
-      />
-      <Box paddingTop={'md'} />
-      <Box
-        height={24}
-        width={'100%'}
-        backgroundColor={'GREY_200'}
-        borderRadius={'md'}
-      />
+      <Skeleton shape="square" />
+      <Box marginTop="md">
+        <Skeleton />
+      </Box>
     </Card>
   );
 };

@@ -8,7 +8,7 @@ export type CardSummaryProps = Pick<
   CardProps,
   'accessibilityLabel' | 'testID' | 'onPress' | 'onPressIn' | 'onPressOut'
 > &
-  Omit<CardHeaderProps, 'colors'> & {
+  Omit<CardHeaderProps, 'colors' | 'title'> & {
     /**
      * Card appearance.
      */
@@ -20,6 +20,10 @@ export type CardSummaryProps = Pick<
      * Card title.
      */
     title?: string;
+    /**
+     * Title of the header.
+     */
+    header?: string;
     /**
      * Card description.
      */

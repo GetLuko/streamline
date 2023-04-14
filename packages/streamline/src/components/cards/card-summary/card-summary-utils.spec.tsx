@@ -27,7 +27,7 @@ describe('card summary utils', () => {
           headerColor: 'PURE_WHITE_1000',
           leftIconColor: 'PURE_WHITE_1000',
           rightIconColor: 'BLUKO_400',
-          valueColor: 'BLUKO_300',
+          valueColor: 'BLUKO_200',
         },
       });
     });
@@ -74,7 +74,7 @@ describe('card summary utils', () => {
           headerColor: 'PURE_WHITE_1000',
           leftIconColor: 'PURE_WHITE_1000',
           rightIconColor: 'ORANGE_400',
-          valueColor: 'ORANGE_300',
+          valueColor: 'ORANGE_200',
         },
       });
     });
@@ -98,7 +98,7 @@ describe('card summary utils', () => {
           headerColor: 'PURE_WHITE_1000',
           leftIconColor: 'PURE_WHITE_1000',
           rightIconColor: 'TERRA_400',
-          valueColor: 'TERRA_300',
+          valueColor: 'TERRA_200',
         },
       });
     });
@@ -122,7 +122,7 @@ describe('card summary utils', () => {
           headerColor: 'PURE_WHITE_1000',
           leftIconColor: 'PURE_WHITE_1000',
           rightIconColor: 'BLUKO_400',
-          valueColor: 'BLUKO_300',
+          valueColor: 'BLUKO_200',
         },
       });
     });

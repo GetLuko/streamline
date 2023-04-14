@@ -17,7 +17,7 @@ export const getCardSummaryColors = ({
           rightIconColor: 'TERRA_400',
           headerColor: 'PURE_WHITE_1000',
           leftIconColor: 'PURE_WHITE_1000',
-          valueColor: 'TERRA_300',
+          valueColor: 'TERRA_200',
         },
         contentColors: {
           titleColor: 'PURE_WHITE_1000',
@@ -34,7 +34,7 @@ export const getCardSummaryColors = ({
           rightIconColor: 'ORANGE_400',
           headerColor: 'PURE_WHITE_1000',
           leftIconColor: 'PURE_WHITE_1000',
-          valueColor: 'ORANGE_300',
+          valueColor: 'ORANGE_200',
         },
         contentColors: {
           titleColor: 'PURE_WHITE_1000',
@@ -70,7 +70,7 @@ export const getCardSummaryColors = ({
           rightIconColor: 'BLUKO_400',
           headerColor: 'PURE_WHITE_1000',
           leftIconColor: 'PURE_WHITE_1000',
-          valueColor: 'BLUKO_300',
+          valueColor: 'BLUKO_200',
         },
         contentColors: {
           titleColor: 'PURE_WHITE_1000',

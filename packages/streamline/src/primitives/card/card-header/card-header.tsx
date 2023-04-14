@@ -52,7 +52,7 @@ export const CardHeader = (props: CardHeaderProps) => {
             <Box paddingLeft="xs" />
             <Icon
               color={colors.rightIconColor}
-              iconName={'ChevronRight'}
+              iconName={'ChevronFarRight'}
               size="regular"
             />
           </>

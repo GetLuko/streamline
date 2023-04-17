@@ -15,6 +15,7 @@ import { TypoSandbox } from './docs/text.doc';
 import { SkeletonSandbox } from './docs/skeleton.doc';
 import { RadioSandbox } from './docs/radio.doc';
 import { CheckboxSandbox } from './docs/checkbox.doc';
+import { ProgressBarSandbox } from './docs/progress-bar.doc';
 
 type SandBoxItemType = {
   title: string;
@@ -27,6 +28,10 @@ export type SandBoxSectionType = {
 };
 
 export const sandboxItems: SandBoxSectionType[] = [
+  {
+    title: 'Progress Bar',
+    items: [{ title: 'Progress Bar', SandBox: ProgressBarSandbox }],
+  },
   {
     title: 'Foundation',
     items: [

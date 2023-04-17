@@ -5,6 +5,7 @@ import { radius } from './radius';
 import { spacings } from './spacings';
 import { fonts } from './fonts';
 import { getAnimationValues } from './animation';
+export { Appearance } from './appearance';
 export { fonts, TextVariants as TextVariant } from './fonts';
 
 const baseTheme = {

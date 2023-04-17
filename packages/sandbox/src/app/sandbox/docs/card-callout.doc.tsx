@@ -31,20 +31,20 @@ const CARDS: JSX.Element[] = [
     key="Primary dismissable card callout"
   />,
   <CardCallout
-    appearance="secondary"
+    appearance="neutral"
     description="Secondary card callout"
-    header="Secondary"
+    header="Neutral"
     iconName={ICON_NAME}
-    key="Secondary card callout"
+    key="Neutral card callout"
     onPress={ON_PRESS}
   />,
   <CardCallout
-    appearance="secondary"
-    description="Secondary dismissable card callout"
+    appearance="neutral"
+    description="Neutral dismissable card callout"
     dismissAction={DISMISS_ACTION}
-    header="Secondary"
+    header="Neutral"
     iconName={ICON_NAME}
-    key="Secondary dismissable card callout"
+    key="Neutral dismissable card callout"
   />,
   <CardCallout
     appearance="warning"

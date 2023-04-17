@@ -4,4 +4,6 @@ export type Appearance =
   | 'danger'
   | 'neutral'
   | 'success'
-  | 'warning';
+  | 'warning'
+  | 'light'
+  | 'dark';

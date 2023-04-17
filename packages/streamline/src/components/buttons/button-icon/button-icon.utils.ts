@@ -47,6 +47,13 @@ export const getButtonIconColors: GetButtonIconColors = ({
           color: 'PURE_WHITE_1000',
           backgroundColor: 'GREY_600',
         };
+      case 'light':
+        return {
+          color: 'PURE_WHITE_1000',
+          opacity: 0.6,
+          backgroundColor: 'PURE_WHITE_1000',
+          backgroundOpacity: 0.05,
+        };
       default:
         return {
           color: 'PURE_WHITE_1000',
@@ -68,6 +75,11 @@ export const getButtonIconColors: GetButtonIconColors = ({
         color: 'TERRA_500',
       };
     case 'neutral':
+    case 'light':
+      return {
+        color: 'PURE_WHITE_1000',
+        opacity: 0.6,
+      };
     default:
       return {
         color: 'PURE_WHITE_1000',

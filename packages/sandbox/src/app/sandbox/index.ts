@@ -16,6 +16,7 @@ import { TypoSandbox } from './docs/text.doc';
 import { SkeletonSandbox } from './docs/skeleton.doc';
 import { RadioSandbox } from './docs/radio.doc';
 import { CheckboxSandbox } from './docs/checkbox.doc';
+import { NavigationTitleSandbox } from './docs/navigation-title.doc';
 
 type SandBoxItemType = {
   title: string;
@@ -73,5 +74,9 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'Radio', SandBox: RadioSandbox },
       { title: 'Checkbox', SandBox: CheckboxSandbox },
     ],
+  },
+  {
+    title: 'Navigation',
+    items: [{ title: 'Navigation Title', SandBox: NavigationTitleSandbox }],
   },
 ];

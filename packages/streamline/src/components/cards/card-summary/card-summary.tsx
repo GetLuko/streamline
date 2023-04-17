@@ -97,9 +97,7 @@ export const CardSummary = (props: CardSummaryProps) => {
             pointerEvents={hasButtonAction ? undefined : 'none'}
             appearance={appearance === 'neutral' ? 'secondary' : appearance}
             {...buttonProps}
-            onPress={(e) => {
-              handleButtonPress(e);
-            }}
+            onPress={handleButtonPress}
             isBusy={isInnerBusy}
             isLoading={isButtonResolving}
           />

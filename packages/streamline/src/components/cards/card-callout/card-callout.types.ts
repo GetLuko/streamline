@@ -17,6 +17,7 @@ export type HeaderProps = {
   hasAction: boolean;
   header: string;
   iconName: IconsName;
+  isLoading: boolean;
 };
 
 export type DismissAction = {

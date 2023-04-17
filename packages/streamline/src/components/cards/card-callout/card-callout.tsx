@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { usePress } from '../../../hooks/use-press.hook';
 import { Card } from '../../../primitives/card/card';
 import { Text } from '../../../primitives/text/text';
 import { CardCalloutProps } from './card-callout.types';
@@ -20,6 +21,8 @@ export const CardCallout = ({
   onPressIn,
   onPressOut,
 }: CardCalloutProps) => {
+  const [handlePress, isLoading] = usePress({ onPress });
+
   const colors = getCardCalloutColors({ appearance });
 
   if (isSkeleton) {
@@ -31,7 +34,7 @@ export const CardCallout = ({
       backgroundColor={colors.backgroundColor}
       pressedBackgroundColor={colors.pressedColor}
       onLongPress={onLongPress}
-      onPress={onPress}
+      onPress={handlePress}
       onPressIn={onPressIn}
       onPressOut={onPressOut}
     >
@@ -41,6 +44,7 @@ export const CardCallout = ({
         hasAction={!!onPress}
         header={header}
         iconName={iconName}
+        isLoading={isLoading}
       />
       <Text
         color={colors.descriptionColor}

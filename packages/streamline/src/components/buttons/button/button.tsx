@@ -87,6 +87,7 @@ export const Button = ({
           text={text}
           isSkeleton={isSkeleton}
           isDisabled={isDisabled}
+          isMini={isMini}
         />
       </AnimatedBox>
     </Pressable>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import { LayoutChangeEvent, StyleProp, ViewStyle } from 'react-native';
 import {
@@ -9,10 +9,11 @@ import {
   withTiming,
 } from 'react-native-reanimated';
 
-import { SkeletonProps } from './skeleton.types';
-import { SIZES } from './skeleton.constants';
+import { AnimationContext } from '../../contexts/disable-animation.context';
 import { useStreamlineTheme } from '../../theme';
 import { AnimatedBox } from '../animated-box/animated-box';
+import { SIZES } from './skeleton.constants';
+import { SkeletonProps } from './skeleton.types';
 
 const START_OPACITY = 1;
 const END_OPACITY = 0.8;
@@ -30,6 +31,7 @@ export const Skeleton = ({
   shape = 'row',
   size = 'md',
 }: SkeletonProps) => {
+  const { disableAnimation } = useContext(AnimationContext);
   const { colors } = useStreamlineTheme();
 
   const isSquare = shape === 'square';
@@ -45,6 +47,10 @@ export const Skeleton = ({
   const opacity = useSharedValue(START_OPACITY);
 
   const onLayout = (event: LayoutChangeEvent) => {
+    if (disableAnimation) {
+      return;
+    }
+
     translateX.value = event.nativeEvent.layout.width;
     opacity.value = END_OPACITY;
   };

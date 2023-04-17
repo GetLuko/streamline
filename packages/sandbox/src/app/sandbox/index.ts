@@ -6,16 +6,17 @@ import { CardCalloutSandbox } from './docs/card-callout.doc';
 import { CardSandbox } from './docs/card.doc';
 import { CardSummarySandbox } from './docs/card-summary.doc';
 import { CardTipSandbox } from './docs/card-tip.doc';
+import { CheckboxSandbox } from './docs/checkbox.doc';
 import { IconsSandbox } from './docs/icon.doc';
 import { InputTextAreaSandbox } from './docs/input-text-area.doc';
 import { InputTextSandbox } from './docs/input-text.doc';
 import { InputTextTypesSandbox } from './docs/input-text-types.doc';
+import { ListItemSandbox } from './docs/list-item.doc';
+import { RadioSandbox } from './docs/radio.doc';
+import { SkeletonSandbox } from './docs/skeleton.doc';
 import { SpinnerSandbox } from './docs/spinner.doc';
 import { TagSandbox } from './docs/tag.doc';
 import { TypoSandbox } from './docs/text.doc';
-import { SkeletonSandbox } from './docs/skeleton.doc';
-import { RadioSandbox } from './docs/radio.doc';
-import { CheckboxSandbox } from './docs/checkbox.doc';
 
 type SandBoxItemType = {
   title: string;
@@ -62,6 +63,10 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'InputText Types', SandBox: InputTextTypesSandbox },
       { title: 'InputTextArea', SandBox: InputTextAreaSandbox },
     ],
+  },
+  {
+    title: 'List Items',
+    items: [{ title: 'ListItem', SandBox: ListItemSandbox }],
   },
   {
     title: 'Tags',

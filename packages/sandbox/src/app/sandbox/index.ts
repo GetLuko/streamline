@@ -29,10 +29,6 @@ export type SandBoxSectionType = {
 
 export const sandboxItems: SandBoxSectionType[] = [
   {
-    title: 'Progress Bar',
-    items: [{ title: 'Progress Bar', SandBox: ProgressBarSandbox }],
-  },
-  {
     title: 'Foundation',
     items: [
       { title: 'Box', SandBox: BoxSandbox },
@@ -76,5 +72,9 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'Radio', SandBox: RadioSandbox },
       { title: 'Checkbox', SandBox: CheckboxSandbox },
     ],
+  },
+  {
+    title: 'Progress Bar',
+    items: [{ title: 'Progress Bar', SandBox: ProgressBarSandbox }],
   },
 ];

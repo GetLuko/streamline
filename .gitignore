@@ -195,3 +195,5 @@ yarn-error.log
 # reg-cli
 diffScreenshots
 tempScreenshots
+
+node

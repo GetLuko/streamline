@@ -4,11 +4,12 @@ import { ButtonMiniSandbox } from './docs/button-mini.doc';
 import { ButtonSandbox } from './docs/button.doc';
 import { CardCalloutSandbox } from './docs/card-callout.doc';
 import { CardSandbox } from './docs/card.doc';
+import { CardSummarySandbox } from './docs/card-summary.doc';
 import { CardTipSandbox } from './docs/card-tip.doc';
 import { IconsSandbox } from './docs/icon.doc';
 import { InputTextAreaSandbox } from './docs/input-text-area.doc';
-import { InputTextTypesSandbox } from './docs/input-text-types.doc';
 import { InputTextSandbox } from './docs/input-text.doc';
+import { InputTextTypesSandbox } from './docs/input-text-types.doc';
 import { SpinnerSandbox } from './docs/spinner.doc';
 import { TagSandbox } from './docs/tag.doc';
 import { TypoSandbox } from './docs/text.doc';
@@ -50,6 +51,7 @@ export const sandboxItems: SandBoxSectionType[] = [
     items: [
       { title: 'Card', SandBox: CardSandbox },
       { title: 'CardCallout', SandBox: CardCalloutSandbox },
+      { title: 'CardSummary', SandBox: CardSummarySandbox },
       { title: 'CardTip', SandBox: CardTipSandbox },
     ],
   },

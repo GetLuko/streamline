@@ -1,12 +1,12 @@
-import React, { useContext } from 'react';
-import { Pressable } from 'react-native';
+import React from 'react';
+import { GestureResponderEvent, Pressable } from 'react-native';
 import {
   interpolate,
+  interpolateColor,
   useAnimatedStyle,
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
-import { AnimationContext } from '../../contexts/disable-animation.context';
 import { useStreamlineTheme } from '../../theme';
 import { getShadowsStyle } from '../../theme/shadows';
 import { AnimatedBox } from '../animated-box/animated-box';
@@ -23,24 +23,26 @@ export const Card = ({
   testID,
   accessible,
   backgroundColor,
+  pressedBackgroundColor,
   disabled,
   shadows,
   withPadding = true,
   animated = true,
+  style,
   ...rest
 }: CardProps) => {
   const pressInAnimatedValue = useSharedValue(0);
 
-  const { animation } = useStreamlineTheme();
+  const { animation, colors } = useStreamlineTheme();
 
-  const handlePressIn = () => {
+  const handlePressIn = (e: GestureResponderEvent) => {
     pressInAnimatedValue.value = 1;
-    onPressIn?.();
+    onPressIn?.(e);
   };
 
-  const handlePressOut = () => {
+  const handlePressOut = (e: GestureResponderEvent) => {
     pressInAnimatedValue.value = 0;
-    onPressOut?.();
+    onPressOut?.(e);
   };
 
   const animatedStyle = useAnimatedStyle(() => {
@@ -52,8 +54,25 @@ export const Card = ({
       ),
       { duration: animation.onPressScale.duration }
     );
+
+    const hasColorInterpolation =
+      backgroundColor != null && pressedBackgroundColor != null;
+
+    const innerBackgroundColor = hasColorInterpolation
+      ? withTiming(
+          interpolateColor(
+            pressInAnimatedValue.value,
+            [0, 1],
+            [colors[backgroundColor], colors[pressedBackgroundColor]]
+          )
+        )
+      : backgroundColor
+      ? colors[backgroundColor]
+      : undefined;
+
     return {
       transform: [{ scale }],
+      backgroundColor: innerBackgroundColor,
     };
   });
 
@@ -72,21 +91,19 @@ export const Card = ({
         accessible={accessible}
       >
         <Box width={rest.width} height={rest.height}>
-          <AnimatedBox style={[animatedStyle]}>
-            <Box
-              borderRadius="lg"
-              paddingHorizontal={withPadding ? 'md' : undefined}
-              paddingVertical={withPadding ? 'md' : undefined}
-              flexGrow={1}
-              flexShrink={1}
-              backgroundColor={backgroundColor}
-              {...(shadows ? getShadowsStyle(shadows) : {})}
-              {...rest}
-            >
-              {React.Children.map(children, (child) =>
-                React.isValidElement(child) ? React.cloneElement(child) : child
-              )}
-            </Box>
+          <AnimatedBox
+            borderRadius="lg"
+            paddingHorizontal={withPadding ? 'md' : undefined}
+            paddingVertical={withPadding ? 'md' : undefined}
+            flexGrow={1}
+            flexShrink={1}
+            style={[style, animatedStyle]}
+            {...(shadows ? getShadowsStyle(shadows) : {})}
+            {...rest}
+          >
+            {React.Children.map(children, (child) =>
+              React.isValidElement(child) ? React.cloneElement(child) : child
+            )}
           </AnimatedBox>
         </Box>
       </Pressable>

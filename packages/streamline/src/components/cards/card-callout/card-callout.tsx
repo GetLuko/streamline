@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Card } from '../../../primitives/card/card';
 import { Text } from '../../../primitives/text/text';
-import { ColorTheme } from '../../../theme';
 import { CardCalloutProps } from './card-callout.types';
 import { getCardCalloutColors } from './card-callout.utils';
 import { CardCalloutSkeleton } from './components/card-callout-skeleton';
@@ -23,31 +22,18 @@ export const CardCallout = ({
 }: CardCalloutProps) => {
   const colors = getCardCalloutColors({ appearance });
 
-  const [backgroundColor, setBackgroundColor] = useState<ColorTheme>(
-    colors.backgroundColor
-  );
-
-  const innerOnPressIn = () => {
-    setBackgroundColor(colors.pressedColor);
-    return onPressIn?.();
-  };
-
-  const innerOnPressOut = () => {
-    setBackgroundColor(colors.backgroundColor);
-    return onPressOut?.();
-  };
-
   if (isSkeleton) {
     return <CardCalloutSkeleton numberOfLines={numberOfSkeletonLines} />;
   }
 
   return (
     <Card
-      backgroundColor={backgroundColor}
+      backgroundColor={colors.backgroundColor}
+      pressedBackgroundColor={colors.pressedColor}
       onLongPress={onLongPress}
       onPress={onPress}
-      onPressIn={innerOnPressIn}
-      onPressOut={innerOnPressOut}
+      onPressIn={onPressIn}
+      onPressOut={onPressOut}
     >
       <Header
         colors={colors}

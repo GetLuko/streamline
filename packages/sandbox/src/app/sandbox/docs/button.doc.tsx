@@ -14,6 +14,15 @@ const docs: JSX.Element[] = [
   <Button text="neutral" isLoading appearance="neutral" />,
   <Button text="danger" isLoading appearance="danger" />,
   <Button text="warning" isLoading appearance="warning" />,
+  <Button
+    text="promise"
+    appearance="primary"
+    onPress={async () =>
+      setTimeout(() => {
+        return true;
+      }, 2000)
+    }
+  />,
 ];
 
 export const ButtonSandbox = () => <DocList docs={docs} />;

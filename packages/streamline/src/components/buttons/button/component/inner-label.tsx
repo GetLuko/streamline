@@ -20,20 +20,26 @@ const InnerLabel = ({
   text,
   isSkeleton,
   isDisabled,
+  isMini,
 }: Pick<
   ButtonProps,
   'isLoading' | 'appearance' | 'isSkeleton' | 'isDisabled' | 'text'
->) => {
+> & {
+  isMini: boolean;
+}) => {
   const styles = useStyles(appearance);
   const textColor = getTextColor({ appearance, isSkeleton, isDisabled });
 
   switch (true) {
-    case isSkeleton: {
+    case isSkeleton && isMini: {
       return (
         <AnimatedBox width={MIN_WIDTH}>
           <Skeleton />
         </AnimatedBox>
       );
+    }
+    case isSkeleton && !isMini: {
+      return <Skeleton />;
     }
     case isLoading: {
       return (

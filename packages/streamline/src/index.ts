@@ -14,6 +14,7 @@ export * from './components/list-items/list-item/list-item';
 export * from './components/radio/radio';
 export * from './components/spinner/spinner';
 export * from './components/spinner/spinner';
+export * from './components/progress-bar/progress-bar';
 export * from './components/tag/tag';
 export * from './primitives/animated-box/animated-box';
 export * from './primitives/box/box';

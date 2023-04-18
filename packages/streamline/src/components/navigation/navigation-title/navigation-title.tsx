@@ -42,6 +42,7 @@ export const NavigationTitle = ({
           accessibilityRole="text"
           color={headerColor}
           opacity={headerOpacity}
+          textAlign={position}
         >
           {header}
         </Text>
@@ -76,6 +77,7 @@ export const NavigationTitle = ({
           accessibilityRole="text"
           color={valueColor}
           opacity={valueOpacity}
+          textAlign={position}
         >
           {value}
         </Text>

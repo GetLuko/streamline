@@ -2,7 +2,12 @@ import { NavigationTitle } from '@getluko/streamline';
 import { DocList } from '../components/DocList';
 
 const docs: JSX.Element[] = [
-  <NavigationTitle title="Title" header="Header" value="Value" icon={'Area'} />,
+  <NavigationTitle
+    title="I'm a really really really really long title"
+    header="I'm a really really really really really really long header"
+    value="I'm a really really really really really really long value"
+    icon={'Area'}
+  />,
   <NavigationTitle title="Title" header="Header" icon={'Area'} />,
   <NavigationTitle title="Title" value="Value" icon={'Area'} />,
   <NavigationTitle title="Title" icon={'Area'} />,
@@ -10,9 +15,9 @@ const docs: JSX.Element[] = [
 
   <NavigationTitle
     position="center"
-    title="Title"
-    header="Header"
-    value="Value"
+    title="I'm a really really really really long title"
+    header="I'm a really really really really really really long header"
+    value="I'm a really really really really really really long value"
     icon={'Area'}
   />,
   <NavigationTitle

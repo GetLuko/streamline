@@ -3,11 +3,11 @@ import { StyleSheet, Pressable } from 'react-native';
 
 import { usePress } from '../../../hooks/use-press.hook';
 import { Box } from '../../../primitives/box/box';
-import { Icon } from '../../../primitives/icon/icon';
 import { CenterContent } from './components/center-content';
 import { ListItemSkeleton } from './components/list-item-skeleton';
 import { RightContent } from './components/right-content';
 import { ListItemProps } from './list-item.types';
+import { LeftContent } from './components/left-content';
 
 /**
  * Todo - Use pressable from react-native-ama when issue below fixed
@@ -50,7 +50,7 @@ export const ListItem = ({
           padding="md"
           paddingRight={rightOption ? 'xs' : 'md'}
         >
-          <Icon color="BLUKO_500" iconName={iconName} size="large" />
+          <LeftContent iconName={iconName} />
           <CenterContent
             description={description}
             header={header}

@@ -8,6 +8,12 @@ const ICON_NAME = 'Area';
 const LONG_DESCRIPTION =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.';
 const ON_PRESS = () => Alert.alert('item pressed');
+const ASYNC_ON_PRESS = async () =>
+  new Promise((resolve) =>
+    setTimeout(() => {
+      resolve(undefined);
+    }, 2000)
+  );
 
 const LIST_ITEMS: JSX.Element[] = [
   <ListItem
@@ -18,7 +24,17 @@ const LIST_ITEMS: JSX.Element[] = [
     title="Title"
   />,
   <ListItem
+    iconName={ICON_NAME}
+    key="Simple list item with only title and icon"
+    title="Title"
+  />,
+  <ListItem
     description="Description"
+    key="Simple list item with only title and description"
+    title="Title"
+  />,
+  <ListItem
+    description="List item with on Press"
     header="Header"
     iconName={ICON_NAME}
     key="List item with on Press"
@@ -34,20 +50,28 @@ const LIST_ITEMS: JSX.Element[] = [
     title="Title"
   />,
   <ListItem
-    description="Description"
+    description="List item with async on Press"
     header="Header"
     iconName={ICON_NAME}
-    key="List item with on right option"
+    key="List item with async on Press"
+    onPress={ASYNC_ON_PRESS}
+    title="Title"
+  />,
+  <ListItem
+    description="List item with right option"
+    header="Header"
+    iconName={ICON_NAME}
+    key="List item with right option"
     onPress={ON_PRESS}
     rightOption={{
       accessibilityLabel: 'Test',
       iconName: 'Info',
-      onPress: () => Alert.alert('right icon pressed'),
+      onPress: ASYNC_ON_PRESS,
     }}
     title="Title"
   />,
   <ListItem
-    description="Description"
+    description="List item with on divider"
     header="Header"
     iconName={ICON_NAME}
     key="List item with on divider"

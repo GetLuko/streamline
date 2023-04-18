@@ -7,7 +7,7 @@ export const getCardTipColors = ({
   appearance: Appearance;
 }): CardTipColors => {
   switch (appearance) {
-    case 'secondary':
+    case 'primary':
       return {
         backgroundColor: 'BLUKO_100',
         descriptionColor: 'BLUKO_800',
@@ -25,7 +25,6 @@ export const getCardTipColors = ({
         descriptionColor: 'TERRA_800',
         iconColor: 'TERRA_500',
       };
-    case 'primary':
     case 'neutral':
     default:
       return {

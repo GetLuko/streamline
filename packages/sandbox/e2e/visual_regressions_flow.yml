@@ -89,6 +89,11 @@ appId: ${APPID}
     file: subflow/takeScreenshot.yaml
     env:
       COMPONENT: Progress Bar
+
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Navigation Bar Progress
 ##
 ## CI tests
 # - stopApp: host.exp.Exponent

@@ -34,7 +34,7 @@ export const NavigationTitle = ({
       paddingVertical={'xs'}
       alignItems={position === 'left' ? 'flex-start' : 'center'}
     >
-      {header && (
+      {header ? (
         <Text
           variant={'headlineBold'}
           marginBottom={'xs'}
@@ -45,7 +45,7 @@ export const NavigationTitle = ({
         >
           {header}
         </Text>
-      )}
+      ) : null}
       <Box alignItems={'center'} flex={1} flexDirection={'row'}>
         <Text
           variant={'titleLargeBold'}
@@ -58,7 +58,7 @@ export const NavigationTitle = ({
           {title}
         </Text>
 
-        {icon && position !== 'center' && (
+        {icon && position !== 'center' ? (
           <ButtonIcon
             accessibilityLabel={buttonIconAccessibilityLabel || icon}
             iconName={icon}
@@ -66,9 +66,9 @@ export const NavigationTitle = ({
             size="large"
             appearance={appearance === 'dark' ? 'primary' : 'light'}
           />
-        )}
+        ) : null}
       </Box>
-      {value && (
+      {value ? (
         <Text
           variant={'headlineBold'}
           marginTop={'xs'}
@@ -79,7 +79,7 @@ export const NavigationTitle = ({
         >
           {value}
         </Text>
-      )}
+      ) : null}
     </Box>
   );
 };

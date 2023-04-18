@@ -71,4 +71,29 @@ describe('NavigationTitle', () => {
     fireEvent.press(getByLabelText('test'));
     expect(mockOnIconPress).toHaveBeenCalledTimes(1);
   });
+
+  it('renders correctly with long text in header, title, and value', () => {
+    const longTextHeader =
+      'Very very very very very looooong text in the header';
+    const longTextTitle = 'Very very very very very looooong text in the title';
+    const longTextValue = 'Very very very very very looooong text in the value';
+
+    const { getByText } = renderWithProvider(
+      <NavigationTitle
+        appearance="light"
+        position="center"
+        title={longTextTitle}
+        header={longTextHeader}
+        value={longTextValue}
+      />
+    );
+
+    const headerElement = getByText(longTextHeader);
+    const titleElement = getByText(longTextTitle);
+    const valueElement = getByText(longTextValue);
+
+    expect(headerElement).toBeDefined();
+    expect(titleElement).toBeDefined();
+    expect(valueElement).toBeDefined();
+  });
 });

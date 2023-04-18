@@ -10,9 +10,11 @@ export * from './components/checkbox/checkbox';
 export * from './components/inputs/input-text-area/input-text-area';
 export * from './components/inputs/input-text/input-text';
 export * from './components/inputs/input-text/input-text';
+export * from './components/list-items/list-item/list-item';
 export * from './components/radio/radio';
 export * from './components/spinner/spinner';
 export * from './components/spinner/spinner';
+export * from './components/progress-bar/progress-bar';
 export * from './components/tag/tag';
 export * from './components/navigation/navigation-title/navigation-title';
 export * from './primitives/animated-box/animated-box';
@@ -42,7 +44,7 @@ export type InteractionType = {
   /**
    * Callback when pressed
    */
-  onPress?: () => void;
+  onPress?: (params: unknown) => void;
   /**
    * Id for tests
    */

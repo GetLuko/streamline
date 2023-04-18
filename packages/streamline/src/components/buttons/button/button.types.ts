@@ -3,7 +3,7 @@ import { PressableProps } from 'react-native';
 import { SmallIconName } from '../../../primitives/icon/icon.types';
 import { Appearance } from '../../../theme/appearance';
 
-export type ButtonProps = Omit<InteractionType, 'accessibilityLabel'> & {
+export type ButtonProps = Pick<InteractionType, 'isLoading' | 'isDisabled'> & {
   /**
    * The text to display. Upper first char automaticaly.
    */
@@ -12,6 +12,10 @@ export type ButtonProps = Omit<InteractionType, 'accessibilityLabel'> & {
    * Whether the button is touched.
    */
   isTouched?: boolean;
+  /**
+   * When present, informs accessible tools if the element is busy
+   */
+  isBusy?: boolean;
   /**
    * The variant of the button. Can be one of `primary`, `secondary`, `danger`, `neutral`.
    */
@@ -27,7 +31,7 @@ export type ButtonProps = Omit<InteractionType, 'accessibilityLabel'> & {
   /**
    * The delay in ms before the onPress callback is called.
    */
-  debounceDelay?: number;
+  debounceDelay?: number; // use ??
   /**
    * Display as a Skeleton.
    */
@@ -37,4 +41,13 @@ export type ButtonProps = Omit<InteractionType, 'accessibilityLabel'> & {
    * Display with a box shadow to have a floating style.
    */
   isFloating?: boolean;
-} & Omit<PressableProps, 'children' | 'disabled' | 'style'>;
+} & Pick<
+    PressableProps,
+    | 'pointerEvents'
+    | 'accessibilityLabel'
+    | 'accessibilityRole'
+    | 'onPress'
+    | 'onPressIn'
+    | 'onPressOut'
+    | 'testID'
+  >;

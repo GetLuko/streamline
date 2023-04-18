@@ -15,14 +15,17 @@ import { getShadowsStyle } from '../../../theme/shadows';
 
 export const Button = ({
   appearance = 'primary',
-  isLoading,
-  isDisabled,
-  size = 'full',
   iconName,
+  isDisabled,
+  isLoading,
+  isSkeleton = false,
   isTouched,
   onPress,
+  testID,
+  pointerEvents,
+  size = 'full',
   text,
-  isSkeleton = false,
+  isBusy,
   isFloating = false,
 }: ButtonProps) => {
   const styles = useStyles(size, appearance, isFloating);
@@ -40,12 +43,15 @@ export const Button = ({
   const [handlePress, isResolving] = usePress({ onPress });
 
   const buttonIsDisabled =
-    isSkeleton || isDisabled || isLoading || isTouched || isResolving;
+    isSkeleton || isDisabled || isLoading || isTouched || isResolving || isBusy;
 
   return (
     <Pressable
+      testID={testID}
+      pointerEvents={pointerEvents}
       accessibilityRole="button"
       accessibilityLabel={text}
+      accessibilityState={{ busy: buttonIsDisabled }}
       disabled={buttonIsDisabled}
       busy={buttonIsDisabled}
       style={(pressableState) => [
@@ -83,6 +89,7 @@ export const Button = ({
           text={text}
           isSkeleton={isSkeleton}
           isDisabled={isDisabled}
+          isMini={isMini}
         />
       </AnimatedBox>
     </Pressable>

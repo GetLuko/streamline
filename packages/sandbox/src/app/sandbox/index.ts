@@ -18,6 +18,7 @@ import { SpinnerSandbox } from './docs/spinner.doc';
 import { TagSandbox } from './docs/tag.doc';
 import { TypoSandbox } from './docs/text.doc';
 import { ButtonDockSandbox } from './docs/button-dock.doc';
+import { ProgressBarSandbox } from './docs/progress-bar.doc';
 
 type SandBoxItemType = {
   title: string;
@@ -80,5 +81,9 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'Radio', SandBox: RadioSandbox },
       { title: 'Checkbox', SandBox: CheckboxSandbox },
     ],
+  },
+  {
+    title: 'Progress Bar',
+    items: [{ title: 'Progress Bar', SandBox: ProgressBarSandbox }],
   },
 ];

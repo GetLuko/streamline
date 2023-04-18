@@ -34,19 +34,16 @@ const regulars: Record<TextVariantRegular, TextStyle> = {
     fontFamily: FontFamily.Default,
     fontSize: 32,
     lineHeight: 40,
-    letterSpacing: -1,
   },
   titleMedium: {
     fontFamily: FontFamily.Default,
     fontSize: 24,
     lineHeight: 32,
-    letterSpacing: -1,
   },
   titleSmall: {
     fontFamily: FontFamily.Default,
     fontSize: 20,
     lineHeight: 28,
-    letterSpacing: -1,
   },
   headline: {
     fontFamily: FontFamily.Default,

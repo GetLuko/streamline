@@ -1,22 +1,6 @@
 // App Colors
 // https://www.figma.com/file/lONxvNbFJYZZziX7Mvd6r7/06.-Android-Menu-Tab-and-Misc?node-id=1693%3A8483
 
-export const OPACITY = {
-  '4': '0A',
-  '10': '1A',
-  '20': '33',
-  '30': '4D',
-  '40': '66',
-  '50': '80',
-  '60': '99',
-  '70': 'B3',
-  '80': 'CC',
-  '90': 'E6',
-  '94': 'F0',
-};
-
-export type OpacityProps = keyof typeof OPACITY;
-
 const PRIMARY = {
   // Palette : Primary colors
   BLACK: '#000000',

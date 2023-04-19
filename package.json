@@ -59,6 +59,7 @@
     "@nrwl/linter": "15.9.2",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/react-native": "15.6.3",
+    "@nrwl/rollup": "^15.9.2",
     "@nrwl/web": "^15.6.3",
     "@nrwl/workspace": "15.9.2",
     "@react-native-async-storage/async-storage": "1.17.11",

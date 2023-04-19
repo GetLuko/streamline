@@ -12,6 +12,7 @@ export const Header = ({
   hasAction,
   header,
   iconName,
+  isLoading,
 }: HeaderProps) => {
   const showAction = hasAction || dismissAction;
   return (
@@ -26,6 +27,7 @@ export const Header = ({
         <HeaderAction
           color={colors.clickIconColor}
           dismissAction={dismissAction}
+          isLoading={isLoading}
         />
       ) : null}
     </Box>

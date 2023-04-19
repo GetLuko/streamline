@@ -31,8 +31,6 @@ export const ListItem = ({
     return <ListItemSkeleton />;
   }
 
-  const innerOnPress = onPress ? handlePress : undefined;
-
   const dividerLeftSpacing = iconName ? 40 : 0;
 
   return (
@@ -40,9 +38,9 @@ export const ListItem = ({
       accessibilityLabel={
         accessibilityLabel ?? `${header}\n${title}\n${description}`
       }
-      accessibilityRole={onPress ? 'button' : 'none'}
+      accessibilityRole={handlePress ? 'button' : 'none'}
       onLongPress={onLongPress}
-      onPress={innerOnPress}
+      onPress={handlePress}
     >
       {({ pressed }) => (
         <Box

@@ -104,6 +104,10 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: Caption
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: ProgressBar
 - runFlow:
     file: subflow/takeScreenshot.yaml

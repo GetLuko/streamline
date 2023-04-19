@@ -2,25 +2,25 @@ import { BoxSandbox } from './docs/box.doc';
 import { ButtonIconSandbox } from './docs/button-icon.doc';
 import { ButtonMiniSandbox } from './docs/button-mini.doc';
 import { ButtonSandbox } from './docs/button.doc';
+import { CaptionSandbox } from './docs/caption.doc';
 import { CardCalloutSandbox } from './docs/card-callout.doc';
-import { CardSandbox } from './docs/card.doc';
 import { CardSummarySandbox } from './docs/card-summary.doc';
 import { CardTipSandbox } from './docs/card-tip.doc';
+import { CardSandbox } from './docs/card.doc';
 import { CheckboxSandbox } from './docs/checkbox.doc';
 import { IconsSandbox } from './docs/icon.doc';
 import { InputTextAreaSandbox } from './docs/input-text-area.doc';
-import { InputTextSandbox } from './docs/input-text.doc';
 import { InputTextTypesSandbox } from './docs/input-text-types.doc';
+import { InputTextSandbox } from './docs/input-text.doc';
 import { ListItemSandbox } from './docs/list-item.doc';
+import { NavigationBarProgressSandbox } from './docs/navigation-bar-progress.doc';
+import { NavigationTitleSandbox } from './docs/navigation-title.doc';
+import { ProgressBarSandbox } from './docs/progress-bar.doc';
 import { RadioSandbox } from './docs/radio.doc';
 import { SkeletonSandbox } from './docs/skeleton.doc';
 import { SpinnerSandbox } from './docs/spinner.doc';
 import { TagSandbox } from './docs/tag.doc';
 import { TypoSandbox } from './docs/text.doc';
-import { ButtonDockSandbox } from './docs/button-dock.doc';
-import { ProgressBarSandbox } from './docs/progress-bar.doc';
-import { NavigationBarProgressSandbox } from './docs/navigation-bar-progress.doc';
-import { NavigationTitleSandbox } from './docs/navigation-title.doc';
 
 type SandBoxItemType = {
   title: string;
@@ -87,6 +87,10 @@ export const sandboxItems: SandBoxSectionType[] = [
   {
     title: 'ProgressBar',
     items: [{ title: 'ProgressBar', SandBox: ProgressBarSandbox }],
+  },
+  {
+    title: 'Primitives',
+    items: [{ title: 'Caption', SandBox: CaptionSandbox }],
   },
   {
     title: 'Navigation',

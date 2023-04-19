@@ -18,6 +18,7 @@ import { SpinnerSandbox } from './docs/spinner.doc';
 import { TagSandbox } from './docs/tag.doc';
 import { TypoSandbox } from './docs/text.doc';
 import { ProgressBarSandbox } from './docs/progress-bar.doc';
+import { NavigationBarProgressSandbox } from './docs/navigation-bar-progress.doc';
 
 type SandBoxItemType = {
   title: string;
@@ -83,5 +84,14 @@ export const sandboxItems: SandBoxSectionType[] = [
   {
     title: 'Progress Bar',
     items: [{ title: 'Progress Bar', SandBox: ProgressBarSandbox }],
+  },
+  {
+    title: 'Navigation',
+    items: [
+      {
+        title: 'Navigation Bar Progress',
+        SandBox: NavigationBarProgressSandbox,
+      },
+    ],
   },
 ];

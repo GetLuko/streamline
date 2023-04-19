@@ -10,7 +10,7 @@ export const CenterContent = ({
   title,
 }: Pick<ListItemProps, 'description' | 'header' | 'title'>) => {
   return (
-    <Box flex={1} marginLeft="md" marginRight="xs">
+    <Box flex={1} marginRight="xs">
       {header ? (
         <Text color="GREY_700" variant="subBody">
           {header}

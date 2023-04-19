@@ -18,13 +18,23 @@ export const Tag = ({
 
   return (
     <Box
-      backgroundColor={colors.backgroundColor}
-      borderRadius="round"
       alignItems="center"
+      alignSelf="flex-start"
       flexDirection="row"
+      justifyContent="center"
       paddingHorizontal="xs"
       paddingVertical="xxs"
     >
+      <Box
+        backgroundColor={colors.backgroundColor}
+        borderRadius="round"
+        opacity={colors.backgroundOpacity}
+        position="absolute"
+        top={0}
+        bottom={0}
+        right={0}
+        left={0}
+      />
       <Icon color={colors.iconColor} iconName={iconName} size={iconSize} />
       <Text color={colors.textColor} marginLeft="xxs" variant={textVariant}>
         {text}

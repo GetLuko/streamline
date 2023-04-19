@@ -1,10 +1,10 @@
 import React from 'react';
-import { StyleSheet, Pressable } from 'react-native';
+import { Pressable, StyleSheet } from 'react-native';
 
 import { usePress } from '../../../hooks/use-press.hook';
 import { Box } from '../../../primitives/box/box';
-import { Icon } from '../../../primitives/icon/icon';
 import { CenterContent } from './components/center-content';
+import { LeftContent } from './components/left-content';
 import { ListItemSkeleton } from './components/list-item-skeleton';
 import { RightContent } from './components/right-content';
 import { ListItemProps } from './list-item.types';
@@ -31,16 +31,16 @@ export const ListItem = ({
     return <ListItemSkeleton />;
   }
 
-  const innerOnPress = onPress ? handlePress : undefined;
+  const dividerLeftSpacing = iconName ? 40 : 0;
 
   return (
     <Pressable
       accessibilityLabel={
         accessibilityLabel ?? `${header}\n${title}\n${description}`
       }
-      accessibilityRole={onPress ? 'button' : 'none'}
+      accessibilityRole={handlePress ? 'button' : 'none'}
       onLongPress={onLongPress}
-      onPress={innerOnPress}
+      onPress={handlePress}
     >
       {({ pressed }) => (
         <Box
@@ -50,7 +50,7 @@ export const ListItem = ({
           padding="md"
           paddingRight={rightOption ? 'xs' : 'md'}
         >
-          <Icon color="BLUKO_500" iconName={iconName} size="large" />
+          <LeftContent iconName={iconName} />
           <CenterContent
             description={description}
             header={header}
@@ -61,21 +61,23 @@ export const ListItem = ({
             onPress={onPress}
             rightOption={rightOption}
           />
-          {showDivider ? <Divider /> : null}
+          {showDivider ? <Divider leftSpacing={dividerLeftSpacing} /> : null}
         </Box>
       )}
     </Pressable>
   );
 };
 
-const Divider = () => (
+const DIVIDER_VERTICAL_MARGIN = 16;
+
+const Divider = ({ leftSpacing }: { leftSpacing: number }) => (
   <Box
     backgroundColor="GREY_100"
     position="absolute"
     height={StyleSheet.hairlineWidth}
-    right={16}
+    right={DIVIDER_VERTICAL_MARGIN}
     bottom={0}
-    left={56}
+    left={DIVIDER_VERTICAL_MARGIN + leftSpacing}
   />
 );
 

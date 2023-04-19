@@ -1,5 +1,7 @@
-import { Box, CardSummary, Text } from '@getluko/streamline';
 import { useState } from 'react';
+import { Box, CardSummary, Text } from '@getluko/streamline';
+
+import { sleep } from '../sandbox.utils';
 
 export const CardSummarySandbox = () => {
   const [descriptionText, setDescriptionText] = useState<
@@ -10,16 +12,9 @@ export const CardSummarySandbox = () => {
     setDescriptionText('Touch');
   };
 
-  const sleep = async () =>
-    new Promise((resolve) =>
-      setTimeout(() => {
-        resolve(undefined);
-      }, 2000)
-    );
-
   const asyncFunc = async () => {
     setDescriptionText('Loading');
-    await sleep();
+    await sleep(2000);
     setDescriptionText('Default');
   };
 

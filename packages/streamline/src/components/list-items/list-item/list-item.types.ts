@@ -10,7 +10,7 @@ export type ListItemProps = {
   accessibilityLabel?: string;
   description?: string;
   header?: string;
-  iconName: IconsName;
+  iconName?: IconsName;
   isSkeleton?: boolean;
   onLongPress?: () => unknown;
   onPress?: () => unknown;

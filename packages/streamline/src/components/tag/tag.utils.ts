@@ -7,11 +7,12 @@ export const getTagColors = ({
   appearance: Appearance;
 }): {
   backgroundColor: ColorTheme;
+  backgroundOpacity?: number;
   iconColor: ColorTheme;
   textColor: ColorTheme;
 } => {
   switch (appearance) {
-    case 'secondary':
+    case 'primary':
       return {
         backgroundColor: 'BLUKO_100',
         iconColor: 'BLUKO_500',
@@ -35,7 +36,21 @@ export const getTagColors = ({
         iconColor: 'TERRA_500',
         textColor: 'TERRA_700',
       };
-    case 'primary':
+    case 'dark':
+      return {
+        backgroundColor: 'GREY_1000',
+        backgroundOpacity: 0.4,
+        iconColor: 'PURE_WHITE_1000',
+        textColor: 'PURE_WHITE_1000',
+      };
+    case 'light':
+      return {
+        backgroundColor: 'PURE_WHITE_1000',
+        backgroundOpacity: 0.2,
+        iconColor: 'PURE_WHITE_1000',
+        textColor: 'PURE_WHITE_1000',
+      };
+    case 'neutral':
     default:
       return {
         backgroundColor: 'GREY_100',

@@ -5,5 +5,5 @@ export type Appearance =
   | 'neutral'
   | 'success'
   | 'warning'
-  | 'light'
-  | 'dark';
+  | 'dark'
+  | 'light';

@@ -7,7 +7,7 @@ export const getCardCalloutColors = ({
   appearance: Appearance;
 }): CardCalloutColors => {
   switch (appearance) {
-    case 'secondary':
+    case 'primary':
       return {
         backgroundColor: 'BLUKO_100',
         clickIconColor: 'BLUKO_300',
@@ -34,7 +34,6 @@ export const getCardCalloutColors = ({
         iconColor: 'TERRA_500',
         pressedColor: 'TERRA_150',
       };
-    case 'primary':
     case 'neutral':
     default:
       return {

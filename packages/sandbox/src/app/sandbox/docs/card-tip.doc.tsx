@@ -1,25 +1,33 @@
-import { Box, CardTip } from '@getluko/streamline';
+import React from 'react';
 
-export const CardTipSandbox = () => (
-  <Box paddingHorizontal="xl">
-    <Box paddingVertical="xxs">
-      <CardTip appearance="primary" description="Primary" iconName="Area" />
-    </Box>
-    <Box paddingVertical="xxs">
-      <CardTip appearance="secondary" description="Secondary" iconName="Area" />
-    </Box>
-    <Box paddingVertical="xxs">
-      <CardTip appearance="warning" description="Warning" iconName="Area" />
-    </Box>
-    <Box paddingVertical="xxs">
-      <CardTip appearance="danger" description="Danger" iconName="Area" />
-    </Box>
-    <Box paddingVertical="xxs">
-      <CardTip
-        appearance="neutral"
-        description="Default appearance"
-        iconName="Area"
-      />
-    </Box>
-  </Box>
-);
+import { CardTip } from '@getluko/streamline';
+import { DocList } from '../components/DocList';
+
+const CARD_TIPS: JSX.Element[] = [
+  <CardTip
+    appearance="primary"
+    description="Primary"
+    iconName="Area"
+    key="primary"
+  />,
+  <CardTip
+    appearance="neutral"
+    description="Neutral"
+    iconName="Area"
+    key="neutral"
+  />,
+  <CardTip
+    appearance="warning"
+    description="Warning"
+    iconName="Area"
+    key="warning"
+  />,
+  <CardTip
+    appearance="danger"
+    description="Danger"
+    iconName="Area"
+    key="danger"
+  />,
+];
+
+export const CardTipSandbox = () => <DocList docs={CARD_TIPS} margin="md" />;

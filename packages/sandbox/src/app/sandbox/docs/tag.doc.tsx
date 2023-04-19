@@ -1,53 +1,85 @@
-import { Box, Tag } from '@getluko/streamline';
+import { Tag } from '@getluko/streamline';
+import { DocList } from '../components/DocList';
 
 const ICON_NAME = 'Area';
 
-export const TagSandbox = () => (
-  <Box paddingHorizontal="xl">
-    <Box paddingVertical="xxs" alignItems="flex-end" flexDirection="row">
-      <Box padding="xxs">
-        <Tag appearance="primary" iconName={ICON_NAME} text="Primary" />
-      </Box>
-      <Box padding="xxs">
-        <Tag appearance="primary" isSmall iconName={ICON_NAME} text="Primary" />
-      </Box>
-    </Box>
-    <Box paddingVertical="xxs" alignItems="flex-end" flexDirection="row">
-      <Box padding="xxs">
-        <Tag appearance="secondary" iconName={ICON_NAME} text="Secondary" />
-      </Box>
-      <Box padding="xxs">
-        <Tag
-          appearance="secondary"
-          isSmall
-          iconName={ICON_NAME}
-          text="Secondary"
-        />
-      </Box>
-    </Box>
-    <Box paddingVertical="xxs" alignItems="flex-end" flexDirection="row">
-      <Box padding="xxs">
-        <Tag appearance="success" iconName={ICON_NAME} text="Success" />
-      </Box>
-      <Box padding="xxs">
-        <Tag appearance="success" isSmall iconName={ICON_NAME} text="Success" />
-      </Box>
-    </Box>
-    <Box paddingVertical="xxs" alignItems="flex-end" flexDirection="row">
-      <Box padding="xxs">
-        <Tag appearance="warning" iconName={ICON_NAME} text="Warning" />
-      </Box>
-      <Box padding="xxs">
-        <Tag appearance="warning" isSmall iconName={ICON_NAME} text="Warning" />
-      </Box>
-    </Box>
-    <Box paddingVertical="xxs" alignItems="flex-end" flexDirection="row">
-      <Box padding="xxs">
-        <Tag appearance="danger" iconName={ICON_NAME} text="Danger" />
-      </Box>
-      <Box padding="xxs">
-        <Tag appearance="danger" isSmall iconName={ICON_NAME} text="Danger" />
-      </Box>
-    </Box>
-  </Box>
-);
+const TAGS: JSX.Element[] = [
+  <Tag
+    appearance="primary"
+    iconName={ICON_NAME}
+    key="primary"
+    text="Primary"
+  />,
+  <Tag
+    appearance="neutral"
+    iconName={ICON_NAME}
+    key="neutral"
+    text="Neutral"
+  />,
+  <Tag
+    appearance="warning"
+    iconName={ICON_NAME}
+    key="warning"
+    text="Warning"
+  />,
+  <Tag appearance="danger" iconName={ICON_NAME} key="danger" text="Danger" />,
+  <Tag
+    appearance="success"
+    iconName={ICON_NAME}
+    key="success"
+    text="Success"
+  />,
+  <Tag appearance="dark" iconName={ICON_NAME} key="dark" text="Dark" />,
+  <Tag appearance="light" iconName={ICON_NAME} key="light" text="Light" />,
+  <Tag
+    appearance="primary"
+    iconName={ICON_NAME}
+    isSmall
+    key="primary small"
+    text="Primary"
+  />,
+  <Tag
+    appearance="neutral"
+    iconName={ICON_NAME}
+    isSmall
+    key="neutral small"
+    text="Neutral"
+  />,
+  <Tag
+    appearance="warning"
+    iconName={ICON_NAME}
+    isSmall
+    key="warning small"
+    text="Warning"
+  />,
+  <Tag
+    appearance="danger"
+    iconName={ICON_NAME}
+    key="danger small"
+    isSmall
+    text="Danger"
+  />,
+  <Tag
+    appearance="success"
+    iconName={ICON_NAME}
+    key="success small"
+    isSmall
+    text="Success"
+  />,
+  <Tag
+    appearance="dark"
+    iconName={ICON_NAME}
+    key="dark small"
+    isSmall
+    text="Dark"
+  />,
+  <Tag
+    appearance="light"
+    iconName={ICON_NAME}
+    key="light small"
+    isSmall
+    text="Light"
+  />,
+];
+
+export const TagSandbox = () => <DocList docs={TAGS} margin="md" />;

@@ -1,13 +1,13 @@
 import React from 'react';
-import { StyleSheet, Pressable } from 'react-native';
+import { Pressable, StyleSheet } from 'react-native';
 
 import { usePress } from '../../../hooks/use-press.hook';
 import { Box } from '../../../primitives/box/box';
 import { CenterContent } from './components/center-content';
+import { LeftContent } from './components/left-content';
 import { ListItemSkeleton } from './components/list-item-skeleton';
 import { RightContent } from './components/right-content';
 import { ListItemProps } from './list-item.types';
-import { LeftContent } from './components/left-content';
 
 /**
  * Todo - Use pressable from react-native-ama when issue below fixed
@@ -32,6 +32,8 @@ export const ListItem = ({
   }
 
   const innerOnPress = onPress ? handlePress : undefined;
+
+  const dividerLeftSpacing = iconName ? 40 : 0;
 
   return (
     <Pressable
@@ -61,21 +63,23 @@ export const ListItem = ({
             onPress={onPress}
             rightOption={rightOption}
           />
-          {showDivider ? <Divider /> : null}
+          {showDivider ? <Divider leftSpacing={dividerLeftSpacing} /> : null}
         </Box>
       )}
     </Pressable>
   );
 };
 
-const Divider = () => (
+const DIVIDER_VERTICAL_MARGIN = 16;
+
+const Divider = ({ leftSpacing }: { leftSpacing: number }) => (
   <Box
     backgroundColor="GREY_100"
     position="absolute"
     height={StyleSheet.hairlineWidth}
-    right={16}
+    right={DIVIDER_VERTICAL_MARGIN}
     bottom={0}
-    left={56}
+    left={DIVIDER_VERTICAL_MARGIN + leftSpacing}
   />
 );
 

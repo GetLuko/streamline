@@ -3,17 +3,16 @@ import { Alert } from 'react-native';
 
 import { ListItem } from '@getluko/streamline';
 import { DocList } from '../components/DocList';
+import { sleep } from '../sandbox.utils';
 
 const ICON_NAME = 'Area';
 const LONG_DESCRIPTION =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.';
 const ON_PRESS = () => Alert.alert('item pressed');
-const ASYNC_ON_PRESS = async () =>
-  new Promise((resolve) =>
-    setTimeout(() => {
-      resolve(undefined);
-    }, 2000)
-  );
+const ASYNC_ON_PRESS = async () => {
+  await sleep(2000);
+  Alert.alert('async pressed completed');
+};
 
 const LIST_ITEMS: JSX.Element[] = [
   <ListItem
@@ -71,11 +70,31 @@ const LIST_ITEMS: JSX.Element[] = [
     title="Title"
   />,
   <ListItem
-    description="List item with on divider"
+    description="List item with divider"
     header="Header"
     iconName={ICON_NAME}
     key="List item with on divider"
     onPress={ON_PRESS}
+    showDivider
+    title="Title"
+  />,
+  <ListItem
+    description="List item with divider and no icon"
+    key="List item with divider and no icon"
+    showDivider
+    title="Title"
+  />,
+  <ListItem
+    description="List item with right option and divider"
+    header="Header"
+    iconName={ICON_NAME}
+    key="List item with right option and divider"
+    onPress={ON_PRESS}
+    rightOption={{
+      accessibilityLabel: 'Test',
+      iconName: 'Info',
+      onPress: ASYNC_ON_PRESS,
+    }}
     showDivider
     title="Title"
   />,

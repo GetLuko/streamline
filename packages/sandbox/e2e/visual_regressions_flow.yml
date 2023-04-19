@@ -13,95 +13,95 @@ appId: ${APPID}
     # bypass expo onboarding modal if you run the test on a fresh env
     text: 'Got it'
     optional: true
-- tapOn:
-    # bypass expo onboarding modal if you run the test on a fresh env
-    text: 'Foundation'
-    optional: true
+# - tapOn:
+#     # bypass expo onboarding modal if you run the test on a fresh env
+#     text: 'Foundation'
+#     optional: true
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: Box
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: Icons
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: Typo
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: Skeleton
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: Spinner
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: Button
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: ButtonMini
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: ButtonIcon
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: Card
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: CardCallout
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: CardSummary
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: CardTip
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: InputText
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: InputTextTypes
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: InputTextArea
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: ListItem
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: Tag
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: Checkbox
+# - runFlow:
+#     file: subflow/takeScreenshot.yaml
+#     env:
+#       COMPONENT: Radio
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: Box
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: Icons
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: Typo
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: Skeleton
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: Spinner
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: Button
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: ButtonMini
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: ButtonIcon
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: Card
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: CardCallout
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: CardSummary
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: CardTip
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: InputText
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: InputTextTypes
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: InputTextArea
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: ListItem
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: Tag
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: Checkbox
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: Radio
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
-      COMPONENT: Progress Bar
+      COMPONENT: ProgressBar
 
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: Navigation Bar Progress
+      COMPONENT: NavigationBarProgress
 ##
 ## CI tests
 # - stopApp: host.exp.Exponent

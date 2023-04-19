@@ -82,14 +82,14 @@ export const sandboxItems: SandBoxSectionType[] = [
     ],
   },
   {
-    title: 'Progress Bar',
-    items: [{ title: 'Progress Bar', SandBox: ProgressBarSandbox }],
+    title: 'ProgressBar',
+    items: [{ title: 'ProgressBar', SandBox: ProgressBarSandbox }],
   },
   {
     title: 'Navigation',
     items: [
       {
-        title: 'Navigation Bar Progress',
+        title: 'NavigationBarProgress',
         SandBox: NavigationBarProgressSandbox,
       },
     ],

@@ -39,3 +39,5 @@ jobs:
         uses: expo/expo-github-action/preview@v8
         with:
           command: eas update --auto
+          channel: pr-${{ github.event.number }}
+          project-root: packages/sandbox

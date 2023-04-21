@@ -36,10 +36,7 @@ jobs:
       #     message: '<a href="https://qr.expo.dev/expo-go?owner=lukoapp&slug=sandbox&releaseChannel=pr-${{ github.event.number }}"><img src="https://qr.expo.dev/expo-go?owner=lukoapp&slug=sandbox&releaseChannel=pr-${{ github.event.number }}" height="200px" width="200px"></a>'
 
       - name: 🚀 Create preview
-        uses: expo/expo-github-action/preview@v8
-        with:
-          command: cd packages/sandbox && eas update --auto --channel=pr-${{ github.event.number }}
-
+        run: cd packages/sandbox && eas update --auto --channel=pr-${{ github.event.number }} --project-root=packages/sandbox
       - name: 💬 Comment in preview
         uses: expo/expo-github-action/preview-comment@v8
         with:

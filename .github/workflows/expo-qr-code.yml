@@ -25,8 +25,8 @@ jobs:
       - name: 🏗 Build
         run: yarn streamline:build
 
-      - name: 🚀 Publish preview
-        run: yarn nx run sandbox:publish --release-channel=pr-${{ github.event.number }} --non-interactive --config=app.json
+      # - name: 🚀 Publish preview
+      #    run: yarn nx run sandbox:publish --release-channel=pr-${{ github.event.number }} --non-interactive --config=app.json
 
       # - name: 💬 Comment preview
       #   uses: expo/expo-github-action/preview-comment@v7

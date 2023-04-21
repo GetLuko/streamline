@@ -38,6 +38,9 @@ jobs:
       - name: 🚀 Create preview
         uses: expo/expo-github-action/preview@v8
         with:
+          command: cd packages/sandbox && eas update --auto --channel=pr-${{ github.event.number }}
+
+      - name: 💬 Comment in preview
+        uses: expo/expo-github-action/preview-comment@v8
+        with:
           channel: pr-${{ github.event.number }}
-          project-root: packages/sandbox
-          command: eas update --auto --channel=pr-${{ github.event.number }} --project-root=packages/sandbox

@@ -43,6 +43,7 @@ export const NavigationTitle = ({
           color={headerColor}
           opacity={headerOpacity}
           textAlign={position}
+          numberOfLines={4}
         >
           {header}
         </Text>
@@ -55,6 +56,7 @@ export const NavigationTitle = ({
           style={{ flex: 1 }}
           color={titleColor}
           textAlign={position}
+          numberOfLines={4}
         >
           {title}
         </Text>
@@ -78,6 +80,7 @@ export const NavigationTitle = ({
           color={valueColor}
           opacity={valueOpacity}
           textAlign={position}
+          numberOfLines={4}
         >
           {value}
         </Text>

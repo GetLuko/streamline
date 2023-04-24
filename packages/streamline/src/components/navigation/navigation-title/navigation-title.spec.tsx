@@ -76,7 +76,8 @@ describe('NavigationTitle', () => {
     const longTextHeader =
       'Very very very very very looooong text in the header';
     const longTextTitle = 'Very very very very very looooong text in the title';
-    const longTextValue = 'Very very very very very looooong text in the value';
+    const longTextValue =
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et sapien eu purus blandit tincidunt a vitae magna. In hac habitasse platea dictumst. Sed aliquet est eu lacus tempor, ut semper sapien auctor.';
 
     const { getByText } = renderWithProvider(
       <NavigationTitle

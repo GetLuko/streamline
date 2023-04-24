@@ -3,7 +3,7 @@ import { DocList } from '../components/DocList';
 
 const docs: JSX.Element[] = [
   <NavigationTitle
-    title="I'm a really really really really long title"
+    title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et sapien eu purus blandit tincidunt a vitae magna. In hac habitasse platea dictumst. Sed aliquet est eu lacus tempor, ut semper sapien auctor."
     header="I'm a really really really really really really long header"
     value="I'm a really really really really really really long value"
     icon={'Area'}
@@ -15,7 +15,7 @@ const docs: JSX.Element[] = [
 
   <NavigationTitle
     position="center"
-    title="I'm a really really really really long title"
+    title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et sapien eu purus blandit tincidunt a vitae magna. In hac habitasse platea dictumst. Sed aliquet est eu lacus tempor, ut semper sapien auctor. "
     header="I'm a really really really really really really long header"
     value="I'm a really really really really really really long value"
     icon={'Area'}

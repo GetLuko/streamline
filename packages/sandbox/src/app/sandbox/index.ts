@@ -37,7 +37,6 @@ export const sandboxItems: SandBoxSectionType[] = [
   {
     title: 'Foundation',
     items: [
-      { title: 'Box', SandBox: BoxSandbox },
       { title: 'Shadows', SandBox: ShadowSandbox },
       { title: 'Icons', SandBox: IconsSandbox },
       { title: 'Typo', SandBox: TypoSandbox },

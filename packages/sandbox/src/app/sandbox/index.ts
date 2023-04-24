@@ -17,6 +17,7 @@ import { SkeletonSandbox } from './docs/skeleton.doc';
 import { SpinnerSandbox } from './docs/spinner.doc';
 import { TagSandbox } from './docs/tag.doc';
 import { TypoSandbox } from './docs/text.doc';
+import { ButtonDockSandbox } from './docs/button-dock.doc';
 import { ProgressBarSandbox } from './docs/progress-bar.doc';
 import { NavigationBarProgressSandbox } from './docs/navigation-bar-progress.doc';
 import { NavigationTitleSandbox } from './docs/navigation-title.doc';
@@ -48,6 +49,7 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'Button', SandBox: ButtonSandbox },
       { title: 'ButtonIcon', SandBox: ButtonIconSandbox },
       { title: 'ButtonMini', SandBox: ButtonMiniSandbox },
+      { title: 'Button Dock', SandBox: ButtonDockSandbox },
     ],
   },
   {

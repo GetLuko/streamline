@@ -66,14 +66,6 @@
       "executor": "@nrwl/expo:ensure-symlink",
       "options": {}
     },
-    "publish": {
-      "executor": "@nrwl/expo:publish",
-      "options": {}
-    },
-    "publish-set": {
-      "executor": "@nrwl/expo:publish-set",
-      "options": {}
-    },
     "rollback": {
       "executor": "@nrwl/expo:rollback",
       "options": {}

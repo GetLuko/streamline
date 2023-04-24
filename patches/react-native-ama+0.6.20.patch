@@ -1,19 +1,9 @@
-diff --git a/node_modules/react-native-ama/ama.rules.json b/node_modules/react-native-ama/ama.rules.json
-index 0967ef4..c785783 100644
---- a/node_modules/react-native-ama/ama.rules.json
-+++ b/node_modules/react-native-ama/ama.rules.json
-@@ -1 +1 @@
--{}
-+{"rules": {"MINIMUM_SIZE": "PLEASE_FORGIVE_ME"}}
-\ No newline at end of file
 diff --git a/node_modules/react-native-ama/dist/ama.rules.json b/node_modules/react-native-ama/dist/ama.rules.json
-index 1f372e1..0967ef4 100755
---- a/node_modules/react-native-ama/dist/ama.rules.json
+new file mode 100644
+index 0000000..0967ef4
+--- /dev/null
 +++ b/node_modules/react-native-ama/dist/ama.rules.json
-@@ -1,3 +1 @@
--{
--  "accessibilityLabelExceptions": ["A A", "A A A"]
--}
+@@ -0,0 +1 @@
 +{}
 diff --git a/node_modules/react-native-ama/dist/commonjs/ama.rules.json b/node_modules/react-native-ama/dist/commonjs/ama.rules.json
 new file mode 100644
@@ -23,7 +13,7 @@ index 0000000..0967ef4
 @@ -0,0 +1 @@
 +{}
 diff --git a/node_modules/react-native-ama/dist/commonjs/internal/logger.js b/node_modules/react-native-ama/dist/commonjs/internal/logger.js
-index cc224c8..b84b226 100644
+index cc224c8..65c49d3 100644
 --- a/node_modules/react-native-ama/dist/commonjs/internal/logger.js
 +++ b/node_modules/react-native-ama/dist/commonjs/internal/logger.js
 @@ -7,7 +7,7 @@ exports.shouldIgnoreContrastCheckForDisabledElement = exports.logFailure = expor
@@ -36,7 +26,7 @@ index cc224c8..b84b226 100644
  const getRuleAction = __DEV__ ? rule => {
    var _overrideRules$rules;
 diff --git a/node_modules/react-native-ama/dist/commonjs/internal/logger.js.map b/node_modules/react-native-ama/dist/commonjs/internal/logger.js.map
-index 293b17d..2e461ee 100644
+index 293b17d..cd9288d 100644
 --- a/node_modules/react-native-ama/dist/commonjs/internal/logger.js.map
 +++ b/node_modules/react-native-ama/dist/commonjs/internal/logger.js.map
 @@ -1 +1 @@
@@ -52,7 +42,7 @@ index 0000000..0967ef4
 @@ -0,0 +1 @@
 +{}
 diff --git a/node_modules/react-native-ama/dist/module/internal/logger.js b/node_modules/react-native-ama/dist/module/internal/logger.js
-index 960dfac..58e4346 100644
+index 960dfac..f88f811 100644
 --- a/node_modules/react-native-ama/dist/module/internal/logger.js
 +++ b/node_modules/react-native-ama/dist/module/internal/logger.js
 @@ -1,7 +1,7 @@
@@ -65,7 +55,7 @@ index 960dfac..58e4346 100644
  export const getRuleAction = __DEV__ ? rule => {
    var _overrideRules$rules;
 diff --git a/node_modules/react-native-ama/dist/module/internal/logger.js.map b/node_modules/react-native-ama/dist/module/internal/logger.js.map
-index 805e407..f07713a 100644
+index 805e407..14eca18 100644
 --- a/node_modules/react-native-ama/dist/module/internal/logger.js.map
 +++ b/node_modules/react-native-ama/dist/module/internal/logger.js.map
 @@ -1 +1 @@
@@ -81,7 +71,7 @@ index 0000000..0967ef4
 @@ -0,0 +1 @@
 +{}
 diff --git a/node_modules/react-native-ama/lib/internal/logger.ts b/node_modules/react-native-ama/lib/internal/logger.ts
-index 60b86af..6682eab 100755
+index 60b86af..9f99fd6 100755
 --- a/node_modules/react-native-ama/lib/internal/logger.ts
 +++ b/node_modules/react-native-ama/lib/internal/logger.ts
 @@ -11,7 +11,7 @@ import {

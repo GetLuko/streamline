@@ -45,6 +45,8 @@ export const App = () => {
           ref={(ref) => {
             scrollViewRef.current = ref;
           }}
+          // TODO: remove (only for testing purposes)
+          scrollEnabled={false}
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}
           contentContainerStyle={{ flex: 1 }}

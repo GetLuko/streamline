@@ -22,6 +22,7 @@ import { ProgressBarSandbox } from './docs/progress-bar.doc';
 import { NavigationBarProgressSandbox } from './docs/navigation-bar-progress.doc';
 import { NavigationTitleSandbox } from './docs/navigation-title.doc';
 import { ShadowSandbox } from './docs/shadows.doc';
+import { ShadowValidationSandbox } from './docs/shadowsValidation.doc';
 
 type SandBoxItemType = {
   title: string;
@@ -37,6 +38,7 @@ export const sandboxItems: SandBoxSectionType[] = [
   {
     title: 'Foundation',
     items: [
+      { title: 'ShadowValidation', SandBox: ShadowValidationSandbox },
       { title: 'Shadows', SandBox: ShadowSandbox },
       { title: 'Icons', SandBox: IconsSandbox },
       { title: 'Typo', SandBox: TypoSandbox },

@@ -47,7 +47,7 @@ export const App = () => {
           }}
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}
-          contentContainerStyle={{ flex: 0 }}
+          contentContainerStyle={{ flex: 1 }}
         >
           <StreamlineThemeProvider disableAnimation={disableAnimation}>
             <SandBox />

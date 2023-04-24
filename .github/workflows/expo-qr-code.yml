@@ -13,10 +13,11 @@ jobs:
           node-version: 16.x
           cache: yarn
 
-      - name: 🏗 Setup Expo
-        uses: expo/expo-github-action@v7
+      - name: 🏗 Setup EAS
+        uses: expo/expo-github-action@v8
         with:
           expo-version: latest
+          eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
 
       - name: 📦 Install dependencies
@@ -25,11 +26,8 @@ jobs:
       - name: 🏗 Build
         run: yarn streamline:build
 
-      - name: 🚀 Publish preview
-        run: yarn nx run sandbox:publish --release-channel=pr-${{ github.event.number }} --non-interactive --config=app.json
-
-      - name: 💬 Comment preview
-        uses: expo/expo-github-action/preview-comment@v7
+      - name: 💬 Comment in preview
+        uses: expo/expo-github-action/preview@v8
         with:
-          channel: pr-${{ github.event.number }}
-          message: '<a href="https://qr.expo.dev/expo-go?owner=lukoapp&slug=sandbox&releaseChannel=pr-${{ github.event.number }}"><img src="https://qr.expo.dev/expo-go?owner=lukoapp&slug=sandbox&releaseChannel=pr-${{ github.event.number }}" height="200px" width="200px"></a>'
+          command: eas update --auto --channel=pr-${{ github.event.number }}
+          working-directory: packages/sandbox

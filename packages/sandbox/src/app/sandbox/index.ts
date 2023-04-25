@@ -20,6 +20,7 @@ import { TypoSandbox } from './docs/text.doc';
 import { ButtonDockSandbox } from './docs/button-dock.doc';
 import { ProgressBarSandbox } from './docs/progress-bar.doc';
 import { NavigationBarProgressSandbox } from './docs/navigation-bar-progress.doc';
+import { NavigationTitleSandbox } from './docs/navigation-title.doc';
 
 type SandBoxItemType = {
   title: string;
@@ -46,8 +47,8 @@ export const sandboxItems: SandBoxSectionType[] = [
     title: 'Buttons',
     items: [
       { title: 'Button', SandBox: ButtonSandbox },
-      { title: 'Button Icon', SandBox: ButtonIconSandbox },
-      { title: 'Button Mini', SandBox: ButtonMiniSandbox },
+      { title: 'ButtonIcon', SandBox: ButtonIconSandbox },
+      { title: 'ButtonMini', SandBox: ButtonMiniSandbox },
       { title: 'Button Dock', SandBox: ButtonDockSandbox },
     ],
   },
@@ -64,7 +65,7 @@ export const sandboxItems: SandBoxSectionType[] = [
     title: 'Inputs',
     items: [
       { title: 'InputText', SandBox: InputTextSandbox },
-      { title: 'InputText Types', SandBox: InputTextTypesSandbox },
+      { title: 'InputTextTypes', SandBox: InputTextTypesSandbox },
       { title: 'InputTextArea', SandBox: InputTextAreaSandbox },
     ],
   },
@@ -85,15 +86,16 @@ export const sandboxItems: SandBoxSectionType[] = [
   },
   {
     title: 'Progress Bar',
-    items: [{ title: 'Progress Bar', SandBox: ProgressBarSandbox }],
+    items: [{ title: 'ProgressBar', SandBox: ProgressBarSandbox }],
   },
   {
     title: 'Navigation',
     items: [
       {
-        title: 'Navigation Bar Progress',
+        title: 'NavigationBarProgress',
         SandBox: NavigationBarProgressSandbox,
       },
+      { title: 'NavigationTitle', SandBox: NavigationTitleSandbox },
     ],
   },
 ];

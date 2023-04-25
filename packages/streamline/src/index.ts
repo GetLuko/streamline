@@ -17,6 +17,7 @@ export * from './components/spinner/spinner';
 export * from './components/spinner/spinner';
 export * from './components/progress-bar/progress-bar';
 export * from './components/tag/tag';
+export * from './components/navigation/navigation-title/navigation-title';
 export * from './components/navigation/navigation-bar-progress/navigation-bar-progress';
 export * from './primitives/animated-box/animated-box';
 export * from './primitives/box/box';

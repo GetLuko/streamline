@@ -49,6 +49,7 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'Button', SandBox: ButtonSandbox },
       { title: 'ButtonIcon', SandBox: ButtonIconSandbox },
       { title: 'ButtonMini', SandBox: ButtonMiniSandbox },
+      { title: 'ButtonDock', SandBox: ButtonMiniSandbox },
     ],
   },
   {

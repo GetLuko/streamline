@@ -52,7 +52,7 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: Button Dock
+      COMPONENT: ButtonDock
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
@@ -104,7 +104,7 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: Progress Bar
+      COMPONENT: ProgressBar
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:

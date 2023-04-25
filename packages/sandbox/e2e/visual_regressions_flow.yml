@@ -44,15 +44,15 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: Button Mini
+      COMPONENT: ButtonMini
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: Button Icon
+      COMPONENT: ButtonIcon
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: Button Dock
+      COMPONENT: ButtonDock
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
@@ -76,7 +76,7 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: InputText Types
+      COMPONENT: InputTextTypes
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
@@ -104,12 +104,11 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: Progress Bar
-
+      COMPONENT: ProgressBar
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: Navigation Bar Progress
+      COMPONENT: NavigationBarProgress
 ##
 ## CI tests
 # - stopApp: host.exp.Exponent

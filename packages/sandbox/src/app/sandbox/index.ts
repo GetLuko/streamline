@@ -49,7 +49,7 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'Button', SandBox: ButtonSandbox },
       { title: 'ButtonIcon', SandBox: ButtonIconSandbox },
       { title: 'ButtonMini', SandBox: ButtonMiniSandbox },
-      { title: 'Button Dock', SandBox: ButtonDockSandbox },
+      { title: 'ButtonDock', SandBox: ButtonMiniSandbox },
     ],
   },
   {
@@ -85,7 +85,7 @@ export const sandboxItems: SandBoxSectionType[] = [
     ],
   },
   {
-    title: 'Progress Bar',
+    title: 'ProgressBar',
     items: [{ title: 'ProgressBar', SandBox: ProgressBarSandbox }],
   },
   {

@@ -1,4 +1,4 @@
-import { Box, Text, ButtonDock, CardTip, Card } from '@getluko/streamline';
+import { Box, Text, ButtonDock, Card } from '@getluko/streamline';
 import { ScrollView } from 'react-native';
 
 export const ShadowValidationSandbox = () => {
@@ -26,8 +26,8 @@ export const ShadowValidationSandbox = () => {
             creatures of the cosmos.
           </Text>
           <Box paddingVertical="sm">
-            <Card backgroundColor="BLUKO_100" shadows="soft">
-              <Text>Soft</Text>
+            <Card backgroundColor="BLUKO_500" shadows="soft">
+              <Text color="PURE_WHITE_1000">Soft</Text>
             </Card>
           </Box>
 
@@ -57,8 +57,8 @@ export const ShadowValidationSandbox = () => {
             claims require extraordinary evidence
           </Text>
           <Box paddingVertical="sm">
-            <Card backgroundColor="BLUKO_100" shadows="moderate">
-              <Text>Moderate</Text>
+            <Card backgroundColor="BLUKO_500" shadows="moderate">
+              <Text color="PURE_WHITE_1000">Moderate</Text>
             </Card>
           </Box>
           <Text>
@@ -78,8 +78,8 @@ export const ShadowValidationSandbox = () => {
             and cherish that pale blue dot star stuff harvesting star light.
           </Text>
           <Box paddingVertical="sm">
-            <Card backgroundColor="BLUKO_100" shadows="strong">
-              <Text>Strong</Text>
+            <Card backgroundColor="BLUKO_500" shadows="strong">
+              <Text color="PURE_WHITE_1000">Strong</Text>
             </Card>
           </Box>
           <Text>

@@ -38,6 +38,7 @@ export const sandboxItems: SandBoxSectionType[] = [
   {
     title: 'Foundation',
     items: [
+      /** ShadowValidation to remove once double checked by Ian on his devices */
       { title: 'ShadowValidation', SandBox: ShadowValidationSandbox },
       { title: 'Shadows', SandBox: ShadowSandbox },
       { title: 'Icons', SandBox: IconsSandbox },

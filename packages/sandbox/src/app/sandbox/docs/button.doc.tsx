@@ -1,5 +1,6 @@
 import { Button } from '@getluko/streamline';
 import { DocList } from '../components/DocList';
+import { sleep } from '../sandbox.utils';
 
 const docs: JSX.Element[] = [
   <Button appearance="primary" text="Primary" />,
@@ -14,15 +15,7 @@ const docs: JSX.Element[] = [
   <Button text="neutral" isLoading appearance="neutral" />,
   <Button text="danger" isLoading appearance="danger" />,
   <Button text="warning" isLoading appearance="warning" />,
-  <Button
-    text="promise"
-    appearance="primary"
-    onPress={async () =>
-      setTimeout(() => {
-        return true;
-      }, 2000)
-    }
-  />,
+  <Button text="promise" appearance="primary" onPress={() => sleep(2000)} />,
 ];
 
 export const ButtonSandbox = () => <DocList docs={docs} />;

@@ -1,7 +1,7 @@
 {
   "name": "sandbox",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@expo/metro-config": "*",
     "@expo/webpack-config": "*",
@@ -11,6 +11,7 @@
     "@testing-library/react-native": "*",
     "expo": "*",
     "expo-font": "~11.0.1",
+    "expo-updates": "~0.16.4",
     "react": "*",
     "react-native": "*",
     "react-native-svg": "*",

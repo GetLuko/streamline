@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { sandboxItems } from '.';
 import { Box, Icon, Text } from '@getluko/streamline';
-import { filterSections } from './sandbox.util';
+import { filterSections } from './sandbox.utils';
 import { TouchableOpacity } from 'react-native';
 
 const ListItem = ({

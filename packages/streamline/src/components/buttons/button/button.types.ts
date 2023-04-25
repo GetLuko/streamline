@@ -36,6 +36,11 @@ export type ButtonProps = Pick<InteractionType, 'isLoading' | 'isDisabled'> & {
    * Display as a Skeleton.
    */
   isSkeleton?: boolean;
+
+  /**
+   * Display with a box shadow to have a floating style.
+   */
+  isFloating?: boolean;
 } & Pick<
     PressableProps,
     | 'pointerEvents'

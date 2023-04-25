@@ -65,7 +65,6 @@ export const sandboxItems: SandBoxSectionType[] = [
     items: [
       { title: 'InputText', SandBox: InputTextSandbox },
       { title: 'InputTextTypes', SandBox: InputTextTypesSandbox },
-      { title: 'InputTextTypes', SandBox: InputTextTypesSandbox },
       { title: 'InputTextArea', SandBox: InputTextAreaSandbox },
     ],
   },
@@ -92,7 +91,6 @@ export const sandboxItems: SandBoxSectionType[] = [
     title: 'Navigation',
     items: [
       {
-        title: 'NavigationBarProgress',
         title: 'NavigationBarProgress',
         SandBox: NavigationBarProgressSandbox,
       },

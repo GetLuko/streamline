@@ -20,6 +20,7 @@ import { TypoSandbox } from './docs/text.doc';
 import { ButtonDockSandbox } from './docs/button-dock.doc';
 import { ProgressBarSandbox } from './docs/progress-bar.doc';
 import { NavigationBarProgressSandbox } from './docs/navigation-bar-progress.doc';
+import { NavigationTitleSandbox } from './docs/navigation-title.doc';
 
 type SandBoxItemType = {
   title: string;
@@ -64,6 +65,7 @@ export const sandboxItems: SandBoxSectionType[] = [
     items: [
       { title: 'InputText', SandBox: InputTextSandbox },
       { title: 'InputTextTypes', SandBox: InputTextTypesSandbox },
+      { title: 'InputTextTypes', SandBox: InputTextTypesSandbox },
       { title: 'InputTextArea', SandBox: InputTextAreaSandbox },
     ],
   },
@@ -91,8 +93,10 @@ export const sandboxItems: SandBoxSectionType[] = [
     items: [
       {
         title: 'NavigationBarProgress',
+        title: 'NavigationBarProgress',
         SandBox: NavigationBarProgressSandbox,
       },
+      { title: 'NavigationTitle', SandBox: NavigationTitleSandbox },
     ],
   },
 ];

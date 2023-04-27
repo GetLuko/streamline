@@ -31,7 +31,14 @@ export function ListItemOption({
   }
 
   return (
-    <Pressable disabled={disabled} onPress={handlePress}>
+    <Pressable
+      accessibilityLabel={
+        accessibilityLabel ?? `${header}\n${title}\n${description}`
+      }
+      disabled={disabled}
+      onPress={handlePress}
+      onLongPress={onLongPress}
+    >
       {({ pressed }) => (
         <>
           <Box

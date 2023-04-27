@@ -17,8 +17,7 @@ export function ListItemOption({
   onLongPress,
   onPress,
   title,
-  showInfoButton,
-  onInfoButtonPress,
+  rightOption,
   isSelected = false,
   disabled = false,
   iconName,
@@ -85,11 +84,11 @@ export function ListItemOption({
               isSelected={isSelected}
             />
 
-            {showInfoButton ? (
+            {rightOption ? (
               <ButtonIcon
-                iconName="Info"
-                accessibilityLabel="Info"
-                onPress={onInfoButtonPress}
+                iconName={rightOption.iconName}
+                accessibilityLabel={rightOption.accessibilityLabel}
+                onPress={rightOption.onPress}
                 appearance="secondary"
                 size="large"
               />

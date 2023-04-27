@@ -1,5 +1,11 @@
 import { IconsName } from '../../../primitives/icon/icon.types';
 
+type RightOption = {
+  accessibilityLabel: string;
+  iconName: IconsName;
+  onPress: () => unknown;
+};
+
 export interface BaseProps {
   accessibilityLabel?: string;
   description?: string;
@@ -8,8 +14,7 @@ export interface BaseProps {
   onLongPress?: () => unknown;
   onPress?: () => unknown;
   title: string;
-  showInfoButton?: boolean;
-  onInfoButtonPress?: () => void;
+  rightOption?: RightOption;
   isSelected?: boolean;
   isLoading?: boolean;
   disabled?: boolean;

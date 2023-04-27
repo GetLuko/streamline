@@ -21,6 +21,7 @@ import { ButtonDockSandbox } from './docs/button-dock.doc';
 import { ProgressBarSandbox } from './docs/progress-bar.doc';
 import { NavigationBarProgressSandbox } from './docs/navigation-bar-progress.doc';
 import { NavigationTitleSandbox } from './docs/navigation-title.doc';
+import { ListItemOptionSandbox } from './docs/list-item-option.doc';
 
 type SandBoxItemType = {
   title: string;
@@ -49,7 +50,7 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'Button', SandBox: ButtonSandbox },
       { title: 'ButtonIcon', SandBox: ButtonIconSandbox },
       { title: 'ButtonMini', SandBox: ButtonMiniSandbox },
-      { title: 'ButtonDock', SandBox: ButtonMiniSandbox },
+      { title: 'ButtonDock', SandBox: ButtonDockSandbox },
     ],
   },
   {
@@ -71,7 +72,10 @@ export const sandboxItems: SandBoxSectionType[] = [
   },
   {
     title: 'List Items',
-    items: [{ title: 'ListItem', SandBox: ListItemSandbox }],
+    items: [
+      { title: 'ListItem', SandBox: ListItemSandbox },
+      { title: 'ListItemOption', SandBox: ListItemOptionSandbox },
+    ],
   },
   {
     title: 'Tags',

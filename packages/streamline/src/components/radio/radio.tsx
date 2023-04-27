@@ -14,6 +14,7 @@ export const Radio = ({
   onChange,
   disabled = false,
   testID,
+  pointerEvents,
 }: RadioProps) => {
   const colors = getRadioColors({ appearance, disabled });
 
@@ -28,6 +29,7 @@ export const Radio = ({
       onPress={handleOnPress}
       testID={testID}
       style={styles.container}
+      pointerEvents={pointerEvents}
     >
       {({ pressed }) => (
         <Box

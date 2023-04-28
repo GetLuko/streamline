@@ -7,7 +7,7 @@ import LeftContent from './components/left-content';
 import { CenterContent } from './components/center-content';
 import { getBorderColor } from './list-item-option.utils';
 import { getBackgroundColor } from './list-item-option.utils';
-import { ListItemOptionProps } from './list-item-option.type';
+import { ListItemOptionProps } from './list-item-option.types';
 
 export function ListItemOption({
   accessibilityLabel,

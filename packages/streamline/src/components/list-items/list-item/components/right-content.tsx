@@ -23,7 +23,7 @@ export const RightContent = ({
     return (
       <ButtonIcon
         accessibilityLabel={rightOption.accessibilityLabel}
-        appearance="secondary"
+        appearance="neutral"
         iconName={rightOption.iconName}
         onPress={handlePress}
         isLoading={isResolving}

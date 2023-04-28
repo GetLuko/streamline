@@ -1,173 +1,99 @@
-import { Box } from '@getluko/streamline';
+import { Appearance, Box } from '@getluko/streamline';
 import { ButtonIcon } from '@getluko/streamline';
 
-const Separator = () => <Box marginTop="md" />;
+import { DocList } from '../components/DocList';
 
-export const ButtonIconSandbox = () => (
-  <Box paddingHorizontal="xl" flexDirection="row">
-    <Box marginRight="md">
+const Separator = () => <Box marginRight="xs" marginTop="md" />;
+
+const ButtonsSizeFamily = ({
+  appearance,
+  size,
+}: {
+  appearance: Appearance;
+  size: 'regular' | 'large';
+}) => {
+  return (
+    <Box flexDirection="row">
       <ButtonIcon
         accessibilityLabel="test"
-        iconName="Cross"
-        appearance="primary"
-      />
-      <Separator />
-      <ButtonIcon
-        accessibilityLabel="test"
-        iconName="Cross"
-        appearance="secondary"
-      />
-      <Separator />
-      <ButtonIcon
-        accessibilityLabel="test"
-        iconName="Cross"
-        appearance="neutral"
-      />
-      <Separator />
-      <ButtonIcon
-        accessibilityLabel="test"
-        iconName="Cross"
-        appearance="danger"
-      />
-      <Separator />
-      <ButtonIcon accessibilityLabel="test" iconName="Cross" isLoading />
-      <Separator />
-      <ButtonIcon accessibilityLabel="test" iconName="Cross" isDisabled />
-    </Box>
-    <Box marginRight="md">
-      <ButtonIcon
+        appearance={appearance}
+        iconName="Area"
+        size={size}
         withContainer
-        accessibilityLabel="test"
-        iconName="Cross"
-        appearance="primary"
       />
       <Separator />
       <ButtonIcon
-        withContainer
         accessibilityLabel="test"
-        iconName="Cross"
-        appearance="secondary"
-      />
-      <Separator />
-      <ButtonIcon
-        withContainer
-        accessibilityLabel="test"
-        iconName="Cross"
-        appearance="neutral"
-      />
-      <Separator />
-      <ButtonIcon
-        withContainer
-        accessibilityLabel="test"
-        iconName="Cross"
-        appearance="danger"
-      />
-      <Separator />
-      <ButtonIcon
-        withContainer
-        accessibilityLabel="test"
-        iconName="Cross"
-        isLoading
-      />
-      <Separator />
-      <ButtonIcon
-        withContainer
-        accessibilityLabel="test"
-        iconName="Cross"
+        appearance={appearance}
+        iconName="Area"
         isDisabled
-      />
-    </Box>
-    <Box marginRight="md">
-      <ButtonIcon
-        size="large"
-        accessibilityLabel="test"
-        iconName="Cross"
-        appearance="primary"
+        size={size}
+        withContainer
       />
       <Separator />
       <ButtonIcon
-        size="large"
         accessibilityLabel="test"
-        iconName="Cross"
-        appearance="secondary"
-      />
-      <Separator />
-      <ButtonIcon
-        size="large"
-        accessibilityLabel="test"
-        iconName="Cross"
-        appearance="neutral"
-      />
-      <Separator />
-      <ButtonIcon
-        size="large"
-        accessibilityLabel="test"
-        iconName="Cross"
-        appearance="danger"
-      />
-      <Separator />
-      <ButtonIcon
-        size="large"
-        accessibilityLabel="test"
-        iconName="Cross"
+        appearance={appearance}
+        iconName="Area"
         isLoading
+        size={size}
+        withContainer
       />
       <Separator />
       <ButtonIcon
-        size="large"
         accessibilityLabel="test"
-        iconName="Cross"
+        appearance={appearance}
+        iconName="Area"
+        size={size}
+      />
+      <Separator />
+      <ButtonIcon
+        accessibilityLabel="test"
+        appearance={appearance}
+        iconName="Area"
         isDisabled
-      />
-    </Box>
-    <Box marginRight="md">
-      <ButtonIcon
-        size="large"
-        withContainer
-        accessibilityLabel="test"
-        iconName="Cross"
-        appearance="primary"
+        size={size}
       />
       <Separator />
       <ButtonIcon
-        size="large"
-        withContainer
         accessibilityLabel="test"
-        iconName="Cross"
-        appearance="secondary"
-      />
-      <Separator />
-      <ButtonIcon
-        size="large"
-        withContainer
-        accessibilityLabel="test"
-        iconName="Cross"
-        appearance="neutral"
-      />
-      <Separator />
-      <ButtonIcon
-        size="large"
-        withContainer
-        accessibilityLabel="test"
-        iconName="Cross"
-        appearance="danger"
-      />
-      <Separator />
-      <ButtonIcon
-        size="large"
-        withContainer
-        accessibilityLabel="test"
-        iconName="Cross"
+        appearance={appearance}
+        iconName="Area"
         isLoading
-      />
-      <Separator />
-      <ButtonIcon
-        size="large"
-        withContainer
-        accessibilityLabel="test"
-        iconName="Cross"
-        isDisabled
+        size={size}
       />
     </Box>
-  </Box>
-);
+  );
+};
+
+const ButtonsFamily = ({ appearance }: { appearance: Appearance }) => {
+  return (
+    <>
+      <ButtonsSizeFamily appearance={appearance} size="large" />
+      <Separator />
+      <ButtonsSizeFamily appearance={appearance} size="regular" />
+      <Separator />
+    </>
+  );
+};
+
+const BUTTONS: JSX.Element[] = [
+  <ButtonsFamily appearance="primary" />,
+  <ButtonsFamily appearance="neutral" />,
+  <ButtonsFamily appearance="warning" />,
+  <ButtonsFamily appearance="danger" />,
+  <ButtonsFamily appearance="dark" />,
+  <ButtonsFamily appearance="light" />,
+  <Box flexDirection="row">
+    <ButtonIcon
+      accessibilityLabel="test"
+      isSkeleton
+      iconName="Area"
+      size="large"
+    />
+    <Separator />
+    <ButtonIcon accessibilityLabel="test" isSkeleton iconName="Area" />
+  </Box>,
+];
+
+export const ButtonIconSandbox = () => <DocList docs={BUTTONS} margin="md" />;

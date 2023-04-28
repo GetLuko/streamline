@@ -19,4 +19,5 @@ export interface ButtonIconProps extends InteractionType {
    * Size of the button
    */
   size?: GenericSize;
+  isSkeleton?: boolean;
 }

@@ -6,6 +6,8 @@ import { colors } from '../../theme/colors';
 import { radius } from '../../theme/radius';
 import { Box } from '../box/box';
 import { Text } from '../text/text';
+import { isIOS } from '../../utils/platform';
+import { FontFamily } from '../../theme/fonts';
 
 export interface MarkdownProps {
   children: string;
@@ -18,6 +20,20 @@ export function Markdown({ children, onLinkPress }: MarkdownProps) {
       onLinkPress={onLinkPress}
       style={styles}
       rules={{
+        hr: (node) => {
+          return node.markup === '---' ? (
+            // spacer
+            <Box key={node.key} style={styles.hr} />
+          ) : (
+            // divider
+            <Box
+              key={node.key}
+              style={styles.hr}
+              height={1}
+              backgroundColor="GREY_100"
+            />
+          );
+        },
         fence: (node, children, parent, styles, inheritedStyles = {}) => {
           let { content } = node;
           if (
@@ -44,15 +60,23 @@ const styles = {
   heading2: { ...fonts.titleSmallBold, color: colors.PRIMARY.BLACK },
   heading3: { ...fonts.headlineBold, color: colors.PRIMARY.BLACK },
   strong: { ...fonts.bodyBold, color: colors.PRIMARY.BLACK },
-  link: { ...fonts.body, color: colors.BLUKO.BLUKO_500, paddingBottom: 2 },
+  em: {
+    ...fonts.bodyBold,
+    fontFamily: FontFamily.Italic,
+  },
+  link: {
+    ...fonts.body,
+    color: colors.BLUKO.BLUKO_500,
+    paddingBottom: isIOS ? 2 : 0,
+  },
   paragraph: { ...fonts.body },
   list_item: { ...fonts.body },
   bullet_list_icon: {
     marginLeft: 0,
     marginRight: 0,
     paddingRight: 12,
-    fontSize: 32,
-    paddingTop: 6,
+    fontSize: isIOS ? 32 : 16,
+    paddingTop: isIOS ? 6 : 0,
     color: colors.PRIMARY.BLACK,
   },
   ordered_list_icon: {
@@ -87,8 +111,6 @@ const styles = {
     paddingVertical: 0,
   },
   hr: {
-    backgroundColor: colors.GREY.GREY_100,
-    height: 1,
     marginTop: 16,
     marginBottom: 16,
   },

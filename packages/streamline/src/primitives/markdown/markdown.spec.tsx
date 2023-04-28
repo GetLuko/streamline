@@ -1,7 +1,7 @@
 import React from 'react';
-import { render } from '@testing-library/react-native';
 
 import { Markdown } from './markdown';
+import { renderWithProvider } from '../../testing/render-with-provider';
 
 const md = `
 # Heading 1
@@ -9,8 +9,8 @@ const md = `
 ### Heading 3
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Luko_Logo.svg/1024px-Luko_Logo.svg.png?20210318113716)
 ___
-*italic* **bold** ***italicbold*** [This is a link](https://www.luko.eu) \`Code\`
-___
+*italic* **bold** **_italicbold_** ~~cross~~ [This is a link](https://www.luko.eu) \`Code\`
+---
 
 > “Design is not just what it looks like and feels like. Design is how it works.” – Steve Jobs
 1. First item
@@ -32,7 +32,7 @@ I hope this email finds you well. It seems to be originating from your bathroom 
 describe('Markdown', () => {
   it('should render successfully', () => {
     // WHen
-    const { getByText, getAllByText, queryByText } = render(
+    const { getByText, getAllByText, queryByText } = renderWithProvider(
       <Markdown>{md}</Markdown>
     );
     // Then
@@ -42,6 +42,7 @@ describe('Markdown', () => {
     expect(getByText('italic')).toBeTruthy();
     expect(getByText('bold')).toBeTruthy();
     expect(getByText('italicbold')).toBeTruthy();
+    expect(getByText('cross')).toBeTruthy();
     expect(
       getByText(
         '“Design is not just what it looks like and feels like. Design is how it works.” – Steve Jobs'

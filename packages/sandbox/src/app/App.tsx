@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
-import { isIOS, StreamlineThemeProvider, Text } from '@getluko/streamline';
+import { isIOS, StreamlineThemeProvider } from '@getluko/streamline';
 import React, { useRef } from 'react';
 import { useFonts } from 'expo-font';
 import {
@@ -19,6 +19,7 @@ export const App = () => {
     'CircularXX-Bold': require('./fonts/CircularXX-Bold.otf'),
     'CircularXX-Medium': require('./fonts/CircularXX-Medium.otf'),
     'CircularXX-Book': require('./fonts/CircularXX-Book.otf'),
+    'CircularXX-BookItalic': require('./fonts/CircularXX-BookItalic.otf'),
   });
 
   const disableAnimation = isMaestro();

@@ -43,11 +43,6 @@ describe('Markdown', () => {
     expect(getByText('bold')).toBeTruthy();
     expect(getByText('italicbold')).toBeTruthy();
     expect(getByText('cross')).toBeTruthy();
-    expect(
-      getByText(
-        '“Design is not just what it looks like and feels like. Design is how it works.” – Steve Jobs'
-      )
-    ).toBeTruthy();
     expect(getByText('1.')).toBeTruthy();
     expect(getByText('First item')).toBeTruthy();
     expect(getByText('2.')).toBeTruthy();

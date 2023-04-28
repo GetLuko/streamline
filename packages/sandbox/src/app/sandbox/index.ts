@@ -22,6 +22,7 @@ import { NavigationBarProgressSandbox } from './docs/navigation-bar-progress.doc
 import { NavigationTitleSandbox } from './docs/navigation-title.doc';
 import { MarkdownSandbox } from './docs/markdown.doc';
 import { ShadowSandbox } from './docs/shadows.doc';
+import { MarkdownSandbox } from './docs/markdown.doc';
 
 type SandBoxItemType = {
   title: string;

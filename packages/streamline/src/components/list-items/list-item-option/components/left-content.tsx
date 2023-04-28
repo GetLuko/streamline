@@ -35,11 +35,15 @@ const LeftContent: FC<LeftContentProps> = ({
 
   if (type === 'checkbox') {
     return (
-      <Checkbox value={isSelected} disabled={isDisabled} pointerEvents="none" />
+      <Checkbox
+        value={isSelected}
+        isDisabled={isDisabled}
+        pointerEvents="none"
+      />
     );
   }
   return (
-    <Radio value={isSelected} disabled={isDisabled} pointerEvents="none" />
+    <Radio value={isSelected} isDisabled={isDisabled} pointerEvents="none" />
   );
 };
 

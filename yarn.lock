@@ -3477,7 +3477,7 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@ronradtke/react-native-markdown-display@^8.0.0":
+"@ronradtke/react-native-markdown-display@8.0.0":
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/@ronradtke/react-native-markdown-display/-/react-native-markdown-display-8.0.0.tgz#ac2763290e19efed5d054fdb59c595af7b5edeea"
   integrity sha512-i56CYXGXWDGN+dxF72dGiEn4Kld0L6c/JvcOrO4azX9YzVVl02F5EDgdb6fWUaiOl8gPqyUI7YIEU2OVGnIg6Q==

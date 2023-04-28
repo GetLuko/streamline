@@ -43,7 +43,7 @@ const LIST_ITEMS: JSX.Element[] = [
     description="Description"
     header="Header"
     title="Icon Disabled"
-    disabled
+    isDisabled
     onPress={ASYNC_ON_PRESS}
   />,
   <ListItemOption
@@ -66,7 +66,7 @@ const LIST_ITEMS: JSX.Element[] = [
     description="Description"
     header="Header"
     title="Checkbox Disabled"
-    disabled
+    isDisabled
     onPress={ASYNC_ON_PRESS}
   />,
   <ListItemOption
@@ -89,7 +89,7 @@ const LIST_ITEMS: JSX.Element[] = [
     description="Description"
     header="Header"
     title="Radio Disabled"
-    disabled
+    isDisabled
     onPress={ASYNC_ON_PRESS}
   />,
 ];

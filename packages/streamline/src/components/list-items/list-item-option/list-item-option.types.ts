@@ -10,14 +10,13 @@ export interface BaseProps {
   accessibilityLabel?: string;
   description?: string;
   header?: string;
-  isSkeleton?: boolean;
   onLongPress?: () => unknown;
   onPress?: () => unknown;
   title: string;
   rightOption?: RightOption;
+  isSkeleton?: boolean;
   isSelected?: boolean;
-  isLoading?: boolean;
-  disabled?: boolean;
+  isDisabled?: boolean;
 }
 
 export type ListItemOptionProps =

@@ -25,7 +25,7 @@ describe('Checkbox', () => {
         value={true}
         onChange={mockOnChange}
         testID="Checkbox"
-        disabled
+        isDisabled
       />
     );
     const checkbox = getByTestId('Checkbox');

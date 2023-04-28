@@ -1,10 +1,12 @@
-import { usePress } from '../../../hooks/use-press.hook';
 import { Pressable } from 'react-native';
-import { ListItemSkeleton } from '../components/list-item-skeleton';
+
+import { usePress } from '../../../hooks/use-press.hook';
+
 import { Box } from '../../../primitives/box/box';
 import ButtonIcon from '../../buttons/button-icon/button-icon';
+import { ListItemSkeleton } from '../components/list-item-skeleton';
 import LeftContent from './components/left-content';
-import { CenterContent } from './components/center-content';
+import CenterContent from './components/center-content';
 import { getBorderColor } from './list-item-option.utils';
 import { getBackgroundColor } from './list-item-option.utils';
 import { ListItemOptionProps } from './list-item-option.types';
@@ -19,7 +21,7 @@ export function ListItemOption({
   title,
   rightOption,
   isSelected = false,
-  disabled = false,
+  isDisabled = false,
   iconName,
   type,
 }: ListItemOptionProps) {
@@ -34,7 +36,7 @@ export function ListItemOption({
       accessibilityLabel={
         accessibilityLabel ?? `${header}\n${title}\n${description}`
       }
-      disabled={disabled}
+      disabled={isDisabled}
       onPress={handlePress}
       onLongPress={onLongPress}
     >
@@ -65,14 +67,14 @@ export function ListItemOption({
             borderColor={getBorderColor({
               pressed,
               selected: isSelected,
-              disabled,
+              isDisabled,
               isResolving,
             })}
           >
             <LeftContent
               type={type}
               iconName={iconName}
-              isDisabled={disabled}
+              isDisabled={isDisabled}
               isSelected={isSelected}
               isLoading={isResolving}
             />
@@ -80,7 +82,7 @@ export function ListItemOption({
               title={title}
               description={description}
               header={header}
-              disabled={disabled}
+              isDisabled={isDisabled}
               isSelected={isSelected}
             />
 

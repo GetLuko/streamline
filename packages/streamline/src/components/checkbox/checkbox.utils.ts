@@ -3,35 +3,35 @@ import { CheckboxColors } from './checkbox.types';
 
 export const getCheckboxColors = ({
   appearance,
-  disabled,
+  isDisabled,
 }: {
   appearance: Appearance;
-  disabled: boolean;
+  isDisabled: boolean;
 }): CheckboxColors => {
   switch (appearance) {
     case 'primary':
       return {
-        backgroundColor: disabled ? 'GREY_50' : 'PURE_WHITE_1000',
-        iconColor: disabled ? 'GREY_50' : 'PURE_WHITE_1000',
+        backgroundColor: isDisabled ? 'GREY_50' : 'PURE_WHITE_1000',
+        iconColor: isDisabled ? 'GREY_50' : 'PURE_WHITE_1000',
         shadowColor: 'BLUKO_100',
-        borderColor: disabled ? 'GREY_200' : 'GREY_300',
-        activeColor: disabled ? 'BLUKO_200' : 'BLUKO_500',
+        borderColor: isDisabled ? 'GREY_200' : 'GREY_300',
+        activeColor: isDisabled ? 'BLUKO_200' : 'BLUKO_500',
       };
     case 'danger':
       return {
-        backgroundColor: disabled ? 'GREY_50' : 'PURE_WHITE_1000',
-        iconColor: disabled ? 'GREY_50' : 'PURE_WHITE_1000',
+        backgroundColor: isDisabled ? 'GREY_50' : 'PURE_WHITE_1000',
+        iconColor: isDisabled ? 'GREY_50' : 'PURE_WHITE_1000',
         shadowColor: 'TERRA_100',
-        borderColor: disabled ? 'TERRA_200' : 'TERRA_500',
-        activeColor: disabled ? 'TERRA_300' : 'TERRA_500',
+        borderColor: isDisabled ? 'TERRA_200' : 'TERRA_500',
+        activeColor: isDisabled ? 'TERRA_300' : 'TERRA_500',
       };
     default:
       return {
-        backgroundColor: disabled ? 'GREY_50' : 'PURE_WHITE_1000',
-        iconColor: disabled ? 'GREY_50' : 'PURE_WHITE_1000',
+        backgroundColor: isDisabled ? 'GREY_50' : 'PURE_WHITE_1000',
+        iconColor: isDisabled ? 'GREY_50' : 'PURE_WHITE_1000',
         shadowColor: 'BLUKO_100',
-        borderColor: disabled ? 'GREY_200' : 'GREY_300',
-        activeColor: disabled ? 'BLUKO_200' : 'BLUKO_500',
+        borderColor: isDisabled ? 'GREY_200' : 'GREY_300',
+        activeColor: isDisabled ? 'BLUKO_200' : 'BLUKO_500',
       };
   }
 };

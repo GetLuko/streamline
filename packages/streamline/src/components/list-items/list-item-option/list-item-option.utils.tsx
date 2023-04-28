@@ -7,10 +7,10 @@ interface TextColors {
 }
 
 export const getTextColors = ({
-  disabled,
+  isDisabled,
   selected,
 }: {
-  disabled: boolean;
+  isDisabled: boolean;
   selected: boolean;
 }): TextColors => {
   if (selected) {
@@ -20,7 +20,7 @@ export const getTextColors = ({
       headerColor: 'BLUKO_500',
     };
   }
-  if (disabled) {
+  if (isDisabled) {
     return {
       titleColor: 'GREY_500',
       descriptionColor: 'GREY_500',
@@ -55,15 +55,15 @@ export const getBackgroundColor = ({
 export const getBorderColor = ({
   selected,
   pressed,
-  disabled,
+  isDisabled,
   isResolving,
 }: {
   selected: boolean;
-  disabled: boolean;
+  isDisabled: boolean;
   pressed: boolean;
   isResolving: boolean;
 }): ColorTheme => {
-  if (disabled) {
+  if (isDisabled) {
     return 'GREY_100';
   }
   if (selected || isResolving) {

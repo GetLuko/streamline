@@ -12,11 +12,11 @@ export const Radio = ({
   appearance = 'primary',
   value,
   onChange,
-  disabled = false,
+  isDisabled = false,
   testID,
   pointerEvents,
 }: RadioProps) => {
-  const colors = getRadioColors({ appearance, disabled });
+  const colors = getRadioColors({ appearance, isDisabled });
 
   const handleOnPress = () => {
     onChange?.(!value);
@@ -24,7 +24,7 @@ export const Radio = ({
 
   return (
     <Pressable
-      disabled={disabled}
+      disabled={isDisabled}
       hitSlop={10}
       onPress={handleOnPress}
       testID={testID}

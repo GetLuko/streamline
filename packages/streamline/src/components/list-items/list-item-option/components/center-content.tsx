@@ -7,14 +7,14 @@ export const CenterContent = ({
   description,
   header,
   title,
-  disabled = false,
+  isDisabled = false,
   isSelected = false,
 }: Pick<
   ListItemOptionProps,
-  'description' | 'header' | 'title' | 'disabled' | 'isSelected'
+  'description' | 'header' | 'title' | 'isDisabled' | 'isSelected'
 >) => {
   const { titleColor, descriptionColor, headerColor } = getTextColors({
-    disabled,
+    isDisabled,
     selected: isSelected,
   });
 
@@ -36,3 +36,5 @@ export const CenterContent = ({
     </Box>
   );
 };
+
+export default CenterContent;

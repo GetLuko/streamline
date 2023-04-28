@@ -6,7 +6,7 @@ export type CheckboxProps = {
   appearance?: Appearance;
   value: boolean;
   onChange?: (value: boolean) => void;
-  disabled?: boolean;
+  isDisabled?: boolean;
 } & Pick<PressableProps, 'pointerEvents' | 'testID'>;
 
 export interface CheckboxColors {

@@ -5,6 +5,8 @@ import { radius } from './radius';
 import { spacings } from './spacings';
 import { fonts } from './fonts';
 import { getAnimationValues } from './animation';
+
+export { getShadowsStyle } from './shadows';
 export { Appearance } from './appearance';
 export { fonts, TextVariants as TextVariant } from './fonts';
 

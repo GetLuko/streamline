@@ -24,7 +24,7 @@ export const HeaderAction = ({
     return (
       <ButtonIcon
         accessibilityLabel={dismissAction.accessibilityLabel}
-        appearance="secondary"
+        appearance="dark"
         iconName="Cross"
         isLoading={isDismissing || isLoading}
         onPress={handlePress}

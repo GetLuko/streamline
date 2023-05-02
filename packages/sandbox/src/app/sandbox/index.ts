@@ -1,4 +1,3 @@
-import { BoxSandbox } from './docs/box.doc';
 import { ButtonIconSandbox } from './docs/button-icon.doc';
 import { ButtonMiniSandbox } from './docs/button-mini.doc';
 import { ButtonSandbox } from './docs/button.doc';
@@ -22,6 +21,7 @@ import { ProgressBarSandbox } from './docs/progress-bar.doc';
 import { NavigationBarProgressSandbox } from './docs/navigation-bar-progress.doc';
 import { NavigationTitleSandbox } from './docs/navigation-title.doc';
 import { ListItemOptionSandbox } from './docs/list-item-option.doc';
+import { ShadowSandbox } from './docs/shadows.doc';
 
 type SandBoxItemType = {
   title: string;
@@ -37,7 +37,7 @@ export const sandboxItems: SandBoxSectionType[] = [
   {
     title: 'Foundation',
     items: [
-      { title: 'Box', SandBox: BoxSandbox },
+      { title: 'Shadows', SandBox: ShadowSandbox },
       { title: 'Icons', SandBox: IconsSandbox },
       { title: 'Typo', SandBox: TypoSandbox },
       { title: 'Skeleton', SandBox: SkeletonSandbox },

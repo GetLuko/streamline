@@ -12,6 +12,8 @@ export * from './components/inputs/input-text-area/input-text-area';
 export * from './components/inputs/input-text/input-text';
 export * from './components/inputs/input-text/input-text';
 export * from './components/list-items/list-item/list-item';
+export * from './components/list-items/list-item/list-item.types';
+export * from './components/list-items/list-item-group/list-item-group';
 export * from './components/radio/radio';
 export * from './components/spinner/spinner';
 export * from './components/spinner/spinner';

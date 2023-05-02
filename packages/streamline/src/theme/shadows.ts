@@ -2,31 +2,31 @@
  * https://www.figma.com/file/tOJLNigXQXJqCSKgJFPZn5/Mobile-Lukomponents-(PoC)?t=bHX0bZ8IyspwHn0r-0
  */
 export const shadows = {
-  // values in progress (to be synced with Ian)
   soft: {
     shadowOffset: {
       width: 0,
       height: 2,
     },
-    shadowRadius: 4,
-    shadowOpacity: 1,
-    elevation: 1,
+    shadowOpacity: 0.08,
+    shadowRadius: 2,
+    elevation: 3,
   },
   moderate: {
     shadowOffset: {
-      width: 3,
-      height: 3,
+      width: 0,
+      height: 6,
     },
-    shadowOpacity: 0.3,
-    elevation: 2,
+    shadowOpacity: 0.16,
+    shadowRadius: 6,
+    elevation: 7,
   },
   strong: {
     shadowOffset: {
       width: 0,
-      height: 10,
+      height: 8,
     },
-    shadowRadius: 20,
-    shadowOpacity: 0.12,
+    shadowRadius: 16,
+    shadowOpacity: 0.24,
     elevation: 12,
   },
 };

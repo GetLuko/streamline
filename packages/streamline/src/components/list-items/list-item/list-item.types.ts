@@ -17,5 +17,6 @@ export type ListItemProps = {
   onPress?: () => unknown;
   rightOption?: RightOption;
   showDivider?: boolean;
+  testID?: string;
   title: string;
 };

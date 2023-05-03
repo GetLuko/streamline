@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { sandboxItems } from '.';
-import { Box, Icon, Text } from '@getluko/streamline';
+import { Box, Icon, ListItemGroup, Text } from '@getluko/streamline';
 import { filterSections } from './sandbox.utils';
 import { TouchableOpacity } from 'react-native';
 
@@ -25,21 +25,6 @@ const ListItem = ({
       </Text>
     </Box>
   </TouchableOpacity>
-);
-
-const GroupItem = ({
-  title,
-  children,
-}: {
-  title: string;
-  children?: React.ReactNode[];
-}) => (
-  <Box backgroundColor="GREY_100" margin="lg" padding="sm" borderRadius="xl">
-    <Text variant="titleLarge" paddingBottom="xs">
-      {title}
-    </Text>
-    {children}
-  </Box>
 );
 
 const BackButton = ({
@@ -81,22 +66,21 @@ export const SandBox = () => {
 
   const renderList = useMemo(
     () => (
-      <>
+      <Box padding="md">
         {sections.map((group, groupIndex) => (
-          <GroupItem key={group.title} title={group.title}>
-            {group.items.map(({ title }, index) => (
-              <ListItem
-                key={title}
-                title={title}
-                testID={title}
-                onAction={() => {
-                  setPage({ groupIndex, index });
-                }}
-              />
-            ))}
-          </GroupItem>
+          <Box marginBottom="md" key={group.title}>
+            <ListItemGroup
+              title={group.title}
+              items={group.items.map(({ title }, index) => ({
+                key: title,
+                title,
+                onPress: () => setPage({ groupIndex, index }),
+                testID: title,
+              }))}
+            />
+          </Box>
         ))}
-      </>
+      </Box>
     ),
     [sections]
   );

@@ -8,7 +8,7 @@ export const ListItemGroup = ({
   items,
   title,
 }: ListItemGroupProps) => {
-  const lastIndex = items.length;
+  const lastIndex = items.length - 1;
 
   return (
     <>

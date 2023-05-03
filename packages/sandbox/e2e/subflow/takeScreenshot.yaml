@@ -2,9 +2,10 @@ appId: ${APPID}
 ---
 - scrollUntilVisible:
     element:
-      text: ${COMPONENT} >
+      id: ${COMPONENT}
     direction: DOWN
-- tapOn: ${COMPONENT} >
+- tapOn:
+    id: ${COMPONENT}
 - scrollUntilVisible:
     element:
       text: ${COMPONENT}

@@ -21,6 +21,7 @@ import { ButtonDockSandbox } from './docs/button-dock.doc';
 import { ProgressBarSandbox } from './docs/progress-bar.doc';
 import { NavigationBarProgressSandbox } from './docs/navigation-bar-progress.doc';
 import { NavigationTitleSandbox } from './docs/navigation-title.doc';
+import { MarkdownSandbox } from './docs/markdown.doc';
 import { ShadowSandbox } from './docs/shadows.doc';
 
 type SandBoxItemType = {
@@ -42,6 +43,7 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'Typo', SandBox: TypoSandbox },
       { title: 'Skeleton', SandBox: SkeletonSandbox },
       { title: 'Spinner', SandBox: SpinnerSandbox },
+      { title: 'Markdown', SandBox: MarkdownSandbox },
     ],
   },
   {

@@ -3,10 +3,11 @@ import { TextStyle } from 'react-native';
 /**
  * https://www.figma.com/file/tOJLNigXQXJqCSKgJFPZn5/Mobile-Lukomponents-(PoC)?node-id=4173%3A3506&t=dOO6KIa04mQ0knst-11
  */
-const FontFamily = {
+export const FontFamily = {
   Default: 'CircularXX-Book',
   Medium: 'CircularXX-Medium',
   Bold: 'CircularXX-Bold',
+  Italic: 'CircularXX-BookItalic',
 };
 
 type TextVariantRegular =

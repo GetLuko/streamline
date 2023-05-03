@@ -7,8 +7,7 @@ import ButtonIcon from '../../buttons/button-icon/button-icon';
 import { ListItemSkeleton } from '../components/list-item-skeleton';
 import LeftContent from './components/left-content';
 import CenterContent from './components/center-content';
-import { getBorderColor } from './list-item-option.utils';
-import { getBackgroundColor } from './list-item-option.utils';
+import { getBorderColor, getBackgroundColor } from './list-item-option.utils';
 import { ListItemOptionProps } from './list-item-option.types';
 
 export function ListItemOption({

@@ -40,6 +40,10 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: Markdown
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: Button
 - runFlow:
     file: subflow/takeScreenshot.yaml

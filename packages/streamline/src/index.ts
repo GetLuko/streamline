@@ -1,5 +1,7 @@
 import * as GeneratedRegularIcons from './primitives/icon/generated/regular';
 
+export * from './primitives/markdown/markdown';
+
 export * from './components/list-items/list-item-option/list-item-option';
 export * from './components/buttons/button-icon/button-icon';
 export * from './components/buttons/button/button';
@@ -17,7 +19,6 @@ export * from './components/list-items/list-item/list-item';
 export * from './components/list-items/list-item/list-item.types';
 export * from './components/list-items/list-item-group/list-item-group';
 export * from './components/radio/radio';
-export * from './components/spinner/spinner';
 export * from './components/spinner/spinner';
 export * from './components/progress-bar/progress-bar';
 export * from './components/tag/tag';

@@ -2,9 +2,10 @@ import React from 'react';
 
 import { Card } from '../../../primitives/card/card';
 import { Icon } from '../../../primitives/icon/icon';
-import { Text } from '../../../primitives/text/text';
 import { CardTipProps } from './card-tip.types';
 import { getCardTipColors } from './card-tip.utils';
+import { Box } from '../../../primitives/box/box';
+import { MarkdownLink } from '../../../primitives/markdown/markdown-link';
 
 export const CardTip = ({
   appearance = 'primary',
@@ -19,9 +20,11 @@ export const CardTip = ({
       alignItems="center"
     >
       <Icon color={colors.iconColor} iconName={iconName} size="large" />
-      <Text color={colors.descriptionColor} marginLeft="md" variant="body">
-        {description}
-      </Text>
+      <Box marginLeft="md">
+        <MarkdownLink bodyColor={colors.descriptionColor}>
+          {description}
+        </MarkdownLink>
+      </Box>
     </Card>
   );
 };

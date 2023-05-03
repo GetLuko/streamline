@@ -6,25 +6,25 @@ import { DocList } from '../components/DocList';
 const CARD_TIPS: JSX.Element[] = [
   <CardTip
     appearance="primary"
-    description="Primary"
+    description="Primary [link](http://luko.eu)"
     iconName="Area"
     key="primary"
   />,
   <CardTip
     appearance="neutral"
-    description="Neutral"
+    description="Neutral [link](http://luko.eu)"
     iconName="Area"
     key="neutral"
   />,
   <CardTip
     appearance="warning"
-    description="Warning"
+    description="Warning [link](http://luko.eu)"
     iconName="Area"
     key="warning"
   />,
   <CardTip
     appearance="danger"
-    description="Danger"
+    description="Danger [link](http://luko.eu)"
     iconName="Area"
     key="danger"
   />,

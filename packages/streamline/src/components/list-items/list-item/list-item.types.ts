@@ -12,6 +12,7 @@ export type ListItemProps = {
   header?: string;
   iconName?: IconsName;
   isSkeleton?: boolean;
+  key?: React.Key;
   onLongPress?: () => unknown;
   onPress?: () => unknown;
   rightOption?: RightOption;

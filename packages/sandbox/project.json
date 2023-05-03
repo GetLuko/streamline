@@ -10,6 +10,12 @@
         "port": 8081
       }
     },
+    "start-e2e": {
+      "executor": "@nrwl/expo:start",
+      "options": {
+        "port": 8081
+      }
+    },
     "serve": {
       "executor": "nx:run-commands",
       "options": {

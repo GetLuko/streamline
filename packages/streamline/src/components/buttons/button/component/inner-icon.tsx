@@ -1,13 +1,13 @@
 import React from 'react';
 import { FadeIn } from 'react-native-reanimated';
 
-import { ButtonProps } from '../button.types';
-import { getTextColor } from '../button.utils';
 import { AnimatedBox } from '../../../../primitives/animated-box/animated-box';
 import { Box } from '../../../../primitives/box/box';
 import { Icon } from '../../../../primitives/icon/icon';
 import { Skeleton } from '../../../../primitives/skeleton/skeleton';
 import { theme } from '../../../../theme';
+import { ButtonProps } from '../button.types';
+import { getTextColor } from '../button.utils';
 
 const InnerIcon = ({
   isLoading,

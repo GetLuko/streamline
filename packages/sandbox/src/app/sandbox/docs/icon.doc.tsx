@@ -1,8 +1,7 @@
-import React, { useCallback } from 'react';
-import { Alert, TouchableOpacity, View } from 'react-native';
-
 import { GeneratedRegularIcons } from '@getluko/streamline';
 import { Icon, IconProps } from '@getluko/streamline';
+import React, { useCallback } from 'react';
+import { Alert, TouchableOpacity, View } from 'react-native';
 
 const iconNames = [
   ...Object.keys(GeneratedRegularIcons),

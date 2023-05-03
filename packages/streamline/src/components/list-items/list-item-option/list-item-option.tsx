@@ -1,14 +1,13 @@
 import { Pressable } from 'react-native';
 
 import { usePress } from '../../../hooks/use-press.hook';
-
 import { Box } from '../../../primitives/box/box';
 import ButtonIcon from '../../buttons/button-icon/button-icon';
 import { ListItemSkeleton } from '../components/list-item-skeleton';
-import LeftContent from './components/left-content';
 import CenterContent from './components/center-content';
-import { getBorderColor, getBackgroundColor } from './list-item-option.utils';
+import LeftContent from './components/left-content';
 import { ListItemOptionProps } from './list-item-option.types';
+import { getBorderColor, getBackgroundColor } from './list-item-option.utils';
 
 export function ListItemOption({
   accessibilityLabel,
@@ -42,21 +41,21 @@ export function ListItemOption({
       {({ pressed }) => (
         <>
           <Box
-            position={'absolute'}
+            position="absolute"
             top={-2}
             left={-2}
             right={-2}
             bottom={-2}
-            backgroundColor={'BLUKO_100'}
+            backgroundColor="BLUKO_100"
             opacity={(pressed && isSelected) || isResolving ? 1 : 0}
-            borderRadius={'lg'}
+            borderRadius="lg"
           />
           <Box
             flex={1}
-            flexDirection={'row'}
-            alignItems={'center'}
-            padding={'md'}
-            borderRadius={'lg'}
+            flexDirection="row"
+            alignItems="center"
+            padding="md"
+            borderRadius="lg"
             borderWidth={2}
             backgroundColor={getBackgroundColor({
               pressed,

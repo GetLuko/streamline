@@ -3,9 +3,9 @@ import { Pressable, StyleSheet } from 'react-native';
 
 import { usePress } from '../../../hooks/use-press.hook';
 import { Box } from '../../../primitives/box/box';
+import { ListItemSkeleton } from '../components/list-item-skeleton';
 import { CenterContent } from './components/center-content';
 import { LeftContent } from './components/left-content';
-import { ListItemSkeleton } from '../components/list-item-skeleton';
 import { RightContent } from './components/right-content';
 import { ListItemProps } from './list-item.types';
 

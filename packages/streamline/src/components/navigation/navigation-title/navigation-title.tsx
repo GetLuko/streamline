@@ -1,6 +1,6 @@
 import { Box } from '../../../primitives/box/box';
-import { Text } from '../../../primitives/text/text';
 import { IconsName } from '../../../primitives/icon/icon.types';
+import { Text } from '../../../primitives/text/text';
 import ButtonIcon from '../../buttons/button-icon/button-icon';
 import { getNavigationTitleColors } from './navigation-title.utils';
 
@@ -30,14 +30,14 @@ export const NavigationTitle = ({
 
   return (
     <Box
-      paddingHorizontal={'md'}
-      paddingVertical={'xs'}
+      paddingHorizontal="md"
+      paddingVertical="xs"
       alignItems={position === 'left' ? 'flex-start' : 'center'}
     >
       {header ? (
         <Text
-          variant={'headlineBold'}
-          marginBottom={'xs'}
+          variant="headlineBold"
+          marginBottom="xs"
           accessibilityLabel={header}
           accessibilityRole="text"
           color={headerColor}
@@ -48,9 +48,9 @@ export const NavigationTitle = ({
           {header}
         </Text>
       ) : null}
-      <Box alignItems={'center'} flex={1} flexDirection={'row'}>
+      <Box alignItems="center" flex={1} flexDirection="row">
         <Text
-          variant={'titleLargeBold'}
+          variant="titleLargeBold"
           accessibilityLabel={header}
           accessibilityRole="header"
           style={{ flex: 1 }}
@@ -73,8 +73,8 @@ export const NavigationTitle = ({
       </Box>
       {value ? (
         <Text
-          variant={'headlineBold'}
-          marginTop={'xs'}
+          variant="headlineBold"
+          marginTop="xs"
           accessibilityLabel={header}
           accessibilityRole="text"
           color={valueColor}

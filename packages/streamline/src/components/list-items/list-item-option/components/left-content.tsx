@@ -1,9 +1,10 @@
 import { FC } from 'react';
-import Spinner from '../../../spinner/spinner';
-import Radio from '../../../radio/radio';
-import Checkbox from '../../../checkbox/checkbox';
+
 import { Icon } from '../../../../primitives/icon/icon';
 import { IconsName } from '../../../../primitives/icon/icon.types';
+import Checkbox from '../../../checkbox/checkbox';
+import Radio from '../../../radio/radio';
+import Spinner from '../../../spinner/spinner';
 
 interface LeftContentProps {
   type: 'icon' | 'checkbox' | 'radio';

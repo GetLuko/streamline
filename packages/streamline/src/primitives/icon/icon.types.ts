@@ -1,6 +1,6 @@
 import { ColorProps } from '@shopify/restyle';
-import { Theme } from '../../theme';
 
+import { Theme } from '../../theme';
 import * as RegularIcons from './generated/regular';
 import * as SmallIcons from './generated/small';
 

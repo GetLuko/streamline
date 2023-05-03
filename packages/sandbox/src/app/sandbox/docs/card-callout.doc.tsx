@@ -1,7 +1,7 @@
+import { CardCallout } from '@getluko/streamline';
 import React from 'react';
 import { Alert } from 'react-native';
 
-import { CardCallout } from '@getluko/streamline';
 import { DocList } from '../components/DocList';
 
 const ICON_NAME = 'Area';

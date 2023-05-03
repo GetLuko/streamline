@@ -1,15 +1,15 @@
 import React from 'react';
 import { FadeIn } from 'react-native-reanimated';
 
-import { ButtonProps } from '../button.types';
-import { getTextColor } from '../button.utils';
 import { AnimatedBox } from '../../../../primitives/animated-box/animated-box';
 import { Skeleton } from '../../../../primitives/skeleton/skeleton';
 import { Text } from '../../../../primitives/text/text';
 import { useStreamlineTheme } from '../../../../theme';
-import { stringCapitalize } from '../../../../utils/string.utils';
 import { Appearance } from '../../../../theme/appearance';
+import { stringCapitalize } from '../../../../utils/string.utils';
 import Spinner from '../../../spinner/spinner';
+import { ButtonProps } from '../button.types';
+import { getTextColor } from '../button.utils';
 
 const MIN_WIDTH = 82;
 const LABEL_CONTAINER_HEIGHT = 24;

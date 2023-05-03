@@ -1,9 +1,9 @@
-import React from 'react';
-
 import { ListItemOption } from '@getluko/streamline';
+import React from 'react';
+import { Alert } from 'react-native';
+
 import { DocList } from '../components/DocList';
 import { sleep } from '../sandbox.utils';
-import { Alert } from 'react-native';
 
 const ASYNC_ON_PRESS = async () => {
   await sleep(2000);

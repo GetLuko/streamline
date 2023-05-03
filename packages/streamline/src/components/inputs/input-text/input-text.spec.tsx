@@ -1,8 +1,8 @@
+import { act, fireEvent } from '@testing-library/react-native';
 import React from 'react';
 
-import { InputText } from './input-text';
 import { renderWithProvider } from '../../../testing/render-with-provider';
-import { act, fireEvent } from '@testing-library/react-native';
+import { InputText } from './input-text';
 
 describe('InputText', () => {
   it('should render InputText with label', () => {

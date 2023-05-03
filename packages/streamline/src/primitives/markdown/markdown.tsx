@@ -1,13 +1,13 @@
+import MarkdownDisplay from '@ronradtke/react-native-markdown-display';
 import React from 'react';
 
-import MarkdownDisplay from '@ronradtke/react-native-markdown-display';
 import { fonts } from '../../theme';
 import { colors } from '../../theme/colors';
+import { FontFamily } from '../../theme/fonts';
 import { radius } from '../../theme/radius';
+import { isIOS } from '../../utils/platform';
 import { Box } from '../box/box';
 import { Text } from '../text/text';
-import { isIOS } from '../../utils/platform';
-import { FontFamily } from '../../theme/fonts';
 
 export interface MarkdownProps {
   children: string;

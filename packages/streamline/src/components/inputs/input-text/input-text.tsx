@@ -1,13 +1,13 @@
 import React from 'react';
 import { ViewProps } from 'react-native';
 
-import { RefNativeTextInput, Root, InputTextProps } from './types';
-import { useTextInput } from './input-text.hooks';
-import InputTextIcon from './components/input-text-icon';
-import { InputTextPrimitive } from './components/input-text-primitive';
-import { Text } from '../../../primitives/text/text';
 import { Box } from '../../../primitives/box/box';
 import { IconsName } from '../../../primitives/icon/icon.types';
+import { Text } from '../../../primitives/text/text';
+import InputTextIcon from './components/input-text-icon';
+import { InputTextPrimitive } from './components/input-text-primitive';
+import { useTextInput } from './input-text.hooks';
+import { RefNativeTextInput, Root, InputTextProps } from './types';
 
 export const InputText = React.forwardRef<RefNativeTextInput, InputTextProps>(
   (

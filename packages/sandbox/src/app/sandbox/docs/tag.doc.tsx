@@ -1,4 +1,5 @@
 import { Tag } from '@getluko/streamline';
+
 import { DocList } from '../components/DocList';
 
 const ICON_NAME = 'Area';

@@ -1,4 +1,5 @@
 import { InputText } from '@getluko/streamline';
+
 import { DocList } from '../components/DocList';
 
 const docs: JSX.Element[] = [

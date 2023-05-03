@@ -7,8 +7,8 @@ import Animated, {
   withRepeat,
   withTiming,
 } from 'react-native-reanimated';
-import { AnimationContext } from '../../contexts/disable-animation.context';
 
+import { AnimationContext } from '../../contexts/disable-animation.context';
 import { Box } from '../../primitives/box/box';
 import { SPINNER_SIZE } from '../../primitives/icon/icon.constants';
 import { Size } from '../../primitives/icon/icon.types';

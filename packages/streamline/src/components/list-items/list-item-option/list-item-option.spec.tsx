@@ -1,8 +1,7 @@
-import React from 'react';
 import { fireEvent, waitFor } from '@testing-library/react-native';
+import React from 'react';
 
 import { renderWithProvider } from '../../../testing/render-with-provider';
-
 import ListItemOption from './list-item-option';
 
 describe('ListItemOption', () => {

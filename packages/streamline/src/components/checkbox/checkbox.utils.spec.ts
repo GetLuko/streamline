@@ -6,7 +6,7 @@ describe('checkbox utils', () => {
       // Given
       const appearance = 'primary';
       // When
-      const colors = getCheckboxColors({ appearance, disabled: false });
+      const colors = getCheckboxColors({ appearance, isDisabled: false });
       // Expect
       expect(colors).toEqual({
         backgroundColor: 'PURE_WHITE_1000',
@@ -20,7 +20,7 @@ describe('checkbox utils', () => {
       // Given
       const appearance = 'danger';
       // When
-      const colors = getCheckboxColors({ appearance, disabled: false });
+      const colors = getCheckboxColors({ appearance, isDisabled: false });
       // Expect
       expect(colors).toEqual({
         backgroundColor: 'PURE_WHITE_1000',
@@ -30,11 +30,11 @@ describe('checkbox utils', () => {
         activeColor: 'TERRA_500',
       });
     });
-    it('for primary disabled', () => {
+    it('for primary isDisabled', () => {
       // Given
       const appearance = 'primary';
       // When
-      const colors = getCheckboxColors({ appearance, disabled: true });
+      const colors = getCheckboxColors({ appearance, isDisabled: true });
       // Expect
       expect(colors).toEqual({
         backgroundColor: 'GREY_50',
@@ -44,11 +44,11 @@ describe('checkbox utils', () => {
         activeColor: 'BLUKO_200',
       });
     });
-    it('for danger disabled', () => {
+    it('for danger isDisabled', () => {
       // Given
       const appearance = 'danger';
       // When
-      const colors = getCheckboxColors({ appearance, disabled: true });
+      const colors = getCheckboxColors({ appearance, isDisabled: true });
       // Expect
       expect(colors).toEqual({
         backgroundColor: 'GREY_50',
@@ -62,7 +62,7 @@ describe('checkbox utils', () => {
       // Given
       const appearance = 'neutral';
       // When
-      const colors = getCheckboxColors({ appearance, disabled: false });
+      const colors = getCheckboxColors({ appearance, isDisabled: false });
       // Expect
       expect(colors).toEqual({
         backgroundColor: 'PURE_WHITE_1000',

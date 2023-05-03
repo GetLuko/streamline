@@ -1,6 +1,8 @@
 import * as GeneratedRegularIcons from './primitives/icon/generated/regular';
 
 export * from './primitives/markdown/markdown';
+
+export * from './components/list-items/list-item-option/list-item-option';
 export * from './components/buttons/button-icon/button-icon';
 export * from './components/buttons/button/button';
 export * from './components/buttons/button/button';

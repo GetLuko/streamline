@@ -16,10 +16,11 @@ export const Checkbox = ({
   appearance = 'primary',
   value,
   onChange,
-  disabled = false,
+  isDisabled = false,
   testID,
+  pointerEvents,
 }: CheckboxProps) => {
-  const colors = getCheckboxColors({ appearance, disabled });
+  const colors = getCheckboxColors({ appearance, isDisabled });
   const styles = useStyles();
 
   const handleOnPress = () => {
@@ -28,11 +29,12 @@ export const Checkbox = ({
 
   return (
     <Pressable
-      disabled={disabled}
+      disabled={isDisabled}
       hitSlop={10}
       onPress={handleOnPress}
       testID={testID}
       style={styles.pressable}
+      pointerEvents={pointerEvents}
     >
       {({ pressed }) => (
         <Box

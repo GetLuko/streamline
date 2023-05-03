@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box } from '../../../../primitives/box/box';
-import { Skeleton } from '../../../../primitives/skeleton/skeleton';
+import { Box } from '../../../primitives/box/box';
+import { Skeleton } from '../../../primitives/skeleton/skeleton';
 
 export const ListItemSkeleton = () => (
   <Box

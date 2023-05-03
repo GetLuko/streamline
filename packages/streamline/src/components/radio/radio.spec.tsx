@@ -21,7 +21,7 @@ describe('Radio', () => {
   it('should not trigger mockOnChange', () => {
     const mockOnChange = jest.fn();
     const { getByTestId } = renderWithProvider(
-      <Radio value={true} onChange={mockOnChange} testID="Radio" disabled />
+      <Radio value={true} onChange={mockOnChange} testID="Radio" isDisabled />
     );
     const radio = getByTestId('Radio');
     fireEvent.press(radio);

@@ -6,7 +6,7 @@ describe('Radio utils', () => {
       // Given
       const appearance = 'primary';
       // When
-      const colors = getRadioColors({ appearance, disabled: false });
+      const colors = getRadioColors({ appearance, isDisabled: false });
       // Expect
       expect(colors).toEqual({
         backgroundColor: 'PURE_WHITE_1000',
@@ -20,7 +20,7 @@ describe('Radio utils', () => {
       // Given
       const appearance = 'danger';
       // When
-      const colors = getRadioColors({ appearance, disabled: false });
+      const colors = getRadioColors({ appearance, isDisabled: false });
       // Expect
       expect(colors).toEqual({
         backgroundColor: 'PURE_WHITE_1000',
@@ -30,11 +30,11 @@ describe('Radio utils', () => {
         activeColor: 'TERRA_500',
       });
     });
-    it('for primary disabled', () => {
+    it('for primary isDisabled', () => {
       // Given
       const appearance = 'primary';
       // When
-      const colors = getRadioColors({ appearance, disabled: true });
+      const colors = getRadioColors({ appearance, isDisabled: true });
       // Expect
       expect(colors).toEqual({
         backgroundColor: 'GREY_50',
@@ -44,11 +44,11 @@ describe('Radio utils', () => {
         activeColor: 'BLUKO_200',
       });
     });
-    it('for danger disabled', () => {
+    it('for danger isDisabled', () => {
       // Given
       const appearance = 'danger';
       // When
-      const colors = getRadioColors({ appearance, disabled: true });
+      const colors = getRadioColors({ appearance, isDisabled: true });
       // Expect
       expect(colors).toEqual({
         backgroundColor: 'GREY_50',
@@ -62,7 +62,7 @@ describe('Radio utils', () => {
       // Given
       const appearance = 'neutral';
       // When
-      const colors = getRadioColors({ appearance, disabled: false });
+      const colors = getRadioColors({ appearance, isDisabled: false });
       // Expect
       expect(colors).toEqual({
         backgroundColor: 'PURE_WHITE_1000',

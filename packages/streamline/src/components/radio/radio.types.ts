@@ -1,13 +1,13 @@
+import { PressableProps } from 'react-native';
 import { ColorTheme } from '../../theme';
 import { Appearance } from '../../theme/appearance';
 
-export interface RadioProps {
+export type RadioProps = {
   appearance?: Appearance;
   value: boolean;
   onChange?: (value: boolean) => void;
-  disabled?: boolean;
-  testID?: string;
-}
+  isDisabled?: boolean;
+} & Pick<PressableProps, 'pointerEvents' | 'testID'>;
 
 export interface RadioColors {
   backgroundColor: ColorTheme;

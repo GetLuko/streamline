@@ -1,13 +1,13 @@
+import { PressableProps } from 'react-native';
 import { ColorTheme } from '../../theme';
 import { Appearance } from '../../theme/appearance';
 
-export interface CheckboxProps {
+export type CheckboxProps = {
   appearance?: Appearance;
   value: boolean;
   onChange?: (value: boolean) => void;
-  disabled?: boolean;
-  testID?: string;
-}
+  isDisabled?: boolean;
+} & Pick<PressableProps, 'pointerEvents' | 'testID'>;
 
 export interface CheckboxColors {
   backgroundColor: ColorTheme;

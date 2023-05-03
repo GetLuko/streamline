@@ -22,6 +22,7 @@ import { ProgressBarSandbox } from './docs/progress-bar.doc';
 import { NavigationBarProgressSandbox } from './docs/navigation-bar-progress.doc';
 import { NavigationTitleSandbox } from './docs/navigation-title.doc';
 import { MarkdownSandbox } from './docs/markdown.doc';
+import { ListItemOptionSandbox } from './docs/list-item-option.doc';
 import { ShadowSandbox } from './docs/shadows.doc';
 
 type SandBoxItemType = {
@@ -76,6 +77,7 @@ export const sandboxItems: SandBoxSectionType[] = [
     title: 'List Items',
     items: [
       { title: 'ListItem', SandBox: ListItemSandbox },
+      { title: 'ListItemOption', SandBox: ListItemOptionSandbox },
       { title: 'ListItemGroup', SandBox: ListItemGroupSandbox },
     ],
   },

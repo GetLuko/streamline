@@ -23,6 +23,7 @@ export const ListItem = ({
   onPress,
   rightOption,
   showDivider,
+  testID,
   title,
 }: ListItemProps) => {
   const [handlePress, isResolving] = usePress({ onPress });
@@ -41,6 +42,7 @@ export const ListItem = ({
       accessibilityRole={handlePress ? 'button' : 'none'}
       onLongPress={onLongPress}
       onPress={handlePress}
+      testID={testID}
     >
       {({ pressed }) => (
         <Box

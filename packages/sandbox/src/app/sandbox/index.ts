@@ -12,6 +12,7 @@ import { InputTextSandbox } from './docs/input-text.doc';
 import { InputTextTypesSandbox } from './docs/input-text-types.doc';
 import { ListItemSandbox } from './docs/list-item.doc';
 import { ListItemGroupSandbox } from './docs/list-item-group.doc';
+import { ListItemValueSandbox } from './docs/list-item-value.doc';
 import { RadioSandbox } from './docs/radio.doc';
 import { SkeletonSandbox } from './docs/skeleton.doc';
 import { SpinnerSandbox } from './docs/spinner.doc';
@@ -78,6 +79,7 @@ export const sandboxItems: SandBoxSectionType[] = [
     items: [
       { title: 'ListItem', SandBox: ListItemSandbox },
       { title: 'ListItemOption', SandBox: ListItemOptionSandbox },
+      { title: 'ListItemValue', SandBox: ListItemValueSandbox },
       { title: 'ListItemGroup', SandBox: ListItemGroupSandbox },
     ],
   },

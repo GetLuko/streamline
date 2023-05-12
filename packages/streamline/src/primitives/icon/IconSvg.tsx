@@ -1,6 +1,8 @@
-import { Box } from '../box/box';
 import React from 'react';
 
+import { Box } from '../box/box';
+import * as RegularIcons from './generated/regular';
+import * as SmallIcons from './generated/small';
 import { ICON_SIZE, SPINNER_SIZE } from './icon.constants';
 import { IconsName, Size } from './icon.types';
 import {
@@ -8,8 +10,6 @@ import {
   isCorrectSmallIconName,
   sanitizeIconName,
 } from './icon.utils';
-import * as RegularIcons from './generated/regular';
-import * as SmallIcons from './generated/small';
 
 type Props = {
   color?: string;

@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Spinner from '../../../components/spinner/spinner';
 import { Box } from '../../box/box';
 import { Icon } from '../../icon/icon';
 import { Text } from '../../text/text';
@@ -9,7 +11,6 @@ import {
   hasValidRightAction,
   hasValidValue,
 } from './card-header.utils';
-import Spinner from '../../../components/spinner/spinner';
 
 export const CardHeader = (props: CardHeaderProps) => {
   const { colors, iconName, title, value, rightAction, isLoading } = props;
@@ -52,7 +53,7 @@ export const CardHeader = (props: CardHeaderProps) => {
             <Box paddingLeft="xs" />
             <Icon
               color={colors.rightIconColor}
-              iconName={'ChevronFarRight'}
+              iconName="ChevronFarRight"
               size="regular"
             />
           </>

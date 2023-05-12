@@ -3,16 +3,16 @@ import { Pressable } from 'react-native';
 
 import { usePress } from '../../../hooks/use-press.hook';
 import { Box } from '../../../primitives/box/box';
-import { CenterContent } from './components/center-content';
-import { LeftContent } from './components/left-content';
 import { Divider } from '../components/divider';
 import { ListItemSkeleton } from '../components/list-item-skeleton';
-import { RightContent } from './components/right-content';
-import { ListItemProps } from './list-item.types';
 import {
   BACKGROUND_COLOR,
   BACKGROUND_PRESSED_COLOR,
 } from '../list-items.constants';
+import { CenterContent } from './components/center-content';
+import { LeftContent } from './components/left-content';
+import { RightContent } from './components/right-content';
+import { ListItemProps } from './list-item.types';
 
 /**
  * Todo - Use pressable from react-native-ama when issue below fixed

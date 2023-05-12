@@ -1,31 +1,9 @@
-import React, { useMemo, useState } from 'react';
-import { sandboxItems } from '.';
 import { Box, Icon, ListItemGroup, Text } from '@getluko/streamline';
-import { filterSections } from './sandbox.utils';
+import React, { useMemo, useState } from 'react';
 import { TouchableOpacity } from 'react-native';
 
-const ListItem = ({
-  title,
-  testID,
-  onAction,
-}: {
-  title: string;
-  testID: string;
-  onAction: () => void;
-}) => (
-  <TouchableOpacity onPress={onAction}>
-    <Box
-      backgroundColor="PURE_WHITE_1000"
-      marginBottom="xs"
-      padding="xs"
-      borderRadius="md"
-    >
-      <Text testID={testID} variant="headline">
-        {title + ' >'}
-      </Text>
-    </Box>
-  </TouchableOpacity>
-);
+import { sandboxItems } from '.';
+import { filterSections } from './sandbox.utils';
 
 const BackButton = ({
   onPress,

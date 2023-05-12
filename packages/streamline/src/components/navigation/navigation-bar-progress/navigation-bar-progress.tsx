@@ -1,6 +1,7 @@
-import { Appearance } from '../../../theme/appearance';
-import { Box } from '../../../primitives/box/box';
 import { FC } from 'react';
+
+import { Box } from '../../../primitives/box/box';
+import { Appearance } from '../../../theme/appearance';
 import ProgressBar from '../../progress-bar/progress-bar';
 
 export interface NavigationBarProgressProps {
@@ -17,7 +18,7 @@ export const NavigationBarProgress: FC<NavigationBarProgressProps> = ({
   appareance = 'primary',
 }) => {
   return (
-    <Box flexDirection={'row'} flex={1} paddingHorizontal={'xxl'}>
+    <Box flexDirection="row" flex={1} paddingHorizontal="xxl">
       {[...Array(totalNumberOfSteps)].map((_, i) => {
         let progress = 0;
         if (i < currentStep - 1) {

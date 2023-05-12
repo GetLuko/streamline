@@ -1,4 +1,5 @@
 import { Skeleton } from '@getluko/streamline';
+
 import { DocList } from '../components/DocList';
 
 const SKELETONS: JSX.Element[] = [

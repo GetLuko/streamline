@@ -5,11 +5,11 @@ import { usePress } from '../../../hooks/use-press.hook';
 import { Box } from '../../../primitives/box/box';
 import { Divider } from '../components/divider';
 import { ListItemSkeleton } from '../components/list-item-skeleton';
+import { LeftContent } from '../list-item/components/left-content';
 import {
   BACKGROUND_COLOR,
   BACKGROUND_PRESSED_COLOR,
 } from '../list-items.constants';
-import { LeftContent } from '../list-item/components/left-content';
 import { BottomContent } from './components/bottom-content';
 import { CenterContent } from './components/center-content';
 import { TopContent } from './components/top-content';

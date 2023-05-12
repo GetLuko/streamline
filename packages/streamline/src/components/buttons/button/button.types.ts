@@ -1,5 +1,6 @@
-import { InteractionType } from '../../../';
 import { PressableProps } from 'react-native';
+
+import { InteractionType } from '../../../';
 import { SmallIconName } from '../../../primitives/icon/icon.types';
 import { Appearance } from '../../../theme/appearance';
 

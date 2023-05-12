@@ -1,17 +1,17 @@
-import React from 'react';
 import isNil from 'lodash.isnil';
-import { Pressable } from 'react-native-ama';
+import React from 'react';
 import { TextStyle, ViewStyle } from 'react-native';
+import { Pressable } from 'react-native-ama';
+
 import { usePress } from '../../../hooks/use-press.hook';
 import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
 import { useStreamlineTheme } from '../../../theme';
-
+import { getShadowsStyle } from '../../../theme/shadows';
 import { ButtonProps } from './button.types';
 import { getPressableBackgroundColor } from './button.utils';
 import InnerIcon from './component/inner-icon';
 import InnerLabel from './component/inner-label';
 import { useLoadingAnimation } from './hook/useLoadingAnimation';
-import { getShadowsStyle } from '../../../theme/shadows';
 
 export const Button = ({
   appearance = 'primary',

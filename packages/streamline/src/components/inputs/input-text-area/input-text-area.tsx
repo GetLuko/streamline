@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { InputText } from '../input-text/input-text';
 import { InputTextProps } from '../input-text/types';
 

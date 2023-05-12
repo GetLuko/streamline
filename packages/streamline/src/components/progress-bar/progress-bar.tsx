@@ -1,6 +1,7 @@
 import React from 'react';
-import { Appearance } from '../../theme/appearance';
+
 import { Box } from '../../primitives/box/box';
+import { Appearance } from '../../theme/appearance';
 import {
   getProgressBarBackgroundColor,
   getProgressBarColor,
@@ -29,10 +30,10 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
   const { backgroundColor, backgroundOpacity } =
     getProgressBarBackgroundColor(appearance);
   return (
-    <Box height={ProgressBarSize[size]} width={'100%'}>
+    <Box height={ProgressBarSize[size]} width="100%">
       <Box
-        position={'absolute'}
-        borderRadius={'round'}
+        position="absolute"
+        borderRadius="round"
         top={0}
         left={0}
         right={0}
@@ -44,7 +45,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
         height={ProgressBarSize[size]}
         width={`${progress}%`}
         backgroundColor={progressBarColor}
-        borderRadius={'round'}
+        borderRadius="round"
       />
     </Box>
   );

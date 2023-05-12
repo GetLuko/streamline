@@ -19,7 +19,7 @@ export const CenterContent = ({
   });
 
   return (
-    <Box flex={1} marginHorizontal={'md'}>
+    <Box flex={1} marginHorizontal="md">
       {header ? (
         <Text color={headerColor} variant="subBody">
           {header}

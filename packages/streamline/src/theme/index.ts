@@ -1,10 +1,10 @@
 import { createTheme, useTheme } from '@shopify/restyle';
 
+import { getAnimationValues } from './animation';
 import { colors } from './colors';
+import { fonts } from './fonts';
 import { radius } from './radius';
 import { spacings } from './spacings';
-import { fonts } from './fonts';
-import { getAnimationValues } from './animation';
 
 export { getShadowsStyle } from './shadows';
 export { Appearance } from './appearance';

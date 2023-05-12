@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Text } from '../../text/text';
 import { hasValidDescription, hasValidTitle } from './card-content-utils';
 import { CardContentProps } from './card-content.types';

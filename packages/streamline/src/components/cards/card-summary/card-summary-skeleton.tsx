@@ -1,8 +1,9 @@
 import React from 'react';
+
 import { Box } from '../../../primitives/box/box';
 import { Card } from '../../../primitives/card/card';
-import { CardSummaryProps } from './card-summary.types';
 import { Skeleton } from '../../../primitives/skeleton/skeleton';
+import { CardSummaryProps } from './card-summary.types';
 
 export const CardSummarySkeleton = (
   props: Pick<CardSummaryProps, 'title' | 'accessibilityLabel' | 'testID'>

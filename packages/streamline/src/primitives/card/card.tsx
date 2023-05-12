@@ -7,11 +7,11 @@ import {
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
+
 import { useStreamlineTheme } from '../../theme';
 import { getShadowsStyle } from '../../theme/shadows';
 import { AnimatedBox } from '../animated-box/animated-box';
 import { Box } from '../box/box';
-
 import { CardProps } from './card.types';
 
 export const Card = ({

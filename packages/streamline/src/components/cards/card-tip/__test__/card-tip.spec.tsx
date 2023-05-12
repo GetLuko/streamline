@@ -1,6 +1,6 @@
-import { renderWithProvider } from '../../../../testing/render-with-provider';
 import React from 'react';
 
+import { renderWithProvider } from '../../../../testing/render-with-provider';
 import CardTip from '../card-tip';
 
 describe('CardTip', () => {

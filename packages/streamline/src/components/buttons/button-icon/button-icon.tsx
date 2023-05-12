@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Pressable } from 'react-native';
 
 import { usePress } from '../../../hooks/use-press.hook';

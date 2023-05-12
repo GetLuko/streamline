@@ -20,7 +20,7 @@ export const CardTip = ({
       alignItems="center"
     >
       <Icon color={colors.iconColor} iconName={iconName} size="large" />
-      <Box marginLeft="md">
+      <Box marginLeft="md" flex={1}>
         <MarkdownLink bodyColor={colors.descriptionColor}>
           {description}
         </MarkdownLink>

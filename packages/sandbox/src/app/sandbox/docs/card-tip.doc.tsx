@@ -1,6 +1,6 @@
+import { CardTip } from '@getluko/streamline';
 import React from 'react';
 
-import { CardTip } from '@getluko/streamline';
 import { DocList } from '../components/DocList';
 
 const CARD_TIPS: JSX.Element[] = [

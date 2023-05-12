@@ -14,7 +14,8 @@ export const TypoSandbox = () => (
           marginVertical="sm"
           style={{ backgroundColor: '#FFF4DE' }}
         >
-          ----- {key} -----
+          {'----- '}
+          {key} {'-----'}
         </Text>
         <Text variant={key} style={{ backgroundColor: '#EAE9E3' }}>
           {typoContent}

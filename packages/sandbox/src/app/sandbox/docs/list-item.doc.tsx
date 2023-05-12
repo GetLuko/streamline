@@ -1,7 +1,7 @@
+import { ListItem } from '@getluko/streamline';
 import React from 'react';
 import { Alert } from 'react-native';
 
-import { ListItem } from '@getluko/streamline';
 import { DocList } from '../components/DocList';
 import { sleep } from '../sandbox.utils';
 

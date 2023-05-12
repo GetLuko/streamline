@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box } from './box';
 import { renderWithProvider } from '../../testing/render-with-provider';
+import { Box } from './box';
 
 describe('Box', () => {
   it('should render successfully', () => {

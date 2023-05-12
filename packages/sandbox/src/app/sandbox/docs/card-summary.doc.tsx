@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import { Box, CardSummary, Text } from '@getluko/streamline';
+import { useState } from 'react';
 
 import { sleep } from '../sandbox.utils';
 
@@ -19,7 +19,7 @@ export const CardSummarySandbox = () => {
   };
 
   return (
-    <Box paddingHorizontal="xl" backgroundColor={'GREY_50'}>
+    <Box paddingHorizontal="xl" backgroundColor="GREY_50">
       <Box paddingVertical="xxs">
         <CardSummary
           appearance="primary"
@@ -87,8 +87,8 @@ export const CardSummarySandbox = () => {
       <Box paddingVertical="xxs">
         <CardSummary isSkeleton />
       </Box>
-      <Box paddingTop={'md'} />
-      <Text variant={'titleSmall'}>CTA has an onPress action</Text>
+      <Box paddingTop="md" />
+      <Text variant="titleSmall">{'CTA has an onPress action'}</Text>
       <Box paddingVertical="xxs">
         <CardSummary
           appearance="primary"

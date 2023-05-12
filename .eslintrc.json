@@ -18,6 +18,24 @@
               }
             ]
           }
+        ],
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              ["builtin", "external"],
+              ["parent", "sibling", "index"]
+            ],
+            "newlines-between": "always",
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+            }
+          }
+        ],
+        "react/jsx-curly-brace-presence": [
+          2,
+          { "props": "never", "children": "always" }
         ]
       }
     },

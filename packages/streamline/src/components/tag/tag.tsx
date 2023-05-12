@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Text } from '../../primitives/text/text';
 import { Box } from '../../primitives/box/box';
 import { Icon } from '../../primitives/icon/icon';
+import { Text } from '../../primitives/text/text';
 import { TagProps } from './tag.types';
 import { getTagColors } from './tag.utils';
 

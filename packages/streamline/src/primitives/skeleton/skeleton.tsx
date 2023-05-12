@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
+import React, { useContext } from 'react';
 import { LayoutChangeEvent, StyleProp, ViewStyle } from 'react-native';
 import {
   Easing,

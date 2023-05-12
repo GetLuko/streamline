@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import { isIOS, StreamlineThemeProvider } from '@getluko/streamline';
-import React, { useRef } from 'react';
 import { useFonts } from 'expo-font';
+import React, { useRef } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -10,6 +10,7 @@ import {
   ActivityIndicator,
   KeyboardAvoidingView,
 } from 'react-native';
+
 import { SandBox } from './sandbox/Sandbox';
 import { isMaestro } from './utils/isMaestro';
 

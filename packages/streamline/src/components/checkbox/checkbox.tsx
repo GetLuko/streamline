@@ -1,6 +1,5 @@
 import { Pressable, ViewStyle } from 'react-native';
-import { CheckboxProps } from './checkbox.types';
-import { getCheckboxColors } from './checkbox.utils';
+
 import { Box } from '../../primitives/box/box';
 import { Icon } from '../../primitives/icon/icon';
 import { useStreamlineTheme } from '../../theme';
@@ -11,6 +10,8 @@ import {
   CHECKBOX_SHADOW_CONTAINER_SIZE,
   CHECKBOX_SHADOW_WIDTH,
 } from './checkbox.constants';
+import { CheckboxProps } from './checkbox.types';
+import { getCheckboxColors } from './checkbox.utils';
 
 export const Checkbox = ({
   appearance = 'primary',
@@ -38,13 +39,13 @@ export const Checkbox = ({
     >
       {({ pressed }) => (
         <Box
-          alignItems={'center'}
-          justifyContent={'center'}
+          alignItems="center"
+          justifyContent="center"
           height={CHECKBOX_SHADOW_CONTAINER_SIZE}
           width={CHECKBOX_SHADOW_CONTAINER_SIZE}
         >
           <Box
-            position={'absolute'}
+            position="absolute"
             top={0}
             left={0}
             right={0}
@@ -56,8 +57,8 @@ export const Checkbox = ({
           <Box
             height={CHECKBOX_BORDER_CONTAINER_SIZE}
             width={CHECKBOX_BORDER_CONTAINER_SIZE}
-            alignItems={'center'}
-            justifyContent={'center'}
+            alignItems="center"
+            justifyContent="center"
             backgroundColor={
               value || pressed ? colors.activeColor : colors.borderColor
             }
@@ -66,14 +67,14 @@ export const Checkbox = ({
             <Box
               height={CHECKBOX_CONTAINER_SIZE}
               width={CHECKBOX_CONTAINER_SIZE}
-              alignItems={'center'}
-              justifyContent={'center'}
+              alignItems="center"
+              justifyContent="center"
               backgroundColor={
                 value ? colors.activeColor : colors.backgroundColor
               }
               style={styles.container}
             >
-              <Icon iconName={'Check'} color={colors.iconColor} size="small" />
+              <Icon iconName="Check" color={colors.iconColor} size="small" />
             </Box>
           </Box>
         </Box>

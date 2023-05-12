@@ -1,6 +1,6 @@
-import { Appearance } from '../../../theme/appearance';
-import { GenericSize, IconsName } from '../../../primitives/icon/icon.types';
 import { InteractionType } from '../../../';
+import { GenericSize, IconsName } from '../../../primitives/icon/icon.types';
+import { Appearance } from '../../../theme/appearance';
 
 export interface ButtonIconProps extends InteractionType {
   /**

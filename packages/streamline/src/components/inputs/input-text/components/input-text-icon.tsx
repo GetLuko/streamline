@@ -1,10 +1,11 @@
-import { IconsName, Size } from '../../../../primitives/icon/icon.types';
 import React from 'react';
 import { ViewProps, StyleProp, ViewStyle } from 'react-native';
-import { Icon } from '../../../../primitives/icon/icon';
-import { ColorTheme } from '../../../../theme';
-import { Box } from '../../../../primitives/box/box';
 import { TouchableOpacity } from 'react-native';
+
+import { Box } from '../../../../primitives/box/box';
+import { Icon } from '../../../../primitives/icon/icon';
+import { IconsName, Size } from '../../../../primitives/icon/icon.types';
+import { ColorTheme } from '../../../../theme';
 
 type StyleContextType = {
   isTextInputFocused: boolean;

@@ -1,8 +1,12 @@
 import React from 'react';
+
+import { usePress } from '../../../hooks/use-press.hook';
 import { Box } from '../../../primitives/box/box';
 import { Card } from '../../../primitives/card/card';
-import { CardHeader } from '../../../primitives/card/card-header/card-header';
 import { CardContent } from '../../../primitives/card/card-content/card-content';
+import { CardHeader } from '../../../primitives/card/card-header/card-header';
+import { Button } from '../../buttons/button/button';
+import { CardSummarySkeleton } from './card-summary-skeleton';
 import { CardSummaryProps } from './card-summary.types';
 import {
   getCardSummaryColors,
@@ -10,9 +14,6 @@ import {
   hasValidButtonAction,
   hasValidContent,
 } from './card-summary.utils';
-import { Button } from '../../buttons/button/button';
-import { CardSummarySkeleton } from './card-summary-skeleton';
-import { usePress } from '../../../hooks/use-press.hook';
 
 export const CardSummary = (props: CardSummaryProps) => {
   const {

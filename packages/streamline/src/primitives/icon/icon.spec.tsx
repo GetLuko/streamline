@@ -1,8 +1,8 @@
+import { render } from '@testing-library/react-native';
 import React from 'react';
 import { Path } from 'react-native-svg';
 
 import { Icon } from './icon';
-import { render } from '@testing-library/react-native';
 
 describe('Icon', () => {
   const extractColorFromReactNode = (

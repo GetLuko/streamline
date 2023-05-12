@@ -1,8 +1,9 @@
-import { IconsName } from '../../../primitives/icon/icon.types';
 import {
   TextInput as NativeTextInput,
   TextInputProps as NativeTextInputProps,
 } from 'react-native';
+
+import { IconsName } from '../../../primitives/icon/icon.types';
 
 export type Root = NativeTextInput | undefined | null;
 

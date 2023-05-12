@@ -1,12 +1,12 @@
-import React from 'react';
-
 import MarkdownDisplay, {
   MarkdownIt,
 } from '@ronradtke/react-native-markdown-display';
+import React from 'react';
+
 import { ColorTheme, fonts, useStreamlineTheme } from '../../theme';
 import { colors } from '../../theme/colors';
-import { isIOS } from '../../utils/platform';
 import { FontFamily } from '../../theme/fonts';
+import { isIOS } from '../../utils/platform';
 
 export interface MarkdownProps {
   children: string;

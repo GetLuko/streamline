@@ -1,17 +1,17 @@
-import { Box } from '../../../../primitives/box/box';
-import { Icon } from '../../../../primitives/icon/icon';
-import { Text } from '../../../../primitives/text/text';
-import { ColorTheme, useStreamlineTheme } from '../../../../theme';
 import React from 'react';
 import {
   TextInput as NativeTextInput,
   TextInputProps,
   View,
 } from 'react-native';
+
+import { Box } from '../../../../primitives/box/box';
+import { Icon } from '../../../../primitives/icon/icon';
+import { Text } from '../../../../primitives/text/text';
+import { ColorTheme, useStreamlineTheme } from '../../../../theme';
 import { IconAdornment } from './input-text-icon';
 import { InputTextLabel } from './input-text-label';
 import { InputTextOutline, OUTLINE_WIDTH } from './input-textoutline';
-
 import { TextInputPrimitiveProps } from './types';
 
 const TEXT_INPUT_HEIGHT_WITHOUT_LABEL = 48;
@@ -102,7 +102,7 @@ export const InputTextPrimitive = ({
           />
         </Box>
       ) : null}
-      <Box flexDirection={'row'} width={width} height={height}>
+      <Box flexDirection="row" width={width} height={height}>
         {left ? (
           <View>
             <InputTextOutline />
@@ -120,7 +120,7 @@ export const InputTextPrimitive = ({
               flexDirection="row"
               borderRadius="md"
             >
-              <Icon iconName="Search" color={'GREY_400'} />
+              <Icon iconName="Search" color="GREY_400" />
               {inputContainer}
             </Box>
           ) : (

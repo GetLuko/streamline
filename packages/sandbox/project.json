@@ -13,7 +13,10 @@
     "start-e2e": {
       "executor": "@nrwl/expo:start",
       "options": {
-        "port": 8081
+        "port": 19000,
+				"dev": false,
+				"clear": true,
+				"minify": true
       }
     },
     "serve": {

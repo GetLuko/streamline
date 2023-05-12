@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
+import './utils/loadEnvironmentVariables';
 import { isIOS, StreamlineThemeProvider } from '@getluko/streamline';
 import { useFonts } from 'expo-font';
 import React, { useRef } from 'react';

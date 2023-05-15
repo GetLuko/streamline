@@ -33,6 +33,7 @@ const CARD_TIPS: JSX.Element[] = [
     description="Primary **bold** [link](http://luko.eu), with a very long description that should wrap to the next line"
     iconName="Area"
     key="primary"
+    animated={false}
   />,
 ];
 

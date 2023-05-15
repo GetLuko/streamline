@@ -11,6 +11,7 @@ export const CardTip = ({
   appearance = 'primary',
   description,
   iconName,
+  animated = true,
 }: CardTipProps) => {
   const colors = getCardTipColors({ appearance });
   return (
@@ -18,9 +19,10 @@ export const CardTip = ({
       backgroundColor={colors.backgroundColor}
       flexDirection="row"
       alignItems="center"
+      animated={animated}
     >
       <Icon color={colors.iconColor} iconName={iconName} size="large" />
-      <Box marginLeft="md">
+      <Box marginLeft="md" flex={1}>
         <MarkdownLink bodyColor={colors.descriptionColor}>
           {description}
         </MarkdownLink>

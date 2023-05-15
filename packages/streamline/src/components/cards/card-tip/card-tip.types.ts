@@ -6,6 +6,7 @@ export type CardTipProps = {
   appearance?: Appearance;
   description: string;
   iconName: IconsName;
+  animated?: boolean;
 };
 
 export type CardTipColors = {

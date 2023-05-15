@@ -38,15 +38,15 @@ export function MarkdownLink({
 }
 const getStyles = (bodyColor?: string) => ({
   body: { ...fonts.body, color: bodyColor || colors.GREY.GREY_700 },
-  strong: { ...fonts.bodyBold, color: colors.PRIMARY.BLACK },
+  strong: { ...fonts.bodyBold, color: bodyColor || colors.PRIMARY.BLACK },
   em: {
     ...fonts.bodyBold,
     fontFamily: FontFamily.Italic,
   },
   link: {
     ...fonts.body,
-    color: bodyColor ? bodyColor : colors.BLUKO.BLUKO_500,
-    paddingBottom: isIOS ? 2 : 0,
+    color: bodyColor || colors.BLUKO.BLUKO_500,
+    bottom: isIOS ? 2 : -1,
   },
   paragraph: {
     marginTop: 0,

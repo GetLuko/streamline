@@ -28,6 +28,13 @@ const CARD_TIPS: JSX.Element[] = [
     iconName="Area"
     key="danger"
   />,
+  <CardTip
+    appearance="primary"
+    description="Primary **bold** [link](http://luko.eu), with a very long description that should wrap to the next line"
+    iconName="Area"
+    key="primary"
+    animated={false}
+  />,
 ];
 
 export const CardTipSandbox = () => <DocList docs={CARD_TIPS} margin="md" />;

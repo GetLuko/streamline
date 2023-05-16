@@ -42,7 +42,6 @@ export const Dialog = ({
         ) : null}
 
         <Text
-          testID="Title"
           variant="titleMediumBold"
           marginBottom="xs"
           textAlign={icon ? 'center' : 'left'}

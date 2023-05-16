@@ -108,7 +108,7 @@ export const sandboxItems: SandBoxSectionType[] = [
     ],
   },
   {
-    title: 'Dialog',
+    title: 'Dialogs',
     items: [
       {
         title: 'Dialog',

@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Box } from '../../../../primitives/box/box';
 import { Text } from '../../../../primitives/text/text';
-import { ColorTheme } from '../../../../theme';
 import { InputTextLabelProps } from './types';
 
 export const InputTextLabel = ({

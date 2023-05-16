@@ -35,6 +35,12 @@ Generate components
 C=component-name yarn streamline:generate:component
 ```
 
+# Publish the library
+
+- `yarn streamline:build`
+- `npm version patch`
+- `yarn streamline:publish`
+
 # Visual regression with Maestro
 
 [Maestro installation requirement](https://maestro.mobile.dev/getting-started/installing-maestro)

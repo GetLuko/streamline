@@ -1,7 +1,7 @@
+import { ListItemValue } from '@getluko/streamline';
 import React from 'react';
 import { Alert } from 'react-native';
 
-import { ListItemValue } from '@getluko/streamline';
 import { DocList } from '../components/DocList';
 import { sleep } from '../sandbox.utils';
 
@@ -23,28 +23,20 @@ const LIST_ITEMS: JSX.Element[] = [
     description="Description"
     header="Header"
     iconName={ICON_NAME}
-    key="Simple list item"
     title="Title"
     value="Value"
   />,
-  <ListItemValue
-    iconName={ICON_NAME}
-    key="Simple list item with only title and icon"
-    title="Title"
-    value="Value"
-  />,
+  <ListItemValue iconName={ICON_NAME} title="Title" value="Value" />,
   <ListItemValue
     description="List item with on Press"
     header="Header"
     iconName={ICON_NAME}
-    key="List item with on Press"
     onPress={ON_PRESS}
     title="Title"
     value="Value"
   />,
   <ListItemValue
     iconName={ICON_NAME}
-    key="List item with long value and title"
     onPress={ON_PRESS}
     title={LONG_TITLE}
     value={LONG_VALUE}
@@ -53,7 +45,6 @@ const LIST_ITEMS: JSX.Element[] = [
     description={LONG_DESCRIPTION}
     header={LONG_HEADER}
     iconName={ICON_NAME}
-    key="List item with very long value"
     onPress={ON_PRESS}
     rightOption={{
       accessibilityLabel: 'Test',
@@ -67,7 +58,6 @@ const LIST_ITEMS: JSX.Element[] = [
     description={LONG_DESCRIPTION}
     header={LONG_HEADER}
     iconName={ICON_NAME}
-    key="List item with long title"
     onPress={ON_PRESS}
     title={LONG_TITLE}
     value="Value"
@@ -76,7 +66,6 @@ const LIST_ITEMS: JSX.Element[] = [
     description="List item with async on Press"
     header="Header"
     iconName={ICON_NAME}
-    key="List item with async on Press"
     onPress={ASYNC_ON_PRESS}
     title="Title"
     value="Value"
@@ -85,7 +74,6 @@ const LIST_ITEMS: JSX.Element[] = [
     description="List item with right option"
     header="Header"
     iconName={ICON_NAME}
-    key="List item with right option"
     onPress={ON_PRESS}
     rightOption={{
       accessibilityLabel: 'Test',
@@ -99,7 +87,6 @@ const LIST_ITEMS: JSX.Element[] = [
     description="List item with divider"
     header="Header"
     iconName={ICON_NAME}
-    key="List item with on divider"
     onPress={ON_PRESS}
     showDivider
     title="Title"
@@ -108,7 +95,6 @@ const LIST_ITEMS: JSX.Element[] = [
   <ListItemValue
     description="List item with onPress and no header "
     iconName={ICON_NAME}
-    key="List item with divider and no icon"
     showDivider
     onPress={ON_PRESS}
     title="Title"
@@ -117,7 +103,6 @@ const LIST_ITEMS: JSX.Element[] = [
   <ListItemValue
     description="List item with right option and no header"
     iconName={ICON_NAME}
-    key="List item with divider and no icon"
     showDivider
     rightOption={{
       accessibilityLabel: 'Test',
@@ -129,7 +114,6 @@ const LIST_ITEMS: JSX.Element[] = [
   />,
   <ListItemValue
     description="List item with divider and no icon"
-    key="List item with divider and no icon"
     showDivider
     onPress={ON_PRESS}
     title="Title"
@@ -139,7 +123,6 @@ const LIST_ITEMS: JSX.Element[] = [
     description="List item with right option and divider"
     header="Header"
     iconName={ICON_NAME}
-    key="List item with right option and divider"
     onPress={ON_PRESS}
     rightOption={{
       accessibilityLabel: 'Test',
@@ -155,7 +138,6 @@ const LIST_ITEMS: JSX.Element[] = [
     header="Header"
     iconName={ICON_NAME}
     isSkeleton
-    key="Skeleton list item"
     title="Title"
     value="Value"
   />,

@@ -1,9 +1,7 @@
 import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
 import { Text } from '../../../primitives/text/text';
-import ListItemValue from '../list-item-value/list-item-value';
-import ListItem from '../list-item/list-item';
+import { Item } from './components/item';
 import { ListItemGroupProps } from './list-item-group.types';
-import { isListItemValueProps } from './list-item-group.utils';
 
 export const ListItemGroup = ({
   description,
@@ -20,15 +18,9 @@ export const ListItemGroup = ({
         </Text>
       ) : null}
       <AnimatedBox borderRadius="lg" overflow="hidden">
-        {items.map((props, index) => {
-          const showDivider = index !== lastIndex;
-          if (isListItemValueProps(props)) {
-            return (
-              <ListItemValue key={index} {...props} showDivider={showDivider} />
-            );
-          }
-          return <ListItem key={index} {...props} showDivider={showDivider} />;
-        })}
+        {items.map((props, index) => (
+          <Item key={index} {...props} showDivider={index !== lastIndex} />
+        ))}
       </AnimatedBox>
       {description ? (
         <Text color="GREY_500" variant="caption" marginTop="xs">

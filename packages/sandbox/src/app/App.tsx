@@ -11,6 +11,7 @@ import {
   ActivityIndicator,
   KeyboardAvoidingView,
 } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { SandBox } from './sandbox/Sandbox';
 import { isMaestro } from './utils/isMaestro';
@@ -36,7 +37,7 @@ export const App = () => {
     );
   }
   return (
-    <>
+    <SafeAreaProvider>
       <StatusBar barStyle={isIOS ? 'light-content' : 'dark-content'} />
       <SafeAreaView style={{ flex: 0 }} />
       <KeyboardAvoidingView
@@ -57,7 +58,7 @@ export const App = () => {
           </StreamlineThemeProvider>
         </ScrollView>
       </KeyboardAvoidingView>
-    </>
+    </SafeAreaProvider>
   );
 };
 const styles = StyleSheet.create({

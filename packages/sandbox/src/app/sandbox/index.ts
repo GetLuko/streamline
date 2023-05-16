@@ -7,6 +7,7 @@ import { CardSummarySandbox } from './docs/card-summary.doc';
 import { CardTipSandbox } from './docs/card-tip.doc';
 import { CardSandbox } from './docs/card.doc';
 import { CheckboxSandbox } from './docs/checkbox.doc';
+import { DialogSandbox } from './docs/dialog.doc';
 import { IconsSandbox } from './docs/icon.doc';
 import { InputTextAreaSandbox } from './docs/input-text-area.doc';
 import { InputTextTypesSandbox } from './docs/input-text-types.doc';
@@ -104,6 +105,15 @@ export const sandboxItems: SandBoxSectionType[] = [
         SandBox: NavigationBarProgressSandbox,
       },
       { title: 'NavigationTitle', SandBox: NavigationTitleSandbox },
+    ],
+  },
+  {
+    title: 'Dialog',
+    items: [
+      {
+        title: 'Dialog',
+        SandBox: DialogSandbox,
+      },
     ],
   },
 ];

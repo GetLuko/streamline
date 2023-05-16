@@ -1,6 +1,6 @@
 {
   "name": "@getluko/streamline",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "luko",
   "description": "Luko Design System using react-native for iOS and Android",
   "main": "dist/packages/streamline/index.js",
@@ -11,6 +11,6 @@
   "scripts": {
     "icons:generate:regular": "npx @svgr/cli@6.5.1 --ignore-existing --native --typescript --svgo-config src/primitives/icon/svgs/svgo.json --replace-attr-values \"#2D50E6={color}\" --index-template src/primitives/icon/svgs/index-template.js --template src/primitives/icon/svgs/icon-template.js --out-dir src/primitives/icon/generated/regular src/primitives/icon/svgs/regular",
     "icons:generate:small": "npx @svgr/cli@6.5.1 --ignore-existing --native --typescript --svgo-config src/primitives/icon/svgs/svgo.json --replace-attr-values \"#2D50E6={color}\" --index-template src/primitives/icon/svgs/index-template.js --template src/primitives/icon/svgs/icon-template.js --out-dir src/primitives/icon/generated/small src/primitives/icon/svgs/small",
-    "type:check":"npx tsc --noEmit -p tsconfig.lib.json"
+    "type:check": "npx tsc --noEmit -p tsconfig.lib.json"
   }
 }

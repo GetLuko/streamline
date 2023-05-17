@@ -85,7 +85,7 @@ const useStyles = (
       marginBottom: insets.bottom,
     },
     primary: {
-      ...(isHorizontal ? { marginLeft: spacing.xxs } : {}),
+      ...(isHorizontal && buttons.secondary ? { marginLeft: spacing.xxs } : {}),
       ...(buttons.secondary ? { marginBottom: spacing.xxs } : {}),
     },
     secondary: {

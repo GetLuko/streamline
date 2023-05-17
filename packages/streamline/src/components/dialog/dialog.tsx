@@ -15,8 +15,8 @@ export const Dialog = ({
   buttons,
   icon,
 }: PropsWithChildren<DialogProps>) => {
-  const insets = useSafeAreaInsets();
-  const styles = useStyles(buttons);
+  const isHorizontal = buttons.orientation === 'horizontal';
+  const styles = useStyles(buttons, isHorizontal);
   return (
     <Box
       borderTopLeftRadius="lg"
@@ -53,10 +53,8 @@ export const Dialog = ({
       <Box
         marginTop="xl"
         flex={1}
-        flexDirection={
-          buttons.orientation === 'horizontal' ? 'row-reverse' : 'column'
-        }
-        style={{ marginBottom: insets.bottom }}
+        flexDirection={isHorizontal ? 'row-reverse' : 'column'}
+        style={styles.buttonsContainer}
       >
         <Box flex={1} style={styles.primary}>
           <Button {...buttons.primary} />
@@ -72,22 +70,26 @@ export const Dialog = ({
 };
 
 const useStyles = (
-  buttons: DialogProps['buttons']
+  buttons: DialogProps['buttons'],
+  isHorizontal: boolean
 ): {
+  buttonsContainer: ViewStyle;
   primary: ViewStyle;
   secondary: ViewStyle;
 } => {
   const { spacing } = useStreamlineTheme();
+  const insets = useSafeAreaInsets();
 
   return {
+    buttonsContainer: {
+      marginBottom: insets.bottom,
+    },
     primary: {
-      ...(buttons.orientation === 'horizontal'
-        ? { marginLeft: spacing.xxs }
-        : {}),
+      ...(isHorizontal ? { marginLeft: spacing.xxs } : {}),
       ...(buttons.secondary ? { marginBottom: spacing.xxs } : {}),
     },
     secondary: {
-      ...(buttons.orientation === 'horizontal'
+      ...(isHorizontal
         ? { marginRight: spacing.xxs }
         : { marginTop: spacing.xxs }),
     },

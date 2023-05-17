@@ -4,16 +4,13 @@ export * from './primitives/markdown/markdown';
 
 export * from './components/buttons/button-icon/button-icon';
 export * from './components/buttons/button/button';
-export * from './components/buttons/button/button';
 export * from './components/buttons/button-dock/button-dock';
 export * from './components/cards/card-callout/card-callout';
 export * from './components/cards/card-summary/card-summary';
 export * from './components/cards/card-tip/card-tip';
-export * from './components/cards/card-tip/card-tip';
 export * from './components/checkbox/checkbox';
 export * from './components/dialog/dialog';
 export * from './components/inputs/input-text-area/input-text-area';
-export * from './components/inputs/input-text/input-text';
 export * from './components/inputs/input-text/input-text';
 export * from './components/list-items/list-item/list-item';
 export * from './components/list-items/list-item/list-item.types';
@@ -37,6 +34,8 @@ export * from './theme';
 export * from './theme/ThemeProvider';
 export * from './utils/platform';
 export { GeneratedRegularIcons };
+export { isIconName, sanitizeIconName } from './primitives/icon/icon.utils';
+export { IconsName } from './primitives/icon/icon.types';
 
 export type InteractionType = {
   /**

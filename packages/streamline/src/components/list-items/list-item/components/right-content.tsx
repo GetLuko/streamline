@@ -3,14 +3,12 @@ import React from 'react';
 import { usePress } from '../../../../hooks/use-press.hook';
 import { Icon } from '../../../../primitives/icon/icon';
 import ButtonIcon from '../../../buttons/button-icon/button-icon';
-import Spinner from '../../../spinner/spinner';
 import { ListItemProps } from '../list-item.types';
 
 export const RightContent = ({
-  isLoading,
   onPress,
   rightOption,
-}: Pick<ListItemProps, 'onPress' | 'rightOption'> & { isLoading: boolean }) => {
+}: Pick<ListItemProps, 'onPress' | 'rightOption'>) => {
   const [handlePress, isResolving] = usePress({
     onPress: rightOption?.onPress,
   });
@@ -30,10 +28,6 @@ export const RightContent = ({
         size="large"
       />
     );
-
-  if (isLoading) {
-    return <Spinner color="GREY_400" size="small" />;
-  }
 
   return <Icon color="GREY_400" iconName="ChevronFarRight" />;
 };

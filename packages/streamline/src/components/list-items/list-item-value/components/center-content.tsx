@@ -6,23 +6,24 @@ import { ListItemValueProps } from '../list-item-value.types';
 import { RightContent } from './right-content';
 
 export const CenterContent = ({
-  isLoading,
+  isDisabled,
   onPress,
   rightOption,
   title,
   value,
-}: Pick<ListItemValueProps, 'onPress' | 'rightOption' | 'title' | 'value'> & {
-  isLoading: boolean;
-}) => {
+}: Pick<
+  ListItemValueProps,
+  'isDisabled' | 'onPress' | 'rightOption' | 'title' | 'value'
+>) => {
   return (
     <Box flex={1} flexDirection="row" alignItems="center">
       <Box flex={1} minWidth="25%">
-        <Text color="GREY_1000" variant="body">
+        <Text color={isDisabled ? 'GREY_500' : 'GREY_1000'} variant="body">
           {title}
         </Text>
       </Box>
       <RightContent
-        isLoading={isLoading}
+        isDisabled={isDisabled}
         onPress={onPress}
         rightOption={rightOption}
         value={value}

@@ -5,7 +5,9 @@ import { renderWithProvider } from '../../../../testing/render-with-provider';
 import ListItemValue from '../list-item-value';
 
 describe('ListItemValue', () => {
-  afterEach(jest.clearAllMocks);
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
 
   it('should call onPress when pressed', async () => {
     // Given
@@ -26,6 +28,28 @@ describe('ListItemValue', () => {
 
     // Then
     await waitFor(() => expect(onPress).toHaveBeenCalledTimes(1));
+  });
+
+  it('should not call onPress when disabled', async () => {
+    // Given
+    const onPress = jest.fn();
+    const { getByText } = renderWithProvider(
+      <ListItemValue
+        description="Description"
+        header="Header"
+        iconName="Area"
+        isDisabled
+        title="Title"
+        onPress={onPress}
+        value="Value"
+      />
+    );
+
+    // When
+    fireEvent.press(getByText('Header'));
+
+    // Then
+    await waitFor(() => expect(onPress).not.toHaveBeenCalled());
   });
 
   it('should call rightOption.onPress when button icon pressed', async () => {

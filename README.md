@@ -38,7 +38,7 @@ C=component-name yarn streamline:generate:component
 # Publish the library
 
 - `cd packages/streamline && yarn streamline:build`
-- `yarn version patch`
+- `npm version patch`
 - `npm run streamline:publish`
 
 # Visual regression with Maestro

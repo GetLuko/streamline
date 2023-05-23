@@ -15,6 +15,8 @@ import { CenterContent } from './components/center-content';
 import { TopContent } from './components/top-content';
 import { ListItemValueProps } from './list-item-value.types';
 
+const DIVIDER_VERTICAL_MARGIN = 16;
+
 /**
  * Todo - Use pressable from react-native-ama when issue below fixed
  * https://github.com/FormidableLabs/react-native-ama/issues/92
@@ -85,7 +87,14 @@ export const ListItemValue = ({
               />
             ) : null}
           </Box>
-          {showDivider ? <Divider leftSpacing={dividerLeftSpacing} /> : null}
+          {showDivider ? (
+            <Divider
+              position="absolute"
+              right={DIVIDER_VERTICAL_MARGIN}
+              bottom={0}
+              left={DIVIDER_VERTICAL_MARGIN + dividerLeftSpacing}
+            />
+          ) : null}
         </Box>
       )}
     </Pressable>

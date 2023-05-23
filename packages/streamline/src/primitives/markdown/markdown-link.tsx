@@ -8,7 +8,7 @@ import { colors } from '../../theme/colors';
 import { FontFamily } from '../../theme/fonts';
 import { isIOS } from '../../utils/platform';
 
-export interface MarkdownProps {
+export interface MarkdownLinkProps {
   children: string;
   onLinkPress?: (url: string) => boolean;
   bodyColor?: ColorTheme;
@@ -18,7 +18,7 @@ export function MarkdownLink({
   children,
   onLinkPress,
   bodyColor,
-}: MarkdownProps) {
+}: MarkdownLinkProps) {
   const theme = useStreamlineTheme();
   const styles = getStyles(bodyColor ? theme.colors[bodyColor] : undefined);
   return (

@@ -32,7 +32,7 @@ export * from './primitives/box/box';
 export * from './primitives/card/card';
 export * from './primitives/icon/icon';
 export * from './primitives/markdown/markdown';
-export * from './primitives/markdown/markdown';
+export * from './primitives/markdown/markdown-link';
 export * from './primitives/skeleton/skeleton';
 export * from './primitives/text/text';
 export * from './theme';

@@ -4,10 +4,6 @@ import { AnimatedBox } from '../../../../primitives/animated-box/animated-box';
 import { Box } from '../../../../primitives/box/box';
 import Spinner from '../../../spinner/spinner';
 
-/**
- * Todo - Use pressable from react-native-ama when issue below fixed
- * https://github.com/FormidableLabs/react-native-ama/issues/92
- */
 export const ImageSpinner = () => {
   return (
     <AnimatedBox

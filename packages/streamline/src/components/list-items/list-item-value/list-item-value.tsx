@@ -26,6 +26,7 @@ export const ListItemValue = ({
   description,
   header,
   iconName,
+  isDisabled,
   isSkeleton,
   onLongPress,
   onPress,
@@ -35,7 +36,7 @@ export const ListItemValue = ({
   title,
   value,
 }: ListItemValueProps) => {
-  const [handlePress, isResolving] = usePress({ onPress });
+  const [handlePress, isResolving] = usePress({ isDisabled, onPress });
 
   if (isSkeleton) {
     return <ListItemSkeleton />;
@@ -63,17 +64,28 @@ export const ListItemValue = ({
           paddingVertical="md"
           paddingLeft="md"
         >
-          <LeftContent iconName={iconName} />
+          <LeftContent
+            iconName={iconName}
+            isDisabled={isDisabled}
+            isLoading={isResolving}
+          />
           <Box flex={1}>
-            {header ? <TopContent header={header} /> : null}
+            {header ? (
+              <TopContent header={header} isDisabled={isDisabled} />
+            ) : null}
             <CenterContent
-              isLoading={isResolving}
+              isDisabled={isDisabled}
               onPress={onPress}
               rightOption={rightOption}
               title={title}
               value={value}
             />
-            {description ? <BottomContent description={description} /> : null}
+            {description ? (
+              <BottomContent
+                description={description}
+                isDisabled={isDisabled}
+              />
+            ) : null}
           </Box>
           {showDivider ? (
             <Divider

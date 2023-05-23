@@ -25,6 +25,7 @@ export const ListItem = ({
   description = '',
   header = '',
   iconName,
+  isDisabled,
   isSkeleton,
   onLongPress,
   onPress,
@@ -33,7 +34,7 @@ export const ListItem = ({
   testID,
   title,
 }: ListItemProps) => {
-  const [handlePress, isResolving] = usePress({ onPress });
+  const [handlePress, isResolving] = usePress({ onPress, isDisabled });
 
   if (isSkeleton) {
     return <ListItemSkeleton />;
@@ -61,17 +62,18 @@ export const ListItem = ({
           padding="md"
           paddingRight={rightOption ? 'xs' : 'md'}
         >
-          <LeftContent iconName={iconName} />
+          <LeftContent
+            iconName={iconName}
+            isDisabled={isDisabled}
+            isLoading={isResolving}
+          />
           <CenterContent
             description={description}
             header={header}
+            isDisabled={isDisabled}
             title={title}
           />
-          <RightContent
-            isLoading={isResolving}
-            onPress={onPress}
-            rightOption={rightOption}
-          />
+          <RightContent onPress={onPress} rightOption={rightOption} />
           {showDivider ? (
             <Divider
               position="absolute"

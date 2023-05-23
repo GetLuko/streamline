@@ -4,8 +4,10 @@ import { useState } from 'react';
 import { isPromise } from '../utils/is-promise';
 
 export const usePress = <T>({
+  isDisabled,
   onPress,
 }: {
+  isDisabled?: boolean;
   onPress?: null | ((arg: T) => void) | ((arg: T) => Promise<void>);
 }): [((arg: T) => Promise<unknown>) | undefined, boolean] => {
   const [isResolving, setIsResolving] = useState<boolean>(false);
@@ -16,7 +18,7 @@ export const usePress = <T>({
           return;
         }
 
-        if (typeof onPress === 'function' && !isResolving) {
+        if (typeof onPress === 'function' && !isResolving && !isDisabled) {
           const returnValue = onPress(arg) as unknown;
 
           if (isPromise(returnValue)) {

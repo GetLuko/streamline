@@ -11,6 +11,7 @@ export type ListItemProps = {
   description?: string;
   header?: string;
   iconName?: IconsName;
+  isDisabled?: boolean;
   isSkeleton?: boolean;
   key?: React.Key;
   onLongPress?: () => unknown;

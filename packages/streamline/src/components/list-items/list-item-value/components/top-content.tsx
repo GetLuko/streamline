@@ -5,9 +5,15 @@ import { ListItemValueProps } from '../list-item-value.types';
 
 export const TopContent = ({
   header,
-}: Required<Pick<ListItemValueProps, 'header'>>) => {
+  isDisabled,
+}: Required<Pick<ListItemValueProps, 'header'>> &
+  Pick<ListItemValueProps, 'isDisabled'>) => {
   return (
-    <Text color="GREY_700" variant="subBody" marginRight="md">
+    <Text
+      color={isDisabled ? 'GREY_500' : 'GREY_700'}
+      variant="subBody"
+      marginRight="md"
+    >
       {header}
     </Text>
   );

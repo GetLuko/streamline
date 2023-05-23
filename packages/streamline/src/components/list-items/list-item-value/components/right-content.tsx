@@ -6,37 +6,35 @@ import { RightContent as FarRightContent } from '../../list-item/components/righ
 import { ListItemValueProps } from '../list-item-value.types';
 
 export const RightContent = ({
-  isLoading,
+  isDisabled,
   onPress,
   rightOption,
   value,
-}: Pick<ListItemValueProps, 'onPress' | 'rightOption' | 'value'> & {
-  isLoading: boolean;
-}) => {
+}: Pick<
+  ListItemValueProps,
+  'isDisabled' | 'onPress' | 'rightOption' | 'value'
+>) => {
   const styles = useStyles();
 
   return (
     <>
       <Text
+        color={isDisabled ? 'GREY_500' : 'GREY_1000'}
         marginLeft="xs"
-        variant="bodyBold"
-        textAlign="right"
         style={styles.text}
+        textAlign="right"
+        variant="bodyBold"
       >
         {value}
       </Text>
       <Box width={rightOption ? 48 : 40} />
       <Box
         position="absolute"
-        right={0}
         paddingLeft={!rightOption ? 'xs' : undefined}
         paddingRight={rightOption ? 'xs' : 'md'}
+        right={0}
       >
-        <FarRightContent
-          isLoading={isLoading}
-          onPress={onPress}
-          rightOption={rightOption}
-        />
+        <FarRightContent onPress={onPress} rightOption={rightOption} />
       </Box>
     </>
   );

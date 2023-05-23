@@ -41,6 +41,14 @@ const LIST_ITEMS: JSX.Element[] = [
     title="Title"
   />,
   <ListItem
+    description="List item disabled"
+    header="Header"
+    iconName={ICON_NAME}
+    isDisabled
+    onPress={ON_PRESS}
+    title="Title"
+  />,
+  <ListItem
     description={LONG_DESCRIPTION}
     header="Header"
     iconName={ICON_NAME}

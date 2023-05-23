@@ -7,20 +7,24 @@ import { ListItemProps } from '../list-item.types';
 export const CenterContent = ({
   description,
   header,
+  isDisabled,
   title,
-}: Pick<ListItemProps, 'description' | 'header' | 'title'>) => {
+}: Pick<ListItemProps, 'description' | 'header' | 'isDisabled' | 'title'>) => {
+  const mainTextColor = isDisabled ? 'GREY_500' : 'GREY_1000';
+  const secondaryTextColor = isDisabled ? 'GREY_500' : 'GREY_700';
+
   return (
     <Box flex={1} marginRight="xs">
       {header ? (
-        <Text color="GREY_700" variant="subBody">
+        <Text color={secondaryTextColor} variant="subBody">
           {header}
         </Text>
       ) : null}
-      <Text color="GREY_1000" variant="body">
+      <Text color={mainTextColor} variant="body">
         {title}
       </Text>
       {description ? (
-        <Text color="GREY_700" variant="subBody">
+        <Text color={secondaryTextColor} variant="subBody">
           {description}
         </Text>
       ) : null}

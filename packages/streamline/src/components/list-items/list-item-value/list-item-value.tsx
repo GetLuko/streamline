@@ -5,23 +5,24 @@ import { usePress } from '../../../hooks/use-press.hook';
 import { Box } from '../../../primitives/box/box';
 import { Divider } from '../components/divider';
 import { ListItemSkeleton } from '../components/list-item-skeleton';
+import { LeftContent } from '../list-item/components/left-content';
 import {
   BACKGROUND_COLOR,
   BACKGROUND_PRESSED_COLOR,
 } from '../list-items.constants';
+import { BottomContent } from './components/bottom-content';
 import { CenterContent } from './components/center-content';
-import { LeftContent } from './components/left-content';
-import { RightContent } from './components/right-content';
-import { ListItemProps } from './list-item.types';
+import { TopContent } from './components/top-content';
+import { ListItemValueProps } from './list-item-value.types';
 
 /**
  * Todo - Use pressable from react-native-ama when issue below fixed
  * https://github.com/FormidableLabs/react-native-ama/issues/92
  */
-export const ListItem = ({
+export const ListItemValue = ({
   accessibilityLabel,
-  description = '',
-  header = '',
+  description,
+  header,
   iconName,
   isSkeleton,
   onLongPress,
@@ -30,7 +31,8 @@ export const ListItem = ({
   showDivider,
   testID,
   title,
-}: ListItemProps) => {
+  value,
+}: ListItemValueProps) => {
   const [handlePress, isResolving] = usePress({ onPress });
 
   if (isSkeleton) {
@@ -56,20 +58,21 @@ export const ListItem = ({
             pressed && onPress ? BACKGROUND_PRESSED_COLOR : BACKGROUND_COLOR
           }
           flexDirection="row"
-          padding="md"
-          paddingRight={rightOption ? 'xs' : 'md'}
+          paddingVertical="md"
+          paddingLeft="md"
         >
           <LeftContent iconName={iconName} />
-          <CenterContent
-            description={description}
-            header={header}
-            title={title}
-          />
-          <RightContent
-            isLoading={isResolving}
-            onPress={onPress}
-            rightOption={rightOption}
-          />
+          <Box flex={1}>
+            {header ? <TopContent header={header} /> : null}
+            <CenterContent
+              isLoading={isResolving}
+              onPress={onPress}
+              rightOption={rightOption}
+              title={title}
+              value={value}
+            />
+            {description ? <BottomContent description={description} /> : null}
+          </Box>
           {showDivider ? <Divider leftSpacing={dividerLeftSpacing} /> : null}
         </Box>
       )}
@@ -77,4 +80,4 @@ export const ListItem = ({
   );
 };
 
-export default ListItem;
+export default ListItemValue;

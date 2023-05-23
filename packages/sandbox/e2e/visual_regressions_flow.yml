@@ -96,6 +96,10 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: ListItemValue
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: ListItemGroup
 - runFlow:
     file: subflow/takeScreenshot.yaml
@@ -121,6 +125,10 @@ appId: ${APPID}
     file: subflow/takeScreenshot.yaml
     env:
       COMPONENT: NavigationBarProgress
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Dialog
 ##
 ## CI tests
 # - stopApp: host.exp.Exponent

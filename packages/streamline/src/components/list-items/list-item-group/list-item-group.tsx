@@ -1,6 +1,6 @@
 import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
 import { Text } from '../../../primitives/text/text';
-import ListItem from '../list-item/list-item';
+import { Item } from './components/item';
 import { ListItemGroupProps } from './list-item-group.types';
 
 export const ListItemGroup = ({
@@ -19,7 +19,7 @@ export const ListItemGroup = ({
       ) : null}
       <AnimatedBox borderRadius="lg" overflow="hidden">
         {items.map((props, index) => (
-          <ListItem key={index} {...props} showDivider={index !== lastIndex} />
+          <Item key={index} {...props} showDivider={index !== lastIndex} />
         ))}
       </AnimatedBox>
       {description ? (

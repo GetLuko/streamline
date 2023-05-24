@@ -30,7 +30,6 @@ export const NavigationTitle = ({
 
   return (
     <Box
-      paddingHorizontal="md"
       paddingVertical="xs"
       alignItems={position === 'left' ? 'flex-start' : 'center'}
     >

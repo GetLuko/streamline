@@ -1,10 +1,12 @@
 import MarkdownDisplay from '@ronradtke/react-native-markdown-display';
 import React from 'react';
+import { StyleSheet } from 'react-native';
 
 import { fonts } from '../../theme';
 import { colors } from '../../theme/colors';
 import { FontFamily } from '../../theme/fonts';
 import { radius } from '../../theme/radius';
+import { spacings } from '../../theme/spacings';
 import { isIOS } from '../../utils/platform';
 import { Box } from '../box/box';
 import { Text } from '../text/text';
@@ -54,11 +56,23 @@ export function Markdown({ children, onLinkPress }: MarkdownProps) {
     </MarkdownDisplay>
   );
 }
-const styles = {
+const styles = StyleSheet.create({
   body: { ...fonts.body, color: colors.GREY.GREY_700 },
-  heading1: { ...fonts.titleMediumBold, color: colors.PRIMARY.BLACK },
-  heading2: { ...fonts.titleSmallBold, color: colors.PRIMARY.BLACK },
-  heading3: { ...fonts.headlineBold, color: colors.PRIMARY.BLACK },
+  heading1: {
+    ...fonts.titleMediumBold,
+    color: colors.PRIMARY.BLACK,
+    marginBottom: spacings.xs,
+  },
+  heading2: {
+    ...fonts.titleSmallBold,
+    color: colors.PRIMARY.BLACK,
+    marginBottom: spacings.xs,
+  },
+  heading3: {
+    ...fonts.headlineBold,
+    color: colors.PRIMARY.BLACK,
+    marginBottom: spacings.xs,
+  },
   strong: { ...fonts.bodyBold, color: colors.PRIMARY.BLACK },
   em: {
     ...fonts.bodyBold,
@@ -90,7 +104,7 @@ const styles = {
     ...fonts.body,
     backgroundColor: colors.GREY.GREY_100,
     borderRadius: radius.lg,
-    borderWith: 0,
+    borderWidth: 0,
     padding: 16,
     borderColor: 'transparent',
   },
@@ -114,4 +128,9 @@ const styles = {
     marginTop: 16,
     marginBottom: 16,
   },
-};
+  image: {
+    backgroundColor: colors.PRIMARY.PURE_WHITE_1000,
+    borderRadius: radius.lg,
+    overflow: 'hidden',
+  },
+});

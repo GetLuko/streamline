@@ -15,7 +15,7 @@ export const Dialog = ({
   buttons,
   icon,
 }: PropsWithChildren<DialogProps>) => {
-  const isHorizontal = buttons.orientation === 'horizontal';
+  const isHorizontal = buttons.orientation !== 'vertical';
   const styles = useStyles(buttons, isHorizontal);
   return (
     <Box
@@ -57,11 +57,11 @@ export const Dialog = ({
         style={styles.buttonsContainer}
       >
         <Box flex={1} style={styles.primary}>
-          <Button {...buttons.primary} />
+          <Button appearance="primary" {...buttons.primary} />
         </Box>
         {buttons.secondary ? (
           <Box flex={1} style={styles.secondary}>
-            <Button {...buttons.secondary} />
+            <Button appearance="neutral" {...buttons.secondary} />
           </Box>
         ) : null}
       </Box>

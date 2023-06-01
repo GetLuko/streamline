@@ -47,18 +47,19 @@ export const NavigationTitle = ({
           {header}
         </Text>
       ) : null}
-      <Box alignItems="center" flex={1} flexDirection="row">
-        <Text
-          variant="titleLargeBold"
-          accessibilityLabel={header}
-          accessibilityRole="header"
-          style={{ flex: 1 }}
-          color={titleColor}
-          textAlign={position}
-          numberOfLines={4}
-        >
-          {title}
-        </Text>
+      <Box alignItems="center" flexDirection="row">
+        <Box flex={1}>
+          <Text
+            variant="titleLargeBold"
+            accessibilityLabel={header}
+            accessibilityRole="header"
+            color={titleColor}
+            textAlign={position}
+            numberOfLines={4}
+          >
+            {title}
+          </Text>
+        </Box>
 
         {icon && position !== 'center' ? (
           <ButtonIcon

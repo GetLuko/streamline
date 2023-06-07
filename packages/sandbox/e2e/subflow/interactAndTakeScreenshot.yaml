@@ -1,0 +1,33 @@
+appId: ${APPID}
+---
+- scrollUntilVisible:
+    element:
+      id: ${COMPONENT}
+    direction: DOWN
+- tapOn:
+    id: ${COMPONENT}
+- scrollUntilVisible:
+    element:
+      text: ${COMPONENT}
+    direction: UP
+- extendedWaitUntil:
+    visible: ${COMPONENT}
+    timeout: 5000
+- tapOn:
+    text: ${OPEN}
+- extendedWaitUntil:
+    visible: ${CLOSE}
+    timeout: 5000
+- takeScreenshot: e2e/${PLATFORM}/tempScreenshots/${COMPONENT}
+# TODO: fix picker behavior to go back
+# - tapOn:
+#     text: ${CLOSE}
+#     optional: true
+# - tapOn:
+#     text: ${CLOSE}
+#     optional: true
+# - extendedWaitUntil:
+#     visible: ${COMPONENT}
+#     timeout: 5000
+# - tapOn:
+#     text: ${COMPONENT}

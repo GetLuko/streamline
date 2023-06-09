@@ -1,9 +1,10 @@
 name: Publish to NPM
-on:
-  release:
-    types: [created]
+# on:
+#   release:
+#     types: [created]
+on: push
 jobs:
-  build:
+  npm_publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

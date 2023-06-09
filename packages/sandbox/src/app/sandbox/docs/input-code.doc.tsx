@@ -27,7 +27,10 @@ export const InputCodeSandbox = () => {
       setIsDisabled(true);
       setTimeout(() => {
         setIsDisabled(false);
-        setIsError(true);
+        setTimeout(() => {
+          // Fix to wait for disabled state to be updated on Android
+          setIsError(true);
+        }, 0);
       }, 1000);
     }
   };

@@ -14,6 +14,7 @@ export * from './components/checkbox/checkbox';
 export * from './components/dialog/dialog';
 export * from './components/inputs/input-text-area/input-text-area';
 export * from './components/inputs/input-text/input-text';
+export * from './components/inputs/input-number/input-number';
 export * from './components/list-items/list-item-group/list-item-group';
 export * from './components/list-items/list-item-option/list-item-option';
 export * from './components/list-items/list-item-value/list-item-value';

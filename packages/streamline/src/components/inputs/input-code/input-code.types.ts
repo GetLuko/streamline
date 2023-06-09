@@ -5,6 +5,7 @@ export interface InputCodeProps {
   isError?: boolean;
   isDisabled?: boolean;
   autoFocus?: boolean;
+  testID?: string;
 }
 
 export type InputCodeCellProps = {

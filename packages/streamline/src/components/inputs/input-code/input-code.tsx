@@ -15,6 +15,7 @@ export const InputCode = ({
   code,
   onChange,
   autoFocus = false,
+  testID = 'input-code',
 }: InputCodeProps) => {
   const {
     handleBackspace,
@@ -37,8 +38,9 @@ export const InputCode = ({
   const { colors } = useStreamlineTheme();
 
   return (
-    <Box>
+    <Box testID={testID}>
       <Pressable
+        testID={`${testID}-container`}
         style={styles.container}
         onLayout={handleOnLayout}
         onPress={handleOnContainerPress}
@@ -57,6 +59,7 @@ export const InputCode = ({
       </Pressable>
 
       <TextInput
+        testID={`${testID}-text-field`}
         autoFocus={autoFocus}
         editable={!isDisabled}
         ref={inputRef}

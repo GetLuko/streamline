@@ -3,19 +3,19 @@ import { Pressable, StyleSheet, TextInput } from 'react-native';
 
 import { Box } from '../../../primitives/box/box';
 import { useStreamlineTheme } from '../../../theme';
-import { InputNumberCell } from './components/cell';
-import { DEFAULT_CODE_LENGTH } from './input-number.constants';
-import useInputNumber from './input-number.hook';
-import { InputNumberProps } from './input-number.types';
+import { InputCodeCell } from './components/cell';
+import { DEFAULT_CODE_LENGTH } from './input-code.constants';
+import useInputCode from './input-code.hook';
+import { InputCodeProps } from './input-code.types';
 
-export const InputNumber = ({
+export const InputCode = ({
   length = DEFAULT_CODE_LENGTH,
   isDisabled,
   isError,
   code,
   onChange,
   autoFocus = false,
-}: InputNumberProps) => {
+}: InputCodeProps) => {
   const {
     handleBackspace,
     handleCodeChange,
@@ -26,7 +26,7 @@ export const InputNumber = ({
     inputStyle,
     inputRef,
     handleOnContainerPress,
-  } = useInputNumber({
+  } = useInputCode({
     length,
     code,
     onChange,
@@ -44,7 +44,7 @@ export const InputNumber = ({
         onPress={handleOnContainerPress}
       >
         {new Array(length).fill(0).map((_, index) => (
-          <InputNumberCell
+          <InputCodeCell
             key={index}
             code={code}
             index={index}
@@ -85,4 +85,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default InputNumber;
+export default InputCode;

@@ -88,6 +88,10 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: InputCode
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: ListItem
 - runFlow:
     file: subflow/takeScreenshot.yaml

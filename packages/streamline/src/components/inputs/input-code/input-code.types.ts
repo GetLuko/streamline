@@ -1,4 +1,4 @@
-export interface InputNumberProps {
+export interface InputCodeProps {
   code: string;
   onChange: (code: string) => void;
   length?: number;
@@ -7,7 +7,7 @@ export interface InputNumberProps {
   autoFocus?: boolean;
 }
 
-export type InputNumberCellProps = {
+export type InputCodeCellProps = {
   code: string;
   index: number;
   length: number;

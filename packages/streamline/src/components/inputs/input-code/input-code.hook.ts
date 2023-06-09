@@ -10,16 +10,16 @@ import {
 import {
   CELL_SHADOW_CONTAINER_SIZE,
   DEFAULT_CODE_LENGTH,
-} from './input-number.constants';
-import { InputNumberProps } from './input-number.types';
+} from './input-code.constants';
+import { InputCodeProps } from './input-code.types';
 
-const useInputNumber = ({
+const useInputCode = ({
   code,
   onChange,
   length = DEFAULT_CODE_LENGTH,
   isDisabled,
   isError,
-}: InputNumberProps) => {
+}: InputCodeProps) => {
   const ref = useRef<TextInput>(null);
 
   const [focused, setFocused] = useState(false);
@@ -105,4 +105,4 @@ const useInputNumber = ({
   };
 };
 
-export default useInputNumber;
+export default useInputCode;

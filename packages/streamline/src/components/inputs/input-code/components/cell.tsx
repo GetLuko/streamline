@@ -7,18 +7,18 @@ import {
   CELL_BORDER_WIDTH,
   CELL_SHADOW_CONTAINER_SIZE,
   CELL_SHADOW_WIDTH,
-} from '../input-number.constants';
-import { InputNumberCellProps } from '../input-number.types';
-import { getInputCellColors } from '../input-number.utils';
+} from '../input-code.constants';
+import { InputCodeCellProps } from '../input-code.types';
+import { getInputCellColors } from '../input-code.utils';
 
-export const InputNumberCell = ({
+export const InputCodeCell = ({
   code,
   index,
   length,
   isInputFocused,
   isDisabled,
   isError,
-}: InputNumberCellProps) => {
+}: InputCodeCellProps) => {
   const styles = useStyles({
     isFocused:
       isInputFocused &&

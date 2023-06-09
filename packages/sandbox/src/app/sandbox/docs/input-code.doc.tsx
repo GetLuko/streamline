@@ -1,4 +1,4 @@
-import { Box, InputNumber, Text } from '@getluko/streamline';
+import { Box, InputCode, Text } from '@getluko/streamline';
 import { useState } from 'react';
 
 const SectionTitle = ({ title, desc }: { title: string; desc: string }) => {
@@ -10,7 +10,7 @@ const SectionTitle = ({ title, desc }: { title: string; desc: string }) => {
   );
 };
 
-export const InputNumberSandbox = () => {
+export const InputCodeSandbox = () => {
   const [code, setCode] = useState('');
   const [errorCode, setErrorCode] = useState('');
   const [isError, setIsError] = useState(true);
@@ -33,25 +33,25 @@ export const InputNumberSandbox = () => {
   };
 
   return (
-    <Box margin="lg">
+    <Box marginHorizontal="lg">
       <SectionTitle
-        title="InputNumber with error"
+        title="InputCode with error"
         desc="Fake API call with invalid code, then set isError to true"
       />
-      <InputNumber
+      <InputCode
         code={errorCode}
         onChange={handleErrorCodeChange}
         isError={isError}
         length={6}
         isDisabled={isDisabled}
       />
-      <SectionTitle title="InputNumber with 4 digits" desc="" />
-      <InputNumber code={code} onChange={setCode} length={6} />
+      <SectionTitle title="InputCode with 4 digits" desc="" />
+      <InputCode code={code} onChange={setCode} length={4} />
       <SectionTitle
-        title="Disabled InputNumber"
+        title="Disabled InputCode"
         desc="Should not be interactive"
       />
-      <InputNumber
+      <InputCode
         code=""
         onChange={() => {
           return;

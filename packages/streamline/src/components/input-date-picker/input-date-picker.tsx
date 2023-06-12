@@ -9,7 +9,6 @@ import { isAndroid, isIOS } from '../../utils/platform';
 import { InputText } from '../inputs/input-text/input-text';
 import { ModalPickerIOS } from './modal-picker-ios';
 
-/* eslint-disable-next-line */
 export interface InputDatePickerProps {
   label: string;
   placeholder?: string;
@@ -73,7 +72,6 @@ export function InputDatePicker({
       onPress={() => {
         setFocused(true);
         onFocus?.();
-        console.log('press');
       }}
       testID={testID}
       accessibilityRole="button"

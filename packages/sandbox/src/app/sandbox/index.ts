@@ -12,7 +12,6 @@ import { IconsSandbox } from './docs/icon.doc';
 import { InputDatePickerSandbox } from './docs/input-date-picker.doc';
 import { InputSelectSandbox } from './docs/input-select.doc';
 import { InputTextAreaSandbox } from './docs/input-text-area.doc';
-import { InputTextTypesSandbox } from './docs/input-text-types.doc';
 import { InputTextSandbox } from './docs/input-text.doc';
 import { ListItemArticleSandbox } from './docs/list-item-article.doc';
 import { ListItemGroupSandbox } from './docs/list-item-group.doc';
@@ -74,7 +73,6 @@ export const sandboxItems: SandBoxSectionType[] = [
     title: 'Inputs',
     items: [
       { title: 'InputText', SandBox: InputTextSandbox },
-      { title: 'InputTextTypes', SandBox: InputTextTypesSandbox },
       { title: 'InputTextArea', SandBox: InputTextAreaSandbox },
       { title: 'InputDatePicker', SandBox: InputDatePickerSandbox },
       { title: 'InputSelect', SandBox: InputSelectSandbox },

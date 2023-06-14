@@ -11,7 +11,7 @@ const docs: JSX.Element[] = [
     label="Error"
     placeholder="Placeholder"
     isError
-    description="error"
+    description="Description"
     onPress={onPress}
   />,
   <InputSelect

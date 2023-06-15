@@ -14,7 +14,12 @@ describe('InputCode', () => {
   it('should call onChange with the correct code when inputting values', () => {
     const onChangeMock = jest.fn();
     const { getByTestId } = renderWithProvider(
-      <InputCode code="" onChange={onChangeMock} length={4} />
+      <InputCode
+        code=""
+        onChange={onChangeMock}
+        length={4}
+        testID="input-code"
+      />
     );
 
     fireEvent.changeText(getByTestId('input-code-text-field'), '1234');

@@ -15,7 +15,7 @@ export const InputCode = ({
   code,
   onChange,
   autoFocus = false,
-  testID = 'input-code',
+  testID,
 }: InputCodeProps) => {
   const {
     handleBackspace,
@@ -40,7 +40,7 @@ export const InputCode = ({
   return (
     <Box testID={testID}>
       <Pressable
-        testID={`${testID}-container`}
+        testID={testID && `${testID}-container`}
         style={styles.container}
         onLayout={handleOnLayout}
         onPress={handleOnContainerPress}
@@ -59,7 +59,7 @@ export const InputCode = ({
       </Pressable>
 
       <TextInput
-        testID={`${testID}-text-field`}
+        testID={testID && `${testID}-text-field`}
         autoFocus={autoFocus}
         editable={!isDisabled}
         ref={inputRef}

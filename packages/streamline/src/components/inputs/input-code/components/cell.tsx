@@ -19,6 +19,7 @@ export const InputCodeCell = ({
   isDisabled,
   isError,
 }: InputCodeCellProps) => {
+  const isLastCell = index === length - 1;
   const styles = useStyles({
     isFocused:
       isInputFocused &&
@@ -35,7 +36,7 @@ export const InputCodeCell = ({
       justifyContent="center"
       height={CELL_SHADOW_CONTAINER_SIZE}
       flex={1}
-      {...(index !== length - 1 ? { marginRight: 'xs' } : {})}
+      marginRight={isLastCell ? undefined : 'xs'}
     >
       <Box style={styles.shadow} />
       <Box

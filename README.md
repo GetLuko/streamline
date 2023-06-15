@@ -37,6 +37,17 @@ C=component-name yarn streamline:generate:component
 
 # Publish the library
 
+With github action
+
+- First make sure you already merged your work and bumped package.json `cd packages/streamline && npm version patch`
+- Create a new github release https://github.com/GetLuko/streamline/releases/new
+- Create a new tag `v0.X.X.X`
+- Add the changelog and click publish release
+
+![alt text](./docs/npm_publish.png 'Npm publish')
+
+Or manually
+
 - `cd packages/streamline && npm version patch`
 - `cd ../.. && yarn streamline:build`
 - `npm run streamline:publish`

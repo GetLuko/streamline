@@ -10,6 +10,7 @@ import { CheckboxSandbox } from './docs/checkbox.doc';
 import { DialogSandbox } from './docs/dialog.doc';
 import { IconsSandbox } from './docs/icon.doc';
 import { InputCodeSandbox } from './docs/input-code.doc';
+import { InputDatePickerSandbox } from './docs/input-date-picker.doc';
 import { InputTextAreaSandbox } from './docs/input-text-area.doc';
 import { InputTextTypesSandbox } from './docs/input-text-types.doc';
 import { InputTextSandbox } from './docs/input-text.doc';
@@ -75,6 +76,7 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'InputText', SandBox: InputTextSandbox },
       { title: 'InputTextTypes', SandBox: InputTextTypesSandbox },
       { title: 'InputTextArea', SandBox: InputTextAreaSandbox },
+      { title: 'InputDatePicker', SandBox: InputDatePickerSandbox },
       { title: 'InputCode', SandBox: InputCodeSandbox },
     ],
   },

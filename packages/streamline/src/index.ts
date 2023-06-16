@@ -14,6 +14,7 @@ export * from './components/checkbox/checkbox';
 export * from './components/dialog/dialog';
 export * from './components/inputs/input-text-area/input-text-area';
 export * from './components/inputs/input-text/input-text';
+export * from './components/input-select/input-select';
 export * from './components/inputs/input-phone/input-phone';
 export * from './components/input-date-picker/input-date-picker';
 export * from './components/list-items/list-item-group/list-item-group';

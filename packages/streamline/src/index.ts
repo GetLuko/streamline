@@ -1,4 +1,6 @@
 import * as GeneratedRegularIcons from './primitives/icon/generated/regular';
+
+export * from './components/input-search/input-search';
 export { GeneratedRegularIcons };
 export { isIconName, sanitizeIconName } from './primitives/icon/icon.utils';
 export * from './components/buttons/button-dock/button-dock';

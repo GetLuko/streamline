@@ -57,7 +57,7 @@ export const InputTextPrimitive = ({
         ...rest,
         maxFontSizeMultiplier: 1,
         ref: innerRef,
-        selectionColor: theme.colors.BLUKO_1000,
+        selectionColor: theme.colors.BLUKO_500,
         placeholder: placeholder,
         placeholderTextColor: theme.colors.GREY_300,
         secureTextEntry: secureTextEntry,
@@ -115,13 +115,20 @@ export const InputTextPrimitive = ({
           {isSearchInput ? (
             <Box
               padding="xs"
-              backgroundColor="GREY_100"
+              backgroundColor={isFocused ? 'GREY_200' : 'GREY_100'}
               justifyContent="space-between"
               flexDirection="row"
-              borderRadius="md"
+              borderRadius="round"
+              height={44}
             >
-              <Icon iconName="Search" color="GREY_400" />
+              <Icon
+                iconName="Search"
+                color="GREY_400"
+                size="large"
+                containerStyle={{ marginTop: 2, marginLeft: 5 }}
+              />
               {inputContainer}
+              {right}
             </Box>
           ) : (
             <>

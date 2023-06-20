@@ -1,6 +1,5 @@
 import * as GeneratedRegularIcons from './primitives/icon/generated/regular';
 export { GeneratedRegularIcons };
-export { IconsName } from './primitives/icon/icon.types';
 export { isIconName, sanitizeIconName } from './primitives/icon/icon.utils';
 export * from './components/buttons/button-dock/button-dock';
 export * from './components/list-items/list-item-article/list-item-article';
@@ -15,11 +14,11 @@ export * from './components/checkbox/checkbox';
 export * from './components/dialog/dialog';
 export * from './components/inputs/input-text-area/input-text-area';
 export * from './components/inputs/input-text/input-text';
+export * from './components/input-select/input-select';
+export * from './components/input-date-picker/input-date-picker';
 export * from './components/list-items/list-item-group/list-item-group';
 export * from './components/list-items/list-item-option/list-item-option';
-export * from './components/list-items/list-item-value/list-item-value.types';
 export * from './components/list-items/list-item-value/list-item-value';
-export * from './components/list-items/list-item/list-item.types';
 export * from './components/list-items/list-item/list-item';
 export * from './components/navigation/navigation-bar-progress/navigation-bar-progress';
 export * from './components/navigation/navigation-title/navigation-title';
@@ -37,6 +36,7 @@ export * from './primitives/skeleton/skeleton';
 export * from './primitives/text/text';
 export * from './theme';
 export * from './theme/ThemeProvider';
+export * from './types';
 export * from './utils/platform';
 
 export type InteractionType = {

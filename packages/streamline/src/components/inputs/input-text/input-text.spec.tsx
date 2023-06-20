@@ -24,6 +24,14 @@ describe('InputText', () => {
     expect(getByText('errorMessage')).toBeTruthy();
   });
 
+  it('should render InputText with value', () => {
+    const { getByPlaceholderText } = renderWithProvider(
+      <InputText label="label" value="value" placeholder="placeholder" />
+    );
+    const element = getByPlaceholderText('placeholder');
+    expect(element.props.value).toBe('value');
+  });
+
   it('should render InputText with description', () => {
     const { getByText } = renderWithProvider(
       <InputText label="label" description="description" />

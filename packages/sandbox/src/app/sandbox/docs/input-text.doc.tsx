@@ -18,6 +18,7 @@ const docs: JSX.Element[] = [
     description="Description"
   />,
   <InputText label="Unit" placeholder="Placeholder" unit="Kw/h" />,
+  <InputText label="Password" placeholder="Placeholder" type="password" />,
 ];
 
 export const InputTextSandbox = () => <DocList docs={docs} />;

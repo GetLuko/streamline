@@ -80,11 +80,11 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: InputTextTypes
+      COMPONENT: InputTextArea
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: InputTextArea
+      COMPONENT: InputSelect
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
@@ -133,6 +133,13 @@ appId: ${APPID}
     file: subflow/takeScreenshot.yaml
     env:
       COMPONENT: Dialog
+# Flow to be at the end for now (as picker dosen't go back)
+- runFlow:
+    file: subflow/interactAndTakeScreenshot.yaml
+    env:
+      COMPONENT: InputDatePicker
+      OPEN: Date
+      CLOSE: OK
 ##
 ## CI tests
 # - stopApp: host.exp.Exponent

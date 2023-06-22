@@ -1,10 +1,12 @@
 import MarkdownDisplay from '@ronradtke/react-native-markdown-display';
 import React from 'react';
+import { StyleSheet } from 'react-native';
 
 import { fonts } from '../../theme';
 import { colors } from '../../theme/colors';
 import { FontFamily } from '../../theme/fonts';
 import { radius } from '../../theme/radius';
+import { spacings } from '../../theme/spacings';
 import { isIOS } from '../../utils/platform';
 import { Box } from '../box/box';
 import { Text } from '../text/text';
@@ -54,11 +56,23 @@ export function Markdown({ children, onLinkPress }: MarkdownProps) {
     </MarkdownDisplay>
   );
 }
-const styles = {
+const styles = StyleSheet.create({
   body: { ...fonts.body, color: colors.GREY.GREY_700 },
-  heading1: { ...fonts.titleMediumBold, color: colors.PRIMARY.BLACK },
-  heading2: { ...fonts.titleSmallBold, color: colors.PRIMARY.BLACK },
-  heading3: { ...fonts.headlineBold, color: colors.PRIMARY.BLACK },
+  heading1: {
+    ...fonts.titleMediumBold,
+    color: colors.PRIMARY.BLACK,
+    marginBottom: spacings.xs,
+  },
+  heading2: {
+    ...fonts.titleSmallBold,
+    color: colors.PRIMARY.BLACK,
+    marginBottom: spacings.xs,
+  },
+  heading3: {
+    ...fonts.headlineBold,
+    color: colors.PRIMARY.BLACK,
+    marginBottom: spacings.xs,
+  },
   strong: { ...fonts.bodyBold, color: colors.PRIMARY.BLACK },
   em: {
     ...fonts.bodyBold,
@@ -72,7 +86,8 @@ const styles = {
   paragraph: { ...fonts.body },
   list_item: { ...fonts.body },
   bullet_list_icon: {
-    marginLeft: 0,
+    marginLeft: 10,
+    left: -10,
     marginRight: 0,
     paddingRight: 12,
     fontSize: isIOS ? 32 : 16,
@@ -80,17 +95,18 @@ const styles = {
     color: colors.PRIMARY.BLACK,
   },
   ordered_list_icon: {
-    marginLeft: 0,
+    ...fonts.body,
+    marginLeft: 10,
+    left: -10,
     marginRight: 0,
     paddingRight: 10,
-    fontSize: 14,
     color: colors.PRIMARY.BLACK,
   },
   code_block: {
     ...fonts.body,
     backgroundColor: colors.GREY.GREY_100,
     borderRadius: radius.lg,
-    borderWith: 0,
+    borderWidth: 0,
     padding: 16,
     borderColor: 'transparent',
   },
@@ -99,14 +115,17 @@ const styles = {
     ...fonts.body,
     backgroundColor: colors.GREY.GREY_100,
     borderRadius: radius.lg,
+    padding: 4,
   },
   blockquote: {
+    ...fonts.titleSmall,
+    fontSize: 250,
     backgroundColor: 'transparent',
     color: colors.GREY.GREY_1000,
     borderColor: colors.GREY.GREY_100,
     borderLeftWidth: 4,
     marginLeft: 0,
-    paddingLeft: 28,
+    paddingLeft: 24,
     paddingHorizontal: 0,
     paddingVertical: 0,
   },
@@ -114,4 +133,9 @@ const styles = {
     marginTop: 16,
     marginBottom: 16,
   },
-};
+  image: {
+    backgroundColor: colors.PRIMARY.PURE_WHITE_1000,
+    borderRadius: radius.lg,
+    overflow: 'hidden',
+  },
+});

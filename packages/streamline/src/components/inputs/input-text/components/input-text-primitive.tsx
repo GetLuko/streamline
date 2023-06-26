@@ -78,7 +78,7 @@ export const InputTextPrimitive = ({
           },
           isSearchInput
             ? {
-                marginLeft: theme.spacing.xxs,
+                marginLeft: theme.spacing.xs,
               }
             : inputPadding,
           isDisabled && { color: theme.colors.GREY_500 },

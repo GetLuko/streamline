@@ -86,6 +86,12 @@ appId: ${APPID}
     env:
       COMPONENT: InputSelect
 - runFlow:
+    file: subflow/inputTextAndTakeScreenshot.yaml
+    env:
+      COMPONENT: InputSearch
+      PLACEHOLDER: Search
+      TEXT: Write some text
+- runFlow:
     file: subflow/takeScreenshot.yaml
     env:
       COMPONENT: ListItem

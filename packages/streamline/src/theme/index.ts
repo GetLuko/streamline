@@ -38,7 +38,8 @@ export const disabledAnimationTheme = createTheme({
 
 export const theme = createTheme(baseTheme);
 
-export type ColorTheme = keyof Theme['colors'];
+export type Colors = Theme['colors'];
+export type ColorTheme = keyof Colors;
 export type Theme = typeof theme;
 
 export const useStreamlineTheme = () => useTheme<Theme>();

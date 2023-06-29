@@ -1,4 +1,6 @@
 import * as GeneratedRegularIcons from './primitives/icon/generated/regular';
+
+export * from './components/input-search/input-search';
 export { GeneratedRegularIcons };
 export { isIconName, sanitizeIconName } from './primitives/icon/icon.utils';
 export * from './components/buttons/button-dock/button-dock';
@@ -14,6 +16,7 @@ export * from './components/checkbox/checkbox';
 export * from './components/dialog/dialog';
 export * from './components/inputs/input-text-area/input-text-area';
 export * from './components/inputs/input-text/input-text';
+export * from './components/input-select/input-select';
 export * from './components/input-date-picker/input-date-picker';
 export * from './components/inputs/input-code/input-code';
 export * from './components/list-items/list-item-group/list-item-group';

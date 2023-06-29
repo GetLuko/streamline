@@ -45,14 +45,15 @@ const getConfig = ({
   disabled?: boolean;
   name: string;
 }): { color: ColorTheme; extraStyle?: StyleProp<ViewStyle>; size?: Size } => {
+  if (name === 'ChevronDown') {
+    return {
+      color: disabled ? 'GREY_300' : 'GREY_400',
+      extraStyle: { paddingTop: 8 },
+      size: 'regular',
+    };
+  }
   if (disabled) {
     return { color: 'GREY_500', size: 'large' };
-  }
-  if (name === 'ChevronDown') {
-    return { color: 'GREY_400', extraStyle: { paddingTop: 4 }, size: 'large' };
-  }
-  if (name === 'ChevronDown' && disabled) {
-    return { color: 'GREY_300', size: 'regular' };
   }
   return { color: 'BLUKO_500', size: 'large' };
 };

@@ -4,6 +4,7 @@ import { ViewProps } from 'react-native';
 import { Box } from '../../../primitives/box/box';
 import { IconsName } from '../../../primitives/icon/icon.types';
 import { Text } from '../../../primitives/text/text';
+import ButtonIcon from '../../buttons/button-icon/button-icon';
 import InputTextIcon from './components/input-text-icon';
 import { InputTextPrimitive } from './components/input-text-primitive';
 import { useTextInput } from './input-text.hooks';
@@ -92,7 +93,11 @@ export const InputText = React.forwardRef<RefNativeTextInput, InputTextProps>(
           props.type,
           pointerEvents,
           secureEntry,
-          handleSecureEntry
+          handleSecureEntry,
+          isSearchInput && !!value,
+          () => {
+            handleChangeText('');
+          }
         )}
         secureTextEntry={secureEntry}
         value={value}
@@ -110,12 +115,31 @@ const getRightComponent = (
   inputType?: string,
   pointerEvents?: ViewProps['pointerEvents'],
   secureEntry?: boolean,
-  handleSecureEntry?: () => void
+  handleSecureEntry?: () => void,
+  isSearchInput?: boolean,
+  onClear?: () => void
 ) => {
   if (rightIconName) {
     return <InputTextIcon name={rightIconName} />;
   }
-
+  if (isSearchInput) {
+    return (
+      <Box
+        style={{ paddingTop: 2 }}
+        marginRight="xxs"
+        testID="CloseInputSearch"
+      >
+        <ButtonIcon
+          iconName="Cross"
+          accessibilityLabel="close"
+          withContainer
+          appearance="dark"
+          size="regular"
+          onPress={onClear}
+        />
+      </Box>
+    );
+  }
   if (inputType === 'calendar') {
     return (
       <InputTextIcon

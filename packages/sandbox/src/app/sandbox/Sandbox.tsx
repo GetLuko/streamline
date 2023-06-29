@@ -1,5 +1,11 @@
-import { Box, Icon, ListItemGroup, Text } from '@getluko/streamline';
-import React, { useMemo, useState } from 'react';
+import {
+  Box,
+  Icon,
+  InputSearch,
+  ListItemGroup,
+  Text,
+} from '@getluko/streamline';
+import React, { useCallback, useMemo, useState } from 'react';
 import { TouchableOpacity } from 'react-native';
 
 import { sandboxItems } from '.';
@@ -28,11 +34,11 @@ const BackButton = ({
 
 export const SandBox = () => {
   const [page, setPage] = useState<{ groupIndex: number; index: number }>();
-  const [search /*, setSearch*/] = useState<string>('');
-  /* TODO: implement Search when Input ready
+  const [search, setSearch] = useState<string>('');
+
   const handleChangeSearch = useCallback((newSearch: string) => {
     setSearch(newSearch);
-  }, []);*/
+  }, []);
 
   const sections = useMemo(() => {
     const searchFormated = search.toLowerCase();
@@ -41,10 +47,12 @@ export const SandBox = () => {
     }
     return filterSections(searchFormated, sandboxItems);
   }, [search]);
-
   const renderList = useMemo(
     () => (
       <Box padding="md">
+        <Box paddingBottom="md">
+          <InputSearch placeholder="Search" onChangeText={handleChangeSearch} />
+        </Box>
         {sections.map((group, groupIndex) => (
           <Box marginBottom="md" key={group.title}>
             <ListItemGroup
@@ -60,7 +68,7 @@ export const SandBox = () => {
         ))}
       </Box>
     ),
-    [sections]
+    [sections, handleChangeSearch]
   );
   if (page) {
     const selection = sandboxItems[page.groupIndex].items[page.index];

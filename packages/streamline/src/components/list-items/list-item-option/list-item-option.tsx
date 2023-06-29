@@ -47,7 +47,7 @@ export function ListItemOption({
             right={-2}
             bottom={-2}
             backgroundColor="BLUKO_100"
-            opacity={(pressed && isSelected) || isResolving ? 1 : 0}
+            opacity={pressed || isSelected || isResolving ? 1 : 0}
             borderRadius="lg"
           />
           <Box

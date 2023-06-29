@@ -9,6 +9,7 @@ import { CardSandbox } from './docs/card.doc';
 import { CheckboxSandbox } from './docs/checkbox.doc';
 import { DialogSandbox } from './docs/dialog.doc';
 import { IconsSandbox } from './docs/icon.doc';
+import { InputCodeSandbox } from './docs/input-code.doc';
 import { InputDatePickerSandbox } from './docs/input-date-picker.doc';
 import { InputSearchSandbox } from './docs/input-search.doc';
 import { InputSelectSandbox } from './docs/input-select.doc';
@@ -78,6 +79,7 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'InputDatePicker', SandBox: InputDatePickerSandbox },
       { title: 'InputSelect', SandBox: InputSelectSandbox },
       { title: 'InputSearch', SandBox: InputSearchSandbox },
+      { title: 'InputCode', SandBox: InputCodeSandbox },
     ],
   },
   {

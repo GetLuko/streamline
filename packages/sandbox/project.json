@@ -14,8 +14,8 @@
       "executor": "@nrwl/expo:start",
       "options": {
         "port": 19000,
-				"clear": true,
-				"minify": true
+        "clear": true,
+        "minify": true
       }
     },
     "serve": {

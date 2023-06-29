@@ -18,6 +18,7 @@ export * from './components/inputs/input-text-area/input-text-area';
 export * from './components/inputs/input-text/input-text';
 export * from './components/input-select/input-select';
 export * from './components/input-date-picker/input-date-picker';
+export * from './components/inputs/input-code/input-code';
 export * from './components/list-items/list-item-group/list-item-group';
 export * from './components/list-items/list-item-option/list-item-option';
 export * from './components/list-items/list-item-value/list-item-value';

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Platform, Switch as SwitchNative } from 'react-native';
+import { Switch as SwitchNative } from 'react-native';
 
-import { Colors, useStreamlineTheme } from '../../theme';
+import { useStreamlineTheme } from '../../theme';
+import { getColorMapping } from './switch.utils';
 
 export interface SwitchProps {
   action: (value: boolean) => void;
@@ -29,35 +30,3 @@ export function Switch({ action, value, disabled, testID }: SwitchProps) {
 }
 
 export default Switch;
-
-const getColorMapping = (colors: Colors) =>
-  Platform.select({
-    android: {
-      enabled: {
-        activeTrack: colors.BLUKO_400,
-        activeThumb: colors.BLUKO_500,
-        inactiveTrack: colors.GREY_400,
-        inactiveThumb: colors.PURE_WHITE_1000,
-      },
-      disabled: {
-        activeTrack: colors.BLUKO_100,
-        activeThumb: colors.BLUKO_200,
-        inactiveTrack: colors.GREY_200,
-        inactiveThumb: colors.GREY_100,
-      },
-    },
-    ios: {
-      enabled: {
-        activeTrack: colors.BLUKO_500,
-        activeThumb: colors.PURE_WHITE_1000,
-        inactiveTrack: colors.GREY_300,
-        inactiveThumb: colors.PURE_WHITE_1000,
-      },
-      disabled: {
-        activeTrack: colors.BLUKO_200,
-        activeThumb: colors.PURE_WHITE_1000,
-        inactiveTrack: colors.GREY_200,
-        inactiveThumb: colors.PURE_WHITE_1000,
-      },
-    },
-  });

@@ -10,7 +10,7 @@ export { getShadowsStyle } from './shadows';
 export { Appearance } from './appearance';
 export { fonts, TextVariants as TextVariant } from './fonts';
 
-const baseTheme = {
+export const baseTheme = {
   textVariants: fonts,
   colors: {
     ...colors.PRIMARY,

@@ -20,6 +20,10 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: Switch
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: Shadows
 - runFlow:
     file: subflow/takeScreenshot.yaml

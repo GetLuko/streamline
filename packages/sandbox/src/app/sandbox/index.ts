@@ -28,6 +28,7 @@ import { RadioSandbox } from './docs/radio.doc';
 import { ShadowSandbox } from './docs/shadows.doc';
 import { SkeletonSandbox } from './docs/skeleton.doc';
 import { SpinnerSandbox } from './docs/spinner.doc';
+import { SwitchSandbox } from './docs/switch.doc';
 import { TagSandbox } from './docs/tag.doc';
 import { TypoSandbox } from './docs/text.doc';
 
@@ -101,6 +102,7 @@ export const sandboxItems: SandBoxSectionType[] = [
     items: [
       { title: 'Radio', SandBox: RadioSandbox },
       { title: 'Checkbox', SandBox: CheckboxSandbox },
+      { title: 'Switch', SandBox: SwitchSandbox },
     ],
   },
   {

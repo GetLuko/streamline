@@ -10,7 +10,7 @@ export { getShadowsStyle } from './shadows';
 export { Appearance } from './appearance';
 export { fonts, TextVariants as TextVariant } from './fonts';
 
-const baseTheme = {
+export const baseTheme = {
   textVariants: fonts,
   colors: {
     ...colors.PRIMARY,
@@ -38,7 +38,8 @@ export const disabledAnimationTheme = createTheme({
 
 export const theme = createTheme(baseTheme);
 
-export type ColorTheme = keyof Theme['colors'];
+export type Colors = Theme['colors'];
+export type ColorTheme = keyof Colors;
 export type Theme = typeof theme;
 
 export const useStreamlineTheme = () => useTheme<Theme>();

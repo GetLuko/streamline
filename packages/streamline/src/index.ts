@@ -26,6 +26,7 @@ export * from './components/list-items/list-item/list-item';
 export * from './components/navigation/navigation-bar-progress/navigation-bar-progress';
 export * from './components/navigation/navigation-title/navigation-title';
 export * from './components/progress-bar/progress-bar';
+export * from './components/switch/switch';
 export * from './components/radio/radio';
 export * from './components/spinner/spinner';
 export * from './components/tag/tag';

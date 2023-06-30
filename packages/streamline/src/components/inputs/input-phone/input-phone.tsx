@@ -1,10 +1,13 @@
 import { Box } from '../../../primitives/box/box';
-import { Text } from '../../../primitives/text/text';
+import CountryPicker from './components/country-picker';
+import { countries } from './input-phone.constants';
 
 export const InputPhone = () => {
   return (
     <Box>
-      <Text>{'InputPhone'}</Text>
+      {Object.keys(countries).map((country) => (
+        <CountryPicker countryCode={country} />
+      ))}
     </Box>
   );
 };

@@ -1,9 +1,7 @@
 import { ButtonProps } from '../button/button.types';
 
 export interface ButtonDockProps {
-  primary: ButtonProps & {
-    appearance: 'primary' | 'danger' | 'warning';
-  };
+  primary: ButtonProps;
   secondary?: ButtonProps & {
     appearance: 'neutral' | 'secondary';
   };

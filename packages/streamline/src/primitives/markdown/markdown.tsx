@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     color: colors.BLUKO.BLUKO_500,
     paddingBottom: isIOS ? 2 : 0,
   },
-  paragraph: { ...fonts.body },
+  paragraph: { ...fonts.body, marginBottom: 16, marginTop: 0 },
   list_item: { ...fonts.body },
   bullet_list_icon: {
     marginLeft: 10,
@@ -93,8 +93,10 @@ const styles = StyleSheet.create({
     fontSize: isIOS ? 32 : 16,
     paddingTop: isIOS ? 6 : 0,
     color: colors.PRIMARY.BLACK,
+    marginBottom: isIOS ? 0 : 8,
   },
   ordered_list_icon: {
+    marginBottom: 8,
     ...fonts.body,
     marginLeft: 10,
     left: -10,

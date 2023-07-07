@@ -1,13 +1,10 @@
-import DateTimePicker, {
-  DateTimePickerEvent,
-} from '@react-native-community/datetimepicker';
 import React, { useEffect } from 'react';
 import { Pressable } from 'react-native-ama';
 
 import { DateFormat, formatDate } from '../../utils/date';
-import { isAndroid, isIOS } from '../../utils/platform';
+import { isAndroid } from '../../utils/platform';
+import { DatePicker } from '../date-picker/date-picker';
 import { InputText } from '../inputs/input-text/input-text';
-import { ModalPickerIOS } from './modal-picker-ios';
 
 export interface InputDatePickerProps {
   label: string;
@@ -54,7 +51,7 @@ export function InputDatePicker({
     }
   }, []);
 
-  const innerOnChange = (event?: DateTimePickerEvent, selectedDate?: Date) => {
+  const innerOnChange = (selectedDate?: Date) => {
     if (isAndroid) {
       setFocused(false);
     }
@@ -77,26 +74,15 @@ export function InputDatePicker({
       accessibilityRole="button"
       accessibilityLabel={label}
     >
-      {isAndroid && focused ? (
-        <DateTimePicker
-          testID="date-picker-input"
-          value={innerDate || new Date()}
-          onChange={innerOnChange}
-          minimumDate={minimumDate}
-          maximumDate={maximumDate}
-        />
-      ) : null}
-      {isIOS ? (
-        <ModalPickerIOS
-          focused={focused}
-          setFocused={setFocused}
-          okLabelIOS={okLabelIOS}
-          innerDate={innerDate}
-          innerOnChange={innerOnChange}
-          minimumDate={minimumDate}
-          maximumDate={maximumDate}
-        />
-      ) : null}
+      <DatePicker
+        focused={focused}
+        initialDate={initialDate}
+        maximumDate={maximumDate}
+        minimumDate={minimumDate}
+        okLabelIOS={okLabelIOS}
+        onChange={innerOnChange}
+        onFocusChange={setFocused}
+      />
       <InputText
         pointerEvents="none"
         label={label}

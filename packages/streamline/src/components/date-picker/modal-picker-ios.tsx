@@ -1,12 +1,11 @@
 import DateTimePicker from '@react-native-community/datetimepicker';
-import { useTheme } from '@shopify/restyle';
 import { Modal, StyleSheet } from 'react-native';
 import { Pressable } from 'react-native-ama';
 
 import { Box } from '../../primitives/box/box';
 import { Text } from '../../primitives/text/text';
 import { useStreamlineTheme } from '../../theme';
-import { InputDatePickerProps } from './input-date-picker';
+import { InputDatePickerProps } from '../input-date-picker/input-date-picker';
 
 interface ModalPickerIOS
   extends Pick<
@@ -104,3 +103,5 @@ const styles = StyleSheet.create({
   },
   pressable: { flex: 1 },
 });
+
+export default ModalPickerIOS;

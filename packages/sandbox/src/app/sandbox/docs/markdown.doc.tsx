@@ -26,8 +26,7 @@ ___
 I hope this email finds you well. It seems to be originating from your bathroom and has caused water to seep into my unit.
 \`\`\`
 [This is a comment that will be hidden.]: # 
-
-
+---
 ![Image](https://images.prismic.io/luko/12533d65-918a-4653-8b1a-9b51191b187a_Picture_Maison.jpg?auto=compress,format&w=309&h=232)
 
 **Bold text draws attention to important concepts.** *Italic text adds additional context or emphasizes a specific point.* **_Italic bold text provides even greater emphasis._** [Hyperlinks](https://www.luko.eu) provide easy access to external resources. ~~Strikethrough indicates a word to be removed~~
@@ -44,12 +43,12 @@ Unordered lists are lists of items that do not have a specific order:
 ___
 
 Ordered lists are lists of items that follow a specific numerical order
-
 1. Evaluate the value of your home contents
 1. Research different insurance providers and policies 
 1. Determine the amount of coverage you need
 1. Understand what your policy covers and what it doesn't
 1. Review and update your policy regularly
+
 ---
 
 ![Image](https://t6w3k2m6.stackpathcdn.com/wp-content/uploads/2012/01/IMG_6347-square-vertorama.jpg?iv=344)

@@ -20,7 +20,8 @@ export const InputDatePickerSandbox = () => {
       label="Date"
       placeholder="Placeholder"
       description="Description"
-      date={new Date('2023-06-07')}
+      initialDate={new Date('2023-06-07')}
+      date={date}
     />,
     <ListItemValue
       title="Date"
@@ -35,6 +36,7 @@ export const InputDatePickerSandbox = () => {
       focused={focused}
       onChange={(date) => date && setDate(date)}
       onFocusChange={setFocused}
+      initialDate={new Date('2023-06-07')}
     />,
   ];
   return <DocList docs={docs} />;

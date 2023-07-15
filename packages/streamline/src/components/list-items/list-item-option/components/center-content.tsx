@@ -1,6 +1,6 @@
 import { Box } from '../../../../primitives/box/box';
 import { Text } from '../../../../primitives/text/text';
-import { getTextColors } from '../../list-item-option/list-item-option.utils';
+import { getTextColors } from '../list-item-option.utils';
 import { ListItemOptionProps } from '../list-item-option.types';
 
 export const CenterContent = ({

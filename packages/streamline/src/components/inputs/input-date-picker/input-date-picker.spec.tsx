@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { renderWithProvider } from '../../testing/render-with-provider';
+import { renderWithProvider } from '../../../testing/render-with-provider';
 import InputDatePicker from './input-date-picker';
 
 describe('InputDatePicker', () => {

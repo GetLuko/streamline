@@ -3,7 +3,7 @@ import DateTimePicker, {
 } from '@react-native-community/datetimepicker';
 import { useEffect, useState } from 'react';
 
-import { isAndroid } from '../../utils/platform';
+import { isAndroid } from '../../../utils/platform';
 import { ModalPickerIOS } from './modal-picker-ios';
 
 interface DatePickerProps {

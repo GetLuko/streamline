@@ -20,12 +20,6 @@ export interface ButtonIconProps extends InteractionType {
    */
   size?: GenericSize;
   isSkeleton?: boolean;
-
-  /**
-   * if true, the button opacity will always be 1. (e.g. BackButton)
-   */
-  isOpaque?: boolean;
-
   /**
    * if false, the spinner will not be display (e.g. BackButton)
    */

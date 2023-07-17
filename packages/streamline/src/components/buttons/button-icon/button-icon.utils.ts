@@ -17,19 +17,16 @@ type GetButtonIconColors = ({
   appearance,
   container,
   isDisabled,
-  isOpaque,
 }: {
   appearance: Appearance;
   container: boolean;
   isDisabled: boolean;
-  isOpaque: boolean;
 }) => ButtonColors;
 
 export const getButtonIconColors: GetButtonIconColors = ({
   appearance,
   container,
   isDisabled,
-  isOpaque,
 }) => {
   if (isDisabled) {
     switch (appearance) {
@@ -120,14 +117,14 @@ export const getButtonIconColors: GetButtonIconColors = ({
     case 'dark':
       return {
         color: 'GREY_1000',
-        opacity: !isOpaque ? 0.6 : 1,
-        pressedOpacity: !isOpaque ? 0.8 : 1,
+        opacity: 0.6,
+        pressedOpacity: 0.8,
       };
     case 'light':
       return {
         color: 'PURE_WHITE_1000',
-        opacity: !isOpaque ? 0.6 : 1,
-        pressedOpacity: !isOpaque ? 0.8 : 1,
+        opacity: 0.6,
+        pressedOpacity: 0.8,
       };
     case 'neutral':
     default:

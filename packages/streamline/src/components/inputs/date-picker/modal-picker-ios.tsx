@@ -2,9 +2,9 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import { Modal, StyleSheet } from 'react-native';
 import { Pressable } from 'react-native-ama';
 
-import { Box } from '../../primitives/box/box';
-import { Text } from '../../primitives/text/text';
-import { useStreamlineTheme } from '../../theme';
+import { Box } from '../../../primitives/box/box';
+import { Text } from '../../../primitives/text/text';
+import { useStreamlineTheme } from '../../../theme';
 import { InputDatePickerProps } from '../input-date-picker/input-date-picker';
 
 interface ModalPickerIOS

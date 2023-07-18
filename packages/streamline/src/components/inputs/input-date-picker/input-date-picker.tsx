@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { Pressable } from 'react-native-ama';
 
-import { DateFormat, formatDate } from '../../utils/date';
-import { isAndroid } from '../../utils/platform';
+import { DateFormat, formatDate } from '../../../utils/date';
+import { isAndroid } from '../../../utils/platform';
 import { DatePicker } from '../date-picker/date-picker';
-import { InputText } from '../inputs/input-text/input-text';
+import { InputText } from '../input-text/input-text';
 
 export interface InputDatePickerProps {
   label: string;

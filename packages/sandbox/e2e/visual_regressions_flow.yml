@@ -138,6 +138,10 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: NavigationBarTrail
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: ProgressBar
 - runFlow:
     file: subflow/takeScreenshot.yaml

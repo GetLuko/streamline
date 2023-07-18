@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { InputText } from '../inputs/input-text/input-text';
-import { InputTextProps } from '../inputs/input-text/types';
+import { InputText } from '../input-text/input-text';
+import { InputTextProps } from '../input-text/types';
 
 export type InputSearchProps = Pick<
   InputTextProps,

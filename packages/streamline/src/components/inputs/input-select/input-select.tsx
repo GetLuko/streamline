@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pressable } from 'react-native-ama';
 
-import { InputText } from '../inputs/input-text/input-text';
+import { InputText } from '../input-text/input-text';
 
 export interface InputSelectProps {
   label: string;

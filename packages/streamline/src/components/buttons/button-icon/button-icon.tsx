@@ -28,6 +28,7 @@ export const ButtonIcon = ({
   isDisabled = false,
   isSkeleton = false,
   testID,
+  shouldDisplaySpinner = true,
 }: ButtonIconProps) => {
   const [handlePress, isResolving] = usePress({ onPress });
 
@@ -84,7 +85,7 @@ export const ButtonIcon = ({
               borderRadius="round"
               opacity={activeColors.backgroundOpacity}
             />
-            {isLoading || isResolving ? (
+            {(isLoading || isResolving) && shouldDisplaySpinner ? (
               <Spinner
                 size={spinnerSize}
                 color={activeColors.iconColor}

@@ -7,9 +7,12 @@ import ButtonIcon from '../../buttons/button-icon/button-icon';
 import { ButtonIconProps } from '../../buttons/button-icon/button-icon.types';
 import { getNavigationTrailTextColor } from './navigation-bar-trail.utils';
 
-interface NavigationBarTrailProps {
+export interface NavigationBarTrailProps {
   title?: string;
-  left?: ButtonIconProps;
+  left?: {
+    type: 'close' | 'back';
+    onPress: () => void;
+  };
   right?: ButtonIconProps;
   action?: {
     title: string;
@@ -42,14 +45,14 @@ export const NavigationBarTrail = ({
       minHeight={48}
     >
       <Box flex={1} position="absolute" left={0} right={0}>
-        <Text variant="headlineBold" color={titleColor} textAlign="center">
+        <Text variant="bodyBold" color={titleColor} textAlign="center">
           {title}
         </Text>
       </Box>
       {left ? (
         <ButtonIcon
-          iconName={left.iconName}
-          accessibilityLabel={left.accessibilityLabel}
+          iconName={left.type === 'close' ? 'Cross' : 'ChevronFarLeft'}
+          accessibilityLabel={left.type === 'close' ? 'Close' : 'Back'}
           onPress={left.onPress}
           size="large"
           appearance={appearance}

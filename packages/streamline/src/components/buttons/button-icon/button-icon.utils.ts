@@ -117,14 +117,14 @@ export const getButtonIconColors: GetButtonIconColors = ({
     case 'dark':
       return {
         color: 'GREY_1000',
-        opacity: 0.6,
-        pressedOpacity: 0.8,
+        opacity: 1,
+        pressedOpacity: 0.6,
       };
     case 'light':
       return {
         color: 'PURE_WHITE_1000',
-        opacity: 0.6,
-        pressedOpacity: 0.8,
+        opacity: 1,
+        pressedOpacity: 0.6,
       };
     case 'neutral':
     default:

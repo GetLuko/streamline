@@ -1,18 +1,21 @@
-import { NavigationBarTrail, IconsName } from '@getluko/streamline';
+import {
+  NavigationBarTrail,
+  IconsName,
+  NavigationBarTrailProps,
+} from '@getluko/streamline';
 
 import { DocList } from '../components/DocList';
 
-const left = {
-  accessibilityLabel: 'Go back',
-  iconName: 'ChevronLeft' as IconsName,
+const left: NavigationBarTrailProps['left'] = {
+  type: 'back',
   onPress: async () => {
     console.log('pressed');
   },
 };
 
-const right = {
+const right: NavigationBarTrailProps['right'] = {
   accessibilityLabel: 'Go back',
-  iconName: 'Plus' as IconsName,
+  iconName: 'Plus',
   onPress: async () => {
     console.log('pressed');
   },
@@ -27,7 +30,7 @@ const action = {
 const docs: JSX.Element[] = [
   <NavigationBarTrail
     appearance="primary"
-    left={left}
+    left={{ ...left, type: 'close' }}
     right={right}
     title="Title"
     action={action}

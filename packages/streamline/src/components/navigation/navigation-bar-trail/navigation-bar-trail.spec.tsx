@@ -3,16 +3,17 @@ import React from 'react';
 
 import { renderWithProvider } from '../../../testing/render-with-provider';
 import { ButtonIconProps } from '../../buttons/button-icon/button-icon.types';
-import NavigationBarTrail from './navigation-bar-trail';
+import NavigationBarTrail, {
+  NavigationBarTrailProps,
+} from './navigation-bar-trail';
 
 describe('NavigationBarTrail', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  const leftButtonProps: ButtonIconProps = {
-    iconName: 'ChevronLeft',
-    accessibilityLabel: 'Left Icon',
+  const leftButtonProps: NavigationBarTrailProps['left'] = {
+    type: 'back',
     onPress: jest.fn(),
   };
 
@@ -42,7 +43,7 @@ describe('NavigationBarTrail', () => {
     const { getByLabelText, queryByTestId } = renderWithProvider(
       <NavigationBarTrail title="Title" left={leftButtonProps} />
     );
-    expect(getByLabelText('Left Icon')).toBeDefined();
+    expect(getByLabelText('Back')).toBeDefined();
     expect(queryByTestId('action-button')).toBeNull();
   });
 
@@ -59,7 +60,7 @@ describe('NavigationBarTrail', () => {
       <NavigationBarTrail title="Title" action={actionButtonProps} />
     );
     expect(getByTestId('action-button')).toBeDefined();
-    expect(queryByLabelText('Left Icon')).toBeNull();
+    expect(queryByLabelText('ChevronFarLeft')).toBeNull();
     expect(queryByLabelText('Right Icon')).toBeNull();
   });
 
@@ -67,7 +68,7 @@ describe('NavigationBarTrail', () => {
     const { getByLabelText } = renderWithProvider(
       <NavigationBarTrail title="Title" left={leftButtonProps} />
     );
-    fireEvent.press(getByLabelText('Left Icon'));
+    fireEvent.press(getByLabelText('Back'));
     expect(leftButtonProps.onPress).toHaveBeenCalledTimes(1);
   });
 

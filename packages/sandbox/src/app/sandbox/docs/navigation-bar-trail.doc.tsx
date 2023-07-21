@@ -1,6 +1,5 @@
 import {
   NavigationBarTrail,
-  IconsName,
   NavigationBarTrailProps,
 } from '@getluko/streamline';
 

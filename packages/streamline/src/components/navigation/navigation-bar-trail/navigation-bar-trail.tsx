@@ -1,5 +1,6 @@
 import { Pressable } from 'react-native';
 
+import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
 import { Box } from '../../../primitives/box/box';
 import { Text } from '../../../primitives/text/text';
 import { ColorTheme } from '../../../theme';
@@ -21,6 +22,7 @@ export interface NavigationBarTrailProps {
   };
   backgroundColor?: ColorTheme;
   appearance?: 'light' | 'dark' | 'primary';
+  textOpacityStyle?: { opacity: 0 | 1 };
 }
 
 export const NavigationBarTrail = ({
@@ -30,6 +32,7 @@ export const NavigationBarTrail = ({
   action,
   backgroundColor,
   appearance = 'primary',
+  textOpacityStyle,
 }: NavigationBarTrailProps) => {
   const { titleColor, actionColor } = getNavigationTrailTextColor({
     appearance,
@@ -45,9 +48,11 @@ export const NavigationBarTrail = ({
       minHeight={48}
     >
       <Box flex={1} position="absolute" left={0} right={0}>
-        <Text variant="bodyBold" color={titleColor} textAlign="center">
-          {title}
-        </Text>
+        <AnimatedBox style={textOpacityStyle}>
+          <Text variant="bodyBold" color={titleColor} textAlign="center">
+            {title}
+          </Text>
+        </AnimatedBox>
       </Box>
       {left ? (
         <ButtonIcon

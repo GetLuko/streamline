@@ -80,7 +80,6 @@ export const NavigationTitle = ({
           color={valueColor}
           opacity={valueOpacity}
           textAlign={position}
-          numberOfLines={4}
         >
           {value}
         </Text>

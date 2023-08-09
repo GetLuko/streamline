@@ -13,6 +13,7 @@ export interface NavigationBarTrailProps {
   left?: {
     type: 'close' | 'back';
     onPress: () => void;
+    testID?: string;
   };
   right?: ButtonIconProps;
   action?: {
@@ -56,6 +57,7 @@ export const NavigationBarTrail = ({
       </Box>
       {left ? (
         <ButtonIcon
+          testID={left.testID}
           iconName={left.type === 'close' ? 'Cross' : 'ChevronFarLeft'}
           accessibilityLabel={left.type === 'close' ? 'Close' : 'Back'}
           onPress={left.onPress}

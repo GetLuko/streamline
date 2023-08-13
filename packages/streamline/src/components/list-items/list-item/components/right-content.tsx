@@ -20,6 +20,7 @@ export const RightContent = ({
   if (rightOption)
     return (
       <ButtonIcon
+        testID={rightOption.testID}
         accessibilityLabel={rightOption.accessibilityLabel}
         appearance="neutral"
         iconName={rightOption.iconName}

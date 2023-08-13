@@ -4,6 +4,7 @@ type RightOption = {
   accessibilityLabel: string;
   iconName: IconsName;
   onPress: () => unknown;
+  testID?: string;
 };
 
 export type ListItemProps = {

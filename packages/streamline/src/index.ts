@@ -32,6 +32,7 @@ export * from './components/switch/switch';
 export * from './components/radio/radio';
 export * from './components/spinner/spinner';
 export * from './components/tag/tag';
+export * from './components/button-bar/button-bar';
 export * from './primitives/animated-box/animated-box';
 export * from './primitives/box/box';
 export * from './primitives/card/card';

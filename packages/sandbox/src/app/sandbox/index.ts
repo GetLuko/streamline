@@ -1,8 +1,8 @@
+import { ButtonBarSandbox } from './docs/button-bar.doc';
 import { ButtonDockSandbox } from './docs/button-dock.doc';
 import { ButtonIconSandbox } from './docs/button-icon.doc';
 import { ButtonMiniSandbox } from './docs/button-mini.doc';
 import { ButtonSandbox } from './docs/button.doc';
-import { ButtonsBarSandbox } from './docs/buttons-bar.doc';
 import { CardCalloutSandbox } from './docs/card-callout.doc';
 import { CardSummarySandbox } from './docs/card-summary.doc';
 import { CardTipSandbox } from './docs/card-tip.doc';
@@ -59,7 +59,7 @@ export const sandboxItems: SandBoxSectionType[] = [
   {
     title: 'Buttons',
     items: [
-      { title: 'ButtonBar', SandBox: ButtonsBarSandbox },
+      { title: 'ButtonBar', SandBox: ButtonBarSandbox },
       { title: 'Button', SandBox: ButtonSandbox },
       { title: 'ButtonIcon', SandBox: ButtonIconSandbox },
       { title: 'ButtonMini', SandBox: ButtonMiniSandbox },

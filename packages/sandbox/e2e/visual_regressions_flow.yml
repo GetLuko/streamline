@@ -52,6 +52,10 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: ButtonBar
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: ButtonMini
 - runFlow:
     file: subflow/takeScreenshot.yaml

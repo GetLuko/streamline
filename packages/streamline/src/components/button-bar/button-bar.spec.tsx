@@ -3,6 +3,7 @@ import React from 'react';
 
 import { renderWithProvider } from '../../testing/render-with-provider';
 import { ButtonProps } from '../../types';
+import { Button } from '../buttons/button/button';
 import { ButtonBar } from './button-bar';
 
 describe('ButtonBar', () => {
@@ -27,24 +28,21 @@ describe('ButtonBar', () => {
     expect(buttons[0].onPress).toHaveBeenCalled();
   });
 
-  // it('should render skeleton items when isSkeleton prop is true', () => {
-  //   const { getByTestId } = renderWithProvider(
-  //     <ButtonBar buttons={[]} isSkeleton={true} />
-  //   );
+  it('should render skeleton items when isSkeleton prop is true', () => {
+    // It is safe when it is used for props test
+    // https://github.com/callstack/react-native-testing-library/issues/427#issuecomment-654405308
+    const { UNSAFE_getAllByType } = renderWithProvider(
+      <ButtonBar buttons={[]} isSkeleton={true} testID="ButtonBar" />
+    );
 
-  //   const skeletonItemTestIDs = [
-  //     'Skeleton_0',
-  //     'Skeleton_1',
-  //     'Skeleton_2',
-  //     'Skeleton_3',
-  //     'Skeleton_4',
-  //   ];
+    const buttons = UNSAFE_getAllByType(Button);
 
-  //   skeletonItemTestIDs.forEach((testID) => {
-  //     const skeletonElement = getByTestId(testID);
-  //     expect(skeletonElement).toBeTruthy();
-  //   });
-  // });
+    expect(buttons.length).toBe(5);
+
+    buttons.forEach((button) => {
+      expect(button.props).toHaveProperty('isSkeleton', true);
+    });
+  });
 
   it('does not scroll when isSkeleton is true', () => {
     const { getByTestId } = renderWithProvider(

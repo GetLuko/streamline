@@ -15,14 +15,16 @@ type Props = {
 export const ButtonBar = ({ buttons, isSkeleton = false, testID }: Props) => {
   const { spacing } = useStreamlineTheme();
 
-  const skeletonItems: ButtonProps[] = [
-    { iconName: 'Area', text: 'Skeleton', size: 'mini' },
-    { iconName: 'Area', text: 'Skeleton', size: 'mini' },
-    { iconName: 'Area', text: 'Skeleton', size: 'mini' },
-    { iconName: 'Area', text: 'Skeleton', size: 'mini' },
-    { iconName: 'Area', text: 'Skeleton', size: 'mini' },
-  ];
-  const buttonMenu = buttons.length > 0 ? buttons : skeletonItems;
+  const skeletonItems: ButtonProps[] = Array(5)
+    .fill(0)
+    .map((_, index) => ({
+      iconName: 'Area',
+      text: `Skeleton${index}`,
+      size: 'mini',
+    }));
+
+  const buttonMenu =
+    buttons.length === 0 && isSkeleton ? skeletonItems : buttons;
 
   return (
     <ScrollView

@@ -11,7 +11,7 @@ import Spinner from '../../../spinner/spinner';
 import { ButtonProps } from '../button.types';
 import { getTextColor } from '../button.utils';
 
-const MIN_WIDTH = 82;
+const MIN_WIDTH = 56;
 const LABEL_CONTAINER_HEIGHT = 24;
 
 const InnerLabel = ({

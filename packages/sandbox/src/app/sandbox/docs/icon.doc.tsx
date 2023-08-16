@@ -10,7 +10,7 @@ const iconNames = [
 export const IconsSandbox = () => {
   const onPress = useCallback(
     (iconName: IconProps['iconName']) => () => {
-      Alert.alert(iconName);
+      console.log(iconName);
     },
     []
   );
@@ -18,20 +18,6 @@ export const IconsSandbox = () => {
     <View
       style={{ paddingHorizontal: 20, flexDirection: 'row', flexWrap: 'wrap' }}
     >
-      {iconNames.map((iconName) => (
-        <TouchableOpacity key={iconName} onPress={onPress(iconName)}>
-          <Icon iconName={iconName} size="small" />
-        </TouchableOpacity>
-      ))}
-
-      <View style={{ marginTop: 40, flexDirection: 'row', flexWrap: 'wrap' }}>
-        {iconNames.map((iconName) => (
-          <TouchableOpacity key={iconName} onPress={onPress(iconName)}>
-            <Icon iconName={iconName} size="regular" />
-          </TouchableOpacity>
-        ))}
-      </View>
-
       <View style={{ marginTop: 40, flexDirection: 'row', flexWrap: 'wrap' }}>
         {iconNames.map((iconName) => (
           <TouchableOpacity key={iconName} onPress={onPress(iconName)}>

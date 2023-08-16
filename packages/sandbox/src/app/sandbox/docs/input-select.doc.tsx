@@ -1,9 +1,8 @@
 import { InputSelect } from '@getluko/streamline';
-import { Alert } from 'react-native';
 
 import { DocList } from '../components/DocList';
 
-const onPress = () => Alert.alert('Pressed');
+const onPress = () => console.log('Pressed');
 
 const docs: JSX.Element[] = [
   <InputSelect label="Select" placeholder="Placeholder" onPress={onPress} />,

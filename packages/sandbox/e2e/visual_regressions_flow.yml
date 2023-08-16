@@ -20,10 +20,6 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: Switch
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
       COMPONENT: Shadows
 - runFlow:
     file: subflow/takeScreenshot.yaml
@@ -48,19 +44,19 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: Button
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
       COMPONENT: ButtonBar
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: ButtonMini
+      COMPONENT: Button
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
       COMPONENT: ButtonIcon
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: ButtonMini
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
@@ -76,11 +72,11 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: CardHighlight
+      COMPONENT: CardSummary
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: CardSummary
+      COMPONENT: CardHighlight
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
@@ -134,19 +130,15 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: Checkbox
-- runFlow:
-    file: subflow/takeScreenshot.yaml
-    env:
       COMPONENT: Radio
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: NavigationTitle
+      COMPONENT: Checkbox
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: NavigationBarTrail
+      COMPONENT: Switch
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
@@ -155,6 +147,14 @@ appId: ${APPID}
     file: subflow/takeScreenshot.yaml
     env:
       COMPONENT: NavigationBarProgress
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: NavigationTitle
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: NavigationBarTrail
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:

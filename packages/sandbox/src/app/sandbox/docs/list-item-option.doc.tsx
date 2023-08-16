@@ -1,14 +1,10 @@
 import { ListItemOption } from '@getluko/streamline';
 import React from 'react';
-import { Alert } from 'react-native';
 
 import { DocList } from '../components/DocList';
 import { sleep } from '../sandbox.utils';
 
-const ASYNC_ON_PRESS = async () => {
-  await sleep(2000);
-  Alert.alert('async pressed completed');
-};
+const ASYNC_ON_PRESS = async () => sleep(2000);
 
 const LIST_ITEMS: JSX.Element[] = [
   <ListItemOption

@@ -1,6 +1,5 @@
 import { ListItemValue } from '@getluko/streamline';
 import React from 'react';
-import { Alert } from 'react-native';
 
 import { DocList } from '../components/DocList';
 import { sleep } from '../sandbox.utils';
@@ -12,11 +11,8 @@ const LONG_TITLE = 'This is a long title that will wrap';
 const LONG_DESCRIPTION =
   'This is an unrealistically long description that will wrap to the next line';
 const LONG_VALUE = 'Value that pushes the title';
-const ON_PRESS = () => Alert.alert('item pressed');
-const ASYNC_ON_PRESS = async () => {
-  await sleep(2000);
-  Alert.alert('async pressed completed');
-};
+const ON_PRESS = () => console.log('item pressed');
+const ASYNC_ON_PRESS = async () => sleep(2000);
 
 const LIST_ITEMS: JSX.Element[] = [
   <ListItemValue

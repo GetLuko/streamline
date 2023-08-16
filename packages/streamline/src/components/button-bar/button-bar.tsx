@@ -35,7 +35,10 @@ export const ButtonBar = ({ buttons, isSkeleton = false, testID }: Props) => {
       contentContainerStyle={{ padding: spacing.md, flexDirection: 'row' }}
     >
       {buttonMenu.map((button, index) => (
-        <Box key={button.text} marginRight="md">
+        <Box
+          key={button.text}
+          marginRight={buttons.length - 1 > index ? 'xs' : undefined}
+        >
           <Button
             testID={testID ? `${testID}_button_${index}` : undefined}
             appearance="secondary"

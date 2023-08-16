@@ -17,16 +17,16 @@ export const RadioSandbox = () => {
         />
       </Box>
       <Box margin="xs">
-        <Radio value={true} disabled />
+        <Radio value={true} isDisabled />
       </Box>
       <Box margin="xs">
-        <Radio value={false} disabled />
+        <Radio value={false} isDisabled />
       </Box>
       <Box margin="xs">
-        <Radio appearance="danger" value={false} disabled />
+        <Radio appearance="danger" value={false} isDisabled />
       </Box>
       <Box margin="xs">
-        <Radio appearance="danger" value={true} disabled />
+        <Radio appearance="danger" value={true} isDisabled />
       </Box>
     </Box>
   );

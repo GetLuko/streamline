@@ -1,10 +1,9 @@
 import { ListItemGroup, ListItemProps } from '@getluko/streamline';
-import { Alert } from 'react-native';
 
 import { DocList } from '../components/DocList';
 
 const ICON_NAME = 'Area';
-const ON_PRESS = () => Alert.alert('item pressed');
+const ON_PRESS = () => console.log('item pressed');
 
 const ITEM: ListItemProps = {
   title: 'Item',

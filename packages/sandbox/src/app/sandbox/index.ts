@@ -1,3 +1,4 @@
+import { ButtonBarSandbox } from './docs/button-bar.doc';
 import { ButtonDockSandbox } from './docs/button-dock.doc';
 import { ButtonIconSandbox } from './docs/button-icon.doc';
 import { ButtonMiniSandbox } from './docs/button-mini.doc';
@@ -59,6 +60,7 @@ export const sandboxItems: SandBoxSectionType[] = [
   {
     title: 'Buttons',
     items: [
+      { title: 'ButtonBar', SandBox: ButtonBarSandbox },
       { title: 'Button', SandBox: ButtonSandbox },
       { title: 'ButtonIcon', SandBox: ButtonIconSandbox },
       { title: 'ButtonMini', SandBox: ButtonMiniSandbox },

@@ -15,4 +15,5 @@ export type CardHighlightProps = {
   title: string;
   media: ImageSourcePropType;
   onPress?: () => void;
+  testID?: string;
 };

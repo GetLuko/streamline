@@ -6,11 +6,12 @@ import { Skeleton } from '../../../primitives/skeleton/skeleton';
 import { CardHighlightProps } from './card-highlight.types';
 
 export const CardHighlightSkeleton = (
-  props: Pick<CardHighlightProps, 'title'>
+  props: Pick<CardHighlightProps, 'title' | 'testID'>
 ) => {
-  const { title } = props;
+  const { title, testID } = props;
   return (
     <Card
+      testID={testID && `${testID}-skeleton`}
       backgroundColor="GREY_100"
       accessibilityRole="button"
       accessibilityLabel={title}

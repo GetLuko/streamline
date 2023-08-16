@@ -20,6 +20,7 @@ export function CardHighlight({
   title,
   media,
   onPress,
+  testID,
 }: CardHighlightProps) {
   const [handlePress, isResolving] = usePress({ onPress });
 
@@ -27,11 +28,12 @@ export function CardHighlight({
     getCardHighlightColors({ appearance });
 
   if (isSkeleton) {
-    return <CardHighlightSkeleton title={title} />;
+    return <CardHighlightSkeleton title={title} testID={testID} />;
   }
 
   return (
     <Card
+      testID={testID}
       backgroundColor={backgroundColor}
       borderRadius="lg"
       overflow="hidden"

@@ -17,10 +17,10 @@ appId: ${APPID}
     # bypass expo onboarding modal if you run the test on a fresh env
     text: 'Foundation'
     optional: true
-# - runFlow:
-#     file: subflow/takeScreenshot.yaml
-#     env:
-#       COMPONENT: Shadows
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Shadows
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:

@@ -76,6 +76,10 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: CardHighlight
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: CardSummary
 - runFlow:
     file: subflow/takeScreenshot.yaml

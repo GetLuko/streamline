@@ -1,5 +1,7 @@
 import * as GeneratedRegularIcons from './primitives/icon/generated/regular';
 
+export * from './components/cards/card-highlight/card-highlight';
+
 export * from './components/inputs/input-search/input-search';
 export { GeneratedRegularIcons };
 export { isIconName, sanitizeIconName } from './primitives/icon/icon.utils';

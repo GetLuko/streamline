@@ -28,6 +28,7 @@ const TEAL = {
   TEAL_150: '#CFEAEC',
   TEAL_400: '#61C4CD',
   TEAL_500: '#26B2BF',
+  TEAL_700: '#3A838B',
   TEAL_800: '#1A6972',
   TEAL_1000: '#04363E',
 };

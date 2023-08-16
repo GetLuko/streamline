@@ -21,6 +21,9 @@ export function CardHighlight({
   media,
   onPress,
   testID,
+  onPressIn,
+  onPressOut,
+  accessibilityLabel,
 }: CardHighlightProps) {
   const [handlePress, isResolving] = usePress({ onPress });
 
@@ -39,6 +42,9 @@ export function CardHighlight({
       overflow="hidden"
       withPadding={false}
       onPress={handlePress}
+      onPressIn={onPressIn}
+      onPressOut={onPressOut}
+      accessibilityLabel={accessibilityLabel}
     >
       <Box padding="md">
         <Box flexDirection="row" justifyContent="space-between">

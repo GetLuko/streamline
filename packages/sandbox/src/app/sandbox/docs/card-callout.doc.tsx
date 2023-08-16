@@ -1,6 +1,5 @@
 import { CardCallout } from '@getluko/streamline';
 import React from 'react';
-import { Alert } from 'react-native';
 
 import { DocList } from '../components/DocList';
 
@@ -8,10 +7,10 @@ const ICON_NAME = 'Area';
 
 const DISMISS_ACTION = {
   accessibilityLabel: 'Test',
-  onDismiss: () => Alert.alert('onDismiss pressed'),
+  onDismiss: () => console.log('onDismiss pressed'),
 };
 
-const ON_PRESS = () => Alert.alert('onPress pressed');
+const ON_PRESS = () => console.log('onPress pressed');
 
 const CARDS: JSX.Element[] = [
   <CardCallout

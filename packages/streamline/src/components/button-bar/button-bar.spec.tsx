@@ -48,7 +48,7 @@ describe('ButtonBar', () => {
     const { getByTestId } = renderWithProvider(
       <ButtonBar buttons={[]} isSkeleton testID="ButtonBar" />
     );
-    const scrollView = getByTestId('ButtonBar_container');
+    const scrollView = getByTestId('ButtonBar');
 
     expect(scrollView.props).toHaveProperty('scrollEnabled', false);
   });

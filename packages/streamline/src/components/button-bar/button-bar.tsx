@@ -7,7 +7,7 @@ import { Button } from '../buttons/button/button';
 import { ButtonProps } from '../buttons/button/button.types';
 
 type Props = {
-  buttons: ButtonProps[];
+  buttons: Omit<ButtonProps, 'size'>[];
   isSkeleton?: boolean;
   testID?: string;
 };
@@ -28,7 +28,7 @@ export const ButtonBar = ({ buttons, isSkeleton = false, testID }: Props) => {
 
   return (
     <ScrollView
-      testID={testID ? `${testID}_container` : undefined}
+      testID={testID}
       scrollEnabled={!isSkeleton}
       horizontal={true}
       showsHorizontalScrollIndicator={false}
@@ -46,6 +46,7 @@ export const ButtonBar = ({ buttons, isSkeleton = false, testID }: Props) => {
             appearance="secondary"
             {...button}
             isSkeleton={isSkeleton}
+            size="mini"
           />
         </Box>
       ))}

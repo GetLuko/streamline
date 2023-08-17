@@ -6,31 +6,26 @@ const buttonsArray: ButtonProps[] = [
     text: 'One',
     onPress: () => console.log('onPress One'),
     iconName: 'Area',
-    size: 'mini',
   },
   {
     text: 'Two',
     onPress: () => console.log('onPress Two'),
     iconName: 'Area',
-    size: 'mini',
   },
   {
     text: 'Three',
     onPress: () => console.log('onPress Three'),
     iconName: 'Area',
-    size: 'mini',
   },
   {
     text: 'Four',
     onPress: () => console.log('onPress Four'),
     iconName: 'Area',
-    size: 'mini',
   },
   {
     text: 'Five',
     onPress: () => console.log('onPress Five'),
     iconName: 'Area',
-    size: 'mini',
   },
 ];
 

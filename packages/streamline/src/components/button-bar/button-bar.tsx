@@ -37,7 +37,9 @@ export const ButtonBar = ({ buttons, isSkeleton = false, testID }: Props) => {
       {buttonMenu.map((button, index) => (
         <Box
           key={button.text}
-          marginRight={buttons.length - 1 > index ? 'xs' : undefined}
+          marginRight={
+            buttons.length - 1 > index || isSkeleton ? 'xs' : undefined
+          }
         >
           <Button
             testID={testID ? `${testID}_button_${index}` : undefined}

@@ -13,7 +13,7 @@ export const CardCarouselSkeleton = (
   return (
     <Card
       backgroundColor="GREY_100"
-      testID={testID}
+      testID={`CardCarousel_skeleton_${testID}`}
       accessibilityRole="button"
       accessibilityLabel={accessibilityLabel}
       accessibilityState={{

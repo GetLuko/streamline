@@ -29,7 +29,7 @@ export const CardCarousel = (props: CardCarouselProps) => {
 
   const [handlePress, isResolving] = usePress({ onPress: onPress });
 
-  if (isSkeleton) return <CardCarouselSkeleton size={size} />;
+  if (isSkeleton) return <CardCarouselSkeleton size={size} testID={testID} />;
 
   return (
     <Card
@@ -47,7 +47,10 @@ export const CardCarousel = (props: CardCarouselProps) => {
     >
       <Box flexDirection="row-reverse" justifyContent="space-between">
         {isLoading || isResolving ? (
-          <Spinner color="PURE_WHITE_1000" />
+          <Spinner
+            color="PURE_WHITE_1000"
+            testID={`CardCarousel_spinner_${testID}`}
+          />
         ) : (
           <ButtonIcon iconName="Cross" accessibilityLabel="close" />
         )}

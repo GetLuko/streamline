@@ -1,51 +1,43 @@
-import { Box, CardCarousel } from '@getluko/streamline';
+import { CardCarousel } from '@getluko/streamline';
 import React from 'react';
 
-const Separator = () => <Box marginRight="xs" marginTop="md" />;
-export const CardCarouselSandbox = () => {
-  return (
-    <>
-      <CardCarousel
-        size="LG"
-        title="Test title"
-        description="description bla bla bla bla bla bla bla blla bla bla bla bla bla bla"
-        backgroundColor="BLUKO_200"
-        iconName="Backpack"
-      />
-      <Separator />
-      <CardCarousel
-        size="LG"
-        title="Test title"
-        description="description bla bla bla bla bla bla bla blla bla bla bla bla bla bla"
-        backgroundColor="BLUKO_200"
-        iconName="Backpack"
-        isLoading
-      />
-      <Separator />
+import { DocList } from '../components/DocList';
 
-      <CardCarousel
-        size="SM"
-        title="Test title"
-        backgroundColor="BLUKO_200"
-        iconName="Backpack"
-      />
-      <Separator />
+const docs = [
+  <CardCarousel
+    size="large"
+    title="Test title"
+    description="description bla bla bla bla bla bla bla blla bla bla bla bla bla bla"
+    tag={{ text: 'Backpack', iconName: 'Backpack' }}
+    media="https://legacy.reactjs.org/logo-og.png"
+  />,
 
-      <CardCarousel
-        size="SM"
-        title="Test title"
-        backgroundColor="BLUKO_200"
-        iconName="Backpack"
-        isLoading
-      />
-      <Separator />
+  <CardCarousel
+    size="large"
+    title="Test title"
+    description="description bla bla bla bla bla bla bla blla bla bla bla bla bla bla"
+    tag={{ text: 'Backpack', iconName: 'Backpack' }}
+    media="https://legacy.reactjs.org/logo-og.png"
+    isLoading
+  />,
 
-      <CardCarousel size="LG" isSkeleton />
-      <Separator />
+  <CardCarousel size="large" isSkeleton />,
+  <CardCarousel
+    size="small"
+    title="Test title"
+    iconName="Backpack"
+    media="https://legacy.reactjs.org/logo-og.png"
+  />,
+  <CardCarousel
+    size="small"
+    title="Test title"
+    iconName="Backpack"
+    isLoading
+    media="https://legacy.reactjs.org/logo-og.png"
+  />,
+  <CardCarousel size="small" isSkeleton />,
+];
 
-      <CardCarousel size="SM" isSkeleton />
-    </>
-  );
-};
+export const CardCarouselSandbox = () => <DocList docs={docs} />;
 
 export default CardCarouselSandbox;

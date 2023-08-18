@@ -1,29 +1,17 @@
 import { CardHeaderProps } from '../../../primitives/card/card-header/card-header.types';
 import { CardProps } from '../../../primitives/card/card.types';
-import { IconsName } from '../../../primitives/icon/icon.types';
-import { ColorTheme } from '../../../theme';
+import { IconsName, Size } from '../../../primitives/icon/icon.types';
 
-export type CardCarouselProps = Pick<
+type DefaultProps = Pick<
   CardProps,
   'accessibilityLabel' | 'testID' | 'onPress' | 'onPressIn' | 'onPressOut'
 > &
-  Omit<CardHeaderProps, 'colors' | 'title'> & {
-    /**
-     * Card's height
-     */
-    size?: 'SM' | 'LG';
-    /**
-     * Icon of the card
-     */
-    iconName?: IconsName;
+  Omit<CardHeaderProps, 'colors' | 'title' | 'iconName'> & {
+    size: Extract<Size, 'small' | 'large'>;
     /**
      * Indicate the loading state of the card
      */
     isLoading?: boolean;
-    /**
-     * Background color
-     */
-    backgroundColor?: ColorTheme;
     /**
      * Card's title
      */
@@ -32,6 +20,10 @@ export type CardCarouselProps = Pick<
      * Card's description
      */
     description?: string;
+    /**
+     * Card's media background
+     */
+    media?: string;
     /**
      * Test ID
      */
@@ -45,3 +37,18 @@ export type CardCarouselProps = Pick<
      */
     isSkeleton?: boolean;
   };
+
+type SmallCardCarouselProps = DefaultProps & {
+  size: 'small';
+  iconName?: IconsName;
+};
+
+type LargeCardCarouselProps = DefaultProps & {
+  size: 'large';
+  tag?: {
+    text: string;
+    iconName: IconsName;
+  };
+};
+
+export type CardCarouselProps = LargeCardCarouselProps | SmallCardCarouselProps;

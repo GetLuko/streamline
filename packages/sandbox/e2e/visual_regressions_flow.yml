@@ -84,11 +84,11 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: InputText
+      COMPONENT: CardCarousel
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: CardCarousel
+      COMPONENT: InputText
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:

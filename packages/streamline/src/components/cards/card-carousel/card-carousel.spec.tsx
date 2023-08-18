@@ -8,11 +8,10 @@ import { CardCarouselProps } from './card-carousel.types';
 
 describe('CardCarousel', () => {
   const mockProps: CardCarouselProps = {
-    size: 'LG',
-    iconName: 'Area',
+    size: 'large',
+    tag: { text: 'Area', iconName: 'Area' },
     title: 'Test Title',
     description: 'Test Description',
-    backgroundColor: 'GREY_100',
     onPress: jest.fn(),
     onPressIn: jest.fn(),
     onPressOut: jest.fn(),
@@ -35,7 +34,7 @@ describe('CardCarousel', () => {
   it('calls onPress when clicked', () => {
     const { getByTestId } = renderWithProvider(<CardCarousel {...mockProps} />);
 
-    const cardElement = getByTestId('card-carousel');
+    const cardElement = getByTestId(`${mockProps.testID}_card`);
     fireEvent.press(cardElement);
 
     expect(mockProps.onPress).toHaveBeenCalledTimes(1);
@@ -46,7 +45,7 @@ describe('CardCarousel', () => {
       <CardCarousel {...mockProps} isLoading={true} />
     );
 
-    const spinnerElement = getByTestId('CardCarousel_spinner_card-carousel');
+    const spinnerElement = getByTestId(`${mockProps.testID}_spinner`);
     expect(spinnerElement).toBeDefined();
   });
 
@@ -55,7 +54,7 @@ describe('CardCarousel', () => {
       <CardCarousel {...mockProps} isSkeleton={true} />
     );
 
-    const skeletonElement = getByTestId('CardCarousel_skeleton_card-carousel');
+    const skeletonElement = getByTestId(`${mockProps.testID}_skeleton`);
     expect(skeletonElement).toBeDefined();
   });
 });

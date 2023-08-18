@@ -88,6 +88,10 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: CardCarousel
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: InputTextArea
 - runFlow:
     file: subflow/takeScreenshot.yaml

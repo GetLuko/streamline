@@ -27,6 +27,7 @@ export const CardCarousel = (props: CardCarouselProps) => {
     isLoading,
     testID,
     media,
+    onClose,
   } = props;
 
   const isSmall = size === 'small';
@@ -52,7 +53,11 @@ export const CardCarousel = (props: CardCarouselProps) => {
     >
       <Image source={{ uri: media }} style={StyleSheet.absoluteFillObject} />
 
-      <Box flexDirection="row-reverse" justifyContent="space-between">
+      <Box
+        flexDirection="row-reverse"
+        justifyContent="space-between"
+        alignItems="center"
+      >
         {isLoading || isResolving ? (
           <Spinner color="PURE_WHITE_1000" testID={`${testID}_spinner`} />
         ) : (
@@ -60,6 +65,7 @@ export const CardCarousel = (props: CardCarouselProps) => {
             iconName="Cross"
             accessibilityLabel="close"
             appearance="light"
+            onPress={onClose}
           />
         )}
 
@@ -68,7 +74,9 @@ export const CardCarousel = (props: CardCarouselProps) => {
         ) : null}
 
         {size === 'small' && props.iconName ? (
-          <Icon iconName={props.iconName} color="PURE_WHITE_1000" />
+          <Box justifyContent="center" alignItems="center">
+            <Icon iconName={props.iconName} color="PURE_WHITE_1000" />
+          </Box>
         ) : null}
       </Box>
 

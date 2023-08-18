@@ -7,6 +7,10 @@ type DefaultProps = Pick<
   'accessibilityLabel' | 'testID' | 'onPress' | 'onPressIn' | 'onPressOut'
 > &
   Omit<CardHeaderProps, 'colors' | 'title' | 'iconName'> & {
+    onClose?: () => void;
+    /**
+     * Handle the close button press event
+     */
     size: Extract<Size, 'small' | 'large'>;
     /**
      * Indicate the loading state of the card

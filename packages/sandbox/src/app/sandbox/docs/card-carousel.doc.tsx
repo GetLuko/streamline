@@ -1,9 +1,8 @@
 import { Box, CardCarousel } from '@getluko/streamline';
 import React from 'react';
 
+const Separator = () => <Box marginRight="xs" marginTop="md" />;
 export const CardCarouselSandbox = () => {
-  const Separator = () => <Box marginRight="xs" marginTop="md" />;
-
   return (
     <>
       <CardCarousel

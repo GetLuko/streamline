@@ -102,14 +102,16 @@ export const CardCarousel = (props: CardCarouselProps) => {
           {title}
         </Text>
 
-        <Text
-          variant={isSmall ? 'subBody' : 'body'}
-          color="PURE_WHITE_1000"
-          opacity={0.8}
-          numberOfLines={2}
-        >
-          {description}
-        </Text>
+        {description ? (
+          <Text
+            variant={isSmall ? 'subBody' : 'body'}
+            color="PURE_WHITE_1000"
+            opacity={0.8}
+            numberOfLines={2}
+          >
+            {description}
+          </Text>
+        ) : null}
       </Box>
     </Card>
   );

@@ -21,7 +21,7 @@ const docs = [
     }}
     isLoading
   />,
-  <CardCarousel size="large" isSkeleton />,
+  <CardCarousel title="" size="large" isSkeleton />,
   <CardCarousel
     size="small"
     title="Test title"
@@ -39,7 +39,7 @@ const docs = [
       uri: 'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
     }}
   />,
-  <CardCarousel size="small" isSkeleton />,
+  <CardCarousel title="" size="small" isSkeleton />,
 ];
 
 export const CardCarouselSandbox = () => <DocList docs={docs} />;

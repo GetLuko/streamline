@@ -21,7 +21,7 @@ type DefaultProps = Pick<
     /**
      * Card's title
      */
-    title?: string;
+    title: string;
     /**
      * Card's description
      */

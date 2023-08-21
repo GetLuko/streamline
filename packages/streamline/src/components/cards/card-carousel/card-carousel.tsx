@@ -12,6 +12,7 @@ import Tag from '../../tag/tag';
 import { CardCarouselSkeleton } from './card-carousel-skeleton';
 import {
   LARGE_CARD_HEIGHT,
+  LINEAR_BACKGROUND,
   LINEAR_END_X,
   LINEAR_START_X,
   SMALL_CARD_SIZE,
@@ -60,7 +61,7 @@ export const CardCarousel = (props: CardCarouselProps) => {
       ) : null}
 
       <LinearGradient
-        colors={['rgba(0, 0, 0, 0.00)', 'rgba(0, 0, 0, 0.80)']}
+        colors={LINEAR_BACKGROUND}
         start={{ x: LINEAR_START_X, y: 0 }}
         end={{ x: LINEAR_END_X, y: 1 }}
         style={StyleSheet.absoluteFillObject}
@@ -71,14 +72,13 @@ export const CardCarousel = (props: CardCarouselProps) => {
         alignItems="center"
       >
         <ButtonIcon
-          testID={
-            isLoading || isResolving ? `${testID}_spinner` : `${testID}_close`
-          }
+          testID={`${testID}_close_button`}
           isLoading={isLoading || isResolving}
           iconName="Cross"
           accessibilityLabel="close"
           appearance="light"
           onPress={onClose}
+          withContainer
         />
 
         {size === 'large' && props.tag ? (
@@ -90,9 +90,7 @@ export const CardCarousel = (props: CardCarouselProps) => {
         ) : null}
 
         {size === 'small' && props.iconName ? (
-          <Box justifyContent="center" alignItems="center">
-            <Icon iconName={props.iconName} color="PURE_WHITE_1000" />
-          </Box>
+          <Icon iconName={props.iconName} color="PURE_WHITE_1000" />
         ) : null}
       </Box>
 
@@ -103,16 +101,15 @@ export const CardCarousel = (props: CardCarouselProps) => {
         >
           {title}
         </Text>
-        {
-          <Text
-            variant="body"
-            color="PURE_WHITE_1000"
-            style={{ opacity: 0.8 }}
-            numberOfLines={isSmall ? 1 : 2}
-          >
-            {description}
-          </Text>
-        }
+
+        <Text
+          variant={isSmall ? 'subBody' : 'body'}
+          color="PURE_WHITE_1000"
+          opacity={0.8}
+          numberOfLines={2}
+        >
+          {description}
+        </Text>
       </Box>
     </Card>
   );

@@ -1,3 +1,5 @@
+import { ImageSourcePropType } from 'react-native';
+
 import { CardHeaderProps } from '../../../primitives/card/card-header/card-header.types';
 import { CardProps } from '../../../primitives/card/card.types';
 import { IconsName, Size } from '../../../primitives/icon/icon.types';
@@ -27,7 +29,7 @@ type DefaultProps = Pick<
     /**
      * Card's media background
      */
-    media?: string;
+    media?: ImageSourcePropType;
     /**
      * Test ID
      */

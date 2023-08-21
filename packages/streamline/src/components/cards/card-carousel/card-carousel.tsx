@@ -1,3 +1,4 @@
+import { LinearGradient } from 'expo-linear-gradient';
 import React from 'react';
 import { Image, StyleSheet } from 'react-native';
 
@@ -6,12 +7,15 @@ import { Box } from '../../../primitives/box/box';
 import { Card } from '../../../primitives/card/card';
 import { Icon } from '../../../primitives/icon/icon';
 import { Text } from '../../../primitives/text/text';
-import { colors } from '../../../theme/colors';
 import ButtonIcon from '../../buttons/button-icon/button-icon';
-import Spinner from '../../spinner/spinner';
 import Tag from '../../tag/tag';
 import { CardCarouselSkeleton } from './card-carousel-skeleton';
-import { LARGE_CARD_HEIGHT, SMALL_CARD_SIZE } from './card-carousel.constants';
+import {
+  LARGE_CARD_HEIGHT,
+  LINEAR_END_X,
+  LINEAR_START_X,
+  SMALL_CARD_SIZE,
+} from './card-carousel.constants';
 import { CardCarouselProps } from './card-carousel.types';
 
 export const CardCarousel = (props: CardCarouselProps) => {
@@ -48,29 +52,41 @@ export const CardCarousel = (props: CardCarouselProps) => {
       onPress={handlePress}
       onPressIn={onPressIn}
       onPressOut={onPressOut}
-      testID={`${testID}_card`}
+      testID={testID}
       accessibilityLabel={accessibilityLabel}
     >
-      <Image source={{ uri: media }} style={StyleSheet.absoluteFillObject} />
+      {media ? (
+        <Image source={media} style={StyleSheet.absoluteFillObject} />
+      ) : null}
 
+      <LinearGradient
+        colors={['rgba(0, 0, 0, 0.00)', 'rgba(0, 0, 0, 0.80)']}
+        start={{ x: LINEAR_START_X, y: 0 }}
+        end={{ x: LINEAR_END_X, y: 1 }}
+        style={StyleSheet.absoluteFillObject}
+      />
       <Box
         flexDirection="row-reverse"
         justifyContent="space-between"
         alignItems="center"
       >
-        {isLoading || isResolving ? (
-          <Spinner color="PURE_WHITE_1000" testID={`${testID}_spinner`} />
-        ) : (
-          <ButtonIcon
-            iconName="Cross"
-            accessibilityLabel="close"
-            appearance="light"
-            onPress={onClose}
-          />
-        )}
+        <ButtonIcon
+          testID={
+            isLoading || isResolving ? `${testID}_spinner` : `${testID}_close`
+          }
+          isLoading={isLoading || isResolving}
+          iconName="Cross"
+          accessibilityLabel="close"
+          appearance="light"
+          onPress={onClose}
+        />
 
         {size === 'large' && props.tag ? (
-          <Tag text="Tag" iconName={props.tag.iconName} appearance="light" />
+          <Tag
+            text={props.tag.text}
+            iconName={props.tag.iconName}
+            appearance="dark"
+          />
         ) : null}
 
         {size === 'small' && props.iconName ? (
@@ -81,10 +97,22 @@ export const CardCarousel = (props: CardCarouselProps) => {
       </Box>
 
       <Box>
-        <Text variant="headlineBold" color="PURE_WHITE_1000">
+        <Text
+          variant={isSmall ? 'bodyBold' : 'headlineBold'}
+          color="PURE_WHITE_1000"
+        >
           {title}
         </Text>
-        {size === 'large' && <Text color="PURE_WHITE_1000">{description}</Text>}
+        {
+          <Text
+            variant="body"
+            color="PURE_WHITE_1000"
+            style={{ opacity: 0.8 }}
+            numberOfLines={isSmall ? 1 : 2}
+          >
+            {description}
+          </Text>
+        }
       </Box>
     </Card>
   );

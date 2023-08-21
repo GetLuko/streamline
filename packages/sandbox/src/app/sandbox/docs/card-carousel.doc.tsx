@@ -8,32 +8,36 @@ const docs = [
     size="large"
     title="Test title"
     description="description bla bla bla bla bla bla bla blla bla bla bla bla bla bla"
-    tag={{ text: 'Backpack', iconName: 'Backpack' }}
-    media="https://legacy.reactjs.org/logo-og.png"
+    tag={{ text: 'Card 1', iconName: 'Backpack' }}
+    media={{ uri: 'https://legacy.reactjs.org/logo-og.png' }}
   />,
-
   <CardCarousel
     size="large"
     title="Test title"
     description="description bla bla bla bla bla bla bla blla bla bla bla bla bla bla"
-    tag={{ text: 'Backpack', iconName: 'Backpack' }}
-    media="https://legacy.reactjs.org/logo-og.png"
+    tag={{ text: 'Tag 2', iconName: 'Backpack' }}
+    media={{
+      uri: 'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+    }}
     isLoading
   />,
-
   <CardCarousel size="large" isSkeleton />,
   <CardCarousel
     size="small"
     title="Test title"
+    description="description bla bla bla bla bla bla bla blla bla bla bla bla bla bla"
     iconName="Backpack"
-    media="https://legacy.reactjs.org/logo-og.png"
+    media={{ uri: 'https://legacy.reactjs.org/logo-og.png' }}
   />,
   <CardCarousel
     size="small"
     title="Test title"
+    description="description bla bla bla bla bla bla bla blla bla bla bla bla bla bla"
     iconName="Backpack"
     isLoading
-    media="https://legacy.reactjs.org/logo-og.png"
+    media={{
+      uri: 'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+    }}
   />,
   <CardCarousel size="small" isSkeleton />,
 ];

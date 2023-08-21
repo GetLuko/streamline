@@ -12,6 +12,7 @@ describe('CardCarousel', () => {
     tag: { text: 'Area', iconName: 'Area' },
     title: 'Test Title',
     description: 'Test Description',
+    media: { uri: 'https://legacy.reactjs.org/logo-og.png' },
     onPress: jest.fn(),
     onPressIn: jest.fn(),
     onPressOut: jest.fn(),
@@ -34,7 +35,7 @@ describe('CardCarousel', () => {
   it('calls onPress when clicked', () => {
     const { getByTestId } = renderWithProvider(<CardCarousel {...mockProps} />);
 
-    const cardElement = getByTestId(`${mockProps.testID}_card`);
+    const cardElement = getByTestId(`${mockProps.testID}`);
     fireEvent.press(cardElement);
 
     expect(mockProps.onPress).toHaveBeenCalledTimes(1);

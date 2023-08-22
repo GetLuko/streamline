@@ -46,7 +46,7 @@ describe('CardCarousel', () => {
       <CardCarousel {...mockProps} isLoading={true} />
     );
 
-    const spinnerElement = getByTestId(`${mockProps.testID}_close_button`);
+    const spinnerElement = getByTestId(`${mockProps.testID}-close-button`);
     expect(spinnerElement).toBeDefined();
   });
 
@@ -55,7 +55,7 @@ describe('CardCarousel', () => {
       <CardCarousel {...mockProps} isSkeleton={true} />
     );
 
-    const skeletonElement = getByTestId(`${mockProps.testID}_skeleton`);
+    const skeletonElement = getByTestId(`${mockProps.testID}-skeleton`);
     expect(skeletonElement).toBeDefined();
   });
 });

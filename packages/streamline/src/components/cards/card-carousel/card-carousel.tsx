@@ -72,7 +72,7 @@ export const CardCarousel = (props: CardCarouselProps) => {
         alignItems="center"
       >
         <ButtonIcon
-          testID={`${testID}_close_button`}
+          testID={`${testID}-close-button`}
           isLoading={isLoading || isResolving}
           iconName="Cross"
           accessibilityLabel="close"

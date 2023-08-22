@@ -42,11 +42,10 @@ export const ButtonBar = ({ buttons, isSkeleton = false, testID }: Props) => {
           }
         >
           <Button
-            testID={testID ? `${testID}_button_${index}` : undefined}
-            appearance="secondary"
             {...button}
             isSkeleton={isSkeleton}
             size="mini"
+            testID={testID ? `${testID}-button-${index}` : undefined}
           />
         </Box>
       ))}

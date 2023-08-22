@@ -32,7 +32,7 @@ describe('ButtonBar', () => {
     // It is safe when it is used for props test
     // https://github.com/callstack/react-native-testing-library/issues/427#issuecomment-654405308
     const { UNSAFE_getAllByType } = renderWithProvider(
-      <ButtonBar buttons={[]} isSkeleton={true} testID="ButtonBar" />
+      <ButtonBar buttons={[]} isSkeleton={true} testID="button-bar" />
     );
 
     const buttons = UNSAFE_getAllByType(Button);
@@ -46,9 +46,9 @@ describe('ButtonBar', () => {
 
   it('does not scroll when isSkeleton is true', () => {
     const { getByTestId } = renderWithProvider(
-      <ButtonBar buttons={[]} isSkeleton testID="ButtonBar" />
+      <ButtonBar buttons={[]} isSkeleton testID="button-bar" />
     );
-    const scrollView = getByTestId('ButtonBar');
+    const scrollView = getByTestId('button-bar');
 
     expect(scrollView.props).toHaveProperty('scrollEnabled', false);
   });

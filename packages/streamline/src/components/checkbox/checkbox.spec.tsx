@@ -12,9 +12,9 @@ describe('Checkbox', () => {
   it('should trigger mockOnChange', () => {
     const mockOnChange = jest.fn();
     const { getByTestId } = renderWithProvider(
-      <Checkbox value={true} onChange={mockOnChange} testID="Checkbox" />
+      <Checkbox value={true} onChange={mockOnChange} testID="checkbox" />
     );
-    const checkbox = getByTestId('Checkbox');
+    const checkbox = getByTestId('checkbox');
     fireEvent.press(checkbox);
     expect(mockOnChange).toHaveBeenNthCalledWith(1, false);
   });
@@ -25,11 +25,11 @@ describe('Checkbox', () => {
       <Checkbox
         value={true}
         onChange={mockOnChange}
-        testID="Checkbox"
+        testID="checkbox"
         isDisabled
       />
     );
-    const checkbox = getByTestId('Checkbox');
+    const checkbox = getByTestId('checkbox');
     fireEvent.press(checkbox);
     expect(mockOnChange).toHaveBeenCalledTimes(0);
   });

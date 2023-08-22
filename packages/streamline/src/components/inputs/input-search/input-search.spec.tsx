@@ -8,7 +8,7 @@ describe('InputSearch', () => {
   it('should render successfully', () => {
     const { container, queryByTestId } = renderWithProvider(<InputSearch />);
     expect(container).toBeTruthy();
-    expect(queryByTestId('CloseInputSearch')).toBeNull();
+    expect(queryByTestId('close-input-search')).toBeNull();
   });
 
   it('should render InputSearch with placeholder', () => {
@@ -34,6 +34,6 @@ describe('InputSearch', () => {
     });
     // Then
     expect(onChangeTextMock).toHaveBeenCalledWith('Text changed');
-    expect(getByTestId('CloseInputSearch')).toBeTruthy();
+    expect(getByTestId('close-input-search')).toBeTruthy();
   });
 });

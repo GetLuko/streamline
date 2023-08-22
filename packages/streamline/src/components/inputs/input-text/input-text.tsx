@@ -127,7 +127,7 @@ const getRightComponent = (
       <Box
         style={{ paddingTop: 2 }}
         marginRight="xxs"
-        testID="CloseInputSearch"
+        testID="close-input-search"
       >
         <ButtonIcon
           iconName="Cross"

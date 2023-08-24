@@ -32,7 +32,11 @@ export const ButtonBar = ({ buttons, isSkeleton = false, testID }: Props) => {
       scrollEnabled={!isSkeleton}
       horizontal={true}
       showsHorizontalScrollIndicator={false}
-      contentContainerStyle={{ padding: spacing.md, flexDirection: 'row' }}
+      contentContainerStyle={{
+        paddingHorizontal: spacing.md,
+        paddingVertical: spacing.xs,
+        flexDirection: 'row',
+      }}
     >
       {buttonMenu.map((button, index) => (
         <Box

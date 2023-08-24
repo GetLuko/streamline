@@ -162,6 +162,10 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: NavigationSectionTitle
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: Dialog
 # Flow to be at the end for now (as picker dosen't go back)
 - runFlow:

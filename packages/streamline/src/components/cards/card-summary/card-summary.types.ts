@@ -25,6 +25,10 @@ export type CardSummaryProps = Pick<
      */
     header?: string;
     /**
+     * Subtitle of the header.
+     */
+    subHeader?: string;
+    /**
      * Card description.
      */
     description?: string;

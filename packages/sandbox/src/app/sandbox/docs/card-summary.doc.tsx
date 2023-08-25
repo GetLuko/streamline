@@ -24,6 +24,7 @@ export const CardSummarySandbox = () => {
         <CardSummary
           appearance="primary"
           header="Header"
+          subHeader="Subheader"
           value="Value"
           iconName="Area"
           rightAction="navigate"

@@ -19,6 +19,7 @@ export const CardSummary = (props: CardSummaryProps) => {
   const {
     appearance = 'primary',
     header,
+    subHeader,
     iconName,
     value,
     rightAction,
@@ -78,6 +79,7 @@ export const CardSummary = (props: CardSummaryProps) => {
       <CardHeader
         colors={headerColors}
         title={header}
+        subtitle={subHeader}
         isLoading={isLoading || isResolving}
         iconName={iconName}
         value={value}

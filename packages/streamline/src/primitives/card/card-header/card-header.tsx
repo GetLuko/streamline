@@ -13,7 +13,8 @@ import {
 } from './card-header.utils';
 
 export const CardHeader = (props: CardHeaderProps) => {
-  const { colors, iconName, title, value, rightAction, isLoading } = props;
+  const { colors, iconName, title, subtitle, value, rightAction, isLoading } =
+    props;
 
   const hasIconName = hasValidIconName(iconName);
   const hasHeader = hasValidHeader(title);
@@ -31,24 +32,35 @@ export const CardHeader = (props: CardHeaderProps) => {
         {hasIconName && !isLoading && (
           <Icon color={colors.leftIconColor} iconName={iconName} size="large" />
         )}
-        {isLoading && <Spinner color={colors.leftIconColor} />}
-        {hasHeader && (
-          <Text
-            color={colors.headerColor}
-            paddingLeft={hasIconName ? 'md' : undefined}
-            variant="body"
-          >
-            {title}
-          </Text>
-        )}
+        {isLoading ? <Spinner color={colors.leftIconColor} /> : null}
+        {hasHeader ? (
+          <Box>
+            <Text
+              color={colors.headerColor}
+              paddingLeft={hasIconName ? 'md' : undefined}
+              variant="body"
+            >
+              {title}
+            </Text>
+            {subtitle ? (
+              <Text
+                color={colors.valueColor}
+                paddingLeft={hasIconName ? 'md' : undefined}
+                variant="subBody"
+              >
+                {subtitle}
+              </Text>
+            ) : null}
+          </Box>
+        ) : null}
       </Box>
       <Box flexDirection="row" alignItems="center">
-        {hasValue && (
+        {hasValue ? (
           <Text color={colors.valueColor} variant="body">
             {value}
           </Text>
-        )}
-        {hasRightAction && (
+        ) : null}
+        {hasRightAction ? (
           <>
             <Box paddingLeft="xs" />
             <Icon
@@ -57,7 +69,7 @@ export const CardHeader = (props: CardHeaderProps) => {
               size="regular"
             />
           </>
-        )}
+        ) : null}
       </Box>
     </Box>
   );

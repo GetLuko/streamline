@@ -1,6 +1,6 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import React from 'react';
-import { Image, StyleSheet } from 'react-native';
+import { Image, ImageBackground, StyleSheet } from 'react-native';
 
 import { usePress } from '../../../hooks/use-press.hook';
 import { Box } from '../../../primitives/box/box';
@@ -55,17 +55,19 @@ export const CardCarousel = (props: CardCarouselProps) => {
       onPressOut={onPressOut}
       testID={testID}
       accessibilityLabel={accessibilityLabel}
+      backgroundColor="BLUKO_700"
     >
       {media ? (
-        <Image source={media} style={StyleSheet.absoluteFillObject} />
+        <ImageBackground source={media} style={StyleSheet.absoluteFillObject}>
+          <LinearGradient
+            colors={LINEAR_BACKGROUND}
+            start={{ x: LINEAR_START_X, y: 0 }}
+            end={{ x: LINEAR_END_X, y: 1 }}
+            style={StyleSheet.absoluteFillObject}
+          />
+        </ImageBackground>
       ) : null}
 
-      <LinearGradient
-        colors={LINEAR_BACKGROUND}
-        start={{ x: LINEAR_START_X, y: 0 }}
-        end={{ x: LINEAR_END_X, y: 1 }}
-        style={StyleSheet.absoluteFillObject}
-      />
       <Box
         flexDirection="row-reverse"
         justifyContent="space-between"

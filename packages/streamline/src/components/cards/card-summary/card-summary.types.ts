@@ -3,6 +3,7 @@ import { CardProps } from '../../../primitives/card/card.types';
 import { ColorTheme } from '../../../theme';
 import { Appearance } from '../../../theme/appearance';
 import { ButtonProps } from '../../buttons/button/button.types';
+import { TagProps } from '../../tag/tag.types';
 
 export type CardSummaryProps = Pick<
   CardProps,
@@ -44,8 +45,12 @@ export type CardSummaryProps = Pick<
      * Button props. If not provided, the button will not be displayed.
      * All button props are available except appearance and pointerEvents.
      */
-    buttonProps?: Omit<ButtonProps, 'appearance' | 'pointerEvents'>;
+    footer?: FooterProps;
   };
+
+type FooterProps =
+  | (Omit<ButtonProps, 'appearance' | 'pointerEvents'> & { type: 'button' })
+  | (TagProps & { type: 'tag' });
 
 type HeaderColors = {
   rightIconColor: ColorTheme;

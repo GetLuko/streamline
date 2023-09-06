@@ -3,6 +3,7 @@ import { ImageSourcePropType } from 'react-native';
 import { CardHeaderProps } from '../../../primitives/card/card-header/card-header.types';
 import { CardProps } from '../../../primitives/card/card.types';
 import { IconsName, Size } from '../../../primitives/icon/icon.types';
+import { Appearance } from '../../../theme';
 
 type DefaultProps = Pick<
   CardProps,
@@ -42,6 +43,7 @@ type DefaultProps = Pick<
      * Indicate if the card is in a skeleton state.
      */
     isSkeleton?: boolean;
+    appearance?: Appearance;
   };
 
 type SmallCardCarouselProps = DefaultProps & {

@@ -40,6 +40,19 @@ const docs = [
     }}
   />,
   <CardCarousel title="" size="small" isSkeleton />,
+  <CardCarousel
+    size="large"
+    title="Test title"
+    description="description bla bla bla bla bla bla bla blla bla bla bla bla bla bla"
+    appearance="primary"
+  />,
+  <CardCarousel
+    size="small"
+    title="Test title"
+    description="description bla bla bla bla bla bla bla blla bla bla bla bla bla bla"
+    iconName="Backpack"
+    appearance="primary"
+  />,
 ];
 
 export const CardCarouselSandbox = () => <DocList docs={docs} />;

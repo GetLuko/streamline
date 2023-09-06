@@ -18,6 +18,7 @@ import {
   SMALL_CARD_SIZE,
 } from './card-carousel.constants';
 import { CardCarouselProps } from './card-carousel.types';
+import { getCardCarouselBackgroundColors } from './card-carousel.utils';
 
 export const CardCarousel = (props: CardCarouselProps) => {
   const {
@@ -33,7 +34,11 @@ export const CardCarousel = (props: CardCarouselProps) => {
     testID,
     media,
     onClose,
+    appearance,
   } = props;
+
+  const { backgroundColor, pressedBackgroundColor } =
+    getCardCarouselBackgroundColors({ appearance });
 
   const isSmall = size === 'small';
   const cardHeight = isSmall ? SMALL_CARD_SIZE : LARGE_CARD_HEIGHT;
@@ -55,7 +60,8 @@ export const CardCarousel = (props: CardCarouselProps) => {
       onPressOut={onPressOut}
       testID={testID}
       accessibilityLabel={accessibilityLabel}
-      backgroundColor="BLUKO_700"
+      backgroundColor={backgroundColor}
+      pressedBackgroundColor={pressedBackgroundColor}
     >
       {media ? (
         <ImageBackground source={media} style={StyleSheet.absoluteFillObject}>

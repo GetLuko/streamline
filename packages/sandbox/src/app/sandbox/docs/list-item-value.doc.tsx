@@ -137,6 +137,23 @@ const LIST_ITEMS: JSX.Element[] = [
     showDivider
     title="Title"
     value="Value"
+    appearance="danger"
+  />,
+  <ListItemValue
+    description="List item with right option and divider"
+    header="Header"
+    iconName={ICON_NAME}
+    onPress={ON_PRESS}
+    rightOption={{
+      accessibilityLabel: 'Test',
+      iconName: 'Info',
+      onPress: ASYNC_ON_PRESS,
+    }}
+    showDivider
+    title="Title"
+    value="Value"
+    appearance="danger"
+    isDisabled
   />,
   <ListItemValue
     description="Skeleton list item"

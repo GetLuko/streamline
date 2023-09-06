@@ -1,4 +1,3 @@
-import { ButtonProps } from '../../buttons/button/button.types';
 import { CardSummaryColors, CardSummaryProps } from './card-summary.types';
 
 export const getCardSummaryColors = ({
@@ -86,13 +85,8 @@ export const hasValidContent = ({
 }: Pick<CardSummaryProps, 'title' | 'description'>) =>
   Boolean(title) || Boolean(description);
 
-export const hasValidButton = (
-  buttonProps: CardSummaryProps['buttonProps']
-): buttonProps is ButtonProps => Boolean(buttonProps);
-
-export const hasValidButtonAction = (
-  buttonProps: CardSummaryProps['buttonProps']
-) =>
-  Boolean(buttonProps?.onPress) ||
-  Boolean(buttonProps?.onPressIn) ||
-  Boolean(buttonProps?.onPressOut);
+export const hasValidButtonAction = (footerProps: CardSummaryProps['footer']) =>
+  footerProps?.type === 'button' &&
+  (Boolean(footerProps?.onPress) ||
+    Boolean(footerProps?.onPressIn) ||
+    Boolean(footerProps?.onPressOut));

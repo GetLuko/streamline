@@ -1,10 +1,6 @@
-import { ButtonProps } from '../../buttons/button/button.types';
+import { CardSummaryProps } from './card-summary.types';
 import { hasValidButtonAction } from './card-summary.utils';
-import {
-  getCardSummaryColors,
-  hasValidButton,
-  hasValidContent,
-} from './card-summary.utils';
+import { getCardSummaryColors, hasValidContent } from './card-summary.utils';
 
 describe('card summary utils', () => {
   describe('getCardSummaryColors', () => {
@@ -170,30 +166,11 @@ describe('card summary utils', () => {
     });
   });
 
-  describe('hasValidButton', () => {
-    it('should return true when buttonLabel is provided', () => {
-      //GIVEN
-      const buttonLabel: ButtonProps = { text: 'buttonLabel' };
-      //WHEN
-      const result = hasValidButton(buttonLabel);
-      //THEN
-      expect(result).toBe(true);
-    });
-
-    it('should return false when buttonLabel is not provided', () => {
-      //GIVEN
-      const buttonLabel = undefined;
-      //WHEN
-      const result = hasValidButton(buttonLabel);
-      //THEN
-      expect(result).toBe(false);
-    });
-  });
-
   describe('hasValidButtonAction', () => {
     it('should return true when button onPress props is provided', () => {
       //GIVEN
-      const buttonLabel: ButtonProps = {
+      const buttonLabel: CardSummaryProps['footer'] = {
+        type: 'button',
         text: 'buttonLabel',
         onPress: () => {
           //
@@ -207,7 +184,8 @@ describe('card summary utils', () => {
 
     it('should return true when button onPressIn props is provided', () => {
       //GIVEN
-      const buttonLabel: ButtonProps = {
+      const buttonLabel: CardSummaryProps['footer'] = {
+        type: 'button',
         text: 'buttonLabel',
         onPressIn: () => {
           //
@@ -221,7 +199,8 @@ describe('card summary utils', () => {
 
     it('should return true when button onPressOut props is provided', () => {
       //GIVEN
-      const buttonLabel: ButtonProps = {
+      const buttonLabel: CardSummaryProps['footer'] = {
+        type: 'button',
         text: 'buttonLabel',
         onPressOut: () => {
           //

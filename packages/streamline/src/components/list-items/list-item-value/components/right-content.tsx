@@ -2,24 +2,25 @@ import React from 'react';
 
 import { Box } from '../../../../primitives/box/box';
 import { Text } from '../../../../primitives/text/text';
+import { ColorTheme } from '../../../../theme';
 import { RightContent as FarRightContent } from '../../list-item/components/right-content';
 import { ListItemValueProps } from '../list-item-value.types';
 
 export const RightContent = ({
-  isDisabled,
   onPress,
   rightOption,
   value,
-}: Pick<
+  valueTextColor,
+}: { valueTextColor: ColorTheme } & Pick<
   ListItemValueProps,
-  'isDisabled' | 'onPress' | 'rightOption' | 'value'
+  'onPress' | 'rightOption' | 'value'
 >) => {
   const styles = useStyles();
 
   return (
     <>
       <Text
-        color={isDisabled ? 'GREY_500' : 'GREY_1000'}
+        color={valueTextColor}
         marginLeft="xs"
         style={styles.text}
         textAlign="right"

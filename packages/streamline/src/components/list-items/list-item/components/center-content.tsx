@@ -2,17 +2,19 @@ import React from 'react';
 
 import { Box } from '../../../../primitives/box/box';
 import { Text } from '../../../../primitives/text/text';
+import { ColorTheme } from '../../../../theme';
 import { ListItemProps } from '../list-item.types';
 
 export const CenterContent = ({
   description,
   header,
-  isDisabled,
   title,
-}: Pick<ListItemProps, 'description' | 'header' | 'isDisabled' | 'title'>) => {
-  const mainTextColor = isDisabled ? 'GREY_500' : 'GREY_1000';
-  const secondaryTextColor = isDisabled ? 'GREY_500' : 'GREY_700';
-
+  secondaryTextColor,
+  mainTextColor,
+}: Pick<ListItemProps, 'description' | 'header' | 'title'> & {
+  secondaryTextColor: ColorTheme;
+  mainTextColor: ColorTheme;
+}) => {
   return (
     <Box flex={1} marginRight="xs">
       {header ? (

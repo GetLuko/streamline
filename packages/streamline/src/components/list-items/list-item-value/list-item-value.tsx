@@ -6,6 +6,7 @@ import { Box } from '../../../primitives/box/box';
 import { Divider } from '../components/divider';
 import { ListItemSkeleton } from '../components/list-item-skeleton';
 import { LeftContent } from '../list-item/components/left-content';
+import { getListItemsColors } from '../list-item/list-item.utils';
 import {
   BACKGROUND_COLOR,
   BACKGROUND_PRESSED_COLOR,
@@ -22,6 +23,7 @@ const DIVIDER_VERTICAL_MARGIN = 16;
  * https://github.com/FormidableLabs/react-native-ama/issues/92
  */
 export const ListItemValue = ({
+  appearance = 'neutral',
   accessibilityLabel,
   description,
   header,
@@ -41,6 +43,9 @@ export const ListItemValue = ({
   if (isSkeleton) {
     return <ListItemSkeleton />;
   }
+
+  const { leftContentColor, mainTextColor, secondaryTextColor } =
+    getListItemsColors({ appearance, isDisabled });
 
   const dividerLeftSpacing = iconName ? 40 : 0;
 
@@ -68,22 +73,23 @@ export const ListItemValue = ({
             iconName={iconName}
             isDisabled={isDisabled}
             isLoading={isResolving}
+            color={leftContentColor}
           />
           <Box flex={1}>
             {header ? (
-              <TopContent header={header} isDisabled={isDisabled} />
+              <TopContent header={header} color={secondaryTextColor} />
             ) : null}
             <CenterContent
-              isDisabled={isDisabled}
               onPress={onPress}
               rightOption={rightOption}
               title={title}
               value={value}
+              color={mainTextColor}
             />
             {description ? (
               <BottomContent
                 description={description}
-                isDisabled={isDisabled}
+                color={secondaryTextColor}
               />
             ) : null}
           </Box>

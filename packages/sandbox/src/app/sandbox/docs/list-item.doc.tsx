@@ -104,6 +104,7 @@ const LIST_ITEMS: JSX.Element[] = [
     }}
     showDivider
     title="Title"
+    appearance="danger"
   />,
   <ListItem
     description="Skeleton list item"

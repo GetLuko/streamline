@@ -7,10 +7,12 @@ export const LeftIcon = ({
   isSelected = false,
   isLoading,
   color,
+  testID,
 }: {
   isSelected?: boolean;
   color: ColorTheme;
   isLoading: boolean;
+  testID?: string;
 }) => {
   if (isLoading)
     return (
@@ -24,7 +26,12 @@ export const LeftIcon = ({
   return (
     <Box marginRight="md">
       {isSelected ? (
-        <Icon color={color} iconName="Check" size="large" />
+        <Icon
+          color={color}
+          iconName="Check"
+          size="large"
+          testID={`${testID}-check-icon`}
+        />
       ) : (
         <Box width={24}></Box>
       )}

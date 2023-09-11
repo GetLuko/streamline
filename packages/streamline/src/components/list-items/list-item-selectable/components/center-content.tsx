@@ -7,7 +7,6 @@ import { ListItemSelectableProps } from '../list-item-selectable.type';
 import { RightContent } from './right-content';
 
 export const CenterContent = ({
-  onPress,
   rightOption,
   title,
   value,
@@ -25,7 +24,7 @@ export const CenterContent = ({
           {title}
         </Text>
       </Box>
-      <RightContent onPress={onPress} rightOption={rightOption} value={value} />
+      <RightContent rightOption={rightOption} value={value} />
     </Box>
   );
 };

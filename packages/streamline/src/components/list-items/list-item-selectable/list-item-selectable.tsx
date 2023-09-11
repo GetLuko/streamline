@@ -68,6 +68,7 @@ export const ListItemSelectable = ({
             isSelected={isSelected}
             isLoading={isResolving}
             color={leftContentColor}
+            testID={testID}
           />
 
           <Box flex={1}>
@@ -75,7 +76,6 @@ export const ListItemSelectable = ({
               <TopContent header={header} color={secondaryTextColor} />
             ) : null}
             <CenterContent
-              onPress={onPress}
               rightOption={rightOption}
               color={mainTextColor}
               title={title}

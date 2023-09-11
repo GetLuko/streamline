@@ -3,11 +3,11 @@ import React from 'react';
 import { usePress } from '../../../../hooks/use-press.hook';
 import { Box } from '../../../../primitives/box/box';
 import { Text } from '../../../../primitives/text/text';
+import { IconsName } from '../../../../types';
 import ButtonIcon from '../../../buttons/button-icon/button-icon';
 import { ListItemSelectableProps } from '../list-item-selectable.type';
 
 export const RightContent = ({
-  onPress,
   rightOption,
   value,
 }: Pick<ListItemSelectableProps, 'onPress' | 'rightOption' | 'value'>) => {
@@ -19,7 +19,7 @@ export const RightContent = ({
     return (
       <Box position="absolute" paddingRight="xs" right={0}>
         <ButtonIcon
-          testID={rightOption.testID}
+          testID={`${rightOption.testID}-info-button`}
           accessibilityLabel={rightOption.accessibilityLabel}
           appearance="neutral"
           iconName={rightOption.iconName}

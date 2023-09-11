@@ -1,6 +1,6 @@
 import { ListItemProps } from '../list-item/list-item.types';
 
-export type ListItemValueProps = ListItemProps & {
+export type ListItemSelectableProps = ListItemProps & {
   value: string;
   isSelected?: boolean;
 };

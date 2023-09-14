@@ -1,7 +1,7 @@
 import { IconsName } from '../../../primitives/icon/icon.types';
 import { Appearance } from '../../../theme';
 
-type RightOption = {
+export type RightOption = {
   accessibilityLabel: string;
   iconName: IconsName;
   onPress: () => unknown;

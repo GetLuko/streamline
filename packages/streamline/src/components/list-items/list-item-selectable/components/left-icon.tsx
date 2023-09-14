@@ -4,12 +4,12 @@ import { ColorTheme } from '../../../../theme';
 import Spinner from '../../../spinner/spinner';
 
 export const LeftIcon = ({
-  isSelected = false,
+  isSelected,
   isLoading,
   color,
   testID,
 }: {
-  isSelected?: boolean;
+  isSelected: boolean;
   color: ColorTheme;
   isLoading: boolean;
   testID?: string;

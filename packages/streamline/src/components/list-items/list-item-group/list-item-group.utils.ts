@@ -8,4 +8,4 @@ export const isListItemValueProps = (
 
 export const isListItemSelectable = (
   item: ListItemProps
-): item is ListItemSelectableProps => ('value' || 'isSelected') in item;
+): item is ListItemSelectableProps => 'isSelected' in item;

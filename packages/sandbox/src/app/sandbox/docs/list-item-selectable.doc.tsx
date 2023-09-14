@@ -35,6 +35,7 @@ const LIST_ITEMS: JSX.Element[] = [
     onPress={ASYNC_ON_PRESS}
     title="Title"
     value="Value"
+    isSelected={false}
   />,
   <ListItemSelectable
     description="List item disabled"
@@ -43,11 +44,13 @@ const LIST_ITEMS: JSX.Element[] = [
     onPress={ASYNC_ON_PRESS}
     title="Title"
     value="Value"
+    isSelected={false}
   />,
   <ListItemSelectable
     onPress={ASYNC_ON_PRESS}
     title={LONG_TITLE}
     value={LONG_VALUE}
+    isSelected={false}
   />,
   <ListItemSelectable
     description={LONG_DESCRIPTION}
@@ -127,6 +130,7 @@ const LIST_ITEMS: JSX.Element[] = [
     onPress={ON_PRESS}
     title="Title"
     value="Value"
+    isSelected={false}
   />,
   <ListItemSelectable
     description="List item with right option and divider"

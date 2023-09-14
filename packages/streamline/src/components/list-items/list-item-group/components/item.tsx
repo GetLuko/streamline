@@ -14,9 +14,13 @@ import {
 export const Item = (
   props: ListItemProps | ListItemValueProps | ListItemSelectableProps
 ) => {
-  if (isListItemValueProps(props)) return <ListItemValue {...props} />;
+  if (isListItemValueProps(props)) {
+    return <ListItemValue {...props} />;
+  }
 
-  if (isListItemSelectable(props)) return <ListItemSelectable {...props} />;
+  if (isListItemSelectable(props)) {
+    return <ListItemSelectable {...props} />;
+  }
 
   return <ListItem {...props} />;
 };

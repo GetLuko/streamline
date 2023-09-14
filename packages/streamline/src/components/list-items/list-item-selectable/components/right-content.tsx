@@ -3,7 +3,6 @@ import React from 'react';
 import { usePress } from '../../../../hooks/use-press.hook';
 import { Box } from '../../../../primitives/box/box';
 import { Text } from '../../../../primitives/text/text';
-import { IconsName } from '../../../../types';
 import ButtonIcon from '../../../buttons/button-icon/button-icon';
 import { ListItemSelectableProps } from '../list-item-selectable.type';
 

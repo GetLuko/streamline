@@ -18,8 +18,6 @@ export const LeftIcon = ({
     return (
       <Box marginRight="md">
         <Spinner color={color} size="regular" />
-
-        <Box width={24} />
       </Box>
     );
 
@@ -33,7 +31,7 @@ export const LeftIcon = ({
           testID={`${testID}-check-icon`}
         />
       ) : (
-        <Box width={24}></Box>
+        <Box marginRight="lg" />
       )}
     </Box>
   );

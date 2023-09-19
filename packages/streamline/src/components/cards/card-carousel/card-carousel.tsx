@@ -67,31 +67,37 @@ export const CardCarousel = (props: CardCarouselProps) => {
         style={StyleSheet.absoluteFillObject}
       />
       <Box
-        flexDirection="row-reverse"
+        flexDirection="row"
         justifyContent="space-between"
         alignItems="center"
       >
-        <ButtonIcon
-          testID={`${testID}-close-button`}
-          isLoading={isLoading || isResolving}
-          iconName="Cross"
-          accessibilityLabel="close"
-          appearance="light"
-          onPress={onClose}
-          withContainer
-        />
+        <Box>
+          {isSmall && props.iconName ? (
+            <Icon iconName={props.iconName} color="PURE_WHITE_1000" />
+          ) : null}
 
-        {size === 'large' && props.tag ? (
-          <Tag
-            text={props.tag.text}
-            iconName={props.tag.iconName}
-            appearance="dark"
-          />
-        ) : null}
+          {!isSmall && props.tag ? (
+            <Tag
+              text={props.tag.text}
+              iconName={props.tag.iconName}
+              appearance="dark"
+            />
+          ) : null}
+        </Box>
 
-        {size === 'small' && props.iconName ? (
-          <Icon iconName={props.iconName} color="PURE_WHITE_1000" />
-        ) : null}
+        <Box>
+          {onClose ? (
+            <ButtonIcon
+              testID={`${testID}-close-button`}
+              isLoading={isLoading ?? isResolving}
+              iconName="Cross"
+              accessibilityLabel="close"
+              appearance="light"
+              onPress={onClose}
+              withContainer
+            />
+          ) : null}
+        </Box>
       </Box>
 
       <Box>

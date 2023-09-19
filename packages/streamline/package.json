@@ -1,6 +1,6 @@
 {
   "name": "@getluko/streamline",
-  "version": "0.0.35",
+  "version": "0.0.36",
   "author": "luko",
   "description": "Luko Design System using react-native for iOS and Android",
   "main": "dist/packages/streamline/index.js",

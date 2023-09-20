@@ -20,6 +20,10 @@ describe('CardCarousel', () => {
     testID: 'card-carousel',
     accessibilityLabel: 'Card Carousel',
     isSkeleton: false,
+    dismissAction: {
+      accessibilityLabel: 'close',
+      onDismiss: jest.fn(),
+    },
   };
 
   it('renders properly', () => {

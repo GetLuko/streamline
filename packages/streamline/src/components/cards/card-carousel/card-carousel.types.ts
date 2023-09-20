@@ -4,12 +4,12 @@ import { CardHeaderProps } from '../../../primitives/card/card-header/card-heade
 import { CardProps } from '../../../primitives/card/card.types';
 import { IconsName, Size } from '../../../primitives/icon/icon.types';
 
-type DefaultProps = Pick<
+export type DefaultProps = Pick<
   CardProps,
   'accessibilityLabel' | 'testID' | 'onPress' | 'onPressIn' | 'onPressOut'
 > &
   Omit<CardHeaderProps, 'colors' | 'title' | 'iconName'> & {
-    onClose?: () => void;
+    dismissAction?: DismissAction;
     /**
      * Handle the close button press event
      */
@@ -44,12 +44,17 @@ type DefaultProps = Pick<
     isSkeleton?: boolean;
   };
 
-type SmallCardCarouselProps = DefaultProps & {
+export type DismissAction = {
+  accessibilityLabel: string;
+  onDismiss: () => unknown;
+};
+
+export type SmallCardCarouselProps = DefaultProps & {
   size: 'small';
   iconName?: IconsName;
 };
 
-type LargeCardCarouselProps = DefaultProps & {
+export type LargeCardCarouselProps = DefaultProps & {
   size: 'large';
   tag?: {
     text: string;

@@ -24,6 +24,7 @@ export const CardCarousel = (props: CardCarouselProps) => {
     size,
     title,
     description,
+    dismissAction,
     onPress,
     onPressIn,
     onPressOut,
@@ -32,7 +33,6 @@ export const CardCarousel = (props: CardCarouselProps) => {
     isLoading,
     testID,
     media,
-    onClose,
   } = props;
 
   const isSmall = size === 'small';
@@ -40,6 +40,10 @@ export const CardCarousel = (props: CardCarouselProps) => {
   const cardWidth = isSmall ? SMALL_CARD_SIZE : '100%';
 
   const [handlePress, isResolving] = usePress({ onPress: onPress });
+
+  const [handleOnDismiss, isDismissing] = usePress({
+    onPress: dismissAction?.onDismiss,
+  });
 
   if (isSkeleton) return <CardCarouselSkeleton size={size} testID={testID} />;
 
@@ -67,31 +71,37 @@ export const CardCarousel = (props: CardCarouselProps) => {
         style={StyleSheet.absoluteFillObject}
       />
       <Box
-        flexDirection="row-reverse"
+        flexDirection="row"
         justifyContent="space-between"
         alignItems="center"
       >
-        <ButtonIcon
-          testID={`${testID}-close-button`}
-          isLoading={isLoading || isResolving}
-          iconName="Cross"
-          accessibilityLabel="close"
-          appearance="light"
-          onPress={onClose}
-          withContainer
-        />
+        <Box>
+          {isSmall && props.iconName ? (
+            <Icon iconName={props.iconName} color="PURE_WHITE_1000" />
+          ) : null}
 
-        {size === 'large' && props.tag ? (
-          <Tag
-            text={props.tag.text}
-            iconName={props.tag.iconName}
-            appearance="dark"
-          />
-        ) : null}
+          {!isSmall && props.tag ? (
+            <Tag
+              text={props.tag.text}
+              iconName={props.tag.iconName}
+              appearance="dark"
+            />
+          ) : null}
+        </Box>
 
-        {size === 'small' && props.iconName ? (
-          <Icon iconName={props.iconName} color="PURE_WHITE_1000" />
-        ) : null}
+        <Box>
+          {dismissAction ? (
+            <ButtonIcon
+              testID={`${testID}-close-button`}
+              isLoading={isDismissing || isLoading}
+              iconName="Cross"
+              accessibilityLabel={dismissAction.accessibilityLabel}
+              appearance="light"
+              onPress={handleOnDismiss}
+              withContainer
+            />
+          ) : null}
+        </Box>
       </Box>
 
       <Box>

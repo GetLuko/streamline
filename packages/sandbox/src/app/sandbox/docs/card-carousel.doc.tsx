@@ -3,7 +3,10 @@ import React from 'react';
 
 import { DocList } from '../components/DocList';
 
-const onClose = () => console.log('onClose pressed');
+const DISMISS_ACTION = {
+  accessibilityLabel: 'close',
+  onDismiss: () => console.log('onDismiss pressed'),
+};
 
 const docs = [
   <CardCarousel
@@ -13,7 +16,7 @@ const docs = [
     description="description bla bla bla bla bla bla bla blla bla bla bla bla bla bla"
     tag={{ text: 'Card 1', iconName: 'Backpack' }}
     media={{ uri: 'https://legacy.reactjs.org/logo-og.png' }}
-    onClose={onClose}
+    dismissAction={DISMISS_ACTION}
   />,
   <CardCarousel
     key={1}
@@ -25,9 +28,15 @@ const docs = [
       uri: 'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
     }}
     isLoading
-    onClose={onClose}
+    dismissAction={DISMISS_ACTION}
   />,
-  <CardCarousel key={2} title="" size="large" isSkeleton onClose={onClose} />,
+  <CardCarousel
+    key={2}
+    title=""
+    size="large"
+    isSkeleton
+    dismissAction={DISMISS_ACTION}
+  />,
   <CardCarousel
     key={3}
     size="small"
@@ -35,7 +44,7 @@ const docs = [
     description="description bla bla bla bla bla bla bla blla bla bla bla bla bla bla"
     iconName="Backpack"
     media={{ uri: 'https://legacy.reactjs.org/logo-og.png' }}
-    onClose={onClose}
+    dismissAction={DISMISS_ACTION}
   />,
   <CardCarousel
     key={4}
@@ -47,9 +56,15 @@ const docs = [
     media={{
       uri: 'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
     }}
-    onClose={onClose}
+    dismissAction={DISMISS_ACTION}
   />,
-  <CardCarousel key={5} title="" size="small" isSkeleton onClose={onClose} />,
+  <CardCarousel
+    key={5}
+    title=""
+    size="small"
+    isSkeleton
+    dismissAction={DISMISS_ACTION}
+  />,
 ];
 
 export const CardCarouselSandbox = () => <DocList docs={docs} />;

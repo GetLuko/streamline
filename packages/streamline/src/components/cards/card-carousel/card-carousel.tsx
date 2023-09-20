@@ -41,7 +41,7 @@ export const CardCarousel = (props: CardCarouselProps) => {
 
   const [handlePress, isResolving] = usePress({ onPress: onPress });
 
-  const [handleOnClose, isDismissing] = usePress({
+  const [handleOnDismiss, isDismissing] = usePress({
     onPress: dismissAction?.onDismiss,
   });
 
@@ -95,9 +95,9 @@ export const CardCarousel = (props: CardCarouselProps) => {
               testID={`${testID}-close-button`}
               isLoading={isDismissing || isLoading}
               iconName="Cross"
-              accessibilityLabel="close"
+              accessibilityLabel={dismissAction.accessibilityLabel}
               appearance="light"
-              onPress={handleOnClose}
+              onPress={handleOnDismiss}
               withContainer
             />
           ) : null}

@@ -12,6 +12,7 @@ export const CardTip = ({
   description,
   iconName,
   animated = true,
+  onLinkPress,
 }: CardTipProps) => {
   const colors = getCardTipColors({ appearance });
   return (
@@ -23,7 +24,10 @@ export const CardTip = ({
     >
       <Icon color={colors.iconColor} iconName={iconName} size="large" />
       <Box marginLeft="md" flex={1}>
-        <MarkdownLink bodyColor={colors.descriptionColor}>
+        <MarkdownLink
+          bodyColor={colors.descriptionColor}
+          onLinkPress={onLinkPress}
+        >
           {description}
         </MarkdownLink>
       </Box>

@@ -8,7 +8,7 @@ export type CardTipProps = {
   description: string;
   iconName: IconsName;
   animated?: boolean;
-  onLinkPress: MarkdownLinkProps['onLinkPress'];
+  onLinkPress?: MarkdownLinkProps['onLinkPress'];
 };
 
 export type CardTipColors = {

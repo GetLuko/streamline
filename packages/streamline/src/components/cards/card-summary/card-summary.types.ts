@@ -2,8 +2,7 @@ import { CardHeaderProps } from '../../../primitives/card/card-header/card-heade
 import { CardProps } from '../../../primitives/card/card.types';
 import { ColorTheme } from '../../../theme';
 import { Appearance } from '../../../theme/appearance';
-import { ButtonProps } from '../../buttons/button/button.types';
-import { TagProps } from '../../tag/tag.types';
+import { FooterProps } from '../../../types';
 
 export type CardSummaryProps = Pick<
   CardProps,
@@ -47,10 +46,6 @@ export type CardSummaryProps = Pick<
      */
     footer?: FooterProps;
   };
-
-type FooterProps =
-  | (Omit<ButtonProps, 'appearance' | 'pointerEvents'> & { type: 'button' })
-  | (TagProps & { type: 'tag' });
 
 type HeaderColors = {
   rightIconColor: ColorTheme;

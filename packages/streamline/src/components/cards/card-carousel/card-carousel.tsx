@@ -18,6 +18,7 @@ import {
   SMALL_CARD_SIZE,
 } from './card-carousel.constants';
 import { CardCarouselProps } from './card-carousel.types';
+import { getCardCarouselColors } from './card-carousel.utils';
 
 export const CardCarousel = (props: CardCarouselProps) => {
   const {
@@ -33,17 +34,23 @@ export const CardCarousel = (props: CardCarouselProps) => {
     isLoading,
     testID,
     media,
+    appearance = 'primary',
   } = props;
 
   const isSmall = size === 'small';
   const cardHeight = isSmall ? SMALL_CARD_SIZE : LARGE_CARD_HEIGHT;
   const cardWidth = isSmall ? SMALL_CARD_SIZE : '100%';
+  const { backgroundColor, pressedColor } = getCardCarouselColors({
+    appearance,
+  });
 
-  const [handlePress, isResolving] = usePress({ onPress: onPress });
+  const [handlePress, isResolving] = usePress({ onPress });
 
   const [handleOnDismiss, isDismissing] = usePress({
     onPress: dismissAction?.onDismiss,
   });
+
+  const isBusy = isResolving || isDismissing || isLoading;
 
   if (isSkeleton) return <CardCarouselSkeleton size={size} testID={testID} />;
 
@@ -59,17 +66,21 @@ export const CardCarousel = (props: CardCarouselProps) => {
       onPressOut={onPressOut}
       testID={testID}
       accessibilityLabel={accessibilityLabel}
+      pressedBackgroundColor={pressedColor}
+      backgroundColor={backgroundColor}
     >
       {media ? (
-        <Image source={media} style={StyleSheet.absoluteFillObject} />
+        <>
+          <Image source={media} style={StyleSheet.absoluteFillObject} />
+          <LinearGradient
+            colors={LINEAR_BACKGROUND}
+            start={{ x: LINEAR_START_X, y: 0 }}
+            end={{ x: LINEAR_END_X, y: 1 }}
+            style={StyleSheet.absoluteFillObject}
+          />
+        </>
       ) : null}
 
-      <LinearGradient
-        colors={LINEAR_BACKGROUND}
-        start={{ x: LINEAR_START_X, y: 0 }}
-        end={{ x: LINEAR_END_X, y: 1 }}
-        style={StyleSheet.absoluteFillObject}
-      />
       <Box
         flexDirection="row"
         justifyContent="space-between"
@@ -93,7 +104,7 @@ export const CardCarousel = (props: CardCarouselProps) => {
           {dismissAction ? (
             <ButtonIcon
               testID={`${testID}-close-button`}
-              isLoading={isDismissing || isLoading}
+              isLoading={isBusy}
               iconName="Cross"
               accessibilityLabel={dismissAction.accessibilityLabel}
               appearance="light"

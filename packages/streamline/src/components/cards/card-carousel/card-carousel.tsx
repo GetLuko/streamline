@@ -88,7 +88,11 @@ export const CardCarousel = (props: CardCarouselProps) => {
       >
         <Box>
           {isSmall && props.iconName ? (
-            <Icon iconName={props.iconName} color="PURE_WHITE_1000" />
+            <Icon
+              size="large"
+              iconName={props.iconName}
+              color="PURE_WHITE_1000"
+            />
           ) : null}
 
           {!isSmall && props.tag ? (

@@ -50,7 +50,7 @@ export const CardCarousel = (props: CardCarouselProps) => {
     onPress: dismissAction?.onDismiss,
   });
 
-  const isBusy = isResolving || isDismissing || isLoading;
+  const isBusy = isResolving || isLoading;
 
   if (isSkeleton) return <CardCarouselSkeleton size={size} testID={testID} />;
 
@@ -105,12 +105,12 @@ export const CardCarousel = (props: CardCarouselProps) => {
         </Box>
 
         <Box>
-          {dismissAction ? (
+          {dismissAction || isBusy ? (
             <ButtonIcon
               testID={`${testID}-close-button`}
-              isLoading={isBusy}
+              isLoading={isDismissing || isBusy}
               iconName="Cross"
-              accessibilityLabel={dismissAction.accessibilityLabel}
+              accessibilityLabel={dismissAction?.accessibilityLabel ?? ''}
               appearance="light"
               onPress={handleOnDismiss}
               withContainer

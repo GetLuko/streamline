@@ -31,7 +31,7 @@ const docs = [
     description="description bla bla bla bla bla bla bla blla bla bla bla bla bla bla"
     tag={{ text: 'Card 1', iconName: 'Backpack' }}
     appearance="secondary"
-    dismissAction={DISMISS_ACTION}
+    isLoading
     onPress={ON_PRESS}
   />,
   <CardCarousel
@@ -50,8 +50,6 @@ const docs = [
     description="description bla bla bla bla bla bla bla blla bla bla bla bla bla bla"
     tag={{ text: 'Card 1', iconName: 'Backpack' }}
     appearance="warning"
-    dismissAction={DISMISS_ACTION}
-    onPress={ON_PRESS}
   />,
   <CardCarousel
     key={0}

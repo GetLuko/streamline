@@ -11,7 +11,6 @@ export const getCardCarouselColors = ({
         backgroundColor: 'MINT_700',
         pressedColor: 'MINT_800',
       };
-
     case 'secondary':
       return {
         backgroundColor: 'TEAL_700',

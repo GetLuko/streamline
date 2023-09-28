@@ -5,10 +5,7 @@ import { Image, StyleSheet } from 'react-native';
 import { usePress } from '../../../hooks/use-press.hook';
 import { Box } from '../../../primitives/box/box';
 import { Card } from '../../../primitives/card/card';
-import { Icon } from '../../../primitives/icon/icon';
 import { Text } from '../../../primitives/text/text';
-import ButtonIcon from '../../buttons/button-icon/button-icon';
-import Tag from '../../tag/tag';
 import { CardCarouselSkeleton } from './card-carousel-skeleton';
 import {
   LARGE_CARD_HEIGHT,
@@ -18,6 +15,9 @@ import {
   SMALL_CARD_SIZE,
 } from './card-carousel.constants';
 import { CardCarouselProps } from './card-carousel.types';
+import { getCardCarouselColors } from './card-carousel.utils';
+import TopLeftContent from './components/top-left-content';
+import TopRightContent from './components/top-right-content';
 
 export const CardCarousel = (props: CardCarouselProps) => {
   const {
@@ -33,17 +33,19 @@ export const CardCarousel = (props: CardCarouselProps) => {
     isLoading,
     testID,
     media,
+    appearance = 'primary',
   } = props;
 
   const isSmall = size === 'small';
   const cardHeight = isSmall ? SMALL_CARD_SIZE : LARGE_CARD_HEIGHT;
   const cardWidth = isSmall ? SMALL_CARD_SIZE : '100%';
-
-  const [handlePress, isResolving] = usePress({ onPress: onPress });
-
-  const [handleOnDismiss, isDismissing] = usePress({
-    onPress: dismissAction?.onDismiss,
+  const { backgroundColor, pressedColor } = getCardCarouselColors({
+    appearance,
   });
+
+  const [handlePress, isResolving] = usePress({ onPress });
+
+  const isBusy = isResolving || isLoading;
 
   if (isSkeleton) return <CardCarouselSkeleton size={size} testID={testID} />;
 
@@ -59,49 +61,33 @@ export const CardCarousel = (props: CardCarouselProps) => {
       onPressOut={onPressOut}
       testID={testID}
       accessibilityLabel={accessibilityLabel}
+      pressedBackgroundColor={pressedColor}
+      backgroundColor={backgroundColor}
     >
       {media ? (
-        <Image source={media} style={StyleSheet.absoluteFillObject} />
+        <>
+          <Image source={media} style={StyleSheet.absoluteFillObject} />
+          <LinearGradient
+            colors={LINEAR_BACKGROUND}
+            start={{ x: LINEAR_START_X, y: 0 }}
+            end={{ x: LINEAR_END_X, y: 1 }}
+            style={StyleSheet.absoluteFillObject}
+          />
+        </>
       ) : null}
 
-      <LinearGradient
-        colors={LINEAR_BACKGROUND}
-        start={{ x: LINEAR_START_X, y: 0 }}
-        end={{ x: LINEAR_END_X, y: 1 }}
-        style={StyleSheet.absoluteFillObject}
-      />
       <Box
         flexDirection="row"
         justifyContent="space-between"
         alignItems="center"
       >
-        <Box>
-          {isSmall && props.iconName ? (
-            <Icon iconName={props.iconName} color="PURE_WHITE_1000" />
-          ) : null}
+        <TopLeftContent {...props} />
 
-          {!isSmall && props.tag ? (
-            <Tag
-              text={props.tag.text}
-              iconName={props.tag.iconName}
-              appearance="dark"
-            />
-          ) : null}
-        </Box>
-
-        <Box>
-          {dismissAction ? (
-            <ButtonIcon
-              testID={`${testID}-close-button`}
-              isLoading={isDismissing || isLoading}
-              iconName="Cross"
-              accessibilityLabel={dismissAction.accessibilityLabel}
-              appearance="light"
-              onPress={handleOnDismiss}
-              withContainer
-            />
-          ) : null}
-        </Box>
+        <TopRightContent
+          dismissAction={dismissAction}
+          isLoading={isBusy}
+          testID={testID}
+        />
       </Box>
 
       <Box>

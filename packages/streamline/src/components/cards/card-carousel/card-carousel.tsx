@@ -5,10 +5,7 @@ import { Image, StyleSheet } from 'react-native';
 import { usePress } from '../../../hooks/use-press.hook';
 import { Box } from '../../../primitives/box/box';
 import { Card } from '../../../primitives/card/card';
-import { Icon } from '../../../primitives/icon/icon';
 import { Text } from '../../../primitives/text/text';
-import ButtonIcon from '../../buttons/button-icon/button-icon';
-import Tag from '../../tag/tag';
 import { CardCarouselSkeleton } from './card-carousel-skeleton';
 import {
   LARGE_CARD_HEIGHT,
@@ -19,6 +16,8 @@ import {
 } from './card-carousel.constants';
 import { CardCarouselProps } from './card-carousel.types';
 import { getCardCarouselColors } from './card-carousel.utils';
+import TopLeftContent from './components/top-left-content';
+import TopRightContent from './components/top-right-content';
 
 export const CardCarousel = (props: CardCarouselProps) => {
   const {
@@ -45,10 +44,6 @@ export const CardCarousel = (props: CardCarouselProps) => {
   });
 
   const [handlePress, isResolving] = usePress({ onPress });
-
-  const [handleOnDismiss, isDismissing] = usePress({
-    onPress: dismissAction?.onDismiss,
-  });
 
   const isBusy = isResolving || isLoading;
 
@@ -86,37 +81,13 @@ export const CardCarousel = (props: CardCarouselProps) => {
         justifyContent="space-between"
         alignItems="center"
       >
-        <Box>
-          {isSmall && props.iconName ? (
-            <Icon
-              size="large"
-              iconName={props.iconName}
-              color="PURE_WHITE_1000"
-            />
-          ) : null}
+        <TopLeftContent {...props} />
 
-          {!isSmall && props.tag ? (
-            <Tag
-              text={props.tag.text}
-              iconName={props.tag.iconName}
-              appearance="dark"
-            />
-          ) : null}
-        </Box>
-
-        <Box>
-          {dismissAction || isBusy ? (
-            <ButtonIcon
-              testID={`${testID}-close-button`}
-              isLoading={isDismissing || isBusy}
-              iconName="Cross"
-              accessibilityLabel={dismissAction?.accessibilityLabel ?? ''}
-              appearance="light"
-              onPress={handleOnDismiss}
-              withContainer
-            />
-          ) : null}
-        </Box>
+        <TopRightContent
+          dismissAction={dismissAction}
+          isLoading={isBusy}
+          testID={testID}
+        />
       </Box>
 
       <Box>

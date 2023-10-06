@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pressable } from 'react-native';
+import { Pressable } from 'react-native-ama';
 
 import { usePress } from '../../../hooks/use-press.hook';
 import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
@@ -13,10 +13,6 @@ import {
   getButtonIconSize,
 } from './button-icon.utils';
 
-/**
- * Todo - Use pressable from react-native-ama when issue below fixed
- * https://github.com/FormidableLabs/react-native-ama/issues/92
- */
 export const ButtonIcon = ({
   accessibilityLabel,
   iconName,

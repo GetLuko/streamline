@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pressable } from 'react-native';
+import { Pressable } from 'react-native-ama';
 
 import { usePress } from '../../../hooks/use-press.hook';
 import { Box } from '../../../primitives/box/box';
@@ -18,10 +18,6 @@ import { ListItemValueProps } from './list-item-value.types';
 
 const DIVIDER_VERTICAL_MARGIN = 16;
 
-/**
- * Todo - Use pressable from react-native-ama when issue below fixed
- * https://github.com/FormidableLabs/react-native-ama/issues/92
- */
 export const ListItemValue = ({
   appearance = 'neutral',
   accessibilityLabel,

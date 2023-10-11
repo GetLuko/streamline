@@ -9,82 +9,82 @@ appId: ${APPID}
 - openLink:
     link: exp://localhost:19000
     autoVerify: true
-# - tapOn:
-#     # bypass expo onboarding modal if you run the test on a fresh env
-#     text: 'Got it'
-#     optional: true
-# - tapOn:
-#     # bypass expo onboarding modal if you run the test on a fresh env
-#     text: 'Foundation'
-#     optional: true
-# - runFlow:
-#     file: subflow/takeScreenshot.yaml
-#     env:
-#       COMPONENT: Shadows
-# - runFlow:
-#     file: subflow/takeScreenshot.yaml
-#     env:
-#       COMPONENT: Icons
-# - runFlow:
-#     file: subflow/takeScreenshot.yaml
-#     env:
-#       COMPONENT: Typo
-# - runFlow:
-#     file: subflow/takeScreenshot.yaml
-#     env:
-#       COMPONENT: Skeleton
-# - runFlow:
-#     file: subflow/takeScreenshot.yaml
-#     env:
-#       COMPONENT: Spinner
-# - runFlow:
-#     file: subflow/takeScreenshot.yaml
-#     env:
-#       COMPONENT: Markdown
-# - runFlow:
-#     file: subflow/takeScreenshot.yaml
-#     env:
-#       COMPONENT: ButtonBar
-# - runFlow:
-#     file: subflow/takeScreenshot.yaml
-#     env:
-#       COMPONENT: Button
-# - runFlow:
-#     file: subflow/takeScreenshot.yaml
-#     env:
-#       COMPONENT: ButtonIcon
-# - runFlow:
-#     file: subflow/takeScreenshot.yaml
-#     env:
-#       COMPONENT: ButtonMini
-# - runFlow:
-#     file: subflow/takeScreenshot.yaml
-#     env:
-#       COMPONENT: ButtonDock
-# - runFlow:
-#     file: subflow/takeScreenshot.yaml
-#     env:
-#       COMPONENT: Card
-# - runFlow:
-#     file: subflow/takeScreenshot.yaml
-#     env:
-#       COMPONENT: CardCallout
-# - runFlow:
-#     file: subflow/takeScreenshot.yaml
-#     env:
-#       COMPONENT: CardSummary
-# - runFlow:
-#     file: subflow/takeScreenshot.yaml
-#     env:
-#       COMPONENT: CardHighlight
-# - runFlow:
-#     file: subflow/takeScreenshot.yaml
-#     env:
-#       COMPONENT: CardTip
-# - runFlow:
-#     file: subflow/takeScreenshot.yaml
-#     env:
-#       COMPONENT: CardCarousel
+- tapOn:
+    # bypass expo onboarding modal if you run the test on a fresh env
+    text: 'Got it'
+    optional: true
+- tapOn:
+    # bypass expo onboarding modal if you run the test on a fresh env
+    text: 'Foundation'
+    optional: true
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Shadows
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Icons
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Typo
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Skeleton
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Spinner
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Markdown
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: ButtonBar
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Button
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: ButtonIcon
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: ButtonMini
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: ButtonDock
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Card
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: CardCallout
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: CardSummary
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: CardHighlight
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: CardTip
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: CardCarousel
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:

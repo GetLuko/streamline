@@ -49,14 +49,16 @@ export function CardHighlight({
       <Box padding="md">
         <Box flexDirection="row" justifyContent="space-between">
           {tag ? (
-            <Tag iconName={tag.iconName} text={tag.text} appearance="light" />
+            <Box marginBottom="md">
+              <Tag iconName={tag.iconName} text={tag.text} appearance="light" />
+            </Box>
           ) : null}
           {isLoading || isResolving ? (
             <Spinner color="PURE_WHITE_1000" />
           ) : null}
         </Box>
 
-        <Text variant="titleMediumBold" color={titleColor} marginTop="md">
+        <Text variant="titleMediumBold" color={titleColor}>
           {title}
         </Text>
         {description ? (

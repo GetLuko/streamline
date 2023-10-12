@@ -114,7 +114,6 @@ const useStyles = (
   return {
     pressable: {
       borderRadius: borderRadii.lg,
-      alignSelf: size === 'mini' ? 'flex-start' : undefined,
       ...(isFloating ? getShadowsStyle('strong') : {}),
     },
     activityIndicator: {

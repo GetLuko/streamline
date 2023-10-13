@@ -1,0 +1,38 @@
+import { ImageBackground, StyleSheet } from 'react-native';
+
+import { Box } from '../../../primitives/box/box';
+import { Card } from '../../../primitives/card/card';
+import { Text } from '../../../primitives/text/text';
+import { CardMediaProps } from './card-media.types';
+import { VideoOverlay } from './component/video-overlay';
+
+const CARD_HEIGHT = 192;
+
+export const CardMedia = ({
+  type,
+  duration,
+  onPress,
+  thumbnail,
+  caption,
+}: CardMediaProps) => {
+  return (
+    <Box>
+      <Card width="100%" height={CARD_HEIGHT} overflow="hidden">
+        <ImageBackground
+          testID="card-media-thumbnail"
+          source={thumbnail}
+          style={StyleSheet.absoluteFillObject}
+        >
+          {type === 'video' ? <VideoOverlay duration={duration} /> : null}
+        </ImageBackground>
+      </Card>
+      {caption ? (
+        <Text variant="caption" color="GREY_500" marginTop="xs">
+          {caption}
+        </Text>
+      ) : null}
+    </Box>
+  );
+};
+
+export default CardMedia;

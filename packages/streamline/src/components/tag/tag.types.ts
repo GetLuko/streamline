@@ -3,7 +3,7 @@ import { Appearance } from '../../theme/appearance';
 
 export type TagProps = {
   appearance?: Appearance;
-  iconName: IconsName;
+  iconName?: IconsName;
   isSmall?: boolean;
-  text: string;
+  text?: string;
 };

@@ -7,6 +7,7 @@ export * from './components/list-items/list-item/list-item.types';
 export * from './components/buttons/button/button.types';
 export * from './components/cards/card-highlight/card-highlight.types';
 export * from './components/cards/card-feedback/card-feedback.types';
+export * from './components/cards/card-media/card-media.types';
 
 export function isObjKey<T extends object>(key: any, obj: T): key is keyof T {
   return key in obj;

@@ -35,10 +35,18 @@ export const Tag = ({
         right={0}
         left={0}
       />
-      <Icon color={colors.iconColor} iconName={iconName} size={iconSize} />
-      <Text color={colors.textColor} marginLeft="xxs" variant={textVariant}>
-        {text}
-      </Text>
+      {iconName ? (
+        <Icon color={colors.iconColor} iconName={iconName} size={iconSize} />
+      ) : null}
+      {text ? (
+        <Text
+          color={colors.textColor}
+          marginLeft={iconName ? 'xxs' : undefined}
+          variant={textVariant}
+        >
+          {text}
+        </Text>
+      ) : null}
     </Box>
   );
 };

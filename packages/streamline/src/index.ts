@@ -14,6 +14,7 @@ export * from './components/buttons/button/button';
 export * from './components/cards/card-callout/card-callout';
 export * from './components/cards/card-carousel/card-carousel';
 export * from './components/cards/card-feedback/card-feedback';
+export * from './components/cards/card-media/card-media';
 export * from './components/cards/card-summary/card-summary';
 export * from './components/cards/card-tip/card-tip';
 export * from './components/checkbox/checkbox';

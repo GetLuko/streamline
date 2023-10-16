@@ -6,4 +6,5 @@ export interface CardMediaProps {
   thumbnail: ImageSourcePropType;
   duration?: string;
   caption?: string;
+  height?: number;
 }

@@ -1,10 +1,6 @@
-import { Pressable } from 'react-native-ama';
-
 import { Box } from '../../../primitives/box/box';
-import { Icon } from '../../../primitives/icon/icon';
+import { Card } from '../../../primitives/card/card';
 import { Text } from '../../../primitives/text/text';
-import { IconsName } from '../../../types';
-import { Button } from '../../buttons/button/button';
 import { CardFeedbackProps } from './card-feedback.types';
 import { getCardFeedbackBackgroundColor } from './card-feedback.utils';
 import EmojiRating from './components/EmojiRating';
@@ -33,10 +29,10 @@ const CardFeedbackContent = (props: CardFeedbackProps) => {
 };
 
 export const CardFeedback = (props: CardFeedbackProps) => {
-  const { appearance = 'primary', title, description } = props;
+  const { appearance = 'primary', title, description, animated } = props;
   const backgroundColor = getCardFeedbackBackgroundColor({ appearance });
   return (
-    <Box backgroundColor={backgroundColor} padding="md" borderRadius="lg">
+    <Card backgroundColor={backgroundColor} animated={animated}>
       <Box paddingBottom={title || description ? 'md' : undefined}>
         {title ? (
           <Text variant="headlineBold" color="GREY_1000">
@@ -50,7 +46,7 @@ export const CardFeedback = (props: CardFeedbackProps) => {
         ) : null}
       </Box>
       <CardFeedbackContent {...props} />
-    </Box>
+    </Card>
   );
 };
 

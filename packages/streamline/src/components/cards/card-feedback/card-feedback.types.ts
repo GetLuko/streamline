@@ -5,6 +5,7 @@ interface DefaultProps {
   title?: string;
   description?: string;
   type: 'star' | 'emoji' | 'thumb';
+  animated?: boolean;
 }
 
 export interface NumberFeedBackProps extends DefaultProps {

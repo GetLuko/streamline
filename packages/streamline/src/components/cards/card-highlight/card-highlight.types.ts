@@ -20,4 +20,8 @@ export type CardHighlightProps = Pick<
     };
     title: string;
     media: ImageSourcePropType;
+    /**
+     * Indicate if the card is published. (if false, the card will have a black overlay)
+     */
+    isPublished?: boolean;
   };

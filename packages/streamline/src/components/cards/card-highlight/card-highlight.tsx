@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 
 import { usePress } from '../../../hooks/use-press.hook';
 import { Box } from '../../../primitives/box/box';
@@ -24,6 +24,7 @@ export function CardHighlight({
   onPressIn,
   onPressOut,
   accessibilityLabel,
+  isPublished,
 }: CardHighlightProps) {
   const [handlePress, isResolving] = usePress({ onPress });
 
@@ -46,6 +47,13 @@ export function CardHighlight({
       onPressOut={onPressOut}
       accessibilityLabel={accessibilityLabel}
     >
+      {!isPublished ? (
+        <Box
+          width={5}
+          style={StyleSheet.absoluteFillObject}
+          backgroundColor="BLACK"
+        />
+      ) : null}
       <Box padding="md">
         <Box flexDirection="row" justifyContent="space-between">
           {tag ? (

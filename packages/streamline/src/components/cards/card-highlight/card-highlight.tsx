@@ -24,7 +24,7 @@ export function CardHighlight({
   onPressIn,
   onPressOut,
   accessibilityLabel,
-  isPublished,
+  isPublished = true,
 }: CardHighlightProps) {
   const [handlePress, isResolving] = usePress({ onPress });
 
@@ -47,13 +47,6 @@ export function CardHighlight({
       onPressOut={onPressOut}
       accessibilityLabel={accessibilityLabel}
     >
-      {!isPublished ? (
-        <Box
-          width={5}
-          style={StyleSheet.absoluteFillObject}
-          backgroundColor="BLACK"
-        />
-      ) : null}
       <Box padding="md">
         <Box flexDirection="row" justifyContent="space-between">
           {tag ? (
@@ -80,6 +73,13 @@ export function CardHighlight({
         style={{ flex: 1, height: 192 }}
         resizeMode="cover"
       />
+      {!isPublished ? (
+        <Box
+          width={5}
+          style={StyleSheet.absoluteFillObject}
+          backgroundColor="BLACK"
+        />
+      ) : null}
     </Card>
   );
 }

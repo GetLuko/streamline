@@ -13,6 +13,7 @@ export interface NavigationTitleProps {
   icon?: IconsName;
   onIconPress?: () => void;
   buttonIconAccessibilityLabel?: string;
+  titleNumberOfLines?: number;
 }
 
 export const NavigationTitle = ({
@@ -24,6 +25,7 @@ export const NavigationTitle = ({
   icon,
   onIconPress,
   buttonIconAccessibilityLabel,
+  titleNumberOfLines,
 }: NavigationTitleProps) => {
   const { titleColor, headerColor, valueColor, headerOpacity, valueOpacity } =
     getNavigationTitleColors(appearance);
@@ -55,7 +57,7 @@ export const NavigationTitle = ({
             accessibilityRole="header"
             color={titleColor}
             textAlign={position}
-            numberOfLines={4}
+            numberOfLines={titleNumberOfLines}
           >
             {title}
           </Text>

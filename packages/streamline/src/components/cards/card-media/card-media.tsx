@@ -6,7 +6,7 @@ import { Text } from '../../../primitives/text/text';
 import { CardMediaProps } from './card-media.types';
 import { VideoOverlay } from './component/video-overlay';
 
-const CARD_HEIGHT = 192;
+const DEFAULT_CARD_HEIGHT = 192;
 
 export const CardMedia = ({
   type,
@@ -14,10 +14,11 @@ export const CardMedia = ({
   onPress,
   thumbnail,
   caption,
+  height = DEFAULT_CARD_HEIGHT,
 }: CardMediaProps) => {
   return (
     <Box>
-      <Card width="100%" height={CARD_HEIGHT} overflow="hidden">
+      <Card width="100%" height={height} overflow="hidden">
         <ImageBackground
           testID="card-media-thumbnail"
           source={thumbnail}

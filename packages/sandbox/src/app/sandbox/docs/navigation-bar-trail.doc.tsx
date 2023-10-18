@@ -20,6 +20,10 @@ const right: NavigationBarTrailProps['right'] = {
   },
 };
 
+const title = 'Title';
+const longTitle =
+  'Super long title that should be truncated even when there is no other stuff';
+
 const action = {
   title: 'Action',
   onPress: async () => {
@@ -31,14 +35,14 @@ const docs: JSX.Element[] = [
     appearance="primary"
     left={{ ...left, type: 'close' }}
     right={right}
-    title="Title"
+    title={title}
     action={action}
   />,
 
   <NavigationBarTrail
     left={left}
     right={right}
-    title="Title"
+    title={title}
     action={action}
     appearance="dark"
   />,
@@ -47,7 +51,7 @@ const docs: JSX.Element[] = [
     left={left}
     right={right}
     backgroundColor="BLUKO_500"
-    title="Title"
+    title={title}
     action={action}
     appearance="light"
   />,
@@ -62,10 +66,32 @@ const docs: JSX.Element[] = [
     backgroundColor="ORANGE_700"
   />,
   <NavigationBarTrail
-    title="Title"
+    title={title}
     appearance="light"
     backgroundColor="ORANGE_700"
   />,
+  <NavigationBarTrail
+    title={longTitle}
+    left={left}
+    right={right}
+    action={action}
+    appearance="primary"
+  />,
+  <NavigationBarTrail
+    title={longTitle}
+    right={right}
+    action={action}
+    appearance="primary"
+  />,
+  <NavigationBarTrail
+    title={longTitle}
+    left={left}
+    action={action}
+    appearance="primary"
+  />,
+  <NavigationBarTrail title={longTitle} action={action} appearance="primary" />,
+  <NavigationBarTrail title={longTitle} right={right} appearance="primary" />,
+  <NavigationBarTrail title={longTitle} left={left} appearance="primary" />,
 ];
 
 export const NavigationBarTrailSandbox = () => <DocList docs={docs} />;

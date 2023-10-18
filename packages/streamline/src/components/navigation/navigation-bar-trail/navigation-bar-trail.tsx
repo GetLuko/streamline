@@ -1,12 +1,16 @@
-import { Pressable } from 'react-native';
+import { useState } from 'react';
+import { LayoutChangeEvent, Pressable } from 'react-native';
 
 import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
 import { Box } from '../../../primitives/box/box';
 import { Text } from '../../../primitives/text/text';
-import { ColorTheme } from '../../../theme';
+import { ColorTheme, useStreamlineTheme } from '../../../theme';
 import ButtonIcon from '../../buttons/button-icon/button-icon';
 import { ButtonIconProps } from '../../buttons/button-icon/button-icon.types';
 import { getNavigationTrailTextColor } from './navigation-bar-trail.utils';
+
+const MIN_WIDTH = 40;
+const MIN_HEIGHT = 48;
 
 export interface NavigationBarTrailProps {
   title?: string;
@@ -38,6 +42,19 @@ export const NavigationBarTrail = ({
   const { titleColor, actionColor } = getNavigationTrailTextColor({
     appearance,
   });
+
+  const { spacing } = useStreamlineTheme();
+
+  const minWidth = left || right ? MIN_WIDTH + spacing.xs : spacing.md;
+
+  const [rightWidth, setRightWidth] = useState(minWidth);
+
+  const handleOnRightLayout = (event: LayoutChangeEvent) => {
+    const { width } = event.nativeEvent.layout;
+    const rightWidth = width ? width + spacing.xs : minWidth;
+    setRightWidth(rightWidth);
+  };
+
   return (
     <Box
       paddingHorizontal="xs"
@@ -46,11 +63,16 @@ export const NavigationBarTrail = ({
       flexDirection="row"
       alignItems="center"
       justifyContent="space-between"
-      minHeight={48}
+      minHeight={MIN_HEIGHT}
     >
-      <Box flex={1} position="absolute" left={0} right={0}>
+      <Box flex={1} position="absolute" left={minWidth} right={rightWidth}>
         <AnimatedBox style={textOpacityStyle}>
-          <Text variant="bodyBold" color={titleColor} textAlign="center">
+          <Text
+            variant="bodyBold"
+            color={titleColor}
+            textAlign="center"
+            numberOfLines={1}
+          >
             {title}
           </Text>
         </AnimatedBox>
@@ -69,7 +91,12 @@ export const NavigationBarTrail = ({
         <Box />
       )}
 
-      <Box flexDirection="row" alignItems="center">
+      <Box
+        flexDirection="row"
+        alignItems="center"
+        backgroundColor={backgroundColor}
+        onLayout={handleOnRightLayout}
+      >
         {action ? (
           <Pressable
             testID={action.testID}

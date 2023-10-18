@@ -60,6 +60,11 @@ export type DefaultProps = Pick<
      * Indicate if the card is in a skeleton state.
      */
     isSkeleton?: boolean;
+
+    /**
+     * Indicate if the card is published. (if false, the card will have a black overlay)
+     */
+    isPublished?: boolean;
   };
 
 export type DismissAction = {

@@ -34,6 +34,7 @@ export const CardCarousel = (props: CardCarouselProps) => {
     testID,
     media,
     appearance = 'primary',
+    isPublished = true,
   } = props;
 
   const isSmall = size === 'small';
@@ -75,7 +76,13 @@ export const CardCarousel = (props: CardCarouselProps) => {
           />
         </>
       ) : null}
-
+      {!isPublished ? (
+        <Box
+          width={5}
+          style={StyleSheet.absoluteFillObject}
+          backgroundColor="BLACK"
+        />
+      ) : null}
       <Box
         flexDirection="row"
         justifyContent="space-between"

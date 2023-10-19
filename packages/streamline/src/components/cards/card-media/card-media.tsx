@@ -18,7 +18,7 @@ export const CardMedia = ({
 }: CardMediaProps) => {
   return (
     <Box>
-      <Card width="100%" height={height} overflow="hidden">
+      <Card width="100%" height={height} overflow="hidden" onPress={onPress}>
         <ImageBackground
           testID="card-media-thumbnail"
           source={thumbnail}

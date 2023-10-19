@@ -28,13 +28,13 @@ export const CardHeader = (props: CardHeaderProps) => {
       alignItems="center"
       justifyContent="space-between"
     >
-      <Box flexDirection="row" alignItems="center">
+      <Box flexDirection="row" alignItems="center" flex={1}>
         {hasIconName && !isLoading && (
           <Icon color={colors.leftIconColor} iconName={iconName} size="large" />
         )}
         {isLoading ? <Spinner color={colors.leftIconColor} /> : null}
         {hasHeader ? (
-          <Box>
+          <Box flex={1}>
             <Text
               color={colors.headerColor}
               paddingLeft={hasIconName ? 'md' : undefined}
@@ -54,21 +54,28 @@ export const CardHeader = (props: CardHeaderProps) => {
           </Box>
         ) : null}
       </Box>
-      <Box flexDirection="row" alignItems="center">
+      <Box
+        flexDirection="row"
+        alignItems="center"
+        justifyContent="flex-end"
+        flex={1}
+      >
         {hasValue ? (
-          <Text color={colors.valueColor} variant="body">
-            {value}
-          </Text>
+          <Box flex={1}>
+            <Text color={colors.valueColor} variant="body" textAlign="right">
+              {value}
+            </Text>
+          </Box>
         ) : null}
         {hasRightAction ? (
-          <>
+          <Box>
             <Box paddingLeft="xs" />
             <Icon
               color={colors.rightIconColor}
               iconName="ChevronFarRight"
               size="regular"
             />
-          </>
+          </Box>
         ) : null}
       </Box>
     </Box>

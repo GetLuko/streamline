@@ -97,23 +97,26 @@ export const CardCarousel = (props: CardCarouselProps) => {
         />
       </Box>
 
-      <Box>
+      <Box flex={1} justifyContent="flex-end" paddingTop="xs">
         <Text
           variant={isSmall ? 'bodyBold' : 'headlineBold'}
           color="PURE_WHITE_1000"
+          numberOfLines={3}
         >
           {title}
         </Text>
 
         {description ? (
-          <Text
-            variant={isSmall ? 'subBody' : 'body'}
-            color="PURE_WHITE_1000"
-            opacity={0.8}
-            numberOfLines={2}
-          >
-            {description}
-          </Text>
+          <Box flexShrink={1}>
+            <Text
+              variant={isSmall ? 'subBody' : 'body'}
+              color="PURE_WHITE_1000"
+              opacity={0.8}
+              numberOfLines={3}
+            >
+              {description}
+            </Text>
+          </Box>
         ) : null}
       </Box>
     </Card>

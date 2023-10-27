@@ -28,7 +28,7 @@ export const Button = ({
   text,
   isBusy,
   isFloating = false,
-  isPublished = true,
+  isPreview = false,
 }: ButtonProps) => {
   const styles = useStyles(size, appearance, isFloating);
   const isMini = size === 'mini';
@@ -68,7 +68,7 @@ export const Button = ({
       onPress={handlePress}
       onLayout={onLayout}
     >
-      {!isPublished ? (
+      {isPreview ? (
         <Box
           width={5}
           style={StyleSheet.absoluteFillObject}

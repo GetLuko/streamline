@@ -24,7 +24,7 @@ export function CardHighlight({
   onPressIn,
   onPressOut,
   accessibilityLabel,
-  isPublished = true,
+  isPreview = false,
 }: CardHighlightProps) {
   const [handlePress, isResolving] = usePress({ onPress });
 
@@ -73,7 +73,7 @@ export function CardHighlight({
         style={{ flex: 1, height: 192 }}
         resizeMode="cover"
       />
-      {!isPublished ? (
+      {isPreview ? (
         <Box
           width={5}
           style={StyleSheet.absoluteFillObject}

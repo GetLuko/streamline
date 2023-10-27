@@ -44,9 +44,9 @@ export type ButtonProps = Pick<InteractionType, 'isLoading' | 'isDisabled'> & {
   isFloating?: boolean;
 
   /**
-   * Indicate if the card is published. (if false, the card will have a black overlay)
+   * Indicate if the card is a preview. (if true, the card will have a black overlay)
    */
-  isPublished?: boolean;
+  isPreview?: boolean;
 } & Pick<
     PressableProps,
     | 'pointerEvents'

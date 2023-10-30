@@ -58,18 +58,18 @@ export const CardHeader = (props: CardHeaderProps) => {
         flexDirection="row"
         alignItems="center"
         justifyContent="flex-end"
-        flex={1}
+        maxWidth="50%"
+        flexShrink={1}
       >
         {hasValue ? (
-          <Box flex={1}>
+          <Box paddingLeft="xs">
             <Text color={colors.valueColor} variant="body" textAlign="right">
               {value}
             </Text>
           </Box>
         ) : null}
         {hasRightAction ? (
-          <Box>
-            <Box paddingLeft="xs" />
+          <Box paddingLeft="xs">
             <Icon
               color={colors.rightIconColor}
               iconName="ChevronFarRight"

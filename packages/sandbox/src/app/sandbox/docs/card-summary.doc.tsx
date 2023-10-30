@@ -23,9 +23,8 @@ export const CardSummarySandbox = () => {
       <Box paddingVertical="xxs">
         <CardSummary
           appearance="primary"
-          header="Header"
-          subHeader="Subheader"
-          value="Value"
+          header="Assurance Emprunteur"
+          subHeader="300 000,00€ · Crédit Agricole"
           iconName="Area"
           rightAction="navigate"
           title="Primary"
@@ -41,8 +40,8 @@ export const CardSummarySandbox = () => {
       <Box paddingVertical="xxs">
         <CardSummary
           appearance="neutral"
-          header="Header"
-          value="Value"
+          header="Assurance Habitation"
+          value="Too long value on two lines"
           iconName="Area"
           rightAction="navigate"
           title="Neutral"

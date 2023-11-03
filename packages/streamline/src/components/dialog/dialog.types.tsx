@@ -12,7 +12,7 @@ interface DialogSecondaryButtonProps extends ButtonProps {
 export interface DialogProps {
   title: string;
   icon?: IconsName;
-  buttons: {
+  buttons?: {
     orientation?: 'horizontal' | 'vertical';
     primary: DialogPrimaryButtonProps;
     secondary?: DialogSecondaryButtonProps;

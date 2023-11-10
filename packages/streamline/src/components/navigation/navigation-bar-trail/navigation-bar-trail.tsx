@@ -116,13 +116,7 @@ export const NavigationBarTrail = ({
           </Pressable>
         ) : null}
         {right ? (
-          <ButtonIcon
-            iconName={right.iconName}
-            accessibilityLabel={right.accessibilityLabel}
-            onPress={right.onPress}
-            size="large"
-            appearance={appearance}
-          />
+          <ButtonIcon {...right} size="large" appearance={appearance} />
         ) : null}
       </Box>
     </Box>

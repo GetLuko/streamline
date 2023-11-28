@@ -27,7 +27,7 @@ export const ConsentBoxSandbox = () => {
           isDisabled
           value={checked}
           onChange={(v) => setDangerChecked(v)}
-          text="Danger"
+          text="Primary disabled"
         />
       </Box>
       <Box margin="xs">
@@ -36,7 +36,7 @@ export const ConsentBoxSandbox = () => {
           isDisabled
           value={dangerChecked}
           onChange={(v) => setDangerChecked(v)}
-          text="Danger"
+          text="Danger disabled"
         />
       </Box>
     </Box>

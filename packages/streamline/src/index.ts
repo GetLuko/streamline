@@ -17,6 +17,7 @@ export * from './components/cards/card-feedback/card-feedback';
 export * from './components/cards/card-media/card-media';
 export * from './components/cards/card-summary/card-summary';
 export * from './components/cards/card-tip/card-tip';
+export * from './components/consent-box/consent-box';
 export * from './components/checkbox/checkbox';
 export * from './components/dialog/dialog';
 export * from './components/inputs/input-text-area/input-text-area';

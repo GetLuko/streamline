@@ -158,6 +158,10 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: ConsentBox
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: ProgressBar
 - runFlow:
     file: subflow/takeScreenshot.yaml

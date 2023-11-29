@@ -12,6 +12,7 @@ import { CardSummarySandbox } from './docs/card-summary.doc';
 import { CardTipSandbox } from './docs/card-tip.doc';
 import { CardSandbox } from './docs/card.doc';
 import { CheckboxSandbox } from './docs/checkbox.doc';
+import { ConsentBoxSandbox } from './docs/consent-box.doc';
 import { DialogSandbox } from './docs/dialog.doc';
 import { IconsSandbox } from './docs/icon.doc';
 import { InputCodeSandbox } from './docs/input-code.doc';
@@ -117,6 +118,7 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'Radio', SandBox: RadioSandbox },
       { title: 'Checkbox', SandBox: CheckboxSandbox },
       { title: 'Switch', SandBox: SwitchSandbox },
+      { title: 'ConsentBox', SandBox: ConsentBoxSandbox },
     ],
   },
   {

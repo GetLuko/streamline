@@ -10,7 +10,7 @@ export const ConsentBoxSandbox = () => {
         <ConsentBox
           value={checked}
           onChange={(v) => setChecked(v)}
-          text="Primary"
+          text="Accept [terms and conditions](https://www.luko.eu)"
         />
       </Box>
       <Box margin="xs">

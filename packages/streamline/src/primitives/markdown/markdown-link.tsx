@@ -74,7 +74,7 @@ const getStyles = (bodyColor?: string) => ({
   link: {
     ...fonts.body,
     color: bodyColor || colors.BLUKO.BLUKO_500,
-    bottom: isIOS ? 2 : -1,
+    bottom: isIOS ? 1.2 : -1.5,
   },
   paragraph: {
     marginTop: 0,

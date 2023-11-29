@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   link: {
     ...fonts.body,
     color: colors.BLUKO.BLUKO_500,
-    paddingBottom: isIOS ? 2 : 0,
+    paddingBottom: isIOS ? 1.2 : -1.5,
   },
   paragraph: { ...fonts.body, marginBottom: 16, marginTop: 0 },
   list_item: { ...fonts.body },

@@ -39,6 +39,13 @@ export const ConsentBoxSandbox = () => {
           text="Danger disabled"
         />
       </Box>
+      <Box margin="xs">
+        <ConsentBox
+          value={checked}
+          onChange={(v) => setChecked(v)}
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies ultrices, nunc nisl aliquam nisl, nec aliquam nisl nisl nec nisl."
+        />
+      </Box>
     </Box>
   );
 };

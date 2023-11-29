@@ -37,6 +37,7 @@ export const ConsentBox: FC<ConsentBoxProps> = ({
         flexDirection="row"
         borderRadius="lg"
         padding="md"
+        alignItems="center"
       >
         <Checkbox
           value={value}
@@ -44,9 +45,11 @@ export const ConsentBox: FC<ConsentBoxProps> = ({
           isDisabled={isDisabled}
           pointerEvents="none"
         />
-        <Text variant="body" color="GREY_1000" marginLeft="md">
-          {text}
-        </Text>
+        <Box flex={1} marginLeft="md">
+          <Text variant="body" color="GREY_1000">
+            {text}
+          </Text>
+        </Box>
       </Box>
     </Pressable>
   );

@@ -30,7 +30,7 @@ export const ConsentBox: FC<ConsentBoxProps> = ({
   };
 
   return (
-    <Pressable testID={testID} onPress={handleOnPress}>
+    <Pressable testID={testID} onPress={handleOnPress} disabled={isDisabled}>
       <Box
         backgroundColor={backgroundColor}
         flexDirection="row"

@@ -10,6 +10,7 @@ import { spacings } from '../../theme/spacings';
 import { isIOS } from '../../utils/platform';
 import { Box } from '../box/box';
 import { Text } from '../text/text';
+import { LINK_BOTTOM_SPACE } from './mardown.constants';
 
 export interface MarkdownProps {
   children: string;
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
   link: {
     ...fonts.body,
     color: colors.BLUKO.BLUKO_500,
-    paddingBottom: isIOS ? 2 : 0,
+    paddingBottom: LINK_BOTTOM_SPACE,
   },
   paragraph: { ...fonts.body, marginBottom: 16, marginTop: 0 },
   list_item: { ...fonts.body },

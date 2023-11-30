@@ -1,6 +1,6 @@
 import { Appearance, ColorTheme } from '../../theme';
 
-export const getConsentBoxBackgroundColor = ({
+export const getConsentBoxColors = ({
   appearance,
   isDisabled,
   value,
@@ -8,14 +8,34 @@ export const getConsentBoxBackgroundColor = ({
   appearance: Appearance;
   isDisabled: boolean;
   value: boolean;
-}): ColorTheme => {
-  if (!value) {
-    return appearance === 'danger' ? 'TERRA_100' : 'GREY_100';
+}): {
+  backgroundColor: ColorTheme;
+  textColor: ColorTheme;
+} => {
+  const isDanger = appearance === 'danger';
+
+  if (isDisabled) {
+    if (value) {
+      return {
+        backgroundColor: isDanger ? 'TERRA_75' : 'BLUKO_75',
+        textColor: isDanger ? 'TERRA_300' : 'BLUKO_300',
+      };
+    }
+    return {
+      backgroundColor: isDanger ? 'TERRA_75' : 'GREY_75',
+      textColor: isDanger ? 'TERRA_300' : 'GREY_500',
+    };
   }
 
-  if (appearance === 'danger') {
-    return isDisabled ? 'TERRA_75' : 'TERRA_100';
+  if (value) {
+    return {
+      backgroundColor: isDanger ? 'TERRA_100' : 'BLUKO_100',
+      textColor: isDanger ? 'TERRA_800' : 'BLUKO_800',
+    };
   }
 
-  return isDisabled ? 'BLUKO_75' : 'BLUKO_100';
+  return {
+    backgroundColor: isDanger ? 'TERRA_100' : 'GREY_100',
+    textColor: isDanger ? 'TERRA_800' : 'GREY_1000',
+  };
 };

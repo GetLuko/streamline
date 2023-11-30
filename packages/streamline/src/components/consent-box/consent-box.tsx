@@ -2,11 +2,10 @@ import { FC } from 'react';
 import { Pressable } from 'react-native';
 
 import { Box } from '../../primitives/box/box';
-import { Card } from '../../primitives/card/card';
-import { Text } from '../../primitives/text/text';
+import { MarkdownLink } from '../../primitives/markdown/markdown-link';
 import Checkbox from '../checkbox/checkbox';
 import { CheckboxProps } from '../checkbox/checkbox.types';
-import { getConsentBoxBackgroundColor } from './consent-box.utils';
+import { getConsentBoxColors } from './consent-box.utils';
 
 type ConsentBoxProps = {
   text: string;
@@ -20,7 +19,7 @@ export const ConsentBox: FC<ConsentBoxProps> = ({
   onChange,
   testID,
 }) => {
-  const backgroundColor = getConsentBoxBackgroundColor({
+  const { backgroundColor, textColor } = getConsentBoxColors({
     appearance,
     isDisabled,
     value,
@@ -46,9 +45,7 @@ export const ConsentBox: FC<ConsentBoxProps> = ({
           pointerEvents="none"
         />
         <Box flex={1} marginLeft="md">
-          <Text variant="body" color="GREY_1000">
-            {text}
-          </Text>
+          <MarkdownLink bodyColor={textColor}>{text}</MarkdownLink>
         </Box>
       </Box>
     </Pressable>

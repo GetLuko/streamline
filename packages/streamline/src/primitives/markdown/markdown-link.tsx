@@ -7,6 +7,7 @@ import { fonts, useStreamlineTheme } from '../../theme';
 import { colors } from '../../theme/colors';
 import { FontFamily } from '../../theme/fonts';
 import { isIOS } from '../../utils/platform';
+import { LINK_BOTTOM_SPACE } from './mardown.constants';
 import { MarkdownLinkProps } from './markdown-link.types';
 
 /**
@@ -74,7 +75,7 @@ const getStyles = (bodyColor?: string) => ({
   link: {
     ...fonts.body,
     color: bodyColor || colors.BLUKO.BLUKO_500,
-    bottom: isIOS ? 2 : -1,
+    bottom: LINK_BOTTOM_SPACE,
   },
   paragraph: {
     marginTop: 0,

@@ -41,6 +41,7 @@ export * from './components/radio/radio';
 export * from './components/spinner/spinner';
 export * from './components/tag/tag';
 export * from './components/button-bar/button-bar';
+export * from './hooks/use-press.hook';
 export * from './primitives/animated-box/animated-box';
 export * from './primitives/box/box';
 export * from './primitives/card/card';
@@ -52,6 +53,7 @@ export * from './primitives/text/text';
 export * from './theme';
 export * from './theme/ThemeProvider';
 export * from './types';
+export * from './utils/date';
 export * from './utils/platform';
 
 export type InteractionType = {

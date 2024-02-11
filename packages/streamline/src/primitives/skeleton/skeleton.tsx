@@ -1,6 +1,11 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import React, { useContext } from 'react';
-import { LayoutChangeEvent, StyleProp, ViewStyle } from 'react-native';
+import {
+  DimensionValue,
+  LayoutChangeEvent,
+  StyleProp,
+  ViewStyle,
+} from 'react-native';
 import {
   Easing,
   useAnimatedStyle,
@@ -77,7 +82,7 @@ export const Skeleton = ({
       ),
     };
   });
-  const width = isSquare ? height : `${percentage}%`;
+  const width: DimensionValue = isSquare ? height : `${percentage}%`;
   const borderRadius = size === 'sm' ? 'sm' : 'md';
 
   return (

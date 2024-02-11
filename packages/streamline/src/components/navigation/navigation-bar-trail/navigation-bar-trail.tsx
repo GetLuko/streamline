@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { LayoutChangeEvent, Pressable } from 'react-native';
 
+import { getNavigationTrailTextColor } from './navigation-bar-trail.utils';
 import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
 import { Box } from '../../../primitives/box/box';
 import { Text } from '../../../primitives/text/text';
 import { ColorTheme, useStreamlineTheme } from '../../../theme';
 import ButtonIcon from '../../buttons/button-icon/button-icon';
 import { ButtonIconProps } from '../../buttons/button-icon/button-icon.types';
-import { getNavigationTrailTextColor } from './navigation-bar-trail.utils';
 
 const MIN_WIDTH = 40;
 const MIN_HEIGHT = 48;

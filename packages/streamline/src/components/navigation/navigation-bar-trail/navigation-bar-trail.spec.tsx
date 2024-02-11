@@ -1,11 +1,11 @@
 import { fireEvent } from '@testing-library/react-native';
 import React from 'react';
 
-import { renderWithProvider } from '../../../testing/render-with-provider';
-import { ButtonIconProps } from '../../buttons/button-icon/button-icon.types';
 import NavigationBarTrail, {
   NavigationBarTrailProps,
 } from './navigation-bar-trail';
+import { renderWithProvider } from '../../../testing/render-with-provider';
+import { ButtonIconProps } from '../../buttons/button-icon/button-icon.types';
 
 describe('NavigationBarTrail', () => {
   afterEach(() => {

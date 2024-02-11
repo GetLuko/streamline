@@ -1,12 +1,5 @@
 import React from 'react';
 
-import { usePress } from '../../../hooks/use-press.hook';
-import { Box } from '../../../primitives/box/box';
-import { Card } from '../../../primitives/card/card';
-import { CardContent } from '../../../primitives/card/card-content/card-content';
-import { CardHeader } from '../../../primitives/card/card-header/card-header';
-import { Button } from '../../buttons/button/button';
-import Tag from '../../tag/tag';
 import { CardSummarySkeleton } from './card-summary-skeleton';
 import { CardSummaryProps } from './card-summary.types';
 import {
@@ -14,6 +7,13 @@ import {
   hasValidButtonAction,
   hasValidContent,
 } from './card-summary.utils';
+import { usePress } from '../../../hooks/use-press.hook';
+import { Box } from '../../../primitives/box/box';
+import { Card } from '../../../primitives/card/card';
+import { CardContent } from '../../../primitives/card/card-content/card-content';
+import { CardHeader } from '../../../primitives/card/card-header/card-header';
+import { Button } from '../../buttons/button/button';
+import Tag from '../../tag/tag';
 
 export const CardSummary = (props: CardSummaryProps) => {
   const {

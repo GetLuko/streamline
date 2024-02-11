@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Box } from '../../primitives/box/box';
-import { Appearance } from '../../theme/appearance';
 import {
   getProgressBarBackgroundColor,
   getProgressBarColor,
 } from './progress-bar.utils';
+import { Box } from '../../primitives/box/box';
+import { Appearance } from '../../theme/appearance';
 
 enum ProgressBarSize {
   'lg' = 8,

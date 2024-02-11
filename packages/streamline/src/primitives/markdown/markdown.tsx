@@ -2,6 +2,7 @@ import MarkdownDisplay from '@ronradtke/react-native-markdown-display';
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
+import { LINK_BOTTOM_SPACE } from './mardown.constants';
 import { fonts } from '../../theme';
 import { colors } from '../../theme/colors';
 import { FontFamily } from '../../theme/fonts';
@@ -10,7 +11,6 @@ import { spacings } from '../../theme/spacings';
 import { isIOS } from '../../utils/platform';
 import { Box } from '../box/box';
 import { Text } from '../text/text';
-import { LINK_BOTTOM_SPACE } from './mardown.constants';
 
 export interface MarkdownProps {
   children: string;

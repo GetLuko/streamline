@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { usePress } from '../../../hooks/use-press.hook';
-import { Card } from '../../../primitives/card/card';
-import { Text } from '../../../primitives/text/text';
 import { CardCalloutProps } from './card-callout.types';
 import { getCardCalloutColors } from './card-callout.utils';
 import { CardCalloutSkeleton } from './components/card-callout-skeleton';
 import Header from './components/header';
+import { usePress } from '../../../hooks/use-press.hook';
+import { Card } from '../../../primitives/card/card';
+import { Text } from '../../../primitives/text/text';
 
 export const CardCallout = ({
   appearance = 'primary',

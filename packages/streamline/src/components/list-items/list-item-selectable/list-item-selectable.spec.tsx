@@ -2,10 +2,10 @@ import { fireEvent } from '@testing-library/react-native';
 import React from 'react';
 
 import '@testing-library/jest-dom/extend-expect';
-import { renderWithProvider } from '../../../testing/render-with-provider';
-import { RightOption } from '../list-item/list-item.types';
 import ListItemSelectable from './list-item-selectable';
 import { ListItemSelectableProps } from './list-item-selectable.type';
+import { renderWithProvider } from '../../../testing/render-with-provider';
+import { RightOption } from '../list-item/list-item.types';
 
 const LONG_HEADER =
   'This is an unrealistically long header that will cause the text to wrap';

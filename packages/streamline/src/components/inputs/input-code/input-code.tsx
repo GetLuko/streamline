@@ -1,12 +1,12 @@
 import React from 'react';
 import { Pressable, StyleSheet, TextInput } from 'react-native';
 
-import { Box } from '../../../primitives/box/box';
-import { useStreamlineTheme } from '../../../theme';
 import { InputCodeCell } from './components/cell';
 import { DEFAULT_CODE_LENGTH } from './input-code.constants';
 import useInputCode from './input-code.hook';
 import { InputCodeProps } from './input-code.types';
+import { Box } from '../../../primitives/box/box';
+import { useStreamlineTheme } from '../../../theme';
 
 export const InputCode = ({
   length = DEFAULT_CODE_LENGTH,

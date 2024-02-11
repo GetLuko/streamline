@@ -1,5 +1,5 @@
-import { Appearance } from '../../../theme/appearance';
 import { CardCalloutColors } from './card-callout.types';
+import { Appearance } from '../../../theme/appearance';
 
 export const getCardCalloutColors = ({
   appearance,

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch as SwitchNative } from 'react-native';
 
-import { useStreamlineTheme } from '../../theme';
 import { getColorMapping } from './switch.utils';
+import { useStreamlineTheme } from '../../theme';
 
 export interface SwitchProps {
   action: (value: boolean) => void;

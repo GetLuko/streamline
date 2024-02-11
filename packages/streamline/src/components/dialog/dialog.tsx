@@ -1,11 +1,11 @@
 import { PropsWithChildren } from 'react';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import Buttons from './components/buttons';
+import { DialogProps } from './dialog.types';
 import { Box } from '../../primitives/box/box';
 import { Icon } from '../../primitives/icon/icon';
 import { Text } from '../../primitives/text/text';
-import Buttons from './components/buttons';
-import { DialogProps } from './dialog.types';
 
 export const Dialog = ({
   title,

@@ -3,8 +3,8 @@ import DateTimePicker, {
 } from '@react-native-community/datetimepicker';
 import { useEffect, useState } from 'react';
 
-import { isAndroid } from '../../../utils/platform';
 import { ModalPickerIOS } from './modal-picker-ios';
+import { isAndroid } from '../../../utils/platform';
 
 interface DatePickerProps {
   focused: boolean;

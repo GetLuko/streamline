@@ -6,7 +6,7 @@
     "prepare": "husky install",
     "postinstall": "patch-package",
     "sandbox:start": "yarn nx run sandbox:start",
-    "sandbox:start:e2e": "NX_E2E=true yarn nx run sandbox:start-e2e",
+    "sandbox:start:e2e": "EXPO_PUBLIC_E2E=true yarn nx run sandbox:start-e2e",
     "sandbox:start:clear": "yarn nx run sandbox:start --clear",
     "sandbox:test": "yarn nx run streamline:test",
     "sandbox:test:visual:ios": "yarn nx run sandbox:test-visual-ios",

@@ -1,11 +1,11 @@
-import { Box } from '../../../primitives/box/box';
-import { Card } from '../../../primitives/card/card';
-import { Text } from '../../../primitives/text/text';
 import { CardFeedbackProps } from './card-feedback.types';
 import { getCardFeedbackBackgroundColor } from './card-feedback.utils';
 import EmojiRating from './components/EmojiRating';
 import StarRating from './components/StarRating';
 import ThumbRating from './components/ThumbRating';
+import { Box } from '../../../primitives/box/box';
+import { Card } from '../../../primitives/card/card';
+import { Text } from '../../../primitives/text/text';
 
 const CardFeedbackContent = (props: CardFeedbackProps) => {
   switch (props.type) {

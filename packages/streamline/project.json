@@ -15,9 +15,7 @@
         "entryFile": "packages/streamline/src/index.ts",
         "external": ["react/jsx-runtime", "react-native"],
         "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
-        "format": [
-          "esm"
-        ],
+        "format": ["esm"],
         "assets": [
           {
             "glob": "packages/streamline/README.md",
@@ -30,18 +28,18 @@
     "type:check": {
       "executor": "nx:run-script",
       "options": {
-          "script": "type:check"
+        "script": "type:check"
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["packages/streamline/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "packages/streamline/jest.config.ts",

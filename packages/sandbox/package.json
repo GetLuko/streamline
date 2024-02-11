@@ -6,7 +6,6 @@
     "@expo/metro-config": "*",
     "@expo/webpack-config": "*",
     "@getluko/streamline": "*",
-    "@nrwl/expo": "*",
     "@testing-library/jest-native": "*",
     "@testing-library/react-native": "*",
     "expo": "*",
@@ -15,7 +14,8 @@
     "react": "*",
     "react-native": "*",
     "react-native-svg": "*",
-    "react-native-web": "*"
+    "react-native-web": "*",
+    "@nx/expo": "16.0.0"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && cp package-lock.json ./packages/sandbox/",

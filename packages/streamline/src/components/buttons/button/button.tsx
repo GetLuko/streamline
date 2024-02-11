@@ -1,4 +1,3 @@
-import isNil from 'lodash.isnil';
 import React from 'react';
 import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
 import { Pressable } from 'react-native-ama';
@@ -33,7 +32,7 @@ export const Button = ({
   const styles = useStyles(size, appearance, isFloating);
   const isMini = size === 'mini';
 
-  if (!isNil(iconName) && !isMini) {
+  if (!iconName && !isMini) {
     console.warn('Icon is only supported for mini buttons');
   }
 

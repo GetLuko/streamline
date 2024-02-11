@@ -77,12 +77,6 @@
         "outputDir": "../../dist/packages/sandbox"
       }
     },
-    "export-web": {
-      "executor": "@nx/expo:export",
-      "options": {
-        "bundler": "metro"
-      }
-    },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],

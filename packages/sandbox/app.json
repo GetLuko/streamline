@@ -26,10 +26,6 @@
       },
       "package": "com.lukoapp.sandbox"
     },
-    "web": {
-      "favicon": "./assets/favicon.png",
-      "bundler": "metro"
-    },
     "extra": {
       "eas": {
         "projectId": "11eb7a11-ac37-40c7-a649-095da5a7b0b3"

@@ -4,7 +4,6 @@
   "private": false,
   "dependencies": {
     "@expo/metro-config": "*",
-    "@expo/webpack-config": "*",
     "@getluko/streamline": "*",
     "@testing-library/jest-native": "*",
     "@testing-library/react-native": "*",
@@ -14,7 +13,6 @@
     "react": "*",
     "react-native": "*",
     "react-native-svg": "*",
-    "react-native-web": "*",
     "@nx/expo": "16.0.0"
   },
   "scripts": {

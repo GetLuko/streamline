@@ -1,6 +1,11 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import React, { useContext } from 'react';
-import { LayoutChangeEvent, StyleProp, ViewStyle } from 'react-native';
+import {
+  DimensionValue,
+  LayoutChangeEvent,
+  StyleProp,
+  ViewStyle,
+} from 'react-native';
 import {
   Easing,
   useAnimatedStyle,
@@ -9,11 +14,11 @@ import {
   withTiming,
 } from 'react-native-reanimated';
 
+import { SIZES } from './skeleton.constants';
+import { SkeletonProps } from './skeleton.types';
 import { AnimationContext } from '../../contexts/disable-animation.context';
 import { useStreamlineTheme } from '../../theme';
 import { AnimatedBox } from '../animated-box/animated-box';
-import { SIZES } from './skeleton.constants';
-import { SkeletonProps } from './skeleton.types';
 
 const START_OPACITY = 1;
 const END_OPACITY = 0.8;
@@ -77,7 +82,7 @@ export const Skeleton = ({
       ),
     };
   });
-  const width = isSquare ? height : `${percentage}%`;
+  const width: DimensionValue = isSquare ? height : `${percentage}%`;
   const borderRadius = size === 'sm' ? 'sm' : 'md';
 
   return (

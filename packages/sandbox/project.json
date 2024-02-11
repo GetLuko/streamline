@@ -8,7 +8,8 @@
       "executor": "@nx/expo:start",
       "options": {
         "port": 8081
-      }
+      },
+      "dependsOn": ["ensure-symlink", "sync-deps"]
     },
     "start-e2e": {
       "executor": "@nx/expo:start",
@@ -28,13 +29,15 @@
       "executor": "@nx/expo:run",
       "options": {
         "platform": "ios"
-      }
+      },
+      "dependsOn": ["ensure-symlink", "sync-deps"]
     },
     "run-android": {
       "executor": "@nx/expo:run",
       "options": {
         "platform": "android"
-      }
+      },
+      "dependsOn": ["ensure-symlink", "sync-deps"]
     },
     "build": {
       "executor": "@nx/expo:build",
@@ -60,7 +63,8 @@
     },
     "prebuild": {
       "executor": "@nx/expo:prebuild",
-      "options": {}
+      "options": {},
+      "dependsOn": ["ensure-symlink", "sync-deps"]
     },
     "install": {
       "executor": "@nx/expo:install",
@@ -75,10 +79,11 @@
       "options": {
         "platform": "all",
         "outputDir": "../../dist/packages/sandbox"
-      }
+      },
+      "dependsOn": ["ensure-symlink", "sync-deps"]
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["packages/sandbox/**/*.{ts,tsx,js,jsx}"]

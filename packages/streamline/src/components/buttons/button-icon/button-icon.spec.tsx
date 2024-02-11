@@ -1,8 +1,8 @@
 import { fireEvent } from '@testing-library/react-native';
 import React from 'react';
 
-import { renderWithProvider } from '../../../testing/render-with-provider';
 import ButtonIcon from './button-icon';
+import { renderWithProvider } from '../../../testing/render-with-provider';
 
 describe('ButtonIcon', () => {
   afterEach(() => {
@@ -10,10 +10,10 @@ describe('ButtonIcon', () => {
   });
 
   it('should render successfully', () => {
-    const { container } = renderWithProvider(
+    const { UNSAFE_root } = renderWithProvider(
       <ButtonIcon accessibilityLabel="test" iconName="Cross" />
     );
-    expect(container).toBeTruthy();
+    expect(UNSAFE_root).toBeTruthy();
   });
 
   it('should call onPress when pressed', () => {

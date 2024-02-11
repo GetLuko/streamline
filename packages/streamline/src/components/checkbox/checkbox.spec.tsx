@@ -1,12 +1,12 @@
 import { fireEvent } from '@testing-library/react-native';
 
-import { renderWithProvider } from '../../testing/render-with-provider';
 import { Checkbox } from './checkbox';
+import { renderWithProvider } from '../../testing/render-with-provider';
 
 describe('Checkbox', () => {
   it('should render successfully', () => {
-    const { container } = renderWithProvider(<Checkbox value={true} />);
-    expect(container).toBeTruthy();
+    const { UNSAFE_root } = renderWithProvider(<Checkbox value={true} />);
+    expect(UNSAFE_root).toBeTruthy();
   });
 
   it('should trigger mockOnChange', () => {

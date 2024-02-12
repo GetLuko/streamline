@@ -5,16 +5,16 @@ import Tag from '../tag';
 
 describe('Tag', () => {
   it('should render successfully', () => {
-    const { container } = renderWithProvider(
+    const { UNSAFE_root } = renderWithProvider(
       <Tag iconName="Area" text="Tag" />
     );
-    expect(container).toBeTruthy();
+    expect(UNSAFE_root).toBeTruthy();
   });
 
   it('should render successfully when small', () => {
-    const { container } = renderWithProvider(
+    const { UNSAFE_root } = renderWithProvider(
       <Tag iconName="Area" isSmall text="Tag" />
     );
-    expect(container).toBeTruthy();
+    expect(UNSAFE_root).toBeTruthy();
   });
 });

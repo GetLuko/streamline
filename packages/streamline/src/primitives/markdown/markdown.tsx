@@ -2,6 +2,7 @@ import MarkdownDisplay from '@ronradtke/react-native-markdown-display';
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
+import { LINK_BOTTOM_SPACE } from './mardown.constants';
 import { fonts } from '../../theme';
 import { colors } from '../../theme/colors';
 import { FontFamily } from '../../theme/fonts';
@@ -81,9 +82,9 @@ const styles = StyleSheet.create({
   link: {
     ...fonts.body,
     color: colors.BLUKO.BLUKO_500,
-    paddingBottom: isIOS ? 2 : 0,
+    paddingBottom: LINK_BOTTOM_SPACE,
   },
-  paragraph: { ...fonts.body },
+  paragraph: { ...fonts.body, marginBottom: 16, marginTop: 0 },
   list_item: { ...fonts.body },
   bullet_list_icon: {
     marginLeft: 10,
@@ -93,8 +94,10 @@ const styles = StyleSheet.create({
     fontSize: isIOS ? 32 : 16,
     paddingTop: isIOS ? 6 : 0,
     color: colors.PRIMARY.BLACK,
+    marginBottom: isIOS ? 0 : 8,
   },
   ordered_list_icon: {
+    marginBottom: 8,
     ...fonts.body,
     marginLeft: 10,
     left: -10,

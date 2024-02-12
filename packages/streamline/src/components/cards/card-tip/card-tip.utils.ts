@@ -1,5 +1,5 @@
-import { Appearance } from '../../../theme/appearance';
 import { CardTipColors } from './card-tip.types';
+import { Appearance } from '../../../theme/appearance';
 
 export const getCardTipColors = ({
   appearance,

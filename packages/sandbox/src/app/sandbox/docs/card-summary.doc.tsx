@@ -23,14 +23,15 @@ export const CardSummarySandbox = () => {
       <Box paddingVertical="xxs">
         <CardSummary
           appearance="primary"
-          header="Header"
-          value="Value"
+          header="Assurance Emprunteur"
+          subHeader="300 000,00€ · Crédit Agricole"
           iconName="Area"
           rightAction="navigate"
           title="Primary"
           description={descriptionText}
-          buttonProps={{
+          footer={{
             text: 'Primary Default',
+            type: 'button',
           }}
           onPress={asyncFunc}
           onPressIn={handlePressIn}
@@ -39,14 +40,17 @@ export const CardSummarySandbox = () => {
       <Box paddingVertical="xxs">
         <CardSummary
           appearance="neutral"
-          header="Header"
-          value="Value"
+          header="Assurance Habitation"
+          value="Too long value on two lines"
           iconName="Area"
           rightAction="navigate"
           title="Neutral"
           description={descriptionText}
-          buttonProps={{
-            text: 'Secondary Default',
+          footer={{
+            text: 'Danger',
+            type: 'tag',
+            iconName: 'Area',
+            appearance: 'danger',
           }}
           onPress={asyncFunc}
           onPressIn={handlePressIn}
@@ -61,8 +65,9 @@ export const CardSummarySandbox = () => {
           rightAction="navigate"
           title="Warning"
           description={descriptionText}
-          buttonProps={{
+          footer={{
             text: 'Warning Default',
+            type: 'button',
           }}
           onPress={asyncFunc}
           onPressIn={handlePressIn}
@@ -77,8 +82,9 @@ export const CardSummarySandbox = () => {
           rightAction="navigate"
           title="Danger"
           description={descriptionText}
-          buttonProps={{
+          footer={{
             text: 'Danger Default',
+            type: 'button',
           }}
           onPress={asyncFunc}
           onPressIn={handlePressIn}
@@ -98,9 +104,10 @@ export const CardSummarySandbox = () => {
           rightAction="navigate"
           title="Primary"
           description={descriptionText}
-          buttonProps={{
+          footer={{
             text: 'Primary Default',
-            onPress: sleep,
+            onPress: () => sleep(1000),
+            type: 'button',
           }}
           onPress={asyncFunc}
           onPressIn={handlePressIn}

@@ -2,7 +2,7 @@ import { CardHeaderProps } from '../../../primitives/card/card-header/card-heade
 import { CardProps } from '../../../primitives/card/card.types';
 import { ColorTheme } from '../../../theme';
 import { Appearance } from '../../../theme/appearance';
-import { ButtonProps } from '../../buttons/button/button.types';
+import { FooterProps } from '../../../types';
 
 export type CardSummaryProps = Pick<
   CardProps,
@@ -25,6 +25,10 @@ export type CardSummaryProps = Pick<
      */
     header?: string;
     /**
+     * Subtitle of the header.
+     */
+    subHeader?: string;
+    /**
      * Card description.
      */
     description?: string;
@@ -40,7 +44,7 @@ export type CardSummaryProps = Pick<
      * Button props. If not provided, the button will not be displayed.
      * All button props are available except appearance and pointerEvents.
      */
-    buttonProps?: Omit<ButtonProps, 'appearance' | 'pointerEvents'>;
+    footer?: FooterProps;
   };
 
 type HeaderColors = {

@@ -1,6 +1,5 @@
 import { ListItemValue } from '@getluko/streamline';
 import React from 'react';
-import { Alert } from 'react-native';
 
 import { DocList } from '../components/DocList';
 import { sleep } from '../sandbox.utils';
@@ -12,11 +11,8 @@ const LONG_TITLE = 'This is a long title that will wrap';
 const LONG_DESCRIPTION =
   'This is an unrealistically long description that will wrap to the next line';
 const LONG_VALUE = 'Value that pushes the title';
-const ON_PRESS = () => Alert.alert('item pressed');
-const ASYNC_ON_PRESS = async () => {
-  await sleep(2000);
-  Alert.alert('async pressed completed');
-};
+const ON_PRESS = () => console.log('item pressed');
+const ASYNC_ON_PRESS = async () => sleep(2000);
 
 const LIST_ITEMS: JSX.Element[] = [
   <ListItemValue
@@ -141,6 +137,23 @@ const LIST_ITEMS: JSX.Element[] = [
     showDivider
     title="Title"
     value="Value"
+    appearance="danger"
+  />,
+  <ListItemValue
+    description="List item with right option and divider"
+    header="Header"
+    iconName={ICON_NAME}
+    onPress={ON_PRESS}
+    rightOption={{
+      accessibilityLabel: 'Test',
+      iconName: 'Info',
+      onPress: ASYNC_ON_PRESS,
+    }}
+    showDivider
+    title="Title"
+    value="Value"
+    appearance="danger"
+    isDisabled
   />,
   <ListItemValue
     description="Skeleton list item"

@@ -1,8 +1,8 @@
+import { getNavigationTitleColors } from './navigation-title.utils';
 import { Box } from '../../../primitives/box/box';
 import { IconsName } from '../../../primitives/icon/icon.types';
 import { Text } from '../../../primitives/text/text';
 import ButtonIcon from '../../buttons/button-icon/button-icon';
-import { getNavigationTitleColors } from './navigation-title.utils';
 
 export interface NavigationTitleProps {
   appearance?: 'dark' | 'light';
@@ -13,6 +13,7 @@ export interface NavigationTitleProps {
   icon?: IconsName;
   onIconPress?: () => void;
   buttonIconAccessibilityLabel?: string;
+  titleNumberOfLines?: number;
 }
 
 export const NavigationTitle = ({
@@ -24,6 +25,7 @@ export const NavigationTitle = ({
   icon,
   onIconPress,
   buttonIconAccessibilityLabel,
+  titleNumberOfLines,
 }: NavigationTitleProps) => {
   const { titleColor, headerColor, valueColor, headerOpacity, valueOpacity } =
     getNavigationTitleColors(appearance);
@@ -55,7 +57,7 @@ export const NavigationTitle = ({
             accessibilityRole="header"
             color={titleColor}
             textAlign={position}
-            numberOfLines={4}
+            numberOfLines={titleNumberOfLines}
           >
             {title}
           </Text>
@@ -80,7 +82,6 @@ export const NavigationTitle = ({
           color={valueColor}
           opacity={valueOpacity}
           textAlign={position}
-          numberOfLines={4}
         >
           {value}
         </Text>

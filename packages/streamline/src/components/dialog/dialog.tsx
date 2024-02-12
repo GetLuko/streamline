@@ -1,13 +1,11 @@
 import { PropsWithChildren } from 'react';
-import { ViewStyle } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import Buttons from './components/buttons';
+import { DialogProps } from './dialog.types';
 import { Box } from '../../primitives/box/box';
 import { Icon } from '../../primitives/icon/icon';
 import { Text } from '../../primitives/text/text';
-import { useStreamlineTheme } from '../../theme';
-import { Button } from '../buttons/button/button';
-import { DialogProps } from './dialog.types';
 
 export const Dialog = ({
   title,
@@ -15,16 +13,16 @@ export const Dialog = ({
   buttons,
   icon,
 }: PropsWithChildren<DialogProps>) => {
-  const isHorizontal = buttons.orientation !== 'vertical';
-  const styles = useStyles(buttons, isHorizontal);
+  const styles = useStyles();
+
   return (
     <Box
       borderTopLeftRadius="lg"
       borderTopRightRadius="lg"
       backgroundColor="PURE_WHITE_1000"
-      padding="md"
+      paddingVertical="md"
     >
-      <Box alignItems={icon ? 'center' : 'flex-start'}>
+      <Box paddingHorizontal="md" alignItems={icon ? 'center' : 'flex-start'}>
         {icon ? (
           <Box
             marginBottom="xl"
@@ -50,48 +48,18 @@ export const Dialog = ({
         </Text>
       </Box>
       {children}
-      <Box
-        marginTop="xl"
-        flex={1}
-        flexDirection={isHorizontal ? 'row-reverse' : 'column'}
-        style={styles.buttonsContainer}
-      >
-        <Box flex={1} style={styles.primary}>
-          <Button appearance="primary" {...buttons.primary} />
-        </Box>
-        {buttons.secondary ? (
-          <Box flex={1} style={styles.secondary}>
-            <Button appearance="neutral" {...buttons.secondary} />
-          </Box>
-        ) : null}
-      </Box>
+      {buttons ? <Buttons buttons={buttons} /> : null}
+      <Box style={styles.bottomInset} />
     </Box>
   );
 };
 
-const useStyles = (
-  buttons: DialogProps['buttons'],
-  isHorizontal: boolean
-): {
-  buttonsContainer: ViewStyle;
-  primary: ViewStyle;
-  secondary: ViewStyle;
-} => {
-  const { spacing } = useStreamlineTheme();
+const useStyles = () => {
   const insets = useSafeAreaInsets();
 
   return {
-    buttonsContainer: {
+    bottomInset: {
       marginBottom: insets.bottom,
-    },
-    primary: {
-      ...(isHorizontal && buttons.secondary ? { marginLeft: spacing.xxs } : {}),
-      ...(buttons.secondary ? { marginBottom: spacing.xxs } : {}),
-    },
-    secondary: {
-      ...(isHorizontal
-        ? { marginRight: spacing.xxs }
-        : { marginTop: spacing.xxs }),
     },
   };
 };

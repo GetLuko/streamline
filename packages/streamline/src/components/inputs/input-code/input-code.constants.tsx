@@ -1,0 +1,5 @@
+const CELL_SIZE = 64;
+export const CELL_BORDER_WIDTH = 2;
+export const CELL_SHADOW_WIDTH = 2;
+export const CELL_SHADOW_CONTAINER_SIZE = CELL_SIZE + CELL_BORDER_WIDTH * 2;
+export const DEFAULT_CODE_LENGTH = 6;

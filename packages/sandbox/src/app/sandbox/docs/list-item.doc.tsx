@@ -1,6 +1,5 @@
 import { ListItem } from '@getluko/streamline';
 import React from 'react';
-import { Alert } from 'react-native';
 
 import { DocList } from '../components/DocList';
 import { sleep } from '../sandbox.utils';
@@ -8,10 +7,10 @@ import { sleep } from '../sandbox.utils';
 const ICON_NAME = 'Area';
 const LONG_DESCRIPTION =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.';
-const ON_PRESS = () => Alert.alert('item pressed');
+const ON_PRESS = () => console.log('item pressed');
 const ASYNC_ON_PRESS = async () => {
   await sleep(2000);
-  Alert.alert('async pressed completed');
+  console.log('async pressed completed');
 };
 
 const LIST_ITEMS: JSX.Element[] = [
@@ -105,6 +104,7 @@ const LIST_ITEMS: JSX.Element[] = [
     }}
     showDivider
     title="Title"
+    appearance="danger"
   />,
   <ListItem
     description="Skeleton list item"

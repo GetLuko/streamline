@@ -1,4 +1,4 @@
-import { InteractionType } from '../../../';
+import { InteractionType } from '../../..';
 import { GenericSize, IconsName } from '../../../primitives/icon/icon.types';
 import { Appearance } from '../../../theme/appearance';
 
@@ -20,4 +20,8 @@ export interface ButtonIconProps extends InteractionType {
    */
   size?: GenericSize;
   isSkeleton?: boolean;
+  /**
+   * if false, the spinner will not be display (e.g. BackButton)
+   */
+  shouldDisplaySpinner?: boolean;
 }

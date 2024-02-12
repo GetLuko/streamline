@@ -1,13 +1,13 @@
 import { Pressable } from 'react-native';
 
-import { usePress } from '../../../hooks/use-press.hook';
-import { Box } from '../../../primitives/box/box';
-import ButtonIcon from '../../buttons/button-icon/button-icon';
-import { ListItemSkeleton } from '../components/list-item-skeleton';
 import CenterContent from './components/center-content';
 import LeftContent from './components/left-content';
 import { ListItemOptionProps } from './list-item-option.types';
 import { getBorderColor, getBackgroundColor } from './list-item-option.utils';
+import { usePress } from '../../../hooks/use-press.hook';
+import { Box } from '../../../primitives/box/box';
+import ButtonIcon from '../../buttons/button-icon/button-icon';
+import { ListItemSkeleton } from '../components/list-item-skeleton';
 
 export function ListItemOption({
   accessibilityLabel,
@@ -47,7 +47,7 @@ export function ListItemOption({
             right={-2}
             bottom={-2}
             backgroundColor="BLUKO_100"
-            opacity={(pressed && isSelected) || isResolving ? 1 : 0}
+            opacity={pressed || isSelected || isResolving ? 1 : 0}
             borderRadius="lg"
           />
           <Box

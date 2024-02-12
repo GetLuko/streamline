@@ -1,17 +1,17 @@
-import isNil from 'lodash.isnil';
 import React from 'react';
-import { TextStyle, ViewStyle } from 'react-native';
+import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
 import { Pressable } from 'react-native-ama';
 
-import { usePress } from '../../../hooks/use-press.hook';
-import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
-import { useStreamlineTheme } from '../../../theme';
-import { getShadowsStyle } from '../../../theme/shadows';
 import { ButtonProps } from './button.types';
 import { getPressableBackgroundColor } from './button.utils';
 import InnerIcon from './component/inner-icon';
 import InnerLabel from './component/inner-label';
 import { useLoadingAnimation } from './hook/useLoadingAnimation';
+import { usePress } from '../../../hooks/use-press.hook';
+import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
+import { Box } from '../../../primitives/box/box';
+import { useStreamlineTheme } from '../../../theme';
+import { getShadowsStyle } from '../../../theme/shadows';
 
 export const Button = ({
   appearance = 'primary',
@@ -27,11 +27,12 @@ export const Button = ({
   text,
   isBusy,
   isFloating = false,
+  isPreview = false,
 }: ButtonProps) => {
   const styles = useStyles(size, appearance, isFloating);
   const isMini = size === 'mini';
 
-  if (!isNil(iconName) && !isMini) {
+  if (!!iconName && !isMini) {
     console.warn('Icon is only supported for mini buttons');
   }
 
@@ -66,6 +67,13 @@ export const Button = ({
       onPress={handlePress}
       onLayout={onLayout}
     >
+      {isPreview ? (
+        <Box
+          width={5}
+          style={StyleSheet.absoluteFillObject}
+          backgroundColor="BLACK"
+        />
+      ) : null}
       <AnimatedBox
         flexDirection="row"
         alignItems="center"
@@ -74,6 +82,7 @@ export const Button = ({
         paddingVertical={isMini ? 'xs' : 'sm'}
         paddingHorizontal={isMini ? 'sm' : 'lg'}
         style={animatedStyle}
+        overflow="hidden"
       >
         <InnerIcon
           isLoading={isResolving || isLoading}
@@ -114,8 +123,8 @@ const useStyles = (
   return {
     pressable: {
       borderRadius: borderRadii.lg,
-      alignSelf: size === 'mini' ? 'flex-start' : undefined,
       ...(isFloating ? getShadowsStyle('strong') : {}),
+      overflow: 'hidden',
     },
     activityIndicator: {
       color: appearance === 'secondary' ? colors.BLACK : colors.PURE_WHITE_1000,

@@ -5,7 +5,7 @@ import Spinner from './spinner';
 
 describe('Spinner', () => {
   it('should render successfully', () => {
-    const { container } = render(<Spinner />);
-    expect(container).toBeTruthy();
+    const { UNSAFE_root } = render(<Spinner />);
+    expect(UNSAFE_root).toBeTruthy();
   });
 });

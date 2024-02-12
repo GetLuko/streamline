@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { renderWithProvider } from '../../../testing/render-with-provider';
 import CardSummary from './card-summary';
+import { renderWithProvider } from '../../../testing/render-with-provider';
 
 describe('CardSummary', () => {
   it('should render successfully', () => {
-    const { container } = renderWithProvider(
+    const { UNSAFE_root } = renderWithProvider(
       <CardSummary
         appearance="neutral"
         header="Header"
@@ -14,6 +14,6 @@ describe('CardSummary', () => {
         rightAction="navigate"
       />
     );
-    expect(container).toBeTruthy();
+    expect(UNSAFE_root).toBeTruthy();
   });
 });

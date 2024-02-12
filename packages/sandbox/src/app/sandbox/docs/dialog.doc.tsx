@@ -1,4 +1,4 @@
-import { Dialog, Markdown } from '@getluko/streamline';
+import { Box, Dialog, ListItemGroup, Markdown } from '@getluko/streamline';
 
 import { DocList } from '../components/DocList';
 
@@ -10,9 +10,11 @@ const DIALOGS = [
       orientation: 'horizontal',
     }}
   >
-    <Markdown>
-      {"1 Button\nI'm a test children for the **dialog component**."}
-    </Markdown>
+    <Box paddingHorizontal="md">
+      <Markdown>
+        {"1 Button\nI'm a test children for the **dialog component**."}
+      </Markdown>
+    </Box>
   </Dialog>,
   <Dialog
     title="Dialog title"
@@ -22,11 +24,13 @@ const DIALOGS = [
       orientation: 'horizontal',
     }}
   >
-    <Markdown>
-      {
-        "2 Button - Horizontal\nI'm a test children for the **dialog component**."
-      }
-    </Markdown>
+    <Box paddingHorizontal="md">
+      <Markdown>
+        {
+          "2 Button - Horizontal\nI'm a test children for the **dialog component**."
+        }
+      </Markdown>
+    </Box>
   </Dialog>,
   <Dialog
     title="Dialog title"
@@ -36,9 +40,13 @@ const DIALOGS = [
       orientation: 'vertical',
     }}
   >
-    <Markdown>
-      {"2 Button - Vertical\nI'm a test children for the **dialog component**."}
-    </Markdown>
+    <Box paddingHorizontal="md">
+      <Markdown>
+        {
+          "2 Button - Vertical\nI'm a test children for the **dialog component**."
+        }
+      </Markdown>
+    </Box>
   </Dialog>,
   <Dialog
     title="Dialog title"
@@ -49,9 +57,21 @@ const DIALOGS = [
       orientation: 'vertical',
     }}
   >
-    <Markdown>
-      {"2 Button - Vertical\nI'm a test children for the **dialog component**."}
-    </Markdown>
+    <Box paddingHorizontal="md">
+      <Markdown>
+        {
+          "2 Button - Vertical\nI'm a test children for the **dialog component**."
+        }
+      </Markdown>
+    </Box>
+  </Dialog>,
+  <Dialog title="Download an insurance certificate">
+    <ListItemGroup
+      items={[
+        { iconName: 'GroupOfPeople', title: 'For everyone' },
+        { iconName: 'Person', title: 'For a specific person' },
+      ]}
+    />
   </Dialog>,
 ];
 

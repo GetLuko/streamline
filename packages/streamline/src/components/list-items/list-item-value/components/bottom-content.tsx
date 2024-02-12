@@ -1,19 +1,17 @@
 import React from 'react';
 
 import { Text } from '../../../../primitives/text/text';
+import { ColorTheme } from '../../../../theme';
 import { ListItemValueProps } from '../list-item-value.types';
 
 export const BottomContent = ({
   description,
-  isDisabled,
-}: Required<Pick<ListItemValueProps, 'description'>> &
-  Pick<ListItemValueProps, 'isDisabled'>) => {
+  color,
+}: Required<Pick<ListItemValueProps, 'description'>> & {
+  color: ColorTheme;
+}) => {
   return (
-    <Text
-      color={isDisabled ? 'GREY_500' : 'GREY_700'}
-      variant="subBody"
-      marginRight="md"
-    >
+    <Text color={color} variant="subBody" marginRight="md">
       {description}
     </Text>
   );

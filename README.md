@@ -56,7 +56,7 @@ Or manually
 
 [Maestro installation requirement](https://maestro.mobile.dev/getting-started/installing-maestro)
 
-- Run iPhone `12` simulator or `Pixel 4a API 33` emulator
+- Run iPhone `12` simulator or `Pixel 5 API 33` emulator
 
 - Start expo
 

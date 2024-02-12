@@ -17,16 +17,16 @@ export const CheckboxSandbox = () => {
         />
       </Box>
       <Box margin="xs">
-        <Checkbox value={true} disabled />
+        <Checkbox value={true} isDisabled />
       </Box>
       <Box margin="xs">
-        <Checkbox value={false} disabled />
+        <Checkbox value={false} isDisabled />
       </Box>
       <Box margin="xs">
-        <Checkbox appearance="danger" value={false} disabled />
+        <Checkbox appearance="danger" value={false} isDisabled />
       </Box>
       <Box margin="xs">
-        <Checkbox appearance="danger" value={true} disabled />
+        <Checkbox appearance="danger" value={true} isDisabled />
       </Box>
     </Box>
   );

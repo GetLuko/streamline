@@ -1,10 +1,10 @@
 import React from 'react';
 
+import { HeaderAction } from './header-action';
 import { Box } from '../../../../primitives/box/box';
 import { Icon } from '../../../../primitives/icon/icon';
 import { Text } from '../../../../primitives/text/text';
 import { HeaderProps } from '../card-callout.types';
-import { HeaderAction } from './header-action';
 
 export const Header = ({
   colors,

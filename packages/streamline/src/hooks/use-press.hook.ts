@@ -1,4 +1,3 @@
-import isNil from 'lodash.isnil';
 import { useState } from 'react';
 
 import { isPromise } from '../utils/is-promise';
@@ -14,7 +13,7 @@ export const usePress = <T>({
 
   const handlePress = onPress
     ? async (arg: T) => {
-        if (isNil(onPress)) {
+        if (!onPress) {
           return;
         }
 

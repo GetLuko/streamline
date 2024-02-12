@@ -44,15 +44,19 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: ButtonBar
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: Button
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: ButtonMini
+      COMPONENT: ButtonIcon
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: ButtonIcon
+      COMPONENT: ButtonMini
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
@@ -72,7 +76,23 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: CardHighlight
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: CardTip
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: CardCarousel
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: CardFeedback
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: CardMedia
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
@@ -91,6 +111,10 @@ appId: ${APPID}
       COMPONENT: InputSearch
       PLACEHOLDER: Search
       TEXT: Write some text
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: InputCode
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
@@ -114,11 +138,11 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: Tag
+      COMPONENT: ListItemSelectable
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: Checkbox
+      COMPONENT: Tag
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
@@ -126,7 +150,15 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: NavigationTitle
+      COMPONENT: Checkbox
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: Switch
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: ConsentBox
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
@@ -135,6 +167,18 @@ appId: ${APPID}
     file: subflow/takeScreenshot.yaml
     env:
       COMPONENT: NavigationBarProgress
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: NavigationTitle
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: NavigationBarTrail
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: NavigationSectionTitle
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:

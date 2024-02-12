@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleProp, ViewStyle } from 'react-native';
 
-import { ColorTheme, useStreamlineTheme } from '../../theme';
-import { Box } from '../box/box';
 import { ICON_SIZE } from './icon.constants';
 import { IconsName, Size } from './icon.types';
 import { IconSvg } from './IconSvg';
+import { ColorTheme, useStreamlineTheme } from '../../theme';
+import { Box } from '../box/box';
 
 export type IconProps = {
   color?: ColorTheme;

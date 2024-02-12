@@ -5,16 +5,16 @@ import CardTip from '../card-tip';
 
 describe('CardTip', () => {
   it('should render successfully', () => {
-    const { container } = renderWithProvider(
+    const { UNSAFE_root } = renderWithProvider(
       <CardTip iconName="Area" description="Card Tip" />
     );
-    expect(container).toBeTruthy();
+    expect(UNSAFE_root).toBeTruthy();
   });
 
   it('should render successfully with appearance', () => {
-    const { container } = renderWithProvider(
+    const { UNSAFE_root } = renderWithProvider(
       <CardTip iconName="Area" description="Card Tip" appearance="warning" />
     );
-    expect(container).toBeTruthy();
+    expect(UNSAFE_root).toBeTruthy();
   });
 });

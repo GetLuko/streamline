@@ -1,6 +1,6 @@
 import { PressableProps } from 'react-native';
 
-import { InteractionType } from '../../../';
+import { InteractionType } from '../../..';
 import { SmallIconName } from '../../../primitives/icon/icon.types';
 import { Appearance } from '../../../theme/appearance';
 
@@ -42,6 +42,11 @@ export type ButtonProps = Pick<InteractionType, 'isLoading' | 'isDisabled'> & {
    * Display with a box shadow to have a floating style.
    */
   isFloating?: boolean;
+
+  /**
+   * Indicate if the card is a preview. (if true, the card will have a black overlay)
+   */
+  isPreview?: boolean;
 } & Pick<
     PressableProps,
     | 'pointerEvents'

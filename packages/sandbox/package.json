@@ -25,7 +25,8 @@
     "@shopify/restyle": "*",
     "@ronradtke/react-native-markdown-display": "*",
     "dayjs": "*",
-    "expo-constants": "*"
+    "expo-constants": "*",
+    "libphonenumber-js": "*"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . packages/sandbox && cp yarn.lock packages/sandbox",

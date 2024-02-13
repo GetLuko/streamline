@@ -21,7 +21,7 @@ export type InputTextProps = Omit<NativeTextInputProps, 'editable'> & {
   description?: string;
   isFocused?: boolean;
   isEditable?: boolean;
-  label: string;
+  label?: string;
   multiline?: boolean;
   numberOfLines?: number;
   rightIconName?: IconsName;
@@ -40,5 +40,6 @@ export type InputTextProps = Omit<NativeTextInputProps, 'editable'> & {
   width?: number;
   height?: number;
   isSearchInput?: boolean;
+  isPhoneInput?: boolean;
   unit?: string;
 };

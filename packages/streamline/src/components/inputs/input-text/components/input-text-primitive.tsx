@@ -19,6 +19,7 @@ const DEFAULTLINEHEIGHT = 18;
 
 export const InputTextPrimitive = ({
   isSearchInput,
+  isPhoneInput,
   isDisabled,
   isEditable,
   isError,
@@ -49,7 +50,8 @@ export const InputTextPrimitive = ({
   const theme = useStreamlineTheme();
   const gutterStyle = { marginLeft: left ? theme.spacing.xs : 0 };
   const containerStyle = !label &&
-    !isSearchInput && { paddingTop: theme.spacing.xxs };
+    !isSearchInput &&
+    !isPhoneInput && { paddingTop: theme.spacing.xxs };
   const inputPadding = { paddingVertical: theme.spacing.xs + OUTLINE_WIDTH };
   const inputContainer = (
     <Box flexGrow={1} flexBasis={0}>

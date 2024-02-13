@@ -1,9 +1,9 @@
 import React from 'react';
 
+import { CardHighlightProps } from './card-highlight.types';
 import { Box } from '../../../primitives/box/box';
 import { Card } from '../../../primitives/card/card';
 import { Skeleton } from '../../../primitives/skeleton/skeleton';
-import { CardHighlightProps } from './card-highlight.types';
 
 export const CardHighlightSkeleton = (
   props: Pick<CardHighlightProps, 'title' | 'testID'>

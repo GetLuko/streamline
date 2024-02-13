@@ -1,9 +1,9 @@
 import { Pressable, StyleSheet } from 'react-native';
 
+import { NavigationSectionTitleProps } from './navigation-section-title.types';
 import { Box } from '../../../primitives/box/box';
 import { Text } from '../../../primitives/text/text';
 import Switch from '../../switch/switch';
-import { NavigationSectionTitleProps } from './navigation-section-title.types';
 
 export const NavigationSectionTitle = ({
   title,

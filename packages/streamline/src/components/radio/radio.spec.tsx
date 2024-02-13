@@ -1,12 +1,12 @@
 import { fireEvent } from '@testing-library/react-native';
 
-import { renderWithProvider } from '../../testing/render-with-provider';
 import { Radio } from './radio';
+import { renderWithProvider } from '../../testing/render-with-provider';
 
 describe('Radio', () => {
   it('should render successfully', () => {
-    const { container } = renderWithProvider(<Radio value={true} />);
-    expect(container).toBeTruthy();
+    const { UNSAFE_root } = renderWithProvider(<Radio value={true} />);
+    expect(UNSAFE_root).toBeTruthy();
   });
 
   it('should trigger mockOnChange', () => {

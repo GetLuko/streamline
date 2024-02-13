@@ -1,15 +1,15 @@
 import React from 'react';
 import { Image, StyleSheet } from 'react-native';
 
+import { CardHighlightSkeleton } from './card-highlight-skeleton';
+import { CardHighlightProps } from './card-highlight.types';
+import { getCardHighlightColors } from './card-highlight.utils';
 import { usePress } from '../../../hooks/use-press.hook';
 import { Box } from '../../../primitives/box/box';
 import { Card } from '../../../primitives/card/card';
 import { Text } from '../../../primitives/text/text';
 import Spinner from '../../spinner/spinner';
 import Tag from '../../tag/tag';
-import { CardHighlightSkeleton } from './card-highlight-skeleton';
-import { CardHighlightProps } from './card-highlight.types';
-import { getCardHighlightColors } from './card-highlight.utils';
 
 export function CardHighlight({
   appearance = 'primary',

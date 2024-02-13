@@ -1,8 +1,8 @@
 import React from 'react';
 
+import { InputTextLabelProps } from './types';
 import { Box } from '../../../../primitives/box/box';
 import { Text } from '../../../../primitives/text/text';
-import { InputTextLabelProps } from './types';
 
 export const InputTextLabel = ({
   label,
@@ -11,7 +11,7 @@ export const InputTextLabel = ({
 }: InputTextLabelProps) => {
   const color = getColor({ error, disabled });
   return (
-    <Box pointerEvents="none" accessibilityElementsHidden>
+    <Box pointerEvents="none">
       <Text variant="subBodyBold" color={color} maxFontSizeMultiplier={1}>
         {label}
       </Text>

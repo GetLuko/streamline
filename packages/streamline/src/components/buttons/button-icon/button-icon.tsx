@@ -1,17 +1,17 @@
 import React from 'react';
 import { Pressable } from 'react-native';
 
-import { usePress } from '../../../hooks/use-press.hook';
-import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
-import { Icon } from '../../../primitives/icon/icon';
-import { Skeleton } from '../../../primitives/skeleton/skeleton';
-import Spinner from '../../spinner/spinner';
 import { ButtonIconProps } from './button-icon.types';
 import {
   getButtonActiveColors,
   getButtonIconColors,
   getButtonIconSize,
 } from './button-icon.utils';
+import { usePress } from '../../../hooks/use-press.hook';
+import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
+import { Icon } from '../../../primitives/icon/icon';
+import { Skeleton } from '../../../primitives/skeleton/skeleton';
+import Spinner from '../../spinner/spinner';
 
 /**
  * Todo - Use pressable from react-native-ama when issue below fixed

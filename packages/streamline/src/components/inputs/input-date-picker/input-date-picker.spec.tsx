@@ -1,18 +1,18 @@
 import React from 'react';
 
-import { renderWithProvider } from '../../../testing/render-with-provider';
 import InputDatePicker from './input-date-picker';
+import { renderWithProvider } from '../../../testing/render-with-provider';
 
 describe('InputDatePicker', () => {
   it('should render successfully', () => {
-    const { container } = renderWithProvider(
+    const { UNSAFE_root } = renderWithProvider(
       <InputDatePicker
         label="Title"
         placeholder="Placeholder"
         description="Description"
       />
     );
-    expect(container).toBeTruthy();
+    expect(UNSAFE_root).toBeTruthy();
   });
 
   it('should render InputText with placeholder', () => {

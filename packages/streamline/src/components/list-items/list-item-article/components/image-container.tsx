@@ -1,9 +1,9 @@
 import { Image } from 'react-native';
 
+import { ImageSpinner } from './image-spinner';
 import { Box } from '../../../../primitives/box/box';
 import { IMAGE_HEIGHT, IMAGE_WIDTH } from '../constants';
 import { ListItemArticleProps } from '../list-item-article.types';
-import { ImageSpinner } from './image-spinner';
 
 export const ImageContainer = (
   props: Pick<

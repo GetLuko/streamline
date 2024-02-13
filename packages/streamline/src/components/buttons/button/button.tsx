@@ -1,18 +1,17 @@
-import isNil from 'lodash.isnil';
 import React from 'react';
 import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
 import { Pressable } from 'react-native-ama';
 
-import { usePress } from '../../../hooks/use-press.hook';
-import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
-import { Box } from '../../../primitives/box/box';
-import { useStreamlineTheme } from '../../../theme';
-import { getShadowsStyle } from '../../../theme/shadows';
 import { ButtonProps } from './button.types';
 import { getPressableBackgroundColor } from './button.utils';
 import InnerIcon from './component/inner-icon';
 import InnerLabel from './component/inner-label';
 import { useLoadingAnimation } from './hook/useLoadingAnimation';
+import { usePress } from '../../../hooks/use-press.hook';
+import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
+import { Box } from '../../../primitives/box/box';
+import { useStreamlineTheme } from '../../../theme';
+import { getShadowsStyle } from '../../../theme/shadows';
 
 export const Button = ({
   appearance = 'primary',
@@ -33,7 +32,7 @@ export const Button = ({
   const styles = useStyles(size, appearance, isFloating);
   const isMini = size === 'mini';
 
-  if (!isNil(iconName) && !isMini) {
+  if (!!iconName && !isMini) {
     console.warn('Icon is only supported for mini buttons');
   }
 

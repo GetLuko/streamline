@@ -1,8 +1,8 @@
+import { getNavigationTitleColors } from './navigation-title.utils';
 import { Box } from '../../../primitives/box/box';
 import { IconsName } from '../../../primitives/icon/icon.types';
 import { Text } from '../../../primitives/text/text';
 import ButtonIcon from '../../buttons/button-icon/button-icon';
-import { getNavigationTitleColors } from './navigation-title.utils';
 
 export interface NavigationTitleProps {
   appearance?: 'dark' | 'light';

@@ -2,9 +2,9 @@ import { fireEvent } from '@testing-library/react-native';
 import React from 'react';
 
 import '@testing-library/jest-dom/extend-expect';
-import { renderWithProvider } from '../../../testing/render-with-provider';
 import CardCarousel from './card-carousel';
 import { CardCarouselProps } from './card-carousel.types';
+import { renderWithProvider } from '../../../testing/render-with-provider';
 
 describe('CardCarousel', () => {
   const mockProps: CardCarouselProps = {

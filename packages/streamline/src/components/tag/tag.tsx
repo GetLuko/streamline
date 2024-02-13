@@ -1,10 +1,10 @@
 import React from 'react';
 
+import { TagProps } from './tag.types';
+import { getTagColors } from './tag.utils';
 import { Box } from '../../primitives/box/box';
 import { Icon } from '../../primitives/icon/icon';
 import { Text } from '../../primitives/text/text';
-import { TagProps } from './tag.types';
-import { getTagColors } from './tag.utils';
 
 export const Tag = ({
   appearance = 'primary',

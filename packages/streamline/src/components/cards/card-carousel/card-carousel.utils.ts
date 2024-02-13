@@ -1,5 +1,5 @@
-import { Appearance } from '../../../theme/appearance';
 import { CardCarouselColors } from './card-carousel.types';
+import { Appearance } from '../../../theme/appearance';
 export const getCardCarouselColors = ({
   appearance,
 }: {

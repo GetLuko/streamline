@@ -197,3 +197,5 @@ diffScreenshots
 tempScreenshots
 
 node
+
+.nx/cache

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { renderWithProvider } from '../../testing/render-with-provider';
 import { Skeleton } from './skeleton';
+import { renderWithProvider } from '../../testing/render-with-provider';
 
 describe('Skeleton', () => {
   it('should render successfully', () => {
-    const { container } = renderWithProvider(<Skeleton />);
-    expect(container).toBeTruthy();
+    const { UNSAFE_root } = renderWithProvider(<Skeleton />);
+    expect(UNSAFE_root).toBeTruthy();
   });
 });

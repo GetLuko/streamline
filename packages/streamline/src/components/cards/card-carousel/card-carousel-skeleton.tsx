@@ -1,10 +1,10 @@
 import React from 'react';
 
+import { LARGE_CARD_HEIGHT, SMALL_CARD_SIZE } from './card-carousel.constants';
+import { CardCarouselProps } from './card-carousel.types';
 import { Box } from '../../../primitives/box/box';
 import { Card } from '../../../primitives/card/card';
 import { Skeleton } from '../../../primitives/skeleton/skeleton';
-import { LARGE_CARD_HEIGHT, SMALL_CARD_SIZE } from './card-carousel.constants';
-import { CardCarouselProps } from './card-carousel.types';
 
 export const CardCarouselSkeleton = (
   props: Pick<CardCarouselProps, 'size' | 'accessibilityLabel' | 'testID'>

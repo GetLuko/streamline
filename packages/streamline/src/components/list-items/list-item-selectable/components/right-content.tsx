@@ -1,4 +1,5 @@
 import React from 'react';
+import { StyleProp, TextStyle } from 'react-native';
 
 import { usePress } from '../../../../hooks/use-press.hook';
 import { Box } from '../../../../primitives/box/box';
@@ -42,7 +43,9 @@ export const RightContent = ({
   );
 };
 
-const useStyles = () => ({
+const useStyles = (): {
+  text: StyleProp<TextStyle>;
+} => ({
   text: {
     maxWidth: '60%',
   },

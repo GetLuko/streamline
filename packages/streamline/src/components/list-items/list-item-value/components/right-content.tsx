@@ -1,4 +1,5 @@
 import React from 'react';
+import { StyleProp, TextStyle } from 'react-native';
 
 import { Box } from '../../../../primitives/box/box';
 import { Text } from '../../../../primitives/text/text';
@@ -41,7 +42,9 @@ export const RightContent = ({
   );
 };
 
-const useStyles = () => ({
+const useStyles = (): {
+  text: StyleProp<TextStyle>;
+} => ({
   text: {
     maxWidth: '60%',
   },

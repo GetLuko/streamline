@@ -5,14 +5,14 @@ import {
   View,
 } from 'react-native';
 
-import { Box } from '../../../../primitives/box/box';
-import { Icon } from '../../../../primitives/icon/icon';
-import { Text } from '../../../../primitives/text/text';
-import { ColorTheme, useStreamlineTheme } from '../../../../theme';
 import { IconAdornment } from './input-text-icon';
 import { InputTextLabel } from './input-text-label';
 import { InputTextOutline, OUTLINE_WIDTH } from './input-textoutline';
 import { TextInputPrimitiveProps } from './types';
+import { Box } from '../../../../primitives/box/box';
+import { Icon } from '../../../../primitives/icon/icon';
+import { Text } from '../../../../primitives/text/text';
+import { ColorTheme, useStreamlineTheme } from '../../../../theme';
 
 const TEXT_INPUT_HEIGHT_WITHOUT_LABEL = 48;
 const DEFAULTLINEHEIGHT = 18;

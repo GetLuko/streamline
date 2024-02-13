@@ -1,13 +1,13 @@
 import { act, fireEvent } from '@testing-library/react-native';
 import React from 'react';
 
-import { renderWithProvider } from '../../../testing/render-with-provider';
 import InputSearch from './input-search';
+import { renderWithProvider } from '../../../testing/render-with-provider';
 
 describe('InputSearch', () => {
   it('should render successfully', () => {
-    const { container, queryByTestId } = renderWithProvider(<InputSearch />);
-    expect(container).toBeTruthy();
+    const { UNSAFE_root, queryByTestId } = renderWithProvider(<InputSearch />);
+    expect(UNSAFE_root).toBeTruthy();
     expect(queryByTestId('close-input-search')).toBeNull();
   });
 

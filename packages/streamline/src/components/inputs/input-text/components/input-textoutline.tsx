@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box } from '../../../../primitives/box/box';
 import { OutlineProps } from './types';
+import { Box } from '../../../../primitives/box/box';
 
 const FOCUS_OUTLINE_OVERFLOW_OFFSET = -2;
 export const OUTLINE_WIDTH = 2;

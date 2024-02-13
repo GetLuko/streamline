@@ -1,10 +1,10 @@
 import { fireEvent } from '@testing-library/react-native';
 import React from 'react';
 
+import { ButtonBar } from './button-bar';
 import { renderWithProvider } from '../../testing/render-with-provider';
 import { ButtonProps } from '../../types';
 import { Button } from '../buttons/button/button';
-import { ButtonBar } from './button-bar';
 
 describe('ButtonBar', () => {
   const buttons: ButtonProps[] = [

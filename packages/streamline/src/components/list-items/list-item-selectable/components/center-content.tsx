@@ -1,10 +1,10 @@
 import React from 'react';
 
+import { RightContent } from './right-content';
 import { Box } from '../../../../primitives/box/box';
 import { Text } from '../../../../primitives/text/text';
 import { ColorTheme } from '../../../../theme';
 import { ListItemSelectableProps } from '../list-item-selectable.type';
-import { RightContent } from './right-content';
 
 export const CenterContent = ({
   rightOption,

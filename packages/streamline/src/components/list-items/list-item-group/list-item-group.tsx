@@ -1,7 +1,7 @@
-import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
-import { Text } from '../../../primitives/text/text';
 import { Item } from './components/item';
 import { ListItemGroupProps } from './list-item-group.types';
+import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
+import { Text } from '../../../primitives/text/text';
 
 export const ListItemGroup = ({
   description,

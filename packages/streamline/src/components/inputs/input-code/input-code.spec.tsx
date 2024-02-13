@@ -1,14 +1,14 @@
 import { fireEvent } from '@testing-library/react-native';
 
-import { renderWithProvider } from '../../../testing/render-with-provider';
 import { InputCode } from './input-code';
+import { renderWithProvider } from '../../../testing/render-with-provider';
 
 describe('InputCode', () => {
   it('should render successfully', () => {
-    const { container } = renderWithProvider(
+    const { UNSAFE_root } = renderWithProvider(
       <InputCode code="" onChange={jest.fn()} length={4} />
     );
-    expect(container).toBeTruthy();
+    expect(UNSAFE_root).toBeTruthy();
   });
 
   it('should call onChange with the correct code when inputting values', () => {

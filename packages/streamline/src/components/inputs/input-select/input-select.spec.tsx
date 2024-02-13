@@ -1,15 +1,15 @@
 import { fireEvent } from '@testing-library/react-native';
 import React from 'react';
 
-import { renderWithProvider } from '../../../testing/render-with-provider';
 import InputSelect from './input-select';
+import { renderWithProvider } from '../../../testing/render-with-provider';
 
 describe('InputSelect', () => {
   it('should render successfully', () => {
-    const { container } = renderWithProvider(
+    const { UNSAFE_root } = renderWithProvider(
       <InputSelect label="Password" placeholder="Placeholder" />
     );
-    expect(container).toBeTruthy();
+    expect(UNSAFE_root).toBeTruthy();
   });
 
   it('should render placeholder', () => {

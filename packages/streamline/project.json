@@ -6,7 +6,7 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/rollup:rollup",
+      "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/streamline",
@@ -14,7 +14,7 @@
         "project": "packages/streamline/package.json",
         "entryFile": "packages/streamline/src/index.ts",
         "external": ["react/jsx-runtime", "react-native"],
-        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
         "format": ["esm"],
         "assets": [
           {

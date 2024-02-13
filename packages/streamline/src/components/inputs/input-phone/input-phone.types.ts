@@ -1,10 +1,9 @@
-import { ParseError, PhoneNumber } from 'libphonenumber-js';
-import { Countries } from 'libphonenumber-js/types';
+import { CountryCode, ParseError, PhoneNumber } from 'libphonenumber-js';
 
 import { InputTextProps } from '../input-text/types';
 
 export type InputPhoneProps = InputTextProps & {
-  countryCode?: keyof Countries;
+  countryCode?: CountryCode;
   onCountryPickerPress?: () => void;
   onChangePhoneNumber?: (phoneNumber: PhoneNumber) => void;
   onError?: (error: ParseError) => void;

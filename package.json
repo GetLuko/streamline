@@ -56,7 +56,6 @@
     "@babel/preset-react": "^7.14.5",
     "@expo/cli": "0.10.16",
     "@getluko/eslint-plugin-react-native": "^0.1.2",
-    "@nrwl/rollup": "17.0.0",
     "@nx/eslint": "17.0.0",
     "@nx/eslint-plugin": "17.0.0",
     "@nx/expo": "17.0.0",

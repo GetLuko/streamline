@@ -1,0 +1,31 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "esnext",
+    "jsx": "react-native",
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true
+  },
+  "exclude": [
+    "jest.config.ts",
+    "src/**/*.spec.ts",
+    "src/**/*.spec.tsx",
+    "test-setup.ts",
+    "src/testing/render-with-provider.tsx"
+  ],
+  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
+  "extends": "expo/tsconfig.base"
+}

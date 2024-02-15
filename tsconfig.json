@@ -23,5 +23,11 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext"
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "jest.config.ts",
+    "test-setup.ts",
+    "src/testing/render-with-provider.tsx"
+  ]
 }

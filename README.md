@@ -1,26 +1,12 @@
 # @getluko/streamline
 
-Luko Design system lib
+Luko Design System using react-native for iOS and Android
 
 ## Installation
 
 ```sh
 npm install @getluko/streamline
 ```
-
-## Usage
-
-```js
-import { multiply } from '@getluko/streamline';
-
-// ...
-
-const result = await multiply(3, 7);
-```
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
 ## License
 

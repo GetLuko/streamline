@@ -1,0 +1,13 @@
+{
+  "root": true,
+  "extends": ["@getluko/react-native"],
+  "overrides": [
+    {
+      "files": ["sandbox/**/*"],
+      "rules": {
+        "no-console": "off",
+        "react/jsx-key": "off"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+diff --git a/src/reanimated2/layoutReanimation/animationBuilder/Keyframe.ts b/src/reanimated2/layoutReanimation/animationBuilder/Keyframe.ts
+index 485e609e80bd92329a5083e0c0c1717829778e48..3557df62e4608b851daf2e9102553a4d4869b736 100644
+--- a/src/reanimated2/layoutReanimation/animationBuilder/Keyframe.ts
++++ b/src/reanimated2/layoutReanimation/animationBuilder/Keyframe.ts
+@@ -288,6 +288,7 @@ class InnerKeyframe implements IEntryExitAnimationBuilder {
+ }
+ 
+ function makeKeyframeKey(index: number, transformProp: string) {
++	'worklet'
+   return `${index}_transform:${transformProp}`;
+ }
+ 

@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig",
   "exclude": [
-    "example",
+    "sandbox",
     "node_modules",
     "jest.config.ts",
     "src/**/*.spec.ts",

@@ -15873,28 +15873,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-reanimated@npm:~3.3.0":
-  version: 3.3.0
-  resolution: "react-native-reanimated@npm:3.3.0"
-  dependencies:
-    "@babel/plugin-transform-object-assign": ^7.16.7
-    "@babel/preset-typescript": ^7.16.7
-    convert-source-map: ^2.0.0
-    invariant: ^2.2.4
-  peerDependencies:
-    "@babel/core": ^7.0.0-0
-    "@babel/plugin-proposal-nullish-coalescing-operator": ^7.0.0-0
-    "@babel/plugin-proposal-optional-chaining": ^7.0.0-0
-    "@babel/plugin-transform-arrow-functions": ^7.0.0-0
-    "@babel/plugin-transform-shorthand-properties": ^7.0.0-0
-    "@babel/plugin-transform-template-literals": ^7.0.0-0
-    react: "*"
-    react-native: "*"
-  checksum: 58096b28caef8af261c446eccb91a5a74caa303ba3520b1a2767c5b922b3d19b9a58612ab9b517a959c1b562b2e76e4cf4a8ffb21136960ed63375f6a4c37d1e
-  languageName: node
-  linkType: hard
-
-"react-native-reanimated@npm:~3.6.2":
+"react-native-reanimated@npm:3.6.2":
   version: 3.6.2
   resolution: "react-native-reanimated@npm:3.6.2"
   dependencies:
@@ -15912,6 +15891,27 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 0a5030ec7d66603bdb1777fb9a37f6621c7c329b47101596d882d0dd526fe1ed34f4088635aacb9d44988bdbc6fe5b792145fc44eafaceb080b7a8c7ddd69eff
+  languageName: node
+  linkType: hard
+
+"react-native-reanimated@patch:react-native-reanimated@npm%3A3.6.2#./.yarn/patches/react-native-reanimated-npm-3.6.2-188483b50f.patch::locator=%40getluko%2Fstreamline%40workspace%3A.":
+  version: 3.6.2
+  resolution: "react-native-reanimated@patch:react-native-reanimated@npm%3A3.6.2#./.yarn/patches/react-native-reanimated-npm-3.6.2-188483b50f.patch::version=3.6.2&hash=a261b3&locator=%40getluko%2Fstreamline%40workspace%3A."
+  dependencies:
+    "@babel/plugin-transform-object-assign": ^7.16.7
+    "@babel/preset-typescript": ^7.16.7
+    convert-source-map: ^2.0.0
+    invariant: ^2.2.4
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+    "@babel/plugin-proposal-nullish-coalescing-operator": ^7.0.0-0
+    "@babel/plugin-proposal-optional-chaining": ^7.0.0-0
+    "@babel/plugin-transform-arrow-functions": ^7.0.0-0
+    "@babel/plugin-transform-shorthand-properties": ^7.0.0-0
+    "@babel/plugin-transform-template-literals": ^7.0.0-0
+    react: "*"
+    react-native: "*"
+  checksum: db2222cd9c6cf9a0d2c8e647de59ca2e53ce4031db8671e392c1551cc502452cd3ecac70c3a29d80c400b3e65a39c5c4bac4365b1e7a3488854f0a6a9f632981
   languageName: node
   linkType: hard
 

@@ -58,7 +58,9 @@
     "wcag-color": "^1.1.1"
   },
   "resolutions": {
-    "@types/react": "17.0.21"
+    "@types/react": "17.0.21",
+    "react-native-reanimated@~3.6.2": "patch:react-native-reanimated@npm%3A3.6.2#./.yarn/patches/react-native-reanimated-npm-3.6.2-188483b50f.patch",
+    "react-native-reanimated@~3.3.0": "patch:react-native-reanimated@npm%3A3.6.2#./.yarn/patches/react-native-reanimated-npm-3.6.2-188483b50f.patch"
   },
   "peerDependencies": {
     "@react-native-community/datetimepicker": "*",

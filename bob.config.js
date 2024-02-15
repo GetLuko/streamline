@@ -3,6 +3,7 @@ module.exports = {
   output: 'lib',
   exclude: ['src/**/*.spec.ts', 'src/**/*.spec.tsx'],
   targets: [
+    'commonjs',
     'module',
     [
       'typescript',

@@ -24,4 +24,5 @@ runs:
         token: ${{ inputs.EXPO_TOKEN }}
 
     - name: 📦 Install dependencies
+      shell: bash
       run: yarn

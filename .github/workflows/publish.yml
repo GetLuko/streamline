@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.MOBILE_LUKO_PAT }}
 
       - name: Setup
         uses: ./.github/actions/setup
@@ -13,8 +15,8 @@ jobs:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
       - name: git config
         run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config user.name "Mobile Luko"
+          git config user.email "app@getluko.com"
           git status
 
       - name: Initialise the NPM config

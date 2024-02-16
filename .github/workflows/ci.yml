@@ -16,6 +16,8 @@ jobs:
 
       - name: Setup
         uses: ./.github/actions/setup
+        with:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       - name: Lint files
         run: yarn lint
@@ -31,6 +33,8 @@ jobs:
 
       - name: Setup
         uses: ./.github/actions/setup
+        with:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       - name: Run unit tests
         run: yarn test --maxWorkers=2 --coverage
@@ -43,6 +47,8 @@ jobs:
 
       - name: Setup
         uses: ./.github/actions/setup
+        with:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       - name: Build package
         run: yarn prepare

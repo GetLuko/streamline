@@ -38,6 +38,7 @@
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "owner": "lukoapp"
   }
 }

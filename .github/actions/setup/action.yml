@@ -4,10 +4,24 @@ description: Setup Node.js and install dependencies
 runs:
   using: composite
   steps:
+      - name: Check for EXPO_TOKEN
+      shell: bash
+      run: |
+        if [ -z "${{ inputs.EXPO_TOKEN }}" ]; then
+          echo "You must provide an EXPO_TOKEN secret linked to this project's Expo account in this repo's secrets. Learn more: https://docs.expo.dev/eas-update/github-actions"
+          exit 1
+        fi
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
         node-version-file: .nvmrc
+
+    - name: Setup Expo
+      uses: expo/expo-github-action@v7
+      with:
+        expo-version: latest
+        eas-version: latest
+        token: ${{ inputs.EXPO_TOKEN }}
 
     - name: Cache dependencies
       id: yarn-cache

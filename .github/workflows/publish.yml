@@ -1,8 +1,5 @@
 name: Release & Publish to NPM
-on:
-  pull_request:
-    branches:
-      - dev
+on: workflow_dispatch
 jobs:
   release:
     runs-on: ubuntu-latest

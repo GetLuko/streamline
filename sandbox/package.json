@@ -1,6 +1,14 @@
 {
   "name": "sandbox",
   "version": "0.0.1",
+  "scripts": {
+    "start:e2e": "EXPO_PUBLIC_E2E=true expo start --clear --port 19000",
+    "start": "expo start --clear",
+    "test:visual:ios": "maestro test e2e/visual_regressions_flow.yml -e APPID=host.exp.Exponent -e PLATFORM=ios",
+    "test:visual:ios:compare": "reg-cli e2e/ios/screenshots e2e/ios/tempScreenshots e2e/ios/diffScreenshots -T 0.0001 -R e2e/ios/diffScreenshots/report.html -J e2e/ios/diffScreenshots/result.json",
+    "test:visual:android": "maestro test e2e/visual_regressions_flow.yml -e APPID=host.exp.exponent -e PLATFORM=android",
+    "test:visual:android:compare": "reg-cli e2e/android/screenshots e2e/android/tempScreenshots e2e/android/diffScreenshots -T 0.0001 -R e2e/android/diffScreenshots/report.html -J e2e/android/diffScreenshots/result.json"
+  },
   "dependencies": {
     "@react-native-community/datetimepicker": "7.6.1",
     "@ronradtke/react-native-markdown-display": "8.0.0",
@@ -26,15 +34,5 @@
     "babel-loader": "^8.1.0",
     "babel-plugin-module-resolver": "^5.0.0",
     "wcag-color": "^1.1.1"
-  },
-  "scripts": {
-    "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . packages/sandbox && cp yarn.lock packages/sandbox",
-    "start:e2e": "E2E=true npx expo start --clear",
-    "start": "npx expo start --clear",
-    "test:visual:ios": "maestro test e2e/visual_regressions_flow.yml -e APPID=host.exp.Exponent -e PLATFORM=ios",
-    "test:visual:ios:compare": "reg-cli e2e/ios/screenshots e2e/ios/tempScreenshots e2e/ios/diffScreenshots -T 0.0001 -R e2e/ios/diffScreenshots/report.html -J e2e/ios/diffScreenshots/result.json",
-    "test:visual:android": "maestro test e2e/visual_regressions_flow.yml -e APPID=host.exp.exponent -e PLATFORM=android",
-    "test:visual:android:compare": "reg-cli e2e/android/screenshots e2e/android/tempScreenshots e2e/android/diffScreenshots -T 0.0001 -R e2e/android/diffScreenshots/report.html -J e2e/android/diffScreenshots/result.json",
-    "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . packages/sandbox"
   }
 }

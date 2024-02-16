@@ -4,7 +4,7 @@ description: Setup Node.js and install dependencies
 runs:
   using: composite
   steps:
-      - name: Check for EXPO_TOKEN
+    - name: Check for EXPO_TOKEN
       shell: bash
       run: |
         if [ -z "${{ inputs.EXPO_TOKEN }}" ]; then

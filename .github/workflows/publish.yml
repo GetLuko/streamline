@@ -18,13 +18,13 @@ jobs:
         run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git checkout "$CI_COMMIT_REF_NAME"
+          git status
 
       - name: Initialise the NPM config
         run: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Log git status
-        run: git status
 
       - name: Build package
         run: yarn prepare

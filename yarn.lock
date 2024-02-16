@@ -15997,6 +15997,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-ama@patch:react-native-ama@npm%3A0.6.20#./.yarn/patches/react-native-ama-npm-0.6.20-6174f89a1f.patch::locator=%40getluko%2Fstreamline%40workspace%3A.":
+  version: 0.6.20
+  resolution: "react-native-ama@patch:react-native-ama@npm%3A0.6.20#./.yarn/patches/react-native-ama-npm-0.6.20-6174f89a1f.patch::version=0.6.20&hash=184d5e&locator=%40getluko%2Fstreamline%40workspace%3A."
+  peerDependencies:
+    react: ">=17"
+    react-native: ">=0.66"
+    react-native-gesture-handler: "*"
+    react-native-reanimated: "*"
+    wcag-color: ^1.1.1
+  checksum: f241b5f08a33d47a527f9326de4b8699a5845cd08acfc6eb0b9bdfe6d10fe064f6bb9cd4ca9b0cfc68982e67e8e6c76edcca442a8d66fbb5945d54df344cabe3
+  languageName: node
+  linkType: hard
+
 "react-native-builder-bob@npm:^0.20.0":
   version: 0.20.4
   resolution: "react-native-builder-bob@npm:0.20.4"

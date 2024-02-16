@@ -9,8 +9,6 @@ jobs:
 
       - name: Install
         uses: ./.github/actions/setup
-        with:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       - name: 💬 Comment in preview
         uses: expo/expo-github-action/preview@v8

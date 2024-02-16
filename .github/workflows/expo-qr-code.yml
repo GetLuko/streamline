@@ -12,12 +12,8 @@ jobs:
         with:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
-      - name: cd to sandbox
-        run: |
-          cd sandbox
-          pwd
-
       - name: 💬 Comment in preview
         uses: expo/expo-github-action/preview@v8
         with:
           command: eas update --auto --channel=pr-${{ github.event.number }}
+          working-directory: sandbox

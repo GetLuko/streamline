@@ -66,7 +66,8 @@
   "resolutions": {
     "@types/react": "17.0.21",
     "react-native-reanimated@~3.6.2": "patch:react-native-reanimated@npm%3A3.6.2#./.yarn/patches/react-native-reanimated-npm-3.6.2-188483b50f.patch",
-    "react-native-reanimated@~3.3.0": "patch:react-native-reanimated@npm%3A3.6.2#./.yarn/patches/react-native-reanimated-npm-3.6.2-188483b50f.patch"
+    "react-native-reanimated@~3.3.0": "patch:react-native-reanimated@npm%3A3.6.2#./.yarn/patches/react-native-reanimated-npm-3.6.2-188483b50f.patch",
+    "react-native-ama@0.6.20": "patch:react-native-ama@npm%3A0.6.20#./.yarn/patches/react-native-ama-npm-0.6.20-6174f89a1f.patch"
   },
   "peerDependencies": {
     "@react-native-community/datetimepicker": "7.6.1",

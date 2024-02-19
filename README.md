@@ -4,7 +4,7 @@ Luko Design System using react-native for iOS and Android
 
 ## Sandbox
 
-The goal of the sandbox project is to showcase all the components available.
+The objective of the sandbox project is to showcase all the components available from the Streamline library.
 
 To start the sandbox expo project, run the following command
 

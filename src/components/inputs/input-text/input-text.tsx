@@ -14,6 +14,7 @@ export const InputText = React.forwardRef<RefNativeTextInput, InputTextProps>(
   (
     {
       isSearchInput = false,
+      isPhoneInput = false,
       isDisabled = false,
       isEditable = true,
       isFocused = false,
@@ -28,6 +29,7 @@ export const InputText = React.forwardRef<RefNativeTextInput, InputTextProps>(
   ) => {
     const props: InputTextProps = {
       isSearchInput,
+      isPhoneInput,
       isDisabled,
       isEditable,
       isFocused,

@@ -72,3 +72,11 @@ To build & publish the library, you can execute the [Release & Publish to NPM](h
 ```
 yarn && yarn prepare && yarn release
 ```
+
+## License
+
+MIT
+
+---
+
+Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)

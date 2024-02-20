@@ -7,7 +7,6 @@ import { Box } from '../../../primitives/box/box';
 import { Text } from '../../../primitives/text/text';
 import { InputTextLabel } from '../input-text/components/input-text-label';
 import { InputText } from '../input-text/input-text';
-import { InputType } from '../input-text/types';
 
 export const InputPhone: FC<InputPhoneProps> = ({
   onChangePhoneNumber,
@@ -66,7 +65,7 @@ export const InputPhone: FC<InputPhoneProps> = ({
             keyboardType="phone-pad"
             onChangeText={handleOnChangeText}
             value={inputValue}
-            inputType={InputType.PHONE}
+            inputType="PHONE"
           />
         </Box>
       </Box>

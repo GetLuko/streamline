@@ -7,11 +7,7 @@ import { IconsName } from '../../../primitives/icon/icon.types';
 
 export type Root = NativeTextInput | undefined | null;
 
-export enum InputType {
-  TEXT = 'TEXT',
-  SEARCH = 'SEARCH',
-  PHONE = 'PHONE',
-}
+export type InputType = 'TEXT' | 'SEARCH' | 'PHONE';
 
 export type RefNativeTextInput =
   | Pick<

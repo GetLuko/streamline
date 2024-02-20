@@ -18,7 +18,7 @@ const TEXT_INPUT_HEIGHT_WITHOUT_LABEL = 48;
 const DEFAULTLINEHEIGHT = 18;
 
 export const InputTextPrimitive = ({
-  isSearchInput,
+  inputType = 'TEXT',
   isDisabled,
   isEditable,
   isError,
@@ -49,7 +49,7 @@ export const InputTextPrimitive = ({
   const theme = useStreamlineTheme();
   const gutterStyle = { marginLeft: left ? theme.spacing.xs : 0 };
   const containerStyle = !label &&
-    !isSearchInput && { paddingTop: theme.spacing.xxs };
+    inputType === 'TEXT' && { paddingTop: theme.spacing.xxs };
   const inputPadding = { paddingVertical: theme.spacing.xs + OUTLINE_WIDTH };
   const inputContainer = (
     <Box flexGrow={1} flexBasis={0}>
@@ -76,7 +76,7 @@ export const InputTextPrimitive = ({
             fontSize: theme.textVariants.body.fontSize,
             minHeight: numberOfLines * DEFAULTLINEHEIGHT,
           },
-          isSearchInput
+          inputType === 'SEARCH'
             ? {
                 marginLeft: theme.spacing.xs,
               }
@@ -112,7 +112,7 @@ export const InputTextPrimitive = ({
           </View>
         ) : null}
         <Box flexGrow={1} style={gutterStyle}>
-          {isSearchInput ? (
+          {inputType === 'SEARCH' ? (
             <Box
               padding="xs"
               backgroundColor={isFocused ? 'GREY_200' : 'GREY_100'}

@@ -13,7 +13,7 @@ export function InputSearch({ placeholder, onChangeText }: InputSearchProps) {
     <InputText
       label=""
       placeholder={placeholder}
-      isSearchInput
+      inputType="SEARCH"
       onChangeText={onChangeText}
     />
   );

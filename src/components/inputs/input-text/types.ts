@@ -7,6 +7,8 @@ import { IconsName } from '../../../primitives/icon/icon.types';
 
 export type Root = NativeTextInput | undefined | null;
 
+export type InputType = 'TEXT' | 'SEARCH' | 'PHONE';
+
 export type RefNativeTextInput =
   | Pick<
       NativeTextInput,
@@ -21,7 +23,7 @@ export type InputTextProps = Omit<NativeTextInputProps, 'editable'> & {
   description?: string;
   isFocused?: boolean;
   isEditable?: boolean;
-  label: string;
+  label?: string;
   multiline?: boolean;
   numberOfLines?: number;
   rightIconName?: IconsName;
@@ -39,6 +41,6 @@ export type InputTextProps = Omit<NativeTextInputProps, 'editable'> & {
   noPadding?: boolean;
   width?: number;
   height?: number;
-  isSearchInput?: boolean;
+  inputType?: InputType;
   unit?: string;
 };

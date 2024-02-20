@@ -2,7 +2,7 @@
   "name": "sandbox",
   "version": "0.0.1",
   "scripts": {
-    "start:e2e": "EXPO_PUBLIC_E2E=true expo start --clear --port 19000",
+    "start:e2e": "EXPO_PUBLIC_E2E=true expo start --clear --port 19000 --minify",
     "start": "expo start --clear",
     "test:visual:ios": "maestro test e2e/visual_regressions_flow.yml -e APPID=host.exp.Exponent -e PLATFORM=ios",
     "test:visual:ios:compare": "reg-cli e2e/ios/screenshots e2e/ios/tempScreenshots e2e/ios/diffScreenshots -T 0.0001 -R e2e/ios/diffScreenshots/report.html -J e2e/ios/diffScreenshots/result.json",
@@ -18,6 +18,7 @@
     "expo-font": "~11.10.2",
     "expo-linear-gradient": "~12.7.1",
     "expo-updates": "~0.24.10",
+    "libphonenumber-js": "^1.10.55",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.73.4",

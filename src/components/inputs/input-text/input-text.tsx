@@ -13,7 +13,7 @@ import ButtonIcon from '../../buttons/button-icon/button-icon';
 export const InputText = React.forwardRef<RefNativeTextInput, InputTextProps>(
   (
     {
-      isSearchInput = false,
+      inputType = 'TEXT',
       isDisabled = false,
       isEditable = true,
       isFocused = false,
@@ -27,7 +27,7 @@ export const InputText = React.forwardRef<RefNativeTextInput, InputTextProps>(
     forwardedRef
   ) => {
     const props: InputTextProps = {
-      isSearchInput,
+      inputType,
       isDisabled,
       isEditable,
       isFocused,
@@ -94,7 +94,7 @@ export const InputText = React.forwardRef<RefNativeTextInput, InputTextProps>(
           pointerEvents,
           secureEntry,
           handleSecureEntry,
-          isSearchInput && !!value,
+          inputType === 'SEARCH' && !!value,
           () => {
             handleChangeText('');
           }

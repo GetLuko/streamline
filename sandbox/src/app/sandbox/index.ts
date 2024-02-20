@@ -17,6 +17,7 @@ import { DialogSandbox } from './docs/dialog.doc';
 import { IconsSandbox } from './docs/icon.doc';
 import { InputCodeSandbox } from './docs/input-code.doc';
 import { InputDatePickerSandbox } from './docs/input-date-picker.doc';
+import { InputPhoneSandbox } from './docs/input-phone.doc';
 import { InputSearchSandbox } from './docs/input-search.doc';
 import { InputSelectSandbox } from './docs/input-select.doc';
 import { InputTextAreaSandbox } from './docs/input-text-area.doc';
@@ -95,6 +96,7 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'InputSelect', SandBox: InputSelectSandbox },
       { title: 'InputSearch', SandBox: InputSearchSandbox },
       { title: 'InputCode', SandBox: InputCodeSandbox },
+      { title: 'InputPhone', SandBox: InputPhoneSandbox },
     ],
   },
   {

@@ -2387,6 +2387,7 @@ __metadata:
     eslint-plugin-react-native: ^4.1.0
     expo-linear-gradient: ~12.3.0
     jest: ^28.1.1
+    libphonenumber-js: ^1.10.55
     prettier: ^2.0.5
     react: 18.2.0
     react-native: 0.72.10
@@ -2407,6 +2408,7 @@ __metadata:
     "@shopify/restyle": 2.0.0
     dayjs: 1.10.6
     expo-linear-gradient: ~12.3.0
+    libphonenumber-js: ^1.10.55
     react: 18.2.0
     react-native: 0.72.10
     react-native-ama: 0.6.20
@@ -12631,6 +12633,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"libphonenumber-js@npm:^1.10.55":
+  version: 1.10.56
+  resolution: "libphonenumber-js@npm:1.10.56"
+  checksum: fddaf5deec1fb5dc075e6cacd3ebbd43f908b0ddec28028ca8f2c02a24666b429d3e6552f0536cef5b462af1b28623277ce34d28ddb2abe381b9ef8a01dd3fa2
+  languageName: node
+  linkType: hard
+
 "lighthouse-logger@npm:^1.0.0":
   version: 1.4.2
   resolution: "lighthouse-logger@npm:1.4.2"
@@ -17037,6 +17046,7 @@ __metadata:
     expo-font: ~11.10.2
     expo-linear-gradient: ~12.7.1
     expo-updates: ~0.24.10
+    libphonenumber-js: ^1.10.55
     react: 18.2.0
     react-dom: 18.2.0
     react-native: 0.73.4

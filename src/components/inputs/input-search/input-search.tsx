@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { InputText } from '../input-text/input-text';
-import { InputTextProps } from '../input-text/types';
+import { InputTextProps, InputType } from '../input-text/types';
 
 export type InputSearchProps = Pick<
   InputTextProps,
@@ -13,7 +13,7 @@ export function InputSearch({ placeholder, onChangeText }: InputSearchProps) {
     <InputText
       label=""
       placeholder={placeholder}
-      isSearchInput
+      inputType={InputType.SEARCH}
       onChangeText={onChangeText}
     />
   );

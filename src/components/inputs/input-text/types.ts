@@ -7,6 +7,12 @@ import { IconsName } from '../../../primitives/icon/icon.types';
 
 export type Root = NativeTextInput | undefined | null;
 
+export enum InputType {
+  TEXT = 'TEXT',
+  SEARCH = 'SEARCH',
+  PHONE = 'PHONE',
+}
+
 export type RefNativeTextInput =
   | Pick<
       NativeTextInput,
@@ -39,7 +45,6 @@ export type InputTextProps = Omit<NativeTextInputProps, 'editable'> & {
   noPadding?: boolean;
   width?: number;
   height?: number;
-  isSearchInput?: boolean;
-  isPhoneInput?: boolean;
+  inputType?: InputType;
   unit?: string;
 };

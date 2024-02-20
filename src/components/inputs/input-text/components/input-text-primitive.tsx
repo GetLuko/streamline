@@ -13,13 +13,13 @@ import { Box } from '../../../../primitives/box/box';
 import { Icon } from '../../../../primitives/icon/icon';
 import { Text } from '../../../../primitives/text/text';
 import { ColorTheme, useStreamlineTheme } from '../../../../theme';
+import { InputType } from '../types';
 
 const TEXT_INPUT_HEIGHT_WITHOUT_LABEL = 48;
 const DEFAULTLINEHEIGHT = 18;
 
 export const InputTextPrimitive = ({
-  isSearchInput,
-  isPhoneInput,
+  inputType = InputType.TEXT,
   isDisabled,
   isEditable,
   isError,
@@ -50,8 +50,7 @@ export const InputTextPrimitive = ({
   const theme = useStreamlineTheme();
   const gutterStyle = { marginLeft: left ? theme.spacing.xs : 0 };
   const containerStyle = !label &&
-    !isSearchInput &&
-    !isPhoneInput && { paddingTop: theme.spacing.xxs };
+    inputType === InputType.TEXT && { paddingTop: theme.spacing.xxs };
   const inputPadding = { paddingVertical: theme.spacing.xs + OUTLINE_WIDTH };
   const inputContainer = (
     <Box flexGrow={1} flexBasis={0}>
@@ -78,7 +77,7 @@ export const InputTextPrimitive = ({
             fontSize: theme.textVariants.body.fontSize,
             minHeight: numberOfLines * DEFAULTLINEHEIGHT,
           },
-          isSearchInput
+          inputType === InputType.SEARCH
             ? {
                 marginLeft: theme.spacing.xs,
               }
@@ -114,7 +113,7 @@ export const InputTextPrimitive = ({
           </View>
         ) : null}
         <Box flexGrow={1} style={gutterStyle}>
-          {isSearchInput ? (
+          {inputType === InputType.SEARCH ? (
             <Box
               padding="xs"
               backgroundColor={isFocused ? 'GREY_200' : 'GREY_100'}

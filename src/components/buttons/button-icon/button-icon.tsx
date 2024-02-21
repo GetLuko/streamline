@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pressable } from 'react-native';
+import { Pressable } from 'react-native-ama';
 
 import { ButtonIconProps } from './button-icon.types';
 import {
@@ -13,10 +13,6 @@ import { Icon } from '../../../primitives/icon/icon';
 import { Skeleton } from '../../../primitives/skeleton/skeleton';
 import Spinner from '../../spinner/spinner';
 
-/**
- * Todo - Use pressable from react-native-ama when issue below fixed
- * https://github.com/FormidableLabs/react-native-ama/issues/92
- */
 export const ButtonIcon = ({
   accessibilityLabel,
   iconName,

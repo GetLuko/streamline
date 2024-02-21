@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pressable } from 'react-native';
+import { Pressable } from 'react-native-ama';
 
 import { CenterContent } from './components/center-content';
 import { LeftContent } from './components/left-content';
@@ -17,10 +17,6 @@ import {
 
 const DIVIDER_VERTICAL_MARGIN = 16;
 
-/**
- * Todo - Use pressable from react-native-ama when issue below fixed
- * https://github.com/FormidableLabs/react-native-ama/issues/92
- */
 export const ListItem = ({
   appearance = 'neutral',
   accessibilityLabel,

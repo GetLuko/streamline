@@ -1,9 +1,15 @@
 pre-commit:
   parallel: true
   commands:
+    format:
+      glob: '*.{js,ts,jsx,tsx}'
+      run: prettier --write
     lint:
       glob: '*.{js,ts,jsx,tsx}'
-      run: npx eslint {staged_files}
+      run: npx eslint {staged_files} --fix --quiet
     types:
       glob: '*.{js,ts, jsx, tsx}'
       run: npx tsc --noEmit
+    test:
+      glob: '*.{js,ts, jsx, tsx}'
+      run: jest --bail --findRelatedTests --passWithNoTests

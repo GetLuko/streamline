@@ -54,7 +54,7 @@
     "prettier": "^2.0.5",
     "react": "18.2.0",
     "react-native": "0.72.10",
-    "react-native-ama": "0.6.20",
+    "react-native-ama": "0.7.5",
     "react-native-builder-bob": "^0.20.0",
     "react-native-gesture-handler": "~2.12.0",
     "react-native-reanimated": "~3.3.0",

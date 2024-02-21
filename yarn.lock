@@ -2391,7 +2391,7 @@ __metadata:
     prettier: ^2.0.5
     react: 18.2.0
     react-native: 0.72.10
-    react-native-ama: 0.6.20
+    react-native-ama: 0.7.5
     react-native-builder-bob: ^0.20.0
     react-native-gesture-handler: ~2.12.0
     react-native-reanimated: ~3.3.0
@@ -16003,6 +16003,19 @@ __metadata:
     react-native-reanimated: "*"
     wcag-color: ^1.1.1
   checksum: 785bd63fbe32059827eca5f9d9d8b2e5014ff7a278d8b8d2fb55182854cd9c405280f2072c01cef4ab863e47695b7264f89ce14467bb2259cb69affa470ad6be
+  languageName: node
+  linkType: hard
+
+"react-native-ama@npm:0.7.5":
+  version: 0.7.5
+  resolution: "react-native-ama@npm:0.7.5"
+  peerDependencies:
+    react: ">=17"
+    react-native: ">=0.66"
+    react-native-gesture-handler: "*"
+    react-native-reanimated: "*"
+    wcag-color: ^1.1.1
+  checksum: 421f5eaf4094a5aa24f570f7a4058e0e5a075ca73d89a92dac40b0c2c376aa3a1c6c60a2884ab0fefc2bcc7be3c6242e33136d1900fce952a7cca41aff532241
   languageName: node
   linkType: hard
 

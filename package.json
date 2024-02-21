@@ -90,7 +90,7 @@
   "workspaces": [
     "sandbox"
   ],
-  "packageManager": "yarn@4.1.0",
+  "packageManager": "yarn@3.6.1",
   "engines": {
     "node": ">= 18.0.0"
   },

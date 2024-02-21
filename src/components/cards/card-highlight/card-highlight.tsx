@@ -26,6 +26,7 @@ export function CardHighlight({
   accessibilityLabel,
   isPreview = false,
 }: CardHighlightProps) {
+  const styles = useStyles();
   const [handlePress, isResolving] = usePress({ onPress });
 
   const { backgroundColor, titleColor, descriptionColor } =
@@ -68,11 +69,7 @@ export function CardHighlight({
           </Text>
         ) : null}
       </Box>
-      <Image
-        source={media}
-        style={{ flex: 1, height: 192 }}
-        resizeMode="cover"
-      />
+      <Image source={media} style={styles.image} resizeMode="cover" />
       {isPreview ? (
         <Box
           width={5}
@@ -83,5 +80,12 @@ export function CardHighlight({
     </Card>
   );
 }
+
+const useStyles = () => ({
+  image: {
+    flex: 1,
+    height: 192,
+  },
+});
 
 export default CardHighlight;

@@ -119,13 +119,15 @@ const getRightComponent = (
   isSearchInput?: boolean,
   onClear?: () => void
 ) => {
+  const styles = useStyles();
+
   if (rightIconName) {
     return <InputTextIcon name={rightIconName} />;
   }
   if (isSearchInput) {
     return (
       <Box
-        style={{ paddingTop: 2 }}
+        style={styles.closeInputSearch}
         marginRight="xxs"
         testID="close-input-search"
       >
@@ -180,3 +182,9 @@ const getRightComponent = (
   }
   return undefined;
 };
+
+const useStyles = () => ({
+  closeInputSearch: {
+    paddingTop: 2,
+  },
+});

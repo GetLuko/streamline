@@ -20,6 +20,7 @@ export * from './components/cards/card-tip/card-tip';
 export * from './components/consent-box/consent-box';
 export * from './components/checkbox/checkbox';
 export * from './components/dialog/dialog';
+export * from './components/inputs/input-outline/input-outline';
 export * from './components/inputs/input-text-area/input-text-area';
 export * from './components/inputs/input-text/input-text';
 export * from './components/inputs/input-select/input-select';

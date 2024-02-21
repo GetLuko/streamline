@@ -1,7 +1,7 @@
-import { GeneratedRegularIcons } from '@getluko/streamline';
+import { Box, GeneratedRegularIcons } from '@getluko/streamline';
 import { Icon, IconProps } from '@getluko/streamline';
 import React, { useCallback } from 'react';
-import { TouchableOpacity, View } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 
 const iconNames = [
   ...Object.keys(GeneratedRegularIcons),
@@ -15,16 +15,14 @@ export const IconsSandbox = () => {
     []
   );
   return (
-    <View
-      style={{ paddingHorizontal: 20, flexDirection: 'row', flexWrap: 'wrap' }}
-    >
-      <View style={{ marginTop: 40, flexDirection: 'row', flexWrap: 'wrap' }}>
+    <Box paddingHorizontal="lg" flexDirection="row" flexWrap="wrap">
+      <Box marginTop="xxl" flexDirection="row" flexWrap="wrap">
         {iconNames.map((iconName) => (
           <TouchableOpacity key={iconName} onPress={onPress(iconName)}>
             <Icon iconName={iconName} size="large" />
           </TouchableOpacity>
         ))}
-      </View>
-    </View>
+      </Box>
+    </Box>
   );
 };

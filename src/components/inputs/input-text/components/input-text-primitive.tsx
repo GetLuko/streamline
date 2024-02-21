@@ -7,12 +7,12 @@ import {
 
 import { IconAdornment } from './input-text-icon';
 import { InputTextLabel } from './input-text-label';
-import { InputTextOutline, OUTLINE_WIDTH } from './input-textoutline';
 import { TextInputPrimitiveProps } from './types';
 import { Box } from '../../../../primitives/box/box';
 import { Icon } from '../../../../primitives/icon/icon';
 import { Text } from '../../../../primitives/text/text';
 import { ColorTheme, useStreamlineTheme } from '../../../../theme';
+import { InputOutline, OUTLINE_WIDTH } from '../../input-outline/input-outline';
 
 const TEXT_INPUT_HEIGHT_WITHOUT_LABEL = 48;
 const DEFAULTLINEHEIGHT = 18;
@@ -47,10 +47,13 @@ export const InputTextPrimitive = ({
   ...rest
 }: TextInputPrimitiveProps) => {
   const theme = useStreamlineTheme();
-  const gutterStyle = { marginLeft: left ? theme.spacing.xs : 0 };
-  const containerStyle = !label &&
-    inputType === 'TEXT' && { paddingTop: theme.spacing.xxs };
-  const inputPadding = { paddingVertical: theme.spacing.xs + OUTLINE_WIDTH };
+  const styles = useStyles({
+    hasLeft: Boolean(left),
+    isDisabled,
+    numberOfLines,
+  });
+  const containerStyle = !label && inputType === 'TEXT' && styles.container;
+
   const inputContainer = (
     <Box flexGrow={1} flexBasis={0}>
       {render?.({
@@ -69,23 +72,12 @@ export const InputTextPrimitive = ({
         onBlur: onBlur,
         onChangeText: onChangeText,
         style: [
-          {
-            flexGrow: 1,
-            color: theme.colors.GREY_1000,
-            fontFamily: theme.textVariants.body.fontFamily,
-            fontSize: theme.textVariants.body.fontSize,
-            minHeight: numberOfLines * DEFAULTLINEHEIGHT,
-          },
+          styles.inputContainer,
           inputType === 'SEARCH'
-            ? {
-                marginLeft: theme.spacing.xs,
-              }
-            : inputPadding,
-          isDisabled && { color: theme.colors.GREY_500 },
-          isError && isDisabled && { color: theme.colors.GREY_500 },
+            ? styles.inputSearchContainer
+            : styles.inputPadding,
           // fix for dot secure text size who are too big with circular font
-          secureTextEntry && value ? { fontFamily: 'System' } : {},
-          maxWidth ? { maxWidth } : undefined,
+          secureTextEntry && value ? styles.secureTextEntry : undefined,
           rest.style,
         ],
       })}
@@ -105,13 +97,13 @@ export const InputTextPrimitive = ({
       <Box flexDirection="row" width={width} height={height}>
         {left ? (
           <View>
-            <InputTextOutline />
+            <InputOutline />
             <Box flexGrow={1} justifyContent="center">
               {left}
             </Box>
           </View>
         ) : null}
-        <Box flexGrow={1} style={gutterStyle}>
+        <Box flexGrow={1} style={styles.gutter}>
           {inputType === 'SEARCH' ? (
             <Box
               padding="xs"
@@ -125,14 +117,14 @@ export const InputTextPrimitive = ({
                 iconName="Search"
                 color="GREY_400"
                 size="large"
-                containerStyle={{ marginTop: 2, marginLeft: 5 }}
+                containerStyle={styles.searchIcon}
               />
               {inputContainer}
               {right}
             </Box>
           ) : (
             <>
-              <InputTextOutline
+              <InputOutline
                 hasActiveOutline={isFocused}
                 backgroundColor={isDisabled ? 'GREY_25' : undefined}
                 {...getOutlineStyle({ error: isError })}
@@ -142,12 +134,12 @@ export const InputTextPrimitive = ({
                 flexDirection="row"
                 paddingTop={multiline ? 'xs' : undefined}
                 style={[
-                  noPadding && { paddingHorizontal: 0, paddingVertical: 0 },
-                  !multiline && { height: TEXT_INPUT_HEIGHT_WITHOUT_LABEL },
+                  noPadding && styles.noPadding,
+                  !multiline && styles.singleLineContainer,
                 ]}
               >
                 {inputContainer}
-                <Box style={inputPadding}>
+                <Box style={styles.inputPadding}>
                   <IconAdornment
                     icon={right}
                     isTextInputFocused={parentState.focused}
@@ -193,5 +185,55 @@ const getOutlineStyle = ({
     activeColor: 'BLUKO_500',
     outlineColor: 'GREY_100',
     focusColor: 'BLUKO_100',
+  };
+};
+
+const useStyles = ({
+  hasLeft,
+  isDisabled,
+  maxWidth,
+  numberOfLines,
+}: {
+  hasLeft: boolean;
+  isDisabled?: boolean;
+  maxWidth?: number;
+  numberOfLines: number;
+}) => {
+  const { colors, spacing, textVariants } = useStreamlineTheme();
+  return {
+    gutter: {
+      marginLeft: hasLeft ? spacing.xs : 0,
+    },
+    container: {
+      paddingTop: spacing.xxs,
+    },
+    inputContainer: {
+      flexGrow: 1,
+      color: isDisabled ? colors.GREY_500 : colors.GREY_1000,
+      fontFamily: textVariants.body.fontFamily,
+      fontSize: textVariants.body.fontSize,
+      minHeight: numberOfLines * DEFAULTLINEHEIGHT,
+      maxWidth,
+    },
+    inputPadding: {
+      paddingVertical: spacing.xs + OUTLINE_WIDTH,
+    },
+    noPadding: {
+      paddingHorizontal: 0,
+      paddingVertical: 0,
+    },
+    singleLineContainer: {
+      height: TEXT_INPUT_HEIGHT_WITHOUT_LABEL,
+    },
+    searchIcon: {
+      marginTop: 2,
+      marginLeft: 5,
+    },
+    inputSearchContainer: {
+      marginLeft: spacing.xs,
+    },
+    secureTextEntry: {
+      fontFamily: 'System',
+    },
   };
 };

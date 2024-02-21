@@ -37,10 +37,10 @@ export const App = () => {
   return (
     <SafeAreaProvider>
       <StatusBar barStyle={isIOS ? 'light-content' : 'dark-content'} />
-      <SafeAreaView style={{ flex: 0 }} />
+      <SafeAreaView style={styles.notFlex} />
       <KeyboardAvoidingView
         behavior="padding"
-        style={{ flex: 1 }}
+        style={styles.keyboardAvoidingView}
         enabled={isIOS}
       >
         <ScrollView
@@ -49,7 +49,7 @@ export const App = () => {
           }}
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}
-          contentContainerStyle={{ flex: 0 }}
+          contentContainerStyle={styles.notFlex}
         >
           <StreamlineThemeProvider disableAnimation={disableAnimation}>
             <SandBox />
@@ -65,6 +65,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   activityIndicator: { flex: 1, alignContent: 'center', alignSelf: 'center' },
+  notFlex: {
+    flex: 0,
+  },
+  keyboardAvoidingView: {
+    flex: 1,
+  },
 });
 
 export default App;

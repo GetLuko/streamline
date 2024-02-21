@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, ViewStyle } from 'react-native';
 
 import { Box } from '../../primitives/box/box';
 import { useStreamlineTheme } from '../../theme';
@@ -13,7 +13,7 @@ type Props = {
 };
 
 export const ButtonBar = ({ buttons, isSkeleton = false, testID }: Props) => {
-  const { spacing } = useStreamlineTheme();
+  const styles = useStyles();
 
   const skeletonItems: ButtonProps[] = Array(5)
     .fill(0)
@@ -32,11 +32,7 @@ export const ButtonBar = ({ buttons, isSkeleton = false, testID }: Props) => {
       scrollEnabled={!isSkeleton}
       horizontal={true}
       showsHorizontalScrollIndicator={false}
-      contentContainerStyle={{
-        paddingHorizontal: spacing.md,
-        paddingVertical: spacing.xs,
-        flexDirection: 'row',
-      }}
+      contentContainerStyle={styles.container}
     >
       {buttonMenu.map((button, index) => (
         <Box
@@ -55,6 +51,17 @@ export const ButtonBar = ({ buttons, isSkeleton = false, testID }: Props) => {
       ))}
     </ScrollView>
   );
+};
+
+const useStyles = (): { [key: string]: ViewStyle } => {
+  const { spacing } = useStreamlineTheme();
+  return {
+    container: {
+      paddingHorizontal: spacing.md,
+      paddingVertical: spacing.xs,
+      flexDirection: 'row',
+    },
+  };
 };
 
 export default ButtonBar;

@@ -1,21 +1,20 @@
 import React from 'react';
-
-import { OutlineProps } from './types';
-import { Box } from '../../../../primitives/box/box';
+import { InputOutlineProps } from './input-outline.types';
+import { Box } from '../../../primitives/box/box';
 
 const FOCUS_OUTLINE_OVERFLOW_OFFSET = -2;
 export const OUTLINE_WIDTH = 2;
 
-export const InputTextOutline = ({
+export const InputOutline = ({
   hasActiveOutline = false,
   activeColor = 'BLUKO_500',
   focusColor = 'BLUKO_100',
   outlineColor = 'GREY_100',
   backgroundColor = 'PURE_WHITE_1000',
-}: OutlineProps) => {
+}: InputOutlineProps) => {
   return (
     <>
-      {hasActiveOutline && (
+      {hasActiveOutline ? (
         <Box
           borderRadius="lg"
           position="absolute"
@@ -26,7 +25,7 @@ export const InputTextOutline = ({
           backgroundColor={focusColor}
           pointerEvents="none"
         />
-      )}
+      ) : null}
       <Box
         pointerEvents="none"
         position="absolute"

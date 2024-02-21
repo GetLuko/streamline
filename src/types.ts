@@ -12,6 +12,8 @@ export * from './components/cards/card-tip/card-tip.types';
 
 export * from './components/dialog/dialog.types';
 
+export * from './components/inputs/input-outline/input-outline.types';
+
 export * from './components/list-items/list-item/list-item.types';
 export * from './components/list-items/list-item-group/list-item-group.types';
 export * from './components/list-items/list-item-selectable/list-item-selectable.type';

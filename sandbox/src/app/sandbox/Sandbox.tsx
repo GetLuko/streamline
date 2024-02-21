@@ -19,18 +19,22 @@ const BackButton = ({
   onPress: () => void;
   testID?: string;
   title: string;
-}) => (
-  <TouchableOpacity onPress={onPress}>
-    <Box margin="lg" testID={testID} alignItems="flex-end" flexDirection="row">
-      <Icon
-        iconName="ArrowLeft"
-        color="BLACK"
-        containerStyle={{ padding: 18 }}
-      />
-      <Text variant="titleLarge">{title}</Text>
-    </Box>
-  </TouchableOpacity>
-);
+}) => {
+  const styles = useStyles();
+  return (
+    <TouchableOpacity onPress={onPress}>
+      <Box
+        margin="lg"
+        testID={testID}
+        alignItems="flex-end"
+        flexDirection="row"
+      >
+        <Icon iconName="ArrowLeft" color="BLACK" containerStyle={styles.icon} />
+        <Text variant="titleLarge">{title}</Text>
+      </Box>
+    </TouchableOpacity>
+  );
+};
 
 export const SandBox = () => {
   const [page, setPage] = useState<{ groupIndex: number; index: number }>();
@@ -90,3 +94,7 @@ export const SandBox = () => {
   }
   return renderList;
 };
+
+const useStyles = () => ({
+  icon: { padding: 18 },
+});

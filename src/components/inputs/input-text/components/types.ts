@@ -1,4 +1,3 @@
-import { ColorTheme } from '../../../../theme';
 import { InputTextProps } from '../types';
 
 export type TextInputPrimitiveProps = InputTextProps & {
@@ -8,14 +7,6 @@ export type TextInputPrimitiveProps = InputTextProps & {
   parentState: { focused: boolean };
   innerRef: (ref: any) => void;
   maxWidth?: number;
-};
-
-export type OutlineProps = {
-  activeColor?: ColorTheme;
-  backgroundColor?: ColorTheme;
-  focusColor?: ColorTheme;
-  hasActiveOutline?: boolean;
-  outlineColor?: ColorTheme;
 };
 
 export interface InputTextLabelProps {

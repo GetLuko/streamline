@@ -96,7 +96,7 @@
   },
   "release-it": {
     "git": {
-      "commitMessage": "chore: release ${version}",
+      "commitMessage": "chore(Release): version ${version}",
       "tagName": "v${version}"
     },
     "npm": {

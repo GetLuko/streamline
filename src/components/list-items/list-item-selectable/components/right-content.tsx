@@ -6,6 +6,7 @@ import { Box } from '../../../../primitives/box/box';
 import { Text } from '../../../../primitives/text/text';
 import ButtonIcon from '../../../buttons/button-icon/button-icon';
 import { ListItemSelectableProps } from '../list-item-selectable.type';
+import Tag from '../../../tag/tag';
 
 export const RightContent = ({
   rightOption,
@@ -13,9 +14,23 @@ export const RightContent = ({
 }: Pick<ListItemSelectableProps, 'onPress' | 'rightOption' | 'value'>) => {
   const styles = useStyles();
   const [handlePress, isResolving] = usePress({
-    onPress: rightOption?.onPress,
+    onPress: rightOption?.type === 'icon' ? rightOption?.onPress : undefined,
   });
-  if (rightOption)
+
+  if (rightOption) {
+    if (rightOption.type === 'tag') {
+      return (
+        <Box position="absolute" paddingRight="xs" paddingLeft="xxs" right={0}>
+          <Tag
+            accessibilityLabel={rightOption.accessibilityLabel}
+            appearance={rightOption.appearance}
+            iconName={rightOption.iconName}
+            text={rightOption.text}
+          />
+        </Box>
+      );
+    }
+
     return (
       <Box position="absolute" paddingRight="xs" right={0}>
         <ButtonIcon
@@ -29,6 +44,7 @@ export const RightContent = ({
         />
       </Box>
     );
+  }
 
   return (
     <Text

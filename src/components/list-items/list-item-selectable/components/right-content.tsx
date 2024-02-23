@@ -13,12 +13,14 @@ export const RightContent = ({
   value,
 }: Pick<ListItemSelectableProps, 'onPress' | 'rightOption' | 'value'>) => {
   const styles = useStyles();
+  const isTag = rightOption?.type === 'tag';
+
   const [handlePress, isResolving] = usePress({
-    onPress: rightOption?.type === 'icon' ? rightOption?.onPress : undefined,
+    onPress: !isTag ? rightOption?.onPress : undefined,
   });
 
   if (rightOption) {
-    if (rightOption.type === 'tag') {
+    if (isTag) {
       return (
         <Box position="absolute" paddingRight="xs" paddingLeft="xxs" right={0}>
           <Tag

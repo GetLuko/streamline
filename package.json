@@ -10,7 +10,8 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli lib",
     "prepare": "bob build",
-    "release": "release-it"
+    "release": "release-it",
+    "postinstall": "lefthook install"
   },
   "devDependencies": {
     "@babel/core": "7.22.1",

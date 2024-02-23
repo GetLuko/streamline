@@ -7,6 +7,7 @@ import { Icon } from '../../primitives/icon/icon';
 import { Text } from '../../primitives/text/text';
 
 export const Tag = ({
+  accessibilityLabel,
   appearance = 'primary',
   iconName,
   isSmall = false,
@@ -18,6 +19,7 @@ export const Tag = ({
 
   return (
     <Box
+      accessibilityLabel={accessibilityLabel ?? text}
       alignItems="center"
       alignSelf="flex-start"
       flexDirection="row"

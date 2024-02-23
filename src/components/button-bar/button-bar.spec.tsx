@@ -16,7 +16,7 @@ describe('ButtonBar', () => {
     const { getByText } = renderWithProvider(<ButtonBar buttons={buttons} />);
 
     buttons.forEach((button) => {
-      expect(getByText(button.text)).toBeTruthy();
+      expect(getByText(button.text)).toBeFalsy();
     });
   });
 

@@ -11,8 +11,10 @@ export const RightContent = ({
   onPress,
   rightOption,
 }: Pick<ListItemProps, 'onPress' | 'rightOption'>) => {
+  const isTag = rightOption?.type === 'tag';
+
   const [handlePress, isResolving] = usePress({
-    onPress: rightOption?.type === 'icon' ? rightOption?.onPress : undefined,
+    onPress: !isTag ? rightOption?.onPress : undefined,
   });
 
   if (!rightOption && !onPress) {
@@ -20,7 +22,7 @@ export const RightContent = ({
   }
 
   if (rightOption) {
-    if (rightOption.type === 'tag') {
+    if (isTag) {
       return (
         <Box paddingRight="xs" paddingLeft="xxs">
           <Tag

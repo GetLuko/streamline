@@ -14,9 +14,7 @@
       "fallbackToCacheTimeout": 0,
       "url": "https://u.expo.dev/11eb7a11-ac37-40c7-a649-095da5a7b0b3"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.lukoapp.sandbox"
@@ -36,9 +34,7 @@
     "runtimeVersion": {
       "policy": "sdkVersion"
     },
-    "plugins": [
-      "expo-font"
-    ],
+    "plugins": ["expo-font"],
     "owner": "lukoapp"
   }
 }

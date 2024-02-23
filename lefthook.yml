@@ -3,13 +3,13 @@ pre-commit:
   commands:
     format:
       glob: '*.{js,ts,jsx,tsx}'
-      run: prettier --write
+      run: npx prettier --write --loglevel warn src/
     lint:
       glob: '*.{js,ts,jsx,tsx}'
-      run: npx eslint {staged_files} --fix --quiet
+      run: npx eslint --quiet --fix --ext '.js,.ts,.tsx' src/
     types:
-      glob: '*.{js,ts, jsx, tsx}'
+      glob: '*.{js,ts,jsx,tsx}'
       run: npx tsc --noEmit
     test:
-      glob: '*.{js,ts, jsx, tsx}'
-      run: jest --bail --findRelatedTests --passWithNoTests
+      glob: '*.{js,ts,jsx,tsx}'
+      run: npx jest --bail --passWithNoTests

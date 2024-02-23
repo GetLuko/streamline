@@ -1,4 +1,4 @@
-import { getNavigationTitleColors } from './navigation-title.utils';
+import { getNavigationTitleColors } from '../navigation-title.utils';
 
 describe('getNavigationTitleColors', () => {
   it('should return dark colors when appearance is "dark"', () => {

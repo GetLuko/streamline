@@ -30,6 +30,7 @@ import { ListItemValueSandbox } from './docs/list-item-value.doc';
 import { ListItemSandbox } from './docs/list-item.doc';
 import { MarkdownSandbox } from './docs/markdown.doc';
 import { NavigationBarProgressSandbox } from './docs/navigation-bar-progress.doc';
+import { NavigationBarSearchSandbox } from './docs/navigation-bar-search.doc';
 import { NavigationBarTrailSandbox } from './docs/navigation-bar-trail.doc';
 import { NavigationSectionTitleSandbox } from './docs/navigation-section-title.doc';
 import { NavigationTitleSandbox } from './docs/navigation-title.doc';
@@ -133,6 +134,10 @@ export const sandboxItems: SandBoxSectionType[] = [
       {
         title: 'NavigationBarProgress',
         SandBox: NavigationBarProgressSandbox,
+      },
+      {
+        title: 'NavigationBarSearch',
+        SandBox: NavigationBarSearchSandbox,
       },
       { title: 'NavigationTitle', SandBox: NavigationTitleSandbox },
       { title: 'NavigationBarTrail', SandBox: NavigationBarTrailSandbox },

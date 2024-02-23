@@ -61,16 +61,16 @@ export const InputTextPrimitive = ({
         maxFontSizeMultiplier: 1,
         ref: innerRef,
         selectionColor: theme.colors.BLUKO_500,
-        placeholder: placeholder,
+        placeholder,
         placeholderTextColor: theme.colors.GREY_300,
-        secureTextEntry: secureTextEntry,
+        secureTextEntry,
         editable: !isDisabled && isEditable,
-        multiline: multiline,
-        numberOfLines: numberOfLines,
-        value: value,
-        onFocus: onFocus,
-        onBlur: onBlur,
-        onChangeText: onChangeText,
+        multiline,
+        numberOfLines,
+        value,
+        onFocus,
+        onBlur,
+        onChangeText,
         style: [
           styles.inputContainer,
           inputType === 'SEARCH'
@@ -107,7 +107,7 @@ export const InputTextPrimitive = ({
           {inputType === 'SEARCH' ? (
             <Box
               padding="xs"
-              backgroundColor={isFocused ? 'GREY_200' : 'GREY_100'}
+              backgroundColor={isFocused ? 'GREY_150' : 'GREY_100'}
               justifyContent="space-between"
               flexDirection="row"
               borderRadius="round"

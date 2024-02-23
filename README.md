@@ -29,19 +29,19 @@ To run tests, run the following command
 - Start expo
 
 ```
-yarn sandbox:start:e2e
+yarn sandbox start:e2e
 ```
 
 - re-generate screenshots with maestro
 
 ```
-yarn sandbox:test:visual:[ios|android]
+yarn sandbox test:visual:[ios|android]
 ```
 
 - Compare screenshots with reg-cli
 
 ```
-yarn sandbox:test:visual:[ios|android]:compare
+yarn sandbox test:visual:[ios|android]:compare
 ```
 
 📺 All good with your new screenshots?

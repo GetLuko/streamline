@@ -13,12 +13,15 @@ export * from './components/cards/card-tip/card-tip.types';
 export * from './components/dialog/dialog.types';
 
 export * from './components/inputs/input-outline/input-outline.types';
+export * from './components/inputs/input-text/types';
 
 export * from './components/list-items/list-item/list-item.types';
+export * from './components/list-items/list-item-article/list-item-article.types';
 export * from './components/list-items/list-item-group/list-item-group.types';
 export * from './components/list-items/list-item-selectable/list-item-selectable.type';
 export * from './components/list-items/list-item-value/list-item-value.types';
 
+export * from './components/navigation/navigation-bar-search/navigation-bar-search.types';
 export * from './components/navigation/navigation-section-title/navigation-section-title.types';
 
 export function isObjKey<T extends object>(key: any, obj: T): key is keyof T {

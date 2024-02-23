@@ -34,6 +34,7 @@ export * from './components/list-items/list-item-value/list-item-value';
 export * from './components/list-items/list-item/list-item';
 export * from './components/list-items/list-item-selectable/list-item-selectable';
 export * from './components/navigation/navigation-bar-progress/navigation-bar-progress';
+export * from './components/navigation/navigation-bar-search/navigation-bar-search';
 export * from './components/navigation/navigation-title/navigation-title';
 export * from './components/navigation/navigation-bar-trail/navigation-bar-trail';
 export * from './components/navigation/navigation-section-title/navigation-section-title';

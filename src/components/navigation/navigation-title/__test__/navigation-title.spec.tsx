@@ -1,8 +1,8 @@
 import { fireEvent } from '@testing-library/react-native';
 import React from 'react';
 
-import NavigationTitle, { NavigationTitleProps } from './navigation-title';
-import { renderWithProvider } from '../../../testing/render-with-provider';
+import NavigationTitle, { NavigationTitleProps } from '../navigation-title';
+import { renderWithProvider } from '../../../../testing/render-with-provider';
 
 describe('NavigationTitle', () => {
   const defaultProps: NavigationTitleProps = {

@@ -92,7 +92,7 @@ const LIST_ITEMS: JSX.Element[] = [
     title="Title"
   />,
   <ListItem
-    description="List item with right option and divider"
+    description="List item with icon right option and divider"
     header="Header"
     iconName={ICON_NAME}
     key="List item with right option and divider"
@@ -105,6 +105,22 @@ const LIST_ITEMS: JSX.Element[] = [
     showDivider
     title="Title"
     appearance="danger"
+  />,
+  <ListItem
+    description="List item with tag right option and divider"
+    header="Header"
+    iconName={ICON_NAME}
+    key="List item with right option and divider"
+    onPress={ON_PRESS}
+    rightOption={{
+      accessibilityLabel: 'Test',
+      appearance: 'success',
+      text: 'Tag',
+      type: 'tag',
+      iconName: 'Bulb',
+    }}
+    showDivider
+    title="Title"
   />,
   <ListItem
     description="Skeleton list item"

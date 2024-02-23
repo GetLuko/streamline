@@ -1,12 +1,25 @@
 import { IconsName } from '../../../primitives/icon/icon.types';
 import { Appearance } from '../../../theme';
 
-export type RightOption = {
+type CommonOption = {
   accessibilityLabel: string;
-  iconName: IconsName;
-  onPress: () => unknown;
   testID?: string;
 };
+
+type IconOption = CommonOption & {
+  iconName: IconsName;
+  onPress: () => unknown;
+  type?: 'icon';
+};
+
+type TagOption = CommonOption & {
+  appearance?: Appearance;
+  iconName?: IconsName;
+  text: string;
+  type: 'tag';
+};
+
+export type RightOption = IconOption | TagOption;
 
 export type ListItemProps = {
   appearance?: Extract<Appearance, 'neutral' | 'danger'>;

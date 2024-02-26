@@ -1853,7 +1853,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@evilmartians/lefthook@npm:^1.5.0":
+"@evilmartians/lefthook@npm:1.6.1":
   version: 1.6.1
   resolution: "@evilmartians/lefthook@npm:1.6.1"
   bin:
@@ -2356,7 +2356,7 @@ __metadata:
     "@babel/plugin-proposal-private-property-in-object": ^7.21.11
     "@babel/preset-env": ^7.23.9
     "@commitlint/config-conventional": ^17.0.2
-    "@evilmartians/lefthook": ^1.5.0
+    "@evilmartians/lefthook": 1.6.1
     "@getluko/eslint-config-react-native": ^0.1.2
     "@getluko/eslint-plugin-react-native": ^0.1.2
     "@react-native-community/datetimepicker": 7.6.1
@@ -2407,8 +2407,8 @@ __metadata:
     "@ronradtke/react-native-markdown-display": 8.0.0
     "@shopify/restyle": 2.0.0
     dayjs: 1.10.6
-    expo-linear-gradient: ~12.3.0
-    libphonenumber-js: ^1.10.55
+    expo-linear-gradient: 12.7.1
+    libphonenumber-js: 1.10.56
     react: 18.2.0
     react-native: 0.72.10
     react-native-ama: 0.7.5

@@ -231,6 +231,7 @@ const useStyles = ({
     },
     inputSearchContainer: {
       marginLeft: spacing.xs,
+      padding: 0,
     },
     secureTextEntry: {
       fontFamily: 'System',

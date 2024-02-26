@@ -9,9 +9,8 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli lib",
-    "prepare": "bob build",
-    "release": "release-it",
-    "postinstall": "lefthook install"
+    "prepare": "bob build && lefthook install",
+    "release": "release-it"
   },
   "devDependencies": {
     "@babel/core": "7.22.1",

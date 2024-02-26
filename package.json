@@ -9,7 +9,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli lib",
-    "prepare": "bob build && lefthook install",
+    "prepare": "bob build",
     "release": "release-it"
   },
   "devDependencies": {

@@ -76,7 +76,7 @@ const useStyles = ({
   const borderRadius = borderRadii.lg;
   const shadowRaddi = borderRadius + CELL_SHADOW_WIDTH;
 
-  const { shadowColor, borderColor, backgroundColor } = getInputCellColors({
+  const { borderColor, backgroundColor } = getInputCellColors({
     isDisabled,
     isFocused,
     isError,
@@ -90,7 +90,8 @@ const useStyles = ({
       right: 0,
       bottom: 0,
       borderRadius: shadowRaddi,
-      backgroundColor: shadowColor ? colors[shadowColor] : undefined,
+      backgroundColor: isError ? colors.TERRA_100 : colors.BLUKO_100,
+      opacity: isFocused ? 1 : 0,
     },
     container: {
       borderRadius: borderRadius,

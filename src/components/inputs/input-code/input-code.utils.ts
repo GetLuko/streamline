@@ -9,7 +9,6 @@ export const getInputCellColors = ({
   isFocused: boolean;
   isError: boolean;
 }): {
-  shadowColor?: ColorTheme;
   borderColor: ColorTheme;
   backgroundColor: ColorTheme;
 } => {
@@ -31,7 +30,6 @@ export const getInputCellColors = ({
     return {
       borderColor: 'BLUKO_500',
       backgroundColor: 'PURE_WHITE_1000',
-      shadowColor: 'BLUKO_100',
     };
   }
 

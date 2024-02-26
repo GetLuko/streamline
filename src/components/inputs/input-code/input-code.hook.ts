@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   LayoutChangeEvent,
   NativeSyntheticEvent,
@@ -14,21 +14,28 @@ import {
 import { InputCodeProps } from './input-code.types';
 
 const useInputCode = ({
-  code,
   onChange,
   length = DEFAULT_CODE_LENGTH,
   isDisabled,
   isError,
 }: InputCodeProps) => {
+  const [code, setCode] = useState('');
   const ref = useRef<TextInput>(null);
 
   const [focused, setFocused] = useState(false);
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
+    onChange(code);
+  }, [code, onChange]);
+
+  useEffect(() => {
     if (isError && code.length === length) {
-      onChange('');
-      ref.current?.focus();
+      setCode('');
+      // This is a workaround to fix the issue with the input not being focused on android
+      setTimeout(() => {
+        ref.current?.focus();
+      }, 0);
     }
   }, [code.length, isError, length, onChange]);
 
@@ -36,7 +43,7 @@ const useInputCode = ({
     e: NativeSyntheticEvent<TextInputKeyPressEventData>
   ) => {
     if (e.nativeEvent.key === 'Backspace') {
-      onChange(code.substring(0, code.length - 1));
+      setCode((prev) => prev.substring(0, prev.length - 1));
     }
   };
 
@@ -47,20 +54,17 @@ const useInputCode = ({
     ref.current?.focus();
   };
 
-  const handleCodeChange = useCallback(
-    (text: string) => {
-      if (text.length === length) {
-        const sanitizedCode = text.replace(/[^0-9]/g, '');
-        onChange(sanitizedCode);
-        return;
-      }
-      if (code.length < length) {
-        const valueInput = text.substring(text.length - 1, text.length);
-        onChange((code + valueInput).substring(0, length));
-      }
-    },
-    [code, length, onChange]
-  );
+  const handleCodeChange = (text: string) => {
+    if (text.length === length) {
+      const sanitizedCode = text.replace(/[^0-9]/g, '');
+      setCode(sanitizedCode);
+      return;
+    }
+    if (code.length < length) {
+      const valueInput = text.substring(text.length - 1, text.length);
+      setCode((prev) => (prev + valueInput).substring(0, length));
+    }
+  };
 
   const handleOnBlur = () => {
     setFocused(false);

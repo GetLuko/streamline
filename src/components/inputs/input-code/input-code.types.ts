@@ -1,5 +1,4 @@
 export interface InputCodeProps {
-  code: string;
   onChange: (code: string) => void;
   length?: number;
   isError?: boolean;

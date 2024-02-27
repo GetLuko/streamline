@@ -6,7 +6,7 @@ import { renderWithProvider } from '../../../testing/render-with-provider';
 describe('InputCode', () => {
   it('should render successfully', () => {
     const { UNSAFE_root } = renderWithProvider(
-      <InputCode code="" onChange={jest.fn()} length={4} />
+      <InputCode onChange={jest.fn()} length={4} />
     );
     expect(UNSAFE_root).toBeTruthy();
   });
@@ -14,12 +14,7 @@ describe('InputCode', () => {
   it('should call onChange with the correct code when inputting values', () => {
     const onChangeMock = jest.fn();
     const { getByTestId } = renderWithProvider(
-      <InputCode
-        code=""
-        onChange={onChangeMock}
-        length={4}
-        testID="input-code"
-      />
+      <InputCode onChange={onChangeMock} length={4} testID="input-code" />
     );
 
     fireEvent.changeText(getByTestId('input-code-text-field'), '1234');

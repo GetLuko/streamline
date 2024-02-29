@@ -17,14 +17,14 @@ import Spinner from '../../spinner/spinner';
 const DIVIDER_VERTICAL_MARGIN = 16;
 
 export const ListItemCountry: FC<ListItemCountryProps> = ({
+  accessibilityLabel,
   appearance = 'neutral',
   countryCode,
-  title,
-  onPress,
   isDisabled,
-  accessibilityLabel,
-  testID,
+  onPress,
   showDivider,
+  testID,
+  title,
 }) => {
   const [handlePress, isResolving] = usePress({ isDisabled, onPress });
 

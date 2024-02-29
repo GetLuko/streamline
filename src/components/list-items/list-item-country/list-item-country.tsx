@@ -3,7 +3,6 @@ import { ListItemCountryProps } from './list-item-country.types';
 import { Box } from '../../../primitives/box/box';
 import { getFlagEmoji } from '../../../utils/country';
 import { Text } from '../../../primitives/text/text';
-import { usePress } from '../../../hooks/use-press.hook';
 import { getListItemsColors } from '../list-item/list-item.utils';
 import { Pressable } from 'react-native-ama';
 import {
@@ -12,8 +11,8 @@ import {
 } from '../list-items.constants';
 import { Divider } from '../components/divider';
 import { ICON_SIZE } from '../../../primitives/icon/icon.constants';
-import Spinner from '../../spinner/spinner';
 import { isIOS } from '../../../utils/platform';
+import { Icon } from '../../../primitives/icon/icon';
 
 const DIVIDER_VERTICAL_MARGIN = 16;
 
@@ -27,10 +26,8 @@ export const ListItemCountry: FC<ListItemCountryProps> = ({
   testID,
   title,
 }) => {
-  const [handlePress, isResolving] = usePress({ isDisabled, onPress });
-
   const emoji = getFlagEmoji(countryCode);
-  const { leftContentColor, mainTextColor } = getListItemsColors({
+  const { mainTextColor } = getListItemsColors({
     appearance,
     isDisabled,
   });
@@ -38,9 +35,10 @@ export const ListItemCountry: FC<ListItemCountryProps> = ({
   return (
     <Pressable
       accessibilityLabel={accessibilityLabel ?? title}
-      accessibilityRole={handlePress ? 'button' : 'none'}
+      accessibilityRole={onPress ? 'button' : 'none'}
       testID={testID}
-      onPress={handlePress}
+      onPress={onPress}
+      disabled={isDisabled}
     >
       {({ pressed }) => (
         <Box
@@ -50,26 +48,26 @@ export const ListItemCountry: FC<ListItemCountryProps> = ({
           }
           flexDirection="row"
           paddingVertical="md"
-          paddingLeft="md"
+          padding="md"
         >
           <Box flex={1} alignItems="center" flexDirection="row">
-            <Box>
-              {isResolving ? (
-                <Spinner color={leftContentColor} size="regular" />
-              ) : (
-                <Text
-                  marginRight="md"
-                  allowFontScaling={false}
-                  fontSize={isIOS ? ICON_SIZE['large'] : ICON_SIZE['regular']}
-                >
-                  {emoji}
-                </Text>
-              )}
+            <Box marginRight="md" justifyContent="center" alignItems="center">
+              <Text
+                allowFontScaling={false}
+                fontSize={isIOS ? ICON_SIZE['large'] : ICON_SIZE['regular']}
+              >
+                {emoji}
+              </Text>
             </Box>
 
-            <Text variant="body" color={mainTextColor}>
-              {title}
-            </Text>
+            <Box flex={1}>
+              <Text variant="body" color={mainTextColor}>
+                {title}
+              </Text>
+            </Box>
+            {onPress ? (
+              <Icon color="GREY_400" iconName="ChevronFarRight" />
+            ) : null}
           </Box>
 
           {showDivider ? (

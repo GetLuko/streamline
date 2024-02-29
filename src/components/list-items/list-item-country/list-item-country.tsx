@@ -13,6 +13,7 @@ import {
 import { Divider } from '../components/divider';
 import { ICON_SIZE } from '../../../primitives/icon/icon.constants';
 import Spinner from '../../spinner/spinner';
+import { isIOS } from '../../../utils/platform';
 
 const DIVIDER_VERTICAL_MARGIN = 16;
 
@@ -56,7 +57,11 @@ export const ListItemCountry: FC<ListItemCountryProps> = ({
               {isResolving ? (
                 <Spinner color={leftContentColor} size="regular" />
               ) : (
-                <Text marginRight="md" fontSize={ICON_SIZE['large']}>
+                <Text
+                  marginRight="md"
+                  allowFontScaling={false}
+                  fontSize={isIOS ? ICON_SIZE['large'] : ICON_SIZE['regular']}
+                >
                   {emoji}
                 </Text>
               )}

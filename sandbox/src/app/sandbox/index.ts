@@ -23,6 +23,7 @@ import { InputSelectSandbox } from './docs/input-select.doc';
 import { InputTextAreaSandbox } from './docs/input-text-area.doc';
 import { InputTextSandbox } from './docs/input-text.doc';
 import { ListItemArticleSandbox } from './docs/list-item-article.doc';
+import { ListItemCountrySandbox } from './docs/list-item-country.doc';
 import { ListItemGroupSandbox } from './docs/list-item-group.doc';
 import { ListItemOptionSandbox } from './docs/list-item-option.doc';
 import { ListItemSelectableSandbox } from './docs/list-item-selectable.doc';
@@ -105,6 +106,7 @@ export const sandboxItems: SandBoxSectionType[] = [
     items: [
       { title: 'ListItem', SandBox: ListItemSandbox },
       { title: 'ListItemArticle', SandBox: ListItemArticleSandbox },
+      { title: 'ListItemCountry', SandBox: ListItemCountrySandbox },
       { title: 'ListItemOption', SandBox: ListItemOptionSandbox },
       { title: 'ListItemValue', SandBox: ListItemValueSandbox },
       { title: 'ListItemGroup', SandBox: ListItemGroupSandbox },

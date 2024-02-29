@@ -1,4 +1,4 @@
-import { getFlagEmoji } from './country-picker.utils';
+import { getFlagEmoji } from './country';
 
 describe('getFlagEmoji', () => {
   it('returns the correct flag emoji for a given country code', () => {

@@ -130,6 +130,10 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: ListItemCountry
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: ListItemOption
 - runFlow:
     file: subflow/takeScreenshot.yaml

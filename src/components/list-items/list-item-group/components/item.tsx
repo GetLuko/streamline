@@ -7,13 +7,18 @@ import { ListItemSelectableProps } from '../../list-item-selectable/list-item-se
 import ListItemValue from '../../list-item-value/list-item-value';
 import { ListItemValueProps } from '../../list-item-value/list-item-value.types';
 import {
+  isListItemCountry,
   isListItemSelectable,
   isListItemValueProps,
 } from '../list-item-group.utils';
+import { ListItemCountry } from '../../list-item-country/list-item-country';
 
 export const Item = (
   props: ListItemProps | ListItemValueProps | ListItemSelectableProps
 ) => {
+  if (isListItemCountry(props)) {
+    return <ListItemCountry {...props} />;
+  }
   if (isListItemSelectable(props)) {
     return <ListItemSelectable {...props} />;
   }

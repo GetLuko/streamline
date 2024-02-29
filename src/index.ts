@@ -29,6 +29,7 @@ export * from './components/inputs/date-picker/date-picker';
 export * from './components/inputs/input-code/input-code';
 export * from './components/inputs/input-phone/input-phone';
 export * from './components/list-items/list-item-group/list-item-group';
+export * from './components/list-items/list-item-country/list-item-country';
 export * from './components/list-items/list-item-option/list-item-option';
 export * from './components/list-items/list-item-value/list-item-value';
 export * from './components/list-items/list-item/list-item';

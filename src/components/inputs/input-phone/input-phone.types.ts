@@ -6,7 +6,7 @@ export type InputPhoneProps = InputTextProps & {
   countryCode?: CountryCode;
   onCountryPickerPress?: () => void;
   onChangePhoneNumber?: (phoneNumber: PhoneNumber) => void;
-  onValidChange?: (valid: boolean) => void;
+  onValidChange?: (isValid: boolean) => void;
 };
 
 export type CountryPickerProps = Pick<

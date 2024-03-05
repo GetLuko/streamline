@@ -28,19 +28,33 @@ describe('InputPhone', () => {
     expect(handleChangePhoneNumber).toHaveBeenCalled();
   });
 
-  it('calls the onError prop when the phone number is invalid', () => {
-    const handleError = jest.fn();
+  it('onValidChange prop should return false when phone number is not valid', () => {
+    const onValidChange = jest.fn();
     const { getByTestId } = renderWithProvider(
       <InputPhone
         onChangePhoneNumber={() => {}}
-        onError={handleError}
+        onValidChange={onValidChange}
         testID="phone-input"
       />
     );
 
     fireEvent.changeText(getByTestId('phone-input'), 'invalid');
 
-    expect(handleError).toHaveBeenCalled();
+    expect(onValidChange).toHaveBeenCalledWith(false);
+  });
+  it('onValidChange prop should return true when phone number is valid', () => {
+    const onValidChange = jest.fn();
+    const { getByTestId } = renderWithProvider(
+      <InputPhone
+        onChangePhoneNumber={() => {}}
+        onValidChange={onValidChange}
+        testID="phone-input"
+      />
+    );
+
+    fireEvent.changeText(getByTestId('phone-input'), '0612345678');
+
+    expect(onValidChange).toHaveBeenCalledWith(true);
   });
 
   it('displays the correct country code when the countryCode prop is provided', () => {

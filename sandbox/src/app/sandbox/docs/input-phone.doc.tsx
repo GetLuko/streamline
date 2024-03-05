@@ -16,6 +16,7 @@ const docs: JSX.Element[] = [
     label="Error"
     description="Error message"
     placeholder="0606060606"
+    defaultValue="0695"
   />,
   <InputPhone
     countryCode="DE"

@@ -14,6 +14,7 @@ export * from './components/dialog/dialog.types';
 
 export * from './components/inputs/input-outline/input-outline.types';
 export * from './components/inputs/input-text/types';
+export * from './components/inputs/input-phone/input-phone.types';
 
 export * from './components/list-items/list-item/list-item.types';
 export * from './components/list-items/list-item-article/list-item-article.types';

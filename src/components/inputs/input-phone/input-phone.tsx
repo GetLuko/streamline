@@ -1,4 +1,4 @@
-import { ParseError, parsePhoneNumberWithError } from 'libphonenumber-js';
+import parsePhoneNumberFromString from 'libphonenumber-js';
 import { FC, useState } from 'react';
 
 import CountryPicker from './components/country-picker';
@@ -17,24 +17,31 @@ export const InputPhone: FC<InputPhoneProps> = ({
   isFocused,
   description,
   label,
-  onError,
+  onValidChange,
   ...props
 }) => {
-  const [inputValue, setInputValue] = useState('');
+  const initialValue = props.defaultValue
+    ? parsePhoneNumberFromString(
+        props.defaultValue,
+        countryCode
+      )?.formatNational() || ''
+    : '';
+  const [inputValue, setInputValue] = useState(initialValue);
 
-  const showDescription =
-    (description && !isError) || (isError && inputValue.length > 2);
+  const showError = isError && inputValue.length > 2;
+
+  const showDescription = (description && !isError) || showError;
 
   const handleOnChangeText = (value: string) => {
-    try {
-      const phoneNumber = parsePhoneNumberWithError(value, countryCode);
-      setInputValue(phoneNumber.formatNational());
+    const phoneNumber = parsePhoneNumberFromString(value, countryCode);
+
+    if (phoneNumber) {
       onChangePhoneNumber?.(phoneNumber);
-    } catch (error) {
-      if (error instanceof ParseError) {
-        onError?.(error);
-      }
+      setInputValue(phoneNumber.formatNational());
+      onValidChange?.(phoneNumber.isValid());
+    } else {
       setInputValue(value);
+      onValidChange?.(false);
     }
   };
 
@@ -53,14 +60,14 @@ export const InputPhone: FC<InputPhoneProps> = ({
         <CountryPicker
           countryCode={countryCode}
           isDisabled={isDisabled}
-          isError={isError}
+          isError={showError}
           onCountryPickerPress={onCountryPickerPress}
         />
         <Box flex={1} marginLeft="xs">
           <InputText
             {...props}
             isDisabled={isDisabled}
-            isError={isError}
+            isError={showError}
             isFocused={isFocused}
             keyboardType="phone-pad"
             onChangeText={handleOnChangeText}

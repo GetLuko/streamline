@@ -124,6 +124,7 @@
   "source": "src/index",
   "files": [
     "src",
-    "lib"
+    "lib",
+    "!/src/**/__test__/*"
   ]
 }

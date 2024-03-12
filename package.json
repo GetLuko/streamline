@@ -1,6 +1,6 @@
 {
   "name": "@getluko/streamline",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "scripts": {
     "sandbox": "yarn workspace sandbox",
     "icons:generate:regular": "npx @svgr/cli@6.5.1 --ignore-existing --native --typescript --svgo-config src/primitives/icon/svgs/svgo.json --replace-attr-values \"#2D50E6={color}\" --index-template src/primitives/icon/svgs/index-template.js --template src/primitives/icon/svgs/icon-template.js --out-dir src/primitives/icon/generated/regular src/primitives/icon/svgs/regular",

@@ -2372,7 +2372,7 @@ __metadata:
     "@types/react-native": 0.70.0
     "@typescript-eslint/eslint-plugin": ^7.0.1
     "@typescript-eslint/parser": ^7.0.1
-    dayjs: 1.10.6
+    dayjs: 1.11.10
     del-cli: ^5.0.0
     eslint: ^8.4.1
     eslint-config-prettier: ^8.5.0
@@ -2394,9 +2394,9 @@ __metadata:
     react-native-ama: 0.7.5
     react-native-builder-bob: ^0.20.0
     react-native-gesture-handler: ~2.12.0
-    react-native-reanimated: ~3.3.0
-    react-native-safe-area-context: 4.8.2
-    react-native-svg: 14.1.0
+    react-native-reanimated: 3.6.2
+    react-native-safe-area-context: 4.9.0
+    react-native-svg: 15.1.0
     react-test-renderer: ^18.2.0
     release-it: ^15.0.0
     tslib: ^2.6.2
@@ -2413,7 +2413,7 @@ __metadata:
     react-native: 0.72.10
     react-native-ama: 0.7.5
     react-native-gesture-handler: ~2.13.4
-    react-native-reanimated: ~3.7.2
+    react-native-reanimated: 3.6.2
     react-native-safe-area-context: ~4.9.0
     react-native-svg: ~15.1.0
   languageName: unknown
@@ -7554,13 +7554,6 @@ __metadata:
   version: 3.0.3
   resolution: "dateformat@npm:3.0.3"
   checksum: ca4911148abb09887bd9bdcd632c399b06f3ecad709a18eb594d289a1031982f441e08e281db77ffebcb2cbcbfa1ac578a7cbfbf8743f41009aa5adc1846ed34
-  languageName: node
-  linkType: hard
-
-"dayjs@npm:1.10.6":
-  version: 1.10.6
-  resolution: "dayjs@npm:1.10.6"
-  checksum: a79af6d19cf1e3aefc231e480037b37df50701e8d0cdbe1736fc6665b7045a159777215c5c8dd42ede7dd3c4c4f4a174d4ddd5bffca51df2a4ba0e0e25a6163c
   languageName: node
   linkType: hard
 
@@ -16097,10 +16090,10 @@ __metadata:
   version: 3.6.2
   resolution: "react-native-reanimated@npm:3.6.2"
   dependencies:
-    "@babel/plugin-transform-object-assign": "npm:^7.16.7"
-    "@babel/preset-typescript": "npm:^7.16.7"
-    convert-source-map: "npm:^2.0.0"
-    invariant: "npm:^2.2.4"
+    "@babel/plugin-transform-object-assign": ^7.16.7
+    "@babel/preset-typescript": ^7.16.7
+    convert-source-map: ^2.0.0
+    invariant: ^2.2.4
   peerDependencies:
     "@babel/core": ^7.0.0-0
     "@babel/plugin-proposal-nullish-coalescing-operator": ^7.0.0-0
@@ -16114,9 +16107,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-reanimated@npm:~3.7.2":
-  version: 3.7.2
-  resolution: "react-native-reanimated@npm:3.7.2"
+"react-native-reanimated@patch:react-native-reanimated@npm%3A3.6.2#./.yarn/patches/react-native-reanimated-npm-3.6.2-188483b50f.patch::locator=%40getluko%2Fstreamline%40workspace%3A.":
+  version: 3.6.2
+  resolution: "react-native-reanimated@patch:react-native-reanimated@npm%3A3.6.2#./.yarn/patches/react-native-reanimated-npm-3.6.2-188483b50f.patch::version=3.6.2&hash=a261b3&locator=%40getluko%2Fstreamline%40workspace%3A."
   dependencies:
     "@babel/plugin-transform-object-assign": ^7.16.7
     "@babel/preset-typescript": ^7.16.7
@@ -16131,38 +16124,7 @@ __metadata:
     "@babel/plugin-transform-template-literals": ^7.0.0-0
     react: "*"
     react-native: "*"
-  checksum: ce1426c9e438331d68742568496e34b55abad19ee5573de42068ddcf9d73376a92584c8d164284391a526f2d80cc1b9d33598bb28a63bad341210cc16f694f84
-  languageName: node
-  linkType: hard
-
-"react-native-reanimated@patch:react-native-reanimated@npm%3A3.6.2#./.yarn/patches/react-native-reanimated-npm-3.6.2-188483b50f.patch::locator=%40getluko%2Fstreamline%40workspace%3A.":
-  version: 3.6.2
-  resolution: "react-native-reanimated@patch:react-native-reanimated@npm%3A3.6.2#./.yarn/patches/react-native-reanimated-npm-3.6.2-188483b50f.patch::version=3.6.2&hash=a261b3&locator=%40getluko%2Fstreamline%40workspace%3A."
-  dependencies:
-    "@babel/plugin-transform-object-assign": "npm:^7.16.7"
-    "@babel/preset-typescript": "npm:^7.16.7"
-    convert-source-map: "npm:^2.0.0"
-    invariant: "npm:^2.2.4"
-  peerDependencies:
-    "@babel/core": ^7.0.0-0
-    "@babel/plugin-proposal-nullish-coalescing-operator": ^7.0.0-0
-    "@babel/plugin-proposal-optional-chaining": ^7.0.0-0
-    "@babel/plugin-transform-arrow-functions": ^7.0.0-0
-    "@babel/plugin-transform-shorthand-properties": ^7.0.0-0
-    "@babel/plugin-transform-template-literals": ^7.0.0-0
-    react: "*"
-    react-native: "*"
   checksum: db2222cd9c6cf9a0d2c8e647de59ca2e53ce4031db8671e392c1551cc502452cd3ecac70c3a29d80c400b3e65a39c5c4bac4365b1e7a3488854f0a6a9f632981
-  languageName: node
-  linkType: hard
-
-"react-native-safe-area-context@npm:4.8.2":
-  version: 4.8.2
-  resolution: "react-native-safe-area-context@npm:4.8.2"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-  checksum: 929eaa5ee522f712e7bfabd0f22908f033918d030c932ddf6a83e4315bc781f7aa44e315806dc8130f75619f09951f3237082f720f4fa65a6670469886cf9735
   languageName: node
   linkType: hard
 
@@ -16173,19 +16135,6 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 120aefb77766a37e81c5a844d7e1493afea35461c30df5ca903c6b6e2fc6694e2496d433550a2eda872ef8384a36ecf8529a617cb19acbeebd37d78d7aa7b17e
-  languageName: node
-  linkType: hard
-
-"react-native-svg@npm:14.1.0":
-  version: 14.1.0
-  resolution: "react-native-svg@npm:14.1.0"
-  dependencies:
-    css-select: "npm:^5.1.0"
-    css-tree: "npm:^1.1.3"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-  checksum: ed94adac9bf3144c5dcbf37a2956ab672d402f11c0ed75cda247d1d9136ce8977f4d01bcfc813ba576bd61ece420d66306c148057e2552828aa8fe9bad173d46
   languageName: node
   linkType: hard
 
@@ -17096,7 +17045,7 @@ __metadata:
     react-native: 0.73.4
     react-native-ama: 0.7.5
     react-native-gesture-handler: ~2.14.0
-    react-native-reanimated: ~3.7.2
+    react-native-reanimated: ~3.6.2
     react-native-safe-area-context: 4.9.0
     react-native-svg: 15.1.0
     react-native-web: ~0.19.8

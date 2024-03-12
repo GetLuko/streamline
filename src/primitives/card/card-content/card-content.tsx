@@ -15,7 +15,7 @@ export const CardContent = (props: CardContentProps) => {
       {hasTitle && (
         <Text
           paddingBottom={hasDescription ? 'xxs' : undefined}
-          variant="titleMediumBold"
+          variant="titleSmallBold"
           color={colors?.titleColor}
         >
           {title}

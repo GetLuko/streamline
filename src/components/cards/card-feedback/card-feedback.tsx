@@ -1,8 +1,8 @@
 import { CardFeedbackProps } from './card-feedback.types';
 import { getCardFeedbackBackgroundColor } from './card-feedback.utils';
-import EmojiRating from './components/EmojiRating';
-import StarRating from './components/StarRating';
-import ThumbRating from './components/ThumbRating';
+import EmojiRating from '../../ratings/emoji-rating/emoji-rating';
+import StarRating from '../../ratings/star-rating/star-rating';
+import ThumbRating from '../../ratings/thumb-rating/thumb-rating';
 import { Box } from '../../../primitives/box/box';
 import { Card } from '../../../primitives/card/card';
 import { Text } from '../../../primitives/text/text';

@@ -1,13 +1,10 @@
 import { Pressable } from 'react-native-ama';
 
-import { Box } from '../../../../primitives/box/box';
-import { Icon } from '../../../../primitives/icon/icon';
-import { IconsName } from '../../../../types';
+import { Box } from '../../../primitives/box/box';
+import { Icon } from '../../../primitives/icon/icon';
+import { IconsName } from '../../../types';
+import { EmojiRatingProps } from './emoji-rating.types';
 
-export interface EmojiRatingProps {
-  currentRating: number;
-  onRatingChange: (rating: number) => void;
-}
 const FACES: IconsName[] = ['Angry', 'Sad', 'Neutral', 'Happy', 'Pumped'];
 
 const EmojiRating = ({ currentRating, onRatingChange }: EmojiRatingProps) => {
@@ -25,7 +22,15 @@ const EmojiRating = ({ currentRating, onRatingChange }: EmojiRatingProps) => {
             accessibilityLabel={`${icon} face rating`}
             onPress={() => onRatingChange(rating)}
           >
-            <Icon iconName={icon} size="xlarge" color={color} />
+            {({ pressed }) => {
+              return (
+                <Icon
+                  iconName={icon}
+                  size="xlarge"
+                  color={pressed ? 'BLUKO_700' : color}
+                />
+              );
+            }}
           </Pressable>
         );
       })}

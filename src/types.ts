@@ -26,6 +26,10 @@ export * from './components/list-items/list-item-value/list-item-value.types';
 export * from './components/navigation/navigation-bar-search/navigation-bar-search.types';
 export * from './components/navigation/navigation-section-title/navigation-section-title.types';
 
+export * from './components/ratings/emoji-rating/emoji-rating.types';
+export * from './components/ratings/star-rating/star-rating.types';
+export * from './components/ratings/thumb-rating/thumb-rating.types';
+
 export function isObjKey<T extends object>(key: any, obj: T): key is keyof T {
   return key in obj;
 }

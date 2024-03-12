@@ -1,6 +1,6 @@
-import { Box } from '../../../../primitives/box/box';
-import { Button } from '../../../buttons/button/button';
-import { ThumbsFeedback } from '../card-feedback.types';
+import { Box } from '../../../primitives/box/box';
+import { Button } from '../../buttons/button/button';
+import { ThumbsFeedback } from './thumb-rating.types';
 
 export interface ThumbRatingProps {
   onRatingChange: (rating: ThumbsFeedback) => void;

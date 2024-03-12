@@ -42,6 +42,9 @@ export * from './components/navigation/navigation-section-title/navigation-secti
 export * from './components/progress-bar/progress-bar';
 export * from './components/switch/switch';
 export * from './components/radio/radio';
+export * from './components/ratings/emoji-rating/emoji-rating';
+export * from './components/ratings/star-rating/star-rating';
+export * from './components/ratings/thumb-rating/thumb-rating';
 export * from './components/spinner/spinner';
 export * from './components/tag/tag';
 export * from './components/button-bar/button-bar';

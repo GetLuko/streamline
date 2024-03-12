@@ -1,4 +1,5 @@
 import { Appearance } from '../../../theme';
+import { ThumbsFeedback } from '../../ratings/thumb-rating/thumb-rating.types';
 
 interface DefaultProps {
   appearance?: Appearance;
@@ -13,8 +14,6 @@ export interface NumberFeedBackProps extends DefaultProps {
   currentRating: number;
   onRatingChange: (rating: number) => void;
 }
-
-export type ThumbsFeedback = 'like' | 'dislike';
 
 export interface ThumbsFeedBackProps extends DefaultProps {
   type: 'thumb';

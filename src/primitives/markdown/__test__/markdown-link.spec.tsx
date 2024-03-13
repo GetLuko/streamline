@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Markdown } from '../markdown';
 import { renderWithProvider } from '../../../testing/render-with-provider';
+import { Markdown } from '../markdown';
 
 const md = `Descriptive [link](https://www.luko.eu)`;
 

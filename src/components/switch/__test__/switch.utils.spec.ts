@@ -1,7 +1,7 @@
 import { Platform } from 'react-native';
 
-import { getColorMapping } from '../switch.utils';
 import { baseTheme } from '../../../theme';
+import { getColorMapping } from '../switch.utils';
 
 describe('getColorMapping', () => {
   it('should return the correct color mapping for iOS enabled state', () => {

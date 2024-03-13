@@ -1,5 +1,6 @@
-import { CheckboxColors } from './checkbox.types';
 import { Appearance } from '../../theme/appearance';
+
+import { CheckboxColors } from './checkbox.types';
 
 export const getCheckboxColors = ({
   appearance,

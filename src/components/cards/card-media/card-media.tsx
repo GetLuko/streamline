@@ -1,10 +1,11 @@
 import { ImageBackground, StyleSheet } from 'react-native';
 
-import { CardMediaProps } from './card-media.types';
-import { VideoOverlay } from './component/video-overlay';
 import { Box } from '../../../primitives/box/box';
 import { Card } from '../../../primitives/card/card';
 import { Text } from '../../../primitives/text/text';
+
+import { CardMediaProps } from './card-media.types';
+import { VideoOverlay } from './component/video-overlay';
 
 const DEFAULT_CARD_HEIGHT = 192;
 

@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { LIST_ITEM_ARTICLE_HEIGHT } from './constants';
 import { Box } from '../../../primitives/box/box';
 import { Skeleton } from '../../../primitives/skeleton/skeleton';
+
+import { LIST_ITEM_ARTICLE_HEIGHT } from './constants';
 
 export const ListItemArticleSkeleton = () => (
   <Box

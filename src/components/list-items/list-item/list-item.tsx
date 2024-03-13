@@ -1,11 +1,6 @@
 import React from 'react';
 import { Pressable } from 'react-native-ama';
 
-import { CenterContent } from './components/center-content';
-import { LeftContent } from './components/left-content';
-import { RightContent } from './components/right-content';
-import { ListItemProps } from './list-item.types';
-import { getListItemsColors } from './list-item.utils';
 import { usePress } from '../../../hooks/use-press.hook';
 import { Box } from '../../../primitives/box/box';
 import { Divider } from '../components/divider';
@@ -14,6 +9,12 @@ import {
   BACKGROUND_COLOR,
   BACKGROUND_PRESSED_COLOR,
 } from '../list-items.constants';
+
+import { CenterContent } from './components/center-content';
+import { LeftContent } from './components/left-content';
+import { RightContent } from './components/right-content';
+import { ListItemProps } from './list-item.types';
+import { getListItemsColors } from './list-item.utils';
 
 const DIVIDER_VERTICAL_MARGIN = 16;
 

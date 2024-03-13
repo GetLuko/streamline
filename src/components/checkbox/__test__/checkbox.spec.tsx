@@ -1,7 +1,7 @@
 import { fireEvent } from '@testing-library/react-native';
 
-import { Checkbox } from '../checkbox';
 import { renderWithProvider } from '../../../testing/render-with-provider';
+import { Checkbox } from '../checkbox';
 
 describe('Checkbox', () => {
   it('should render successfully', () => {

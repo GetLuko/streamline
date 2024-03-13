@@ -1,10 +1,10 @@
 import { getCountryCallingCode } from 'libphonenumber-js';
 import { Pressable } from 'react-native';
 
-import { getFlagEmoji } from '../../../../utils/country';
 import { Box } from '../../../../primitives/box/box';
 import { Icon } from '../../../../primitives/icon/icon';
 import { Text } from '../../../../primitives/text/text';
+import { getFlagEmoji } from '../../../../utils/country';
 import { CountryPickerProps } from '../input-phone.types';
 
 const CountryPicker = ({

@@ -1,6 +1,9 @@
 import { CardSummaryProps } from '../card-summary.types';
-import { hasValidButtonAction } from '../card-summary.utils';
-import { getCardSummaryColors, hasValidContent } from '../card-summary.utils';
+import {
+  getCardSummaryColors,
+  hasValidButtonAction,
+  hasValidContent,
+} from '../card-summary.utils';
 
 describe('card summary utils', () => {
   describe('getCardSummaryColors', () => {

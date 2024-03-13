@@ -1,7 +1,7 @@
 import React from 'react';
 
-import CardSummary from '../card-summary';
 import { renderWithProvider } from '../../../../testing/render-with-provider';
+import CardSummary from '../card-summary';
 
 describe('CardSummary', () => {
   it('should render successfully', () => {

@@ -1,5 +1,4 @@
-import { Appearance, Box } from '@getluko/streamline';
-import { ButtonIcon } from '@getluko/streamline';
+import { Appearance, Box, ButtonIcon } from '@getluko/streamline';
 
 import { DocList } from '../components/DocList';
 

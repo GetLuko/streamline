@@ -1,8 +1,9 @@
 import React from 'react';
 
+import { Text } from '../../text/text';
+
 import { hasValidDescription, hasValidTitle } from './card-content-utils';
 import { CardContentProps } from './card-content.types';
-import { Text } from '../../text/text';
 
 export const CardContent = (props: CardContentProps) => {
   const { title, description, colors } = props;

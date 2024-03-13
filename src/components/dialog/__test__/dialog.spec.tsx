@@ -1,8 +1,8 @@
 import { fireEvent } from '@testing-library/react-native';
 
+import { renderWithProvider } from '../../../testing/render-with-provider';
 import Dialog from '../dialog';
 import { DialogProps } from '../dialog.types';
-import { renderWithProvider } from '../../../testing/render-with-provider';
 
 const mockPrimaryOnPress = jest.fn();
 const mockSecondaryOnPress = jest.fn();

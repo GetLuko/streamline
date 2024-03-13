@@ -1,5 +1,6 @@
 import { Box } from '../../../primitives/box/box';
 import { Button } from '../../buttons/button/button';
+
 import { ThumbRatingProps } from './thumb-rating.types';
 
 export const ThumbRating = ({ onRatingChange }: ThumbRatingProps) => {

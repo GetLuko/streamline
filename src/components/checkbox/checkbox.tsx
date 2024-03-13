@@ -1,5 +1,9 @@
 import { Pressable, ViewStyle } from 'react-native';
 
+import { Box } from '../../primitives/box/box';
+import { Icon } from '../../primitives/icon/icon';
+import { useStreamlineTheme } from '../../theme';
+
 import {
   CHECKBOX_BORDER_CONTAINER_SIZE,
   CHECKBOX_BORDER_WIDTH,
@@ -9,9 +13,6 @@ import {
 } from './checkbox.constants';
 import { CheckboxProps } from './checkbox.types';
 import { getCheckboxColors } from './checkbox.utils';
-import { Box } from '../../primitives/box/box';
-import { Icon } from '../../primitives/icon/icon';
-import { useStreamlineTheme } from '../../theme';
 
 export const Checkbox = ({
   appearance = 'primary',

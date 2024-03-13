@@ -1,5 +1,6 @@
-import { RadioColors } from './radio.types';
 import { Appearance } from '../../theme/appearance';
+
+import { RadioColors } from './radio.types';
 
 export const getRadioColors = ({
   appearance,

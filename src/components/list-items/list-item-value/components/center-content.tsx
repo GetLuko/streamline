@@ -1,10 +1,11 @@
 import React from 'react';
 
-import { RightContent } from './right-content';
 import { Box } from '../../../../primitives/box/box';
 import { Text } from '../../../../primitives/text/text';
 import { ColorTheme } from '../../../../theme';
 import { ListItemValueProps } from '../list-item-value.types';
+
+import { RightContent } from './right-content';
 
 export const CenterContent = ({
   onPress,

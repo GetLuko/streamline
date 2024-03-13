@@ -5,8 +5,8 @@ import { usePress } from '../../../../hooks/use-press.hook';
 import { Box } from '../../../../primitives/box/box';
 import { Text } from '../../../../primitives/text/text';
 import ButtonIcon from '../../../buttons/button-icon/button-icon';
-import { ListItemSelectableProps } from '../list-item-selectable.type';
 import Tag from '../../../tag/tag';
+import { ListItemSelectableProps } from '../list-item-selectable.type';
 
 export const RightContent = ({
   rightOption,

@@ -3,6 +3,7 @@ import { Pressable } from 'react-native-ama';
 import { Box } from '../../../primitives/box/box';
 import { Icon } from '../../../primitives/icon/icon';
 import { IconsName } from '../../../types';
+
 import { EmojiRatingProps } from './emoji-rating.types';
 
 const FACES: IconsName[] = ['Angry', 'Sad', 'Neutral', 'Happy', 'Pumped'];

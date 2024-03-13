@@ -1,6 +1,10 @@
 import React from 'react';
-import { ViewProps, StyleProp, ViewStyle } from 'react-native';
-import { TouchableOpacity } from 'react-native';
+import {
+  StyleProp,
+  TouchableOpacity,
+  ViewProps,
+  ViewStyle,
+} from 'react-native';
 
 import { Box } from '../../../../primitives/box/box';
 import { Icon } from '../../../../primitives/icon/icon';

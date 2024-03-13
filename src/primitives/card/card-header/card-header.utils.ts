@@ -1,5 +1,6 @@
-import { CardHeaderProps } from './card-header.types';
 import { IconsName } from '../../icon/icon.types';
+
+import { CardHeaderProps } from './card-header.types';
 
 export const hasValidIconName = (
   iconName: CardHeaderProps['iconName']

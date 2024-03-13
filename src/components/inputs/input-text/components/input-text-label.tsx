@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { InputTextLabelProps } from './types';
 import { Box } from '../../../../primitives/box/box';
 import { Text } from '../../../../primitives/text/text';
+
+import { InputTextLabelProps } from './types';
 
 export const InputTextLabel = ({
   label,

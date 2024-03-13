@@ -1,7 +1,7 @@
 import { fireEvent } from '@testing-library/react-native';
 
-import { Radio } from '../radio';
 import { renderWithProvider } from '../../../testing/render-with-provider';
+import { Radio } from '../radio';
 
 describe('Radio', () => {
   it('should render successfully', () => {

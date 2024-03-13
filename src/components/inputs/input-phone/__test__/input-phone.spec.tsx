@@ -1,8 +1,8 @@
-import React from 'react';
 import { fireEvent } from '@testing-library/react-native';
+import React from 'react';
 
-import { InputPhone } from '../input-phone';
 import { renderWithProvider } from '../../../../testing/render-with-provider';
+import { InputPhone } from '../input-phone';
 
 describe('InputPhone', () => {
   it('renders correctly with default props', () => {

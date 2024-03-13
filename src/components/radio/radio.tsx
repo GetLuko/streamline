@@ -1,5 +1,7 @@
 import { Pressable, StyleSheet } from 'react-native';
 
+import { Box } from '../../primitives/box/box';
+
 import {
   RADIO_BORDER_CONTAINER_SIZE,
   RADIO_CONTAINER_SIZE,
@@ -7,7 +9,6 @@ import {
 } from './radio.constants';
 import { RadioProps } from './radio.types';
 import { getRadioColors } from './radio.utils';
-import { Box } from '../../primitives/box/box';
 
 export const Radio = ({
   appearance = 'primary',

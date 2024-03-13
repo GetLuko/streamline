@@ -1,8 +1,8 @@
 import { act, fireEvent } from '@testing-library/react-native';
 import React from 'react';
 
-import { NavigationBarSearch } from '../navigation-bar-search';
 import { renderWithProvider } from '../../../../testing/render-with-provider';
+import { NavigationBarSearch } from '../navigation-bar-search';
 
 describe('NavigationBarSearch', () => {
   it('should render successfully', () => {

@@ -1,5 +1,5 @@
-import { Markdown } from '../markdown';
 import { renderWithProvider } from '../../../testing/render-with-provider';
+import { Markdown } from '../markdown';
 
 const md = `
 # Heading 1

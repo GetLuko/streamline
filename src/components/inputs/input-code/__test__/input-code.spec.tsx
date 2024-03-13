@@ -1,7 +1,7 @@
 import { fireEvent } from '@testing-library/react-native';
 
-import { InputCode } from '../input-code';
 import { renderWithProvider } from '../../../../testing/render-with-provider';
+import { InputCode } from '../input-code';
 
 describe('InputCode', () => {
   it('should render successfully', () => {

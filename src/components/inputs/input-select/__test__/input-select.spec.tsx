@@ -1,8 +1,8 @@
 import { fireEvent } from '@testing-library/react-native';
 import React from 'react';
 
-import InputSelect from '../input-select';
 import { renderWithProvider } from '../../../../testing/render-with-provider';
+import InputSelect from '../input-select';
 
 describe('InputSelect', () => {
   it('should render successfully', () => {

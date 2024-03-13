@@ -1,9 +1,9 @@
 import { fireEvent } from '@testing-library/react-native';
 import React from 'react';
 
+import { renderWithProvider } from '../../../../testing/render-with-provider';
 import CardHighlight from '../card-highlight';
 import { CardHighlightProps } from '../card-highlight.types';
-import { renderWithProvider } from '../../../../testing/render-with-provider';
 
 describe('CardHighlight', () => {
   const mockOnPress = jest.fn();

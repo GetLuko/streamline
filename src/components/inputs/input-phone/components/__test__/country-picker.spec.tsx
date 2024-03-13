@@ -1,8 +1,8 @@
-import React from 'react';
 import { fireEvent } from '@testing-library/react-native';
+import React from 'react';
 
-import CountryPicker from '../country-picker';
 import { renderWithProvider } from '../../../../../testing/render-with-provider';
+import CountryPicker from '../country-picker';
 
 describe('CountryPicker', () => {
   it('renders correctly with default props', () => {

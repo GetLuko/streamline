@@ -6,10 +6,6 @@ import {
   withTiming,
 } from 'react-native-reanimated';
 
-import { ImageContainer } from './components/image-container';
-import { LIST_ITEM_ARTICLE_HEIGHT } from './constants';
-import { ListItemArticleSkeleton } from './list-item-article-skeleton';
-import { ListItemArticleProps } from './list-item-article.types';
 import { usePress } from '../../../hooks/use-press.hook';
 import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
 import { Box } from '../../../primitives/box/box';
@@ -17,6 +13,11 @@ import { Icon } from '../../../primitives/icon/icon';
 import { Text } from '../../../primitives/text/text';
 import { useStreamlineTheme } from '../../../theme';
 import { Divider } from '../components/divider';
+
+import { ImageContainer } from './components/image-container';
+import { LIST_ITEM_ARTICLE_HEIGHT } from './constants';
+import { ListItemArticleSkeleton } from './list-item-article-skeleton';
+import { ListItemArticleProps } from './list-item-article.types';
 
 export const ListItemArticle = (props: ListItemArticleProps) => {
   const {

@@ -1,6 +1,8 @@
 import React from 'react';
-import { InputOutlineProps } from './input-outline.types';
+
 import { Box } from '../../../primitives/box/box';
+
+import { InputOutlineProps } from './input-outline.types';
 
 const FOCUS_OUTLINE_OVERFLOW_OFFSET = -2;
 export const OUTLINE_WIDTH = 2;

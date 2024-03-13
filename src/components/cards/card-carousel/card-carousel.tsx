@@ -2,6 +2,11 @@ import { LinearGradient } from 'expo-linear-gradient';
 import React from 'react';
 import { Image, StyleSheet } from 'react-native';
 
+import { usePress } from '../../../hooks/use-press.hook';
+import { Box } from '../../../primitives/box/box';
+import { Card } from '../../../primitives/card/card';
+import { Text } from '../../../primitives/text/text';
+
 import { CardCarouselSkeleton } from './card-carousel-skeleton';
 import {
   LARGE_CARD_HEIGHT,
@@ -14,10 +19,6 @@ import { CardCarouselProps } from './card-carousel.types';
 import { getCardCarouselColors } from './card-carousel.utils';
 import TopLeftContent from './components/top-left-content';
 import TopRightContent from './components/top-right-content';
-import { usePress } from '../../../hooks/use-press.hook';
-import { Box } from '../../../primitives/box/box';
-import { Card } from '../../../primitives/card/card';
-import { Text } from '../../../primitives/text/text';
 
 export const CardCarousel = (props: CardCarouselProps) => {
   const {

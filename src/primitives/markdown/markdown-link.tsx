@@ -3,11 +3,12 @@ import MarkdownDisplay, {
 } from '@ronradtke/react-native-markdown-display';
 import React from 'react';
 
-import { LINK_BOTTOM_SPACE } from './mardown.constants';
-import { MarkdownLinkProps } from './markdown-link.types';
 import { fonts, useStreamlineTheme } from '../../theme';
 import { colors } from '../../theme/colors';
 import { FontFamily } from '../../theme/fonts';
+
+import { LINK_BOTTOM_SPACE } from './mardown.constants';
+import { MarkdownLinkProps } from './markdown-link.types';
 
 /**
  * MarkdownLink

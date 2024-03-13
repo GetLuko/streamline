@@ -1,8 +1,8 @@
 import { fireEvent } from '@testing-library/react-native';
 
+import { renderWithProvider } from '../../../../testing/render-with-provider';
 import { NavigationSectionTitle } from '../navigation-section-title';
 import { NavigationSectionTitleProps } from '../navigation-section-title.types';
-import { renderWithProvider } from '../../../../testing/render-with-provider';
 
 describe('NavigationSectionTitle', () => {
   afterEach(() => {

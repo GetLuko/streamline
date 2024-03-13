@@ -1,5 +1,5 @@
-import NavigationBarProgress from '../navigation-bar-progress';
 import { renderWithProvider } from '../../../../testing/render-with-provider';
+import NavigationBarProgress from '../navigation-bar-progress';
 
 describe('NavigationBarProgress', () => {
   it('renders correctly with default props', () => {

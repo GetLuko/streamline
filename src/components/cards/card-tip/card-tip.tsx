@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { CardTipProps } from './card-tip.types';
-import { getCardTipColors } from './card-tip.utils';
 import { Box } from '../../../primitives/box/box';
 import { Card } from '../../../primitives/card/card';
 import { Icon } from '../../../primitives/icon/icon';
 import { MarkdownLink } from '../../../primitives/markdown/markdown-link';
+
+import { CardTipProps } from './card-tip.types';
+import { getCardTipColors } from './card-tip.utils';
 
 export const CardTip = ({
   appearance = 'primary',

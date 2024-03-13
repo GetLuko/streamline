@@ -1,8 +1,8 @@
 import { fireEvent, waitFor } from '@testing-library/react-native';
 import React from 'react';
 
-import ListItemArticle from '../list-item-article';
 import { renderWithProvider } from '../../../../testing/render-with-provider';
+import ListItemArticle from '../list-item-article';
 
 describe('ListItemArticle', () => {
   afterEach(() => {

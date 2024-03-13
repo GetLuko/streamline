@@ -1,8 +1,8 @@
 import { fireEvent } from '@testing-library/react-native';
 import React from 'react';
 
-import ButtonIcon from '../button-icon';
 import { renderWithProvider } from '../../../../testing/render-with-provider';
+import ButtonIcon from '../button-icon';
 
 describe('ButtonIcon', () => {
   afterEach(() => {

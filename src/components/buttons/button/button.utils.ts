@@ -1,7 +1,8 @@
 import { PressableStateCallbackType } from 'react-native';
 
-import { ButtonProps } from './button.types';
 import { Theme } from '../../../theme';
+
+import { ButtonProps } from './button.types';
 
 export const getPressableBackgroundColor =
   (colors: Theme['colors'], variant: ButtonProps['appearance']) =>

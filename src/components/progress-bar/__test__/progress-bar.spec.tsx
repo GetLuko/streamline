@@ -1,5 +1,5 @@
-import ProgressBar from '../progress-bar';
 import { renderWithProvider } from '../../../testing/render-with-provider';
+import ProgressBar from '../progress-bar';
 
 describe('ProgressBar', () => {
   it('should render successfully - size lg', () => {

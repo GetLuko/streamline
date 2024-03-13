@@ -1,11 +1,12 @@
 import { FC } from 'react';
 import { Pressable } from 'react-native';
 
-import { getConsentBoxColors } from './consent-box.utils';
 import { Box } from '../../primitives/box/box';
 import { MarkdownLink } from '../../primitives/markdown/markdown-link';
 import Checkbox from '../checkbox/checkbox';
 import { CheckboxProps } from '../checkbox/checkbox.types';
+
+import { getConsentBoxColors } from './consent-box.utils';
 
 type ConsentBoxProps = {
   text: string;

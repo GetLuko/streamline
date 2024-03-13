@@ -1,8 +1,13 @@
-import { Box, Dialog, ListItemGroup, Markdown } from '@getluko/streamline';
+import {
+  Box,
+  Dialog,
+  ListItemGroup,
+  Markdown,
+  StarRating,
+} from '@getluko/streamline';
 import { useState } from 'react';
 
 import { DocList } from '../components/DocList';
-import StarRating from '../../../../../src/components/ratings/star-rating/star-rating';
 
 export const DialogSandbox = () => {
   const [star, setStar] = useState(0);

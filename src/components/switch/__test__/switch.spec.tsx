@@ -1,8 +1,8 @@
 import { act, fireEvent } from '@testing-library/react-native';
 import React from 'react';
 
-import Switch from '../switch';
 import { renderWithProvider } from '../../../testing/render-with-provider';
+import Switch from '../switch';
 
 describe('Switch', () => {
   it('should render successfully and call onValueChange true', async () => {

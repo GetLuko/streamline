@@ -1,12 +1,13 @@
 import parsePhoneNumberFromString from 'libphonenumber-js';
 import { FC, useState } from 'react';
 
-import CountryPicker from './components/country-picker';
-import { InputPhoneProps } from './input-phone.types';
 import { Box } from '../../../primitives/box/box';
 import { Text } from '../../../primitives/text/text';
 import { InputTextLabel } from '../input-text/components/input-text-label';
 import { InputText } from '../input-text/input-text';
+
+import CountryPicker from './components/country-picker';
+import { InputPhoneProps } from './input-phone.types';
 
 export const InputPhone: FC<InputPhoneProps> = ({
   onChangePhoneNumber,

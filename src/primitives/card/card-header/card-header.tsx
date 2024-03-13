@@ -1,5 +1,10 @@
 import React from 'react';
 
+import Spinner from '../../../components/spinner/spinner';
+import { Box } from '../../box/box';
+import { Icon } from '../../icon/icon';
+import { Text } from '../../text/text';
+
 import { CardHeaderProps } from './card-header.types';
 import {
   hasValidHeader,
@@ -7,10 +12,6 @@ import {
   hasValidRightAction,
   hasValidValue,
 } from './card-header.utils';
-import Spinner from '../../../components/spinner/spinner';
-import { Box } from '../../box/box';
-import { Icon } from '../../icon/icon';
-import { Text } from '../../text/text';
 
 export const CardHeader = (props: CardHeaderProps) => {
   const { colors, iconName, title, subtitle, value, rightAction, isLoading } =

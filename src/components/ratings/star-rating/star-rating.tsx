@@ -3,6 +3,7 @@ import { Pressable } from 'react-native';
 
 import { Box } from '../../../primitives/box/box';
 import { Icon } from '../../../primitives/icon/icon';
+
 import { StarRatingProps } from './star-rating.types';
 
 export const StarRating = ({ currentRating, onRatingChange }: StarRatingProps) => {

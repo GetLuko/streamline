@@ -1,5 +1,9 @@
-import { Box, GeneratedRegularIcons } from '@getluko/streamline';
-import { Icon, IconProps } from '@getluko/streamline';
+import {
+  Box,
+  GeneratedRegularIcons,
+  Icon,
+  IconProps,
+} from '@getluko/streamline';
 import React, { useCallback } from 'react';
 import { TouchableOpacity } from 'react-native';
 

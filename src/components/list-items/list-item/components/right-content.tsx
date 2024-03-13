@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { usePress } from '../../../../hooks/use-press.hook';
+import { Box } from '../../../../primitives/box/box';
 import { Icon } from '../../../../primitives/icon/icon';
 import ButtonIcon from '../../../buttons/button-icon/button-icon';
 import Tag from '../../../tag/tag';
 import { ListItemProps } from '../list-item.types';
-import { Box } from '../../../../primitives/box/box';
 
 export const RightContent = ({
   onPress,

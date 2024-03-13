@@ -2,16 +2,17 @@ import React from 'react';
 import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
 import { Pressable } from 'react-native-ama';
 
-import { ButtonProps } from './button.types';
-import { getPressableBackgroundColor } from './button.utils';
-import InnerIcon from './component/inner-icon';
-import InnerLabel from './component/inner-label';
-import { useLoadingAnimation } from './hook/useLoadingAnimation';
 import { usePress } from '../../../hooks/use-press.hook';
 import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
 import { Box } from '../../../primitives/box/box';
 import { useStreamlineTheme } from '../../../theme';
 import { getShadowsStyle } from '../../../theme/shadows';
+
+import { ButtonProps } from './button.types';
+import { getPressableBackgroundColor } from './button.utils';
+import InnerIcon from './component/inner-icon';
+import InnerLabel from './component/inner-label';
+import { useLoadingAnimation } from './hook/useLoadingAnimation';
 
 export const Button = ({
   appearance = 'primary',

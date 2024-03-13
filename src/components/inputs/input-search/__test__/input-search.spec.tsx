@@ -1,8 +1,8 @@
 import { act, fireEvent } from '@testing-library/react-native';
 import React from 'react';
 
-import InputSearch from '../input-search';
 import { renderWithProvider } from '../../../../testing/render-with-provider';
+import InputSearch from '../input-search';
 
 describe('InputSearch', () => {
   it('should render successfully', () => {

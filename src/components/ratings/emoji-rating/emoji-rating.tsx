@@ -7,7 +7,7 @@ import { EmojiRatingProps } from './emoji-rating.types';
 
 const FACES: IconsName[] = ['Angry', 'Sad', 'Neutral', 'Happy', 'Pumped'];
 
-const EmojiRating = ({ currentRating, onRatingChange }: EmojiRatingProps) => {
+export const EmojiRating = ({ currentRating, onRatingChange }: EmojiRatingProps) => {
   return (
     <Box flexDirection="row" flex={1} justifyContent="space-between">
       {FACES.map((icon, index) => {

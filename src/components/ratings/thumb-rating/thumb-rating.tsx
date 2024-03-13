@@ -1,12 +1,8 @@
 import { Box } from '../../../primitives/box/box';
 import { Button } from '../../buttons/button/button';
-import { ThumbsFeedback } from './thumb-rating.types';
+import { ThumbRatingProps } from './thumb-rating.types';
 
-export interface ThumbRatingProps {
-  onRatingChange: (rating: ThumbsFeedback) => void;
-}
-
-const ThumbRating = ({ onRatingChange }: ThumbRatingProps) => {
+export const ThumbRating = ({ onRatingChange }: ThumbRatingProps) => {
   return (
     <Box flexDirection="row" flex={1} justifyContent="space-between">
       <Box flex={1} marginRight="xs">

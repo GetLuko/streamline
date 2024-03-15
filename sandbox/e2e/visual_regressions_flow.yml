@@ -122,6 +122,14 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: InputSlider
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: InputSliderRange
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: ListItem
 - runFlow:
     file: subflow/takeScreenshot.yaml

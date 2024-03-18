@@ -7,8 +7,8 @@ export const SwitchSandbox = () => {
   const [value, setValue] = useState(false);
   const toggle = () => setValue(!value);
   const data = [
-    <Switch action={toggle} value={value} />,
-    <Switch action={toggle} value={!value} />,
+    <Switch onChange={toggle} value={value} />,
+    <Switch onChange={toggle} value={!value} />,
   ];
   return <DocList docs={data} margin="md" />;
 };

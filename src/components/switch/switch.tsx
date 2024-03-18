@@ -6,28 +6,33 @@ import { useStreamlineTheme } from '../../theme';
 import { getColorMapping } from './switch.utils';
 
 export interface SwitchProps {
-  action: (value: boolean) => void;
+  onChange: (value: boolean) => void | Promise<void>;
   value: boolean;
-  disabled?: boolean;
+  isDisabled?: boolean;
   testID?: string;
 }
 
-export function Switch({ action, value, disabled, testID }: SwitchProps) {
-  const state = disabled ? 'disabled' : 'enabled';
+export const Switch = ({
+  onChange,
+  value,
+  isDisabled,
+  testID,
+}: SwitchProps) => {
+  const state = isDisabled ? 'disabled' : 'enabled';
   const theme = useStreamlineTheme();
   const colors = getColorMapping(theme.colors)?.[state];
   return (
     <SwitchNative
       accessibilityRole="switch"
       value={value}
-      disabled={disabled}
-      onValueChange={action}
+      disabled={isDisabled}
+      onValueChange={onChange}
       trackColor={{ false: colors?.inactiveTrack, true: colors?.activeTrack }}
       thumbColor={value ? colors?.activeThumb : colors?.inactiveThumb}
       ios_backgroundColor={colors?.inactiveTrack}
       testID={testID}
     />
   );
-}
+};
 
 export default Switch;

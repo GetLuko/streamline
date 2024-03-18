@@ -96,6 +96,10 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: CardOption
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: InputText
 - runFlow:
     file: subflow/takeScreenshot.yaml

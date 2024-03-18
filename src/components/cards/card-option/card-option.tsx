@@ -1,9 +1,7 @@
 import React from 'react';
 
 import { usePress } from '../../../hooks/use-press.hook';
-import { Box } from '../../../primitives/box/box';
 import { Card } from '../../../primitives/card/card';
-import { CardContent } from '../../../primitives/card/card-content/card-content';
 
 import { CardOptionSkeleton } from './card-option-skeleton';
 import { CardOptionProps } from './card-option.types';

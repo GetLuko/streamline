@@ -1,4 +1,4 @@
-import { fireEvent } from '@testing-library/react-native';
+import { act, fireEvent } from '@testing-library/react-native';
 import React from 'react';
 
 import { renderWithProvider } from '../../../../testing/render-with-provider';
@@ -39,7 +39,7 @@ describe('CardOption', () => {
     expect(onPress).toHaveBeenCalledTimes(2);
   });
 
-  it('should call switchOption onChange when switch pressed', () => {
+  it('should call switchOption onChange when switch pressed', async () => {
     // Given
     const onPress = jest.fn();
     const { getByTestId } = renderWithProvider(
@@ -54,7 +54,9 @@ describe('CardOption', () => {
     );
 
     // When
-    fireEvent.press(getByTestId('switch'));
+    await act(async () => {
+      fireEvent(getByTestId('switch'), 'onValueChange', false);
+    });
 
     // Then
     expect(onPress).toHaveBeenCalledTimes(0);

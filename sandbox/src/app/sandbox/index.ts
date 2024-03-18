@@ -8,6 +8,7 @@ import { CardCarouselSandbox } from './docs/card-carousel.doc';
 import { CardFeedbackSandbox } from './docs/card-feedback.doc';
 import { CardHighlightSandbox } from './docs/card-highlight.doc';
 import { CardMediaSandbox } from './docs/card-media.doc';
+import { CardOptionSandbox } from './docs/card-option.doc';
 import { CardSummarySandbox } from './docs/card-summary.doc';
 import { CardTipSandbox } from './docs/card-tip.doc';
 import { CardSandbox } from './docs/card.doc';
@@ -89,6 +90,7 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'CardCarousel', SandBox: CardCarouselSandbox },
       { title: 'CardFeedback', SandBox: CardFeedbackSandbox },
       { title: 'CardMedia', SandBox: CardMediaSandbox },
+      { title: 'CardOption', SandBox: CardOptionSandbox },
     ],
   },
   {

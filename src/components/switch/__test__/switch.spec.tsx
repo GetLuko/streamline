@@ -8,7 +8,7 @@ describe('Switch', () => {
   it('should render successfully and call onValueChange true', async () => {
     const toggle = jest.fn();
     const { getByTestId } = renderWithProvider(
-      <Switch action={toggle} value={true} testID="switch" />
+      <Switch onChange={toggle} value={true} testID="switch" />
     );
     // When
     await act(async () => {
@@ -22,7 +22,7 @@ describe('Switch', () => {
   it('should render successfully and call onValueChange false', async () => {
     const toggle = jest.fn();
     const { getByTestId } = renderWithProvider(
-      <Switch action={toggle} value={true} testID="switch" />
+      <Switch onChange={toggle} value={true} testID="switch" />
     );
     // When
     await act(async () => {

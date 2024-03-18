@@ -7,6 +7,7 @@ export * from './components/buttons/button/button.types';
 export * from './components/cards/card-highlight/card-highlight.types';
 export * from './components/cards/card-feedback/card-feedback.types';
 export * from './components/cards/card-media/card-media.types';
+export * from './components/cards/card-option/card-option.types';
 export * from './components/cards/card-summary/card-summary.types';
 export * from './components/cards/card-tip/card-tip.types';
 

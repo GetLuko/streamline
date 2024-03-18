@@ -150,7 +150,7 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
-      COMPONENT: Tab
+      COMPONENT: TabBar
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:

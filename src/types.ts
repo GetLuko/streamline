@@ -31,6 +31,7 @@ export * from './components/ratings/star-rating/star-rating.types';
 export * from './components/ratings/thumb-rating/thumb-rating.types';
 
 export * from './components/tabs/tab/tab.types';
+export * from './components/tabs/tab-bar/tab-bar.types';
 
 export function isObjKey<T extends object>(key: any, obj: T): key is keyof T {
   return key in obj;

@@ -41,7 +41,7 @@ import { ShadowSandbox } from './docs/shadows.doc';
 import { SkeletonSandbox } from './docs/skeleton.doc';
 import { SpinnerSandbox } from './docs/spinner.doc';
 import { SwitchSandbox } from './docs/switch.doc';
-import { TabSandbox } from './docs/tab.doc';
+import { TabBarSandbox } from './docs/tab-bar.doc';
 import { TagSandbox } from './docs/tag.doc';
 import { TypoSandbox } from './docs/text.doc';
 
@@ -116,7 +116,7 @@ export const sandboxItems: SandBoxSectionType[] = [
   },
   {
     title: 'Tabs',
-    items: [{ title: 'Tab', SandBox: TabSandbox }],
+    items: [{ title: 'TabBar', SandBox: TabBarSandbox }],
   },
   {
     title: 'Tags',

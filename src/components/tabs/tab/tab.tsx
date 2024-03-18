@@ -12,14 +12,13 @@ import { Box } from '../../../primitives/box/box';
 import { Text } from '../../../primitives/text/text';
 
 import { TabProps } from './tab.types';
-import { getBorderConfig, getTitleConfig } from './tab.utils';
+import { getTitleConfig } from './tab.utils';
 
 export const Tab = ({ appearance, isSelected, onPress, title }: TabProps) => {
   const pressed = useSharedValue(0);
   const innerIsSelected = useSharedValue(isSelected ? 1 : 0);
 
   const titleConfig = getTitleConfig({ appearance });
-  const borderConfig = getBorderConfig({ appearance });
 
   useEffect(() => {
     innerIsSelected.value = withTiming(isSelected ? 1 : 0);
@@ -70,16 +69,6 @@ export const Tab = ({ appearance, isSelected, onPress, title }: TabProps) => {
             {title}
           </Text>
         </AnimatedBox>
-        <Box
-          backgroundColor={borderConfig.backgroundColor}
-          height={1}
-          position="absolute"
-          bottom={0}
-          right={0}
-          left={0}
-          opacity={borderConfig.opacity}
-          alignSelf="center"
-        />
         <AnimatedBox
           backgroundColor={titleConfig.selectedColor}
           style={selectedBorderStyle}

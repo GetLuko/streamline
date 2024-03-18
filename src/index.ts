@@ -28,6 +28,8 @@ export * from './components/inputs/input-date-picker/input-date-picker';
 export * from './components/inputs/date-picker/date-picker';
 export * from './components/inputs/input-code/input-code';
 export * from './components/inputs/input-phone/input-phone';
+export * from './components/inputs/input-slider/input-slider';
+export * from './components/inputs/input-slider-range/input-slider-range';
 export * from './components/list-items/list-item-group/list-item-group';
 export * from './components/list-items/list-item-country/list-item-country';
 export * from './components/list-items/list-item-option/list-item-option';

@@ -46,6 +46,8 @@ export * from './components/ratings/emoji-rating/emoji-rating';
 export * from './components/ratings/star-rating/star-rating';
 export * from './components/ratings/thumb-rating/thumb-rating';
 export * from './components/spinner/spinner';
+export * from './components/tabs/tab/tab';
+export * from './components/tabs/tab/tab-divider';
 export * from './components/tag/tag';
 export * from './components/button-bar/button-bar';
 export * from './hooks/use-press.hook';

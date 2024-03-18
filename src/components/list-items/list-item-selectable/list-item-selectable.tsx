@@ -8,6 +8,7 @@ import { ListItemSkeleton } from '../components/list-item-skeleton';
 import {
   BACKGROUND_COLOR,
   BACKGROUND_PRESSED_COLOR,
+  DIVIDER_VERTICAL_MARGIN,
 } from '../list-items.constants';
 
 import { BottomContent } from './components/bottom-content';
@@ -17,7 +18,6 @@ import { TopContent } from './components/top-content';
 import { ListItemSelectableProps } from './list-item-selectable.type';
 import { getListItemsSelectableColors } from './list-item-selectable.utils';
 
-const DIVIDER_VERTICAL_MARGIN = 16;
 export const ListItemSelectable = ({
   accessibilityLabel,
   description,

@@ -162,6 +162,10 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: ListItemSwitch
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: Tag
 - runFlow:
     file: subflow/takeScreenshot.yaml

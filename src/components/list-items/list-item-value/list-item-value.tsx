@@ -10,14 +10,13 @@ import { getListItemsColors } from '../list-item/list-item.utils';
 import {
   BACKGROUND_COLOR,
   BACKGROUND_PRESSED_COLOR,
+  DIVIDER_VERTICAL_MARGIN,
 } from '../list-items.constants';
 
 import { BottomContent } from './components/bottom-content';
 import { CenterContent } from './components/center-content';
 import { TopContent } from './components/top-content';
 import { ListItemValueProps } from './list-item-value.types';
-
-const DIVIDER_VERTICAL_MARGIN = 16;
 
 export const ListItemValue = ({
   appearance = 'neutral',

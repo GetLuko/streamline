@@ -10,10 +10,10 @@ describe('ButtonIcon', () => {
   });
 
   it('should render successfully', () => {
-    const { UNSAFE_root } = renderWithProvider(
+    const { root } = renderWithProvider(
       <ButtonIcon accessibilityLabel="test" iconName="Cross" />
     );
-    expect(UNSAFE_root).toBeTruthy();
+    expect(root).toBeTruthy();
   });
 
   it('should call onPress when pressed', () => {

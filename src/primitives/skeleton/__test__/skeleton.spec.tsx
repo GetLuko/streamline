@@ -5,7 +5,7 @@ import { Skeleton } from '../skeleton';
 
 describe('Skeleton', () => {
   it('should render successfully', () => {
-    const { UNSAFE_root } = renderWithProvider(<Skeleton />);
-    expect(UNSAFE_root).toBeTruthy();
+    const { root } = renderWithProvider(<Skeleton />);
+    expect(root).toBeTruthy();
   });
 });

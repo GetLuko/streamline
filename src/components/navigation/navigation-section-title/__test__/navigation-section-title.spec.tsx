@@ -18,7 +18,7 @@ describe('NavigationSectionTitle', () => {
 
   const switchProps: NavigationSectionTitleProps['rightComponent'] = {
     type: 'switch',
-    action: jest.fn(),
+    onChange: jest.fn(),
     value: true,
     testID: 'switch-button',
   };
@@ -59,6 +59,6 @@ describe('NavigationSectionTitle', () => {
       <NavigationSectionTitle title="Title" rightComponent={switchProps} />
     );
     fireEvent(getByTestId('switch-button'), 'valueChange', true);
-    expect(switchProps.action).toHaveBeenCalled();
+    expect(switchProps.onChange).toHaveBeenCalled();
   });
 });

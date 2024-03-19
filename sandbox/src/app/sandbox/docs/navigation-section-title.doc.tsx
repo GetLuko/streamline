@@ -15,7 +15,7 @@ const action: NavigationSectionTitleProps['rightComponent'] = {
 
 const switchProps: NavigationSectionTitleProps['rightComponent'] = {
   type: 'switch',
-  action: () => {
+  onChange: () => {
     return;
   },
   value: true,

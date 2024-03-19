@@ -5,14 +5,14 @@ import InputDatePicker from '../input-date-picker';
 
 describe('InputDatePicker', () => {
   it('should render successfully', () => {
-    const { UNSAFE_root } = renderWithProvider(
+    const { root } = renderWithProvider(
       <InputDatePicker
         label="Title"
         placeholder="Placeholder"
         description="Description"
       />
     );
-    expect(UNSAFE_root).toBeTruthy();
+    expect(root).toBeTruthy();
   });
 
   it('should render InputText with placeholder', () => {

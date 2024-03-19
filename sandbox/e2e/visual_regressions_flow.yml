@@ -96,6 +96,10 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: CardOption
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: InputText
 - runFlow:
     file: subflow/takeScreenshot.yaml
@@ -119,6 +123,14 @@ appId: ${APPID}
     file: subflow/takeScreenshot.yaml
     env:
       COMPONENT: InputCode
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: InputSlider
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: InputSliderRange
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
@@ -147,6 +159,10 @@ appId: ${APPID}
     file: subflow/takeScreenshot.yaml
     env:
       COMPONENT: ListItemSelectable
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
+      COMPONENT: ListItemSwitch
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:

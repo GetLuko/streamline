@@ -7,6 +7,7 @@ export * from './components/buttons/button/button.types';
 export * from './components/cards/card-highlight/card-highlight.types';
 export * from './components/cards/card-feedback/card-feedback.types';
 export * from './components/cards/card-media/card-media.types';
+export * from './components/cards/card-option/card-option.types';
 export * from './components/cards/card-summary/card-summary.types';
 export * from './components/cards/card-tip/card-tip.types';
 
@@ -15,12 +16,15 @@ export * from './components/dialog/dialog.types';
 export * from './components/inputs/input-outline/input-outline.types';
 export * from './components/inputs/input-text/types';
 export * from './components/inputs/input-phone/input-phone.types';
+export * from './components/inputs/input-slider/input-slider.types';
+export * from './components/inputs/input-slider-range/input-slider-range.types';
 
 export * from './components/list-items/list-item/list-item.types';
 export * from './components/list-items/list-item-article/list-item-article.types';
 export * from './components/list-items/list-item-country/list-item-country.types';
 export * from './components/list-items/list-item-group/list-item-group.types';
 export * from './components/list-items/list-item-selectable/list-item-selectable.type';
+export * from './components/list-items/list-item-switch/list-item-switch.types';
 export * from './components/list-items/list-item-value/list-item-value.types';
 
 export * from './components/navigation/navigation-bar-search/navigation-bar-search.types';

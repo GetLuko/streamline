@@ -21,17 +21,17 @@ describe('ListItemGroup', () => {
   });
 
   it('should render successfully', () => {
-    const { UNSAFE_root } = renderWithProvider(
+    const { root } = renderWithProvider(
       <ListItemGroup description="description" items={ITEMS} title="title" />
     );
-    expect(UNSAFE_root).toBeTruthy();
+    expect(root).toBeTruthy();
   });
 
   it('should render items successfully', () => {
-    const { UNSAFE_root, getByText } = renderWithProvider(
+    const { root, getByText } = renderWithProvider(
       <ListItemGroup description="description" items={ITEMS} title="title" />
     );
-    expect(UNSAFE_root).toBeTruthy();
+    expect(root).toBeTruthy();
     expect(getByText(ITEMS[0]!.title)).toBeTruthy();
     expect(getByText(ITEMS[1]!.title)).toBeTruthy();
   });

@@ -8,6 +8,7 @@ import { CardCarouselSandbox } from './docs/card-carousel.doc';
 import { CardFeedbackSandbox } from './docs/card-feedback.doc';
 import { CardHighlightSandbox } from './docs/card-highlight.doc';
 import { CardMediaSandbox } from './docs/card-media.doc';
+import { CardOptionSandbox } from './docs/card-option.doc';
 import { CardSummarySandbox } from './docs/card-summary.doc';
 import { CardTipSandbox } from './docs/card-tip.doc';
 import { CardSandbox } from './docs/card.doc';
@@ -20,6 +21,8 @@ import { InputDatePickerSandbox } from './docs/input-date-picker.doc';
 import { InputPhoneSandbox } from './docs/input-phone.doc';
 import { InputSearchSandbox } from './docs/input-search.doc';
 import { InputSelectSandbox } from './docs/input-select.doc';
+import { InputSliderRangeSandbox } from './docs/input-slider-range.doc';
+import { InputSliderSandbox } from './docs/input-slider.doc';
 import { InputTextAreaSandbox } from './docs/input-text-area.doc';
 import { InputTextSandbox } from './docs/input-text.doc';
 import { ListItemArticleSandbox } from './docs/list-item-article.doc';
@@ -27,6 +30,7 @@ import { ListItemCountrySandbox } from './docs/list-item-country.doc';
 import { ListItemGroupSandbox } from './docs/list-item-group.doc';
 import { ListItemOptionSandbox } from './docs/list-item-option.doc';
 import { ListItemSelectableSandbox } from './docs/list-item-selectable.doc';
+import { ListItemSwitchSandbox } from './docs/list-item-switch.doc';
 import { ListItemValueSandbox } from './docs/list-item-value.doc';
 import { ListItemSandbox } from './docs/list-item.doc';
 import { MarkdownSandbox } from './docs/markdown.doc';
@@ -88,6 +92,7 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'CardCarousel', SandBox: CardCarouselSandbox },
       { title: 'CardFeedback', SandBox: CardFeedbackSandbox },
       { title: 'CardMedia', SandBox: CardMediaSandbox },
+      { title: 'CardOption', SandBox: CardOptionSandbox },
     ],
   },
   {
@@ -100,6 +105,8 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'InputSearch', SandBox: InputSearchSandbox },
       { title: 'InputCode', SandBox: InputCodeSandbox },
       { title: 'InputPhone', SandBox: InputPhoneSandbox },
+      { title: 'InputSlider', SandBox: InputSliderSandbox },
+      { title: 'InputSliderRange', SandBox: InputSliderRangeSandbox },
     ],
   },
   {
@@ -112,6 +119,7 @@ export const sandboxItems: SandBoxSectionType[] = [
       { title: 'ListItemValue', SandBox: ListItemValueSandbox },
       { title: 'ListItemGroup', SandBox: ListItemGroupSandbox },
       { title: 'ListItemSelectable', SandBox: ListItemSelectableSandbox },
+      { title: 'ListItemSwitch', SandBox: ListItemSwitchSandbox },
     ],
   },
   {

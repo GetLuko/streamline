@@ -3,13 +3,13 @@ import NavigationBarProgress from '../navigation-bar-progress';
 
 describe('NavigationBarProgress', () => {
   it('renders correctly with default props', () => {
-    const { UNSAFE_root } = renderWithProvider(
+    const { root } = renderWithProvider(
       <NavigationBarProgress
         totalNumberOfSteps={4}
         currentStep={2}
         currentStepProgress={50}
       />
     );
-    expect(UNSAFE_root).toBeTruthy();
+    expect(root).toBeTruthy();
   });
 });

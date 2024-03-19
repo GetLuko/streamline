@@ -6,8 +6,8 @@ import InputSearch from '../input-search';
 
 describe('InputSearch', () => {
   it('should render successfully', () => {
-    const { UNSAFE_root, queryByTestId } = renderWithProvider(<InputSearch />);
-    expect(UNSAFE_root).toBeTruthy();
+    const { root, queryByTestId } = renderWithProvider(<InputSearch />);
+    expect(root).toBeTruthy();
     expect(queryByTestId('close-input-search')).toBeNull();
   });
 

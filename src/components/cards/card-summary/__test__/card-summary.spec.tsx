@@ -5,7 +5,7 @@ import CardSummary from '../card-summary';
 
 describe('CardSummary', () => {
   it('should render successfully', () => {
-    const { UNSAFE_root } = renderWithProvider(
+    const { root } = renderWithProvider(
       <CardSummary
         appearance="neutral"
         header="Header"
@@ -14,6 +14,6 @@ describe('CardSummary', () => {
         rightAction="navigate"
       />
     );
-    expect(UNSAFE_root).toBeTruthy();
+    expect(root).toBeTruthy();
   });
 });

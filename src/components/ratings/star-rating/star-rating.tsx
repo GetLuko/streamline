@@ -6,7 +6,10 @@ import { Icon } from '../../../primitives/icon/icon';
 
 import { StarRatingProps } from './star-rating.types';
 
-export const StarRating = ({ currentRating, onRatingChange }: StarRatingProps) => {
+export const StarRating = ({
+  currentRating,
+  onRatingChange,
+}: StarRatingProps) => {
   const [pressedRating, setPressedRating] = useState<number | undefined>(
     undefined
   );

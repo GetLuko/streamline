@@ -8,6 +8,7 @@ import { ListItemSkeleton } from '../components/list-item-skeleton';
 import {
   BACKGROUND_COLOR,
   BACKGROUND_PRESSED_COLOR,
+  DIVIDER_VERTICAL_MARGIN,
 } from '../list-items.constants';
 
 import { CenterContent } from './components/center-content';
@@ -15,8 +16,6 @@ import { LeftContent } from './components/left-content';
 import { RightContent } from './components/right-content';
 import { ListItemProps } from './list-item.types';
 import { getListItemsColors } from './list-item.utils';
-
-const DIVIDER_VERTICAL_MARGIN = 16;
 
 export const ListItem = ({
   appearance = 'neutral',

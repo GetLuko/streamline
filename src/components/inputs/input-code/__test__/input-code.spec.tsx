@@ -5,10 +5,10 @@ import { InputCode } from '../input-code';
 
 describe('InputCode', () => {
   it('should render successfully', () => {
-    const { UNSAFE_root } = renderWithProvider(
+    const { root } = renderWithProvider(
       <InputCode onChange={jest.fn()} length={4} />
     );
-    expect(UNSAFE_root).toBeTruthy();
+    expect(root).toBeTruthy();
   });
 
   it('should call onChange with the correct code when inputting values', () => {

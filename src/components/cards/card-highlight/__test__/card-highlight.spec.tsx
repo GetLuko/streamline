@@ -19,8 +19,8 @@ describe('CardHighlight', () => {
     testID: 'card-highlight',
   };
   it('should render successfully', () => {
-    const { UNSAFE_root } = renderWithProvider(<CardHighlight {...props} />);
-    expect(UNSAFE_root).toBeTruthy();
+    const { root } = renderWithProvider(<CardHighlight {...props} />);
+    expect(root).toBeTruthy();
   });
 
   it('should call onPress when pressed', () => {

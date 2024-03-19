@@ -150,6 +150,10 @@ appId: ${APPID}
 - runFlow:
     file: subflow/takeScreenshot.yaml
     env:
+      COMPONENT: ListItemOptionMedia
+- runFlow:
+    file: subflow/takeScreenshot.yaml
+    env:
       COMPONENT: ListItemValue
 - runFlow:
     file: subflow/takeScreenshot.yaml

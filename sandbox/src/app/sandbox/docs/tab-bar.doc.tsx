@@ -1,4 +1,4 @@
-import { Box, TabBar, TabProps } from '@getluko/streamline';
+import { Box, TabBar, TabBarProps, TabProps } from '@getluko/streamline';
 import { useState } from 'react';
 
 const tabsTwo = ['Title', 'Title'];
@@ -6,50 +6,42 @@ const tabsThree = ['Title', 'Title', 'Title'];
 const tabsFour = ['Title', 'Title', 'Title', 'Title'];
 const tabsFive = ['Title', 'Title', 'Title', 'Title', 'Title'];
 const tabsSix = ['Title', 'Title', 'Title', 'Title', 'Title', 'Title'];
+const tabsSixLong = [
+  'Long title',
+  'Long title',
+  'Long title',
+  'Long title',
+  'Long title',
+  'Long title',
+];
 
-const TabBarRow = ({ appearance }: Pick<TabProps, 'appearance'>) => {
-  const [tabIndexTwo, setTabIndexTwo] = useState(0);
-  const [tabIndexThree, setTabIndexThree] = useState(0);
-  const [tabIndexFour, setTabIndexFour] = useState(0);
-  const [tabIndexFive, setTabIndexFive] = useState(0);
-  const [tabIndexSix, setTabIndexSix] = useState(0);
+const TabBarItem = ({
+  appearance,
+  tabs,
+}: Pick<TabBarProps, 'appearance' | 'tabs'>) => {
+  const [tabIndex, setTabIndex] = useState(0);
 
   return (
+    <Box paddingBottom="md">
+      <TabBar
+        appearance={appearance}
+        tabs={tabs}
+        tabIndex={tabIndex}
+        onTabSelected={setTabIndex}
+      />
+    </Box>
+  );
+};
+
+const TabBarRow = ({ appearance }: Pick<TabProps, 'appearance'>) => {
+  return (
     <Box>
-      <TabBar
-        appearance={appearance}
-        tabs={tabsTwo}
-        tabIndex={tabIndexTwo}
-        onTabSelected={setTabIndexTwo}
-      />
-      <Box paddingBottom="md" />
-      <TabBar
-        appearance={appearance}
-        tabs={tabsThree}
-        tabIndex={tabIndexThree}
-        onTabSelected={setTabIndexThree}
-      />
-      <Box paddingBottom="md" />
-      <TabBar
-        appearance={appearance}
-        tabs={tabsFour}
-        tabIndex={tabIndexFour}
-        onTabSelected={setTabIndexFour}
-      />
-      <Box paddingBottom="md" />
-      <TabBar
-        appearance={appearance}
-        tabs={tabsFive}
-        tabIndex={tabIndexFive}
-        onTabSelected={setTabIndexFive}
-      />
-      <Box paddingBottom="md" />
-      <TabBar
-        appearance={appearance}
-        tabs={tabsSix}
-        tabIndex={tabIndexSix}
-        onTabSelected={setTabIndexSix}
-      />
+      <TabBarItem appearance={appearance} tabs={tabsTwo} />
+      <TabBarItem appearance={appearance} tabs={tabsThree} />
+      <TabBarItem appearance={appearance} tabs={tabsFour} />
+      <TabBarItem appearance={appearance} tabs={tabsFive} />
+      <TabBarItem appearance={appearance} tabs={tabsSix} />
+      <TabBarItem appearance={appearance} tabs={tabsSixLong} />
     </Box>
   );
 };

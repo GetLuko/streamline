@@ -1,15 +1,7 @@
-import Animated, {
-  Extrapolation,
-  interpolate,
-  useAnimatedRef,
-  useAnimatedStyle,
-  useScrollViewOffset,
-} from 'react-native-reanimated';
-import { AnimatedScrollView } from 'react-native-reanimated/lib/typescript/reanimated2/component/ScrollView';
+import Animated from 'react-native-reanimated';
 
 import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
 import { Box } from '../../../primitives/box/box';
-import { useStreamlineTheme } from '../../../theme';
 import { Tab } from '../tab/tab';
 import { getBorderConfig } from '../tab/tab.utils';
 
@@ -21,22 +13,7 @@ export const TabBar = ({
   tabs,
   tabIndex,
 }: TabBarProps) => {
-  const { spacing } = useStreamlineTheme();
   const borderConfig = getBorderConfig({ appearance });
-
-  const animatedRef = useAnimatedRef<AnimatedScrollView>();
-  const scrollOffset = useScrollViewOffset(animatedRef);
-
-  const borderStyle = useAnimatedStyle(() => {
-    return {
-      left: interpolate(
-        scrollOffset.value,
-        [0, spacing.md],
-        [spacing.md, 0],
-        Extrapolation.CLAMP
-      ),
-    };
-  });
 
   return (
     <Box paddingTop="xs">
@@ -46,7 +23,7 @@ export const TabBar = ({
         position="absolute"
         bottom={0}
         right={0}
-        style={borderStyle}
+        left={0}
         opacity={borderConfig.opacity}
         alignSelf="center"
       />
@@ -54,9 +31,7 @@ export const TabBar = ({
         horizontal
         showsHorizontalScrollIndicator={false}
         alwaysBounceHorizontal={false}
-        ref={animatedRef}
       >
-        <Box paddingLeft="md" />
         {tabs.map((title, index) => (
           <Box key={`tab-${index}`} paddingLeft="md">
             <Tab

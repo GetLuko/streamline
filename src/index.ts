@@ -34,6 +34,7 @@ export * from './components/inputs/input-slider-range/input-slider-range';
 export * from './components/list-items/list-item-group/list-item-group';
 export * from './components/list-items/list-item-country/list-item-country';
 export * from './components/list-items/list-item-option/list-item-option';
+export * from './components/list-items/list-item-option-media/list-item-option-media';
 export * from './components/list-items/list-item-switch/list-item-switch';
 export * from './components/list-items/list-item-value/list-item-value';
 export * from './components/list-items/list-item/list-item';

@@ -6,10 +6,10 @@ import InputSelect from '../input-select';
 
 describe('InputSelect', () => {
   it('should render successfully', () => {
-    const { UNSAFE_root } = renderWithProvider(
+    const { root } = renderWithProvider(
       <InputSelect label="Password" placeholder="Placeholder" />
     );
-    expect(UNSAFE_root).toBeTruthy();
+    expect(root).toBeTruthy();
   });
 
   it('should render placeholder', () => {

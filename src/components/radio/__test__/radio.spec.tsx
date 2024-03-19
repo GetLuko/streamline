@@ -5,8 +5,8 @@ import { Radio } from '../radio';
 
 describe('Radio', () => {
   it('should render successfully', () => {
-    const { UNSAFE_root } = renderWithProvider(<Radio value={true} />);
-    expect(UNSAFE_root).toBeTruthy();
+    const { root } = renderWithProvider(<Radio value={true} />);
+    expect(root).toBeTruthy();
   });
 
   it('should trigger mockOnChange', () => {

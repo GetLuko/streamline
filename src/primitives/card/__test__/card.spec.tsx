@@ -5,7 +5,7 @@ import { Card } from '../card';
 
 describe('Card', () => {
   it('should render successfully', () => {
-    const { UNSAFE_root } = renderWithProvider(<Card />);
-    expect(UNSAFE_root).toBeTruthy();
+    const { root } = renderWithProvider(<Card />);
+    expect(root).toBeTruthy();
   });
 });

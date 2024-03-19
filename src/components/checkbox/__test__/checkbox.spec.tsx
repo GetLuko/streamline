@@ -5,8 +5,8 @@ import { Checkbox } from '../checkbox';
 
 describe('Checkbox', () => {
   it('should render successfully', () => {
-    const { UNSAFE_root } = renderWithProvider(<Checkbox value={true} />);
-    expect(UNSAFE_root).toBeTruthy();
+    const { root } = renderWithProvider(<Checkbox value={true} />);
+    expect(root).toBeTruthy();
   });
 
   it('should trigger mockOnChange', () => {

@@ -12,11 +12,10 @@ import { getListItemsColors } from '../list-item/list-item.utils';
 import {
   BACKGROUND_COLOR,
   BACKGROUND_PRESSED_COLOR,
+  DIVIDER_VERTICAL_MARGIN,
 } from '../list-items.constants';
 
 import { ListItemCountryProps } from './list-item-country.types';
-
-const DIVIDER_VERTICAL_MARGIN = 16;
 
 export const ListItemCountry: FC<ListItemCountryProps> = ({
   accessibilityLabel,

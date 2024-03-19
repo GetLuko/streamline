@@ -5,7 +5,7 @@ import { AnimatedBox } from '../animated-box';
 
 describe('AnimatedBox', () => {
   it('should render successfully', () => {
-    const { UNSAFE_root } = renderWithProvider(<AnimatedBox />);
-    expect(UNSAFE_root).toBeTruthy();
+    const { root } = renderWithProvider(<AnimatedBox />);
+    expect(root).toBeTruthy();
   });
 });

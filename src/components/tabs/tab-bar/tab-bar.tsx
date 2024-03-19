@@ -1,14 +1,11 @@
-import {
-  NativeScrollEvent,
-  NativeSyntheticEvent,
-  ScrollView,
-} from 'react-native';
-import {
+import Animated, {
   Extrapolation,
   interpolate,
+  useAnimatedRef,
   useAnimatedStyle,
-  useSharedValue,
+  useScrollViewOffset,
 } from 'react-native-reanimated';
+import { AnimatedScrollView } from 'react-native-reanimated/lib/typescript/reanimated2/component/ScrollView';
 
 import { AnimatedBox } from '../../../primitives/animated-box/animated-box';
 import { Box } from '../../../primitives/box/box';
@@ -26,11 +23,9 @@ export const TabBar = ({
 }: TabBarProps) => {
   const { spacing } = useStreamlineTheme();
   const borderConfig = getBorderConfig({ appearance });
-  const scrollOffset = useSharedValue(0);
 
-  const onScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
-    scrollOffset.value = event.nativeEvent.contentOffset.x;
-  };
+  const animatedRef = useAnimatedRef<AnimatedScrollView>();
+  const scrollOffset = useScrollViewOffset(animatedRef);
 
   const borderStyle = useAnimatedStyle(() => {
     return {
@@ -55,12 +50,11 @@ export const TabBar = ({
         opacity={borderConfig.opacity}
         alignSelf="center"
       />
-      <ScrollView
+      <Animated.ScrollView
         horizontal
-        scrollEventThrottle={16}
         showsHorizontalScrollIndicator={false}
-        onScroll={onScroll}
         alwaysBounceHorizontal={false}
+        ref={animatedRef}
       >
         <Box paddingLeft="md" />
         {tabs.map((title, index) => (
@@ -74,7 +68,7 @@ export const TabBar = ({
           </Box>
         ))}
         <Box paddingLeft="md" />
-      </ScrollView>
+      </Animated.ScrollView>
     </Box>
   );
 };

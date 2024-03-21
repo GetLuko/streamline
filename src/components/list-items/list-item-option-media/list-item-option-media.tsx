@@ -1,8 +1,8 @@
+import { useEffect } from 'react';
 import { Pressable } from 'react-native-ama';
 import {
   interpolateColor,
   useAnimatedStyle,
-  useDerivedValue,
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
@@ -35,11 +35,11 @@ export const ListItemOptionMedia = ({
   const { colors } = useStreamlineTheme();
 
   const isPressed = useSharedValue(0);
-  const isHighlighted = useDerivedValue(
-    () =>
-      (isSelected && isPressed.value) || (isSelected && isResolving ? 1 : 0),
-    [isSelected, isResolving]
-  );
+  const isHighlighted = useSharedValue(isSelected ? 1 : 0);
+
+  useEffect(() => {
+    isHighlighted.value = withTiming(isSelected ? 1 : 0);
+  }, [isSelected]);
 
   const highlightStyle = useAnimatedStyle(() => {
     return {
@@ -48,20 +48,32 @@ export const ListItemOptionMedia = ({
   });
 
   const containerStyle = useAnimatedStyle(() => {
-    const defaultBackgroundColor = isSelected
-      ? colors.BLUKO_50
-      : colors.PURE_WHITE_1000;
-    const pressedBackgroundColor = isSelected
-      ? colors.BLUKO_100
-      : colors.PURE_WHITE_1000;
+    const defaultBackgroundColor = interpolateColor(
+      isHighlighted.value,
+      [0, 1],
+      [colors.PURE_WHITE_1000, colors.BLUKO_25]
+    );
+    const pressedBackgroundColor = interpolateColor(
+      isHighlighted.value,
+      [0, 1],
+      [colors.PURE_WHITE_1000, colors.BLUKO_50]
+    );
     const backgroundColor = interpolateColor(
       isPressed.value,
       [0, 1],
       [defaultBackgroundColor, pressedBackgroundColor]
     );
 
-    const defaultBorderColor = isSelected ? colors.BLUKO_500 : colors.GREY_100;
-    const pressedBorderColor = isSelected ? colors.BLUKO_600 : colors.GREY_300;
+    const defaultBorderColor = interpolateColor(
+      isHighlighted.value,
+      [0, 1],
+      [colors.GREY_100, colors.BLUKO_500]
+    );
+    const pressedBorderColor = interpolateColor(
+      isHighlighted.value,
+      [0, 1],
+      [colors.GREY_300, colors.BLUKO_600]
+    );
     const borderColor = interpolateColor(
       isPressed.value,
       [0, 1],

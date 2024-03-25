@@ -25,7 +25,7 @@
     "@react-native-community/datetimepicker": "7.6.1",
     "@react-native/babel-preset": "^0.73.21",
     "@react-native/eslint-config": "^0.72.2",
-    "@release-it/conventional-changelog": "^5.0.0",
+    "@release-it/conventional-changelog": "^8.0.1",
     "@ronradtke/react-native-markdown-display": "8.0.0",
     "@shopify/restyle": "2.0.0",
     "@testing-library/jest-native": "^5.4.3",
@@ -62,7 +62,7 @@
     "react-native-safe-area-context": "4.9.0",
     "react-native-svg": "15.1.0",
     "react-test-renderer": "^18.2.0",
-    "release-it": "^15.0.0",
+    "release-it": "^17.1.1",
     "tslib": "^2.6.2",
     "typescript": "^5.0.2",
     "wcag-color": "^1.1.1"

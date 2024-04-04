@@ -10,4 +10,7 @@ globalAny.ReanimatedDataMock = {
 jest.mock('expo-linear-gradient', () => ({
   LinearGradient: () => null,
 }));
+jest.mock('expo-image', () => ({
+  Image: () => null,
+}));
 jest.mock('react-native-safe-area-context', () => mockSafeAreaContext);

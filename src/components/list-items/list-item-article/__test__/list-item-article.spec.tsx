@@ -47,8 +47,6 @@ describe('ListItemArticle', () => {
     await expect(getByText('Header')).toBeDefined();
     await expect(getByText('Title')).toBeDefined();
     await expect(getByText('Description')).toBeDefined();
-    await expect(
-      getByLabelText(`Header\nTitle\nDescription\nimage`)
-    ).toBeDefined();
+    await expect(getByLabelText(`Header\nTitle\nDescription`)).toBeDefined();
   });
 });

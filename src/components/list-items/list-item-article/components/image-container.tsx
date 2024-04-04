@@ -1,4 +1,4 @@
-import { Image } from 'react-native';
+import { Image } from 'expo-image';
 
 import { Box } from '../../../../primitives/box/box';
 import { IMAGE_HEIGHT, IMAGE_WIDTH } from '../constants';

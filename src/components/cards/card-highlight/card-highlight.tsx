@@ -1,5 +1,6 @@
+import { Image } from 'expo-image';
 import React from 'react';
-import { Image, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 import { usePress } from '../../../hooks/use-press.hook';
 import { Box } from '../../../primitives/box/box';

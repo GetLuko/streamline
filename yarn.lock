@@ -2386,6 +2386,7 @@ __metadata:
     eslint-plugin-react: ^7.33.2
     eslint-plugin-react-hooks: ^4.6.0
     eslint-plugin-react-native: ^4.1.0
+    expo-image: 1.10.6
     expo-linear-gradient: ~12.3.0
     jest: ^28.1.1
     libphonenumber-js: ^1.10.55
@@ -2408,6 +2409,7 @@ __metadata:
     "@ronradtke/react-native-markdown-display": 8.0.0
     "@shopify/restyle": 2.0.0
     dayjs: 1.11.10
+    expo-image: 1.10.6
     expo-linear-gradient: 12.7.1
     libphonenumber-js: 1.10.56
     react: 18.2.0
@@ -9001,6 +9003,17 @@ __metadata:
   peerDependencies:
     expo: "*"
   checksum: 334f4bc26fc9519b0053c344ca3f460d841c09a9c5a4b514cb594bcff7971d2865992c3f45d10df057cd5daf73dc06485c14811dd84de1df7e2b53100a1eb479
+  languageName: node
+  linkType: hard
+
+"expo-image@npm:1.10.6":
+  version: 1.10.6
+  resolution: "expo-image@npm:1.10.6"
+  dependencies:
+    "@react-native/assets-registry": ~0.73.1
+  peerDependencies:
+    expo: "*"
+  checksum: c847caf52e507d75a8d66a2f1f56d0c05669fe565510a9c24e4a5644e521a638e7171cfa67a4af89cc2db20f6d6a9cb25ee75471a9b2a4e167b91eb48d8eed35
   languageName: node
   linkType: hard
 
@@ -16918,6 +16931,7 @@ __metadata:
     dayjs: 1.11.10
     expo: ~50.0.6
     expo-font: ~11.10.2
+    expo-image: 1.10.6
     expo-linear-gradient: ~12.7.1
     expo-updates: ~0.24.10
     libphonenumber-js: 1.10.56

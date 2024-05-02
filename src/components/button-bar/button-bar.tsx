@@ -1,8 +1,8 @@
 import React from 'react';
-import { ScrollView, ViewStyle } from 'react-native';
+import { ScrollView } from 'react-native';
 
 import { Box } from '../../primitives/box/box';
-import { useStreamlineTheme } from '../../theme';
+import { makeStreamlineStyles } from '../../theme';
 import { Button } from '../buttons/button/button';
 import { ButtonProps } from '../buttons/button/button.types';
 
@@ -53,8 +53,7 @@ export const ButtonBar = ({ buttons, isSkeleton = false, testID }: Props) => {
   );
 };
 
-const useStyles = (): { [key: string]: ViewStyle } => {
-  const { spacing } = useStreamlineTheme();
+const useStyles = makeStreamlineStyles(({ spacing }) => {
   return {
     container: {
       paddingHorizontal: spacing.md,
@@ -62,6 +61,6 @@ const useStyles = (): { [key: string]: ViewStyle } => {
       flexDirection: 'row',
     },
   };
-};
+});
 
 export default ButtonBar;

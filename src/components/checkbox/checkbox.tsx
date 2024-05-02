@@ -1,8 +1,8 @@
-import { Pressable, ViewStyle } from 'react-native';
+import { Pressable } from 'react-native';
 
 import { Box } from '../../primitives/box/box';
 import { Icon } from '../../primitives/icon/icon';
-import { useStreamlineTheme } from '../../theme';
+import { makeStreamlineStyles } from '../../theme';
 
 import {
   CHECKBOX_BORDER_CONTAINER_SIZE,
@@ -84,14 +84,7 @@ export const Checkbox = ({
   );
 };
 
-const useStyles = (): {
-  pressable: ViewStyle;
-  shadow: ViewStyle;
-  border: ViewStyle;
-  container: ViewStyle;
-} => {
-  const { borderRadii } = useStreamlineTheme();
-
+const useStyles = makeStreamlineStyles(({ borderRadii }) => {
   /**
    * In order to have the perfect border radius, we use the following formula:
    * innerRadius + distance = outerRadius
@@ -119,6 +112,6 @@ const useStyles = (): {
       borderRadius: containerRaddi,
     },
   };
-};
+});
 
 export default Checkbox;

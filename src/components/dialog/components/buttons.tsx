@@ -1,7 +1,5 @@
-import { ViewStyle } from 'react-native';
-
 import { Box } from '../../../primitives/box/box';
-import { useStreamlineTheme } from '../../../theme';
+import { makeStreamlineStyles } from '../../../theme';
 import { Button } from '../../buttons/button/button';
 import { DialogProps } from '../dialog.types';
 
@@ -9,7 +7,7 @@ type ButtonsProps = Required<Pick<DialogProps, 'buttons'>>;
 
 export const Buttons = ({ buttons }: ButtonsProps) => {
   const isHorizontal = buttons.orientation !== 'vertical';
-  const styles = useStyles(buttons, isHorizontal);
+  const styles = useStyles(buttons, isHorizontal)();
   return (
     <Box
       marginTop="xl"
@@ -29,26 +27,21 @@ export const Buttons = ({ buttons }: ButtonsProps) => {
   );
 };
 
-const useStyles = (
-  buttons: ButtonsProps['buttons'],
-  isHorizontal: boolean
-): {
-  primary: ViewStyle;
-  secondary: ViewStyle;
-} => {
-  const { spacing } = useStreamlineTheme();
-
-  return {
-    primary: {
-      ...(isHorizontal && buttons.secondary ? { marginLeft: spacing.xxs } : {}),
-      ...(buttons.secondary ? { marginBottom: spacing.xxs } : {}),
-    },
-    secondary: {
-      ...(isHorizontal
-        ? { marginRight: spacing.xxs }
-        : { marginTop: spacing.xxs }),
-    },
-  };
-};
+const useStyles = (buttons: ButtonsProps['buttons'], isHorizontal: boolean) =>
+  makeStreamlineStyles(({ spacing }) => {
+    return {
+      primary: {
+        ...(isHorizontal && buttons.secondary
+          ? { marginLeft: spacing.xxs }
+          : {}),
+        ...(buttons.secondary ? { marginBottom: spacing.xxs } : {}),
+      },
+      secondary: {
+        ...(isHorizontal
+          ? { marginRight: spacing.xxs }
+          : { marginTop: spacing.xxs }),
+      },
+    };
+  });
 
 export default Buttons;

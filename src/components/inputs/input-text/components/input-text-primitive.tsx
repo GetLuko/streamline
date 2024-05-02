@@ -8,7 +8,11 @@ import {
 import { Box } from '../../../../primitives/box/box';
 import { Icon } from '../../../../primitives/icon/icon';
 import { Text } from '../../../../primitives/text/text';
-import { ColorTheme, useStreamlineTheme } from '../../../../theme';
+import {
+  ColorTheme,
+  makeStreamlineStyles,
+  useStreamlineTheme,
+} from '../../../../theme';
 import { InputOutline, OUTLINE_WIDTH } from '../../input-outline/input-outline';
 
 import { IconAdornment } from './input-text-icon';
@@ -52,7 +56,7 @@ export const InputTextPrimitive = ({
     hasLeft: Boolean(left),
     isDisabled,
     numberOfLines,
-  });
+  })();
   const containerStyle = !label && inputType === 'TEXT' && styles.container;
 
   const inputContainer = (
@@ -199,43 +203,43 @@ const useStyles = ({
   isDisabled?: boolean;
   maxWidth?: number;
   numberOfLines: number;
-}) => {
-  const { colors, spacing, textVariants } = useStreamlineTheme();
-  return {
-    gutter: {
-      marginLeft: hasLeft ? spacing.xs : 0,
-    },
-    container: {
-      paddingTop: spacing.xxs,
-    },
-    inputContainer: {
-      flexGrow: 1,
-      color: isDisabled ? colors.GREY_500 : colors.GREY_1000,
-      fontFamily: textVariants.body.fontFamily,
-      fontSize: textVariants.body.fontSize,
-      minHeight: numberOfLines * DEFAULTLINEHEIGHT,
-      maxWidth,
-    },
-    inputPadding: {
-      paddingVertical: spacing.xs + OUTLINE_WIDTH,
-    },
-    noPadding: {
-      paddingHorizontal: 0,
-      paddingVertical: 0,
-    },
-    singleLineContainer: {
-      height: TEXT_INPUT_HEIGHT_WITHOUT_LABEL,
-    },
-    searchIcon: {
-      marginTop: 2,
-      marginLeft: 5,
-    },
-    inputSearchContainer: {
-      marginLeft: spacing.xs,
-      padding: 0,
-    },
-    secureTextEntry: {
-      fontFamily: 'System',
-    },
-  };
-};
+}) =>
+  makeStreamlineStyles(({ colors, spacing, textVariants }) => {
+    return {
+      gutter: {
+        marginLeft: hasLeft ? spacing.xs : 0,
+      },
+      container: {
+        paddingTop: spacing.xxs,
+      },
+      inputContainer: {
+        flexGrow: 1,
+        color: isDisabled ? colors.GREY_500 : colors.GREY_1000,
+        fontFamily: textVariants.body.fontFamily,
+        fontSize: textVariants.body.fontSize,
+        minHeight: numberOfLines * DEFAULTLINEHEIGHT,
+        maxWidth,
+      },
+      inputPadding: {
+        paddingVertical: spacing.xs + OUTLINE_WIDTH,
+      },
+      noPadding: {
+        paddingHorizontal: 0,
+        paddingVertical: 0,
+      },
+      singleLineContainer: {
+        height: TEXT_INPUT_HEIGHT_WITHOUT_LABEL,
+      },
+      searchIcon: {
+        marginTop: 2,
+        marginLeft: 5,
+      },
+      inputSearchContainer: {
+        marginLeft: spacing.xs,
+        padding: 0,
+      },
+      secureTextEntry: {
+        fontFamily: 'System',
+      },
+    };
+  });

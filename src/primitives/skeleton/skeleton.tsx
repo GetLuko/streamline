@@ -1,11 +1,6 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import React, { useContext } from 'react';
-import {
-  DimensionValue,
-  LayoutChangeEvent,
-  StyleProp,
-  ViewStyle,
-} from 'react-native';
+import { DimensionValue, LayoutChangeEvent } from 'react-native';
 import {
   Easing,
   useAnimatedStyle,
@@ -15,7 +10,7 @@ import {
 } from 'react-native-reanimated';
 
 import { AnimationContext } from '../../contexts/disable-animation.context';
-import { useStreamlineTheme } from '../../theme';
+import { makeStreamlineStyles, useStreamlineTheme } from '../../theme';
 import { AnimatedBox } from '../animated-box/animated-box';
 
 import { SIZES } from './skeleton.constants';
@@ -110,7 +105,7 @@ export const Skeleton = ({
   );
 };
 
-const useStyles = (): { [key: string]: StyleProp<ViewStyle> } => {
+const useStyles = makeStreamlineStyles(() => {
   return {
     container: {
       position: 'absolute',
@@ -120,4 +115,4 @@ const useStyles = (): { [key: string]: StyleProp<ViewStyle> } => {
       right: 0,
     },
   };
-};
+});

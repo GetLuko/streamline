@@ -1,9 +1,9 @@
 import React from 'react';
-import { StyleProp, TextStyle } from 'react-native';
 
 import { usePress } from '../../../../hooks/use-press.hook';
 import { Box } from '../../../../primitives/box/box';
 import { Text } from '../../../../primitives/text/text';
+import { makeStreamlineStyles } from '../../../../theme';
 import ButtonIcon from '../../../buttons/button-icon/button-icon';
 import Tag from '../../../tag/tag';
 import { ListItemSelectableProps } from '../list-item-selectable.type';
@@ -61,10 +61,8 @@ export const RightContent = ({
   );
 };
 
-const useStyles = (): {
-  text: StyleProp<TextStyle>;
-} => ({
+const useStyles = makeStreamlineStyles(() => ({
   text: {
     maxWidth: '60%',
   },
-});
+}));

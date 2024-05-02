@@ -1,4 +1,5 @@
 import { createTheme, useTheme } from '@shopify/restyle';
+import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
 
 import { getAnimationValues } from './animation';
 import { colors } from './colors';
@@ -42,4 +43,15 @@ export type Colors = Theme['colors'];
 export type ColorTheme = keyof Colors;
 export type Theme = typeof theme;
 
+export type NamedStyles<T> = {
+  [P in keyof T]: ViewStyle | TextStyle | ImageStyle;
+};
+
 export const useStreamlineTheme = () => useTheme<Theme>();
+
+export const makeStreamlineStyles =
+  <T extends NamedStyles<T> | NamedStyles<any>>(styles: (theme: Theme) => T) =>
+  () => {
+    const reTheme = useStreamlineTheme();
+    return styles(reTheme);
+  };

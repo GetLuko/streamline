@@ -1,9 +1,8 @@
 import React from 'react';
-import { StyleProp, TextStyle } from 'react-native';
 
 import { Box } from '../../../../primitives/box/box';
 import { Text } from '../../../../primitives/text/text';
-import { ColorTheme } from '../../../../theme';
+import { ColorTheme, makeStreamlineStyles } from '../../../../theme';
 import { RightContent as FarRightContent } from '../../list-item/components/right-content';
 import { ListItemValueProps } from '../list-item-value.types';
 
@@ -42,10 +41,8 @@ export const RightContent = ({
   );
 };
 
-const useStyles = (): {
-  text: StyleProp<TextStyle>;
-} => ({
+const useStyles = makeStreamlineStyles(() => ({
   text: {
     maxWidth: '60%',
   },
-});
+}));

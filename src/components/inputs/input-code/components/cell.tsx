@@ -1,8 +1,6 @@
-import { ViewStyle } from 'react-native';
-
 import { Box } from '../../../../primitives/box/box';
 import { Text } from '../../../../primitives/text/text';
-import { useStreamlineTheme } from '../../../../theme';
+import { makeStreamlineStyles } from '../../../../theme';
 import {
   CELL_BORDER_WIDTH,
   CELL_SHADOW_CONTAINER_SIZE,
@@ -27,7 +25,7 @@ export const InputCodeCell = ({
         (index === code.length - 1 && code.length === length)),
     isDisabled,
     isError,
-  });
+  })();
 
   return (
     <Box
@@ -67,37 +65,33 @@ const useStyles = ({
   isFocused: boolean;
   isDisabled?: boolean;
   isError?: boolean;
-}): {
-  shadow: ViewStyle;
-  container: ViewStyle;
-} => {
-  const { borderRadii, colors } = useStreamlineTheme();
+}) =>
+  makeStreamlineStyles(({ borderRadii, colors }) => {
+    const borderRadius = borderRadii.lg;
+    const shadowRaddi = borderRadius + CELL_SHADOW_WIDTH;
 
-  const borderRadius = borderRadii.lg;
-  const shadowRaddi = borderRadius + CELL_SHADOW_WIDTH;
+    const { borderColor, backgroundColor } = getInputCellColors({
+      isDisabled,
+      isFocused,
+      isError,
+    });
 
-  const { borderColor, backgroundColor } = getInputCellColors({
-    isDisabled,
-    isFocused,
-    isError,
+    return {
+      shadow: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        borderRadius: shadowRaddi,
+        backgroundColor: isError ? colors.TERRA_100 : colors.BLUKO_100,
+        opacity: isFocused ? 1 : 0,
+      },
+      container: {
+        borderRadius: borderRadius,
+        margin: 2,
+        borderColor: colors[borderColor],
+        backgroundColor: colors[backgroundColor],
+      },
+    };
   });
-
-  return {
-    shadow: {
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      borderRadius: shadowRaddi,
-      backgroundColor: isError ? colors.TERRA_100 : colors.BLUKO_100,
-      opacity: isFocused ? 1 : 0,
-    },
-    container: {
-      borderRadius: borderRadius,
-      margin: 2,
-      borderColor: colors[borderColor],
-      backgroundColor: colors[backgroundColor],
-    },
-  };
-};

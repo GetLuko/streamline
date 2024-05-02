@@ -5,7 +5,6 @@ import { AnimatedBox } from '../../../../primitives/animated-box/animated-box';
 import { Skeleton } from '../../../../primitives/skeleton/skeleton';
 import { Text } from '../../../../primitives/text/text';
 import { useStreamlineTheme } from '../../../../theme';
-import { Appearance } from '../../../../theme/appearance';
 import { stringCapitalize } from '../../../../utils/string.utils';
 import Spinner from '../../../spinner/spinner';
 import { ButtonProps } from '../button.types';
@@ -27,7 +26,7 @@ const InnerLabel = ({
 > & {
   isMini: boolean;
 }) => {
-  const styles = useStyles(appearance);
+  const { animation } = useStreamlineTheme();
   const textColor = getTextColor({ appearance, isSkeleton, isDisabled });
 
   switch (true) {
@@ -48,7 +47,7 @@ const InnerLabel = ({
           height={LABEL_CONTAINER_HEIGHT}
           justifyContent="center"
           alignItems="center"
-          entering={FadeIn.duration(styles.duration)}
+          entering={FadeIn.duration(animation.appearDuration)}
         >
           <Spinner size="regular" color={textColor} />
         </AnimatedBox>
@@ -58,7 +57,7 @@ const InnerLabel = ({
       return (
         <AnimatedBox
           alignSelf="center"
-          entering={FadeIn.duration(styles.duration)}
+          entering={FadeIn.duration(animation.appearDuration)}
         >
           <Text
             textAlign="center"
@@ -72,17 +71,6 @@ const InnerLabel = ({
       );
     }
   }
-};
-
-const useStyles = (variant?: Appearance) => {
-  const { colors, animation } = useStreamlineTheme();
-
-  return {
-    activityIndicator: {
-      color: variant === 'secondary' ? colors.BLACK : colors.PURE_WHITE_1000,
-    },
-    duration: animation.appearDuration,
-  };
 };
 
 export default InnerLabel;

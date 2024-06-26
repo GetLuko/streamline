@@ -15603,29 +15603,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-ama@npm:0.6.20":
-  version: 0.6.20
-  resolution: "react-native-ama@npm:0.6.20"
+"react-native-ama@npm:0.7.5":
+  version: 0.7.5
+  resolution: "react-native-ama@npm:0.7.5"
   peerDependencies:
     react: ">=17"
     react-native: ">=0.66"
     react-native-gesture-handler: "*"
     react-native-reanimated: "*"
     wcag-color: ^1.1.1
-  checksum: 785bd63fbe32059827eca5f9d9d8b2e5014ff7a278d8b8d2fb55182854cd9c405280f2072c01cef4ab863e47695b7264f89ce14467bb2259cb69affa470ad6be
-  languageName: node
-  linkType: hard
-
-"react-native-ama@patch:react-native-ama@npm%3A0.6.20#./.yarn/patches/react-native-ama-npm-0.6.20-6174f89a1f.patch::locator=%40getluko%2Fstreamline%40workspace%3A.":
-  version: 0.6.20
-  resolution: "react-native-ama@patch:react-native-ama@npm%3A0.6.20#./.yarn/patches/react-native-ama-npm-0.6.20-6174f89a1f.patch::version=0.6.20&hash=184d5e&locator=%40getluko%2Fstreamline%40workspace%3A."
-  peerDependencies:
-    react: ">=17"
-    react-native: ">=0.66"
-    react-native-gesture-handler: "*"
-    react-native-reanimated: "*"
-    wcag-color: ^1.1.1
-  checksum: f241b5f08a33d47a527f9326de4b8699a5845cd08acfc6eb0b9bdfe6d10fe064f6bb9cd4ca9b0cfc68982e67e8e6c76edcca442a8d66fbb5945d54df344cabe3
+  checksum: 421f5eaf4094a5aa24f570f7a4058e0e5a075ca73d89a92dac40b0c2c376aa3a1c6c60a2884ab0fefc2bcc7be3c6242e33136d1900fce952a7cca41aff532241
   languageName: node
   linkType: hard
 

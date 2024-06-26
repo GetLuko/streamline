@@ -2707,7 +2707,7 @@ __metadata:
     "@ronradtke/react-native-markdown-display": 8.0.0
     "@shopify/restyle": 2.0.0
     "@testing-library/jest-native": ^5.4.3
-    "@testing-library/react-native": ^12.4.3
+    "@testing-library/react-native": ^12.5.1
     "@types/jest": ^28.1.2
     "@types/react": ^18.2.6
     "@typescript-eslint/eslint-plugin": 7.13.1
@@ -4054,13 +4054,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react-native@npm:^12.4.3":
-  version: 12.4.3
-  resolution: "@testing-library/react-native@npm:12.4.3"
+"@testing-library/react-native@npm:^12.5.1":
+  version: 12.5.1
+  resolution: "@testing-library/react-native@npm:12.5.1"
   dependencies:
-    jest-matcher-utils: "npm:^29.7.0"
-    pretty-format: "npm:^29.7.0"
-    redent: "npm:^3.0.0"
+    jest-matcher-utils: ^29.7.0
+    pretty-format: ^29.7.0
+    redent: ^3.0.0
   peerDependencies:
     jest: ">=28.0.0"
     react: ">=16.8.0"
@@ -4069,7 +4069,7 @@ __metadata:
   peerDependenciesMeta:
     jest:
       optional: true
-  checksum: bd1c06b200063ffad26245cbc61b7256b5bfcc2c69a32f7e6dc9ff1bf44c3743117d5010b8dbc8f9a1b660c3ee22ccf9ecc320c03db52f9ec75ba7e52c1d8ba3
+  checksum: 5fa582184ae99244d0175f72d7804659393d6952510b7ff2a85c43ea0dd043bb1c8ab79fe52d73ceca3c2dddbc0df7c3b1fb2915a2aff1ac98f4423b202c6146
   languageName: node
   linkType: hard
 

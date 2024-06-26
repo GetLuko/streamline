@@ -58,7 +58,9 @@ export function CardHighlight({
             </Box>
           ) : null}
           {isLoading || isResolving ? (
-            <Spinner color="PURE_WHITE_1000" />
+            <Box>
+              <Spinner color="PURE_WHITE_1000" />
+            </Box>
           ) : null}
         </Box>
 

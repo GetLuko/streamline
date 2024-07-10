@@ -5,7 +5,9 @@ import { Text } from '../text';
 
 describe('Text', () => {
   it('should render successfully', () => {
-    const { getByText } = renderWithProvider(<Text>{'Hello'}</Text>);
+    const { getByText } = renderWithProvider(
+      <Text variant="body">{'Hello'}</Text>
+    );
     expect(getByText('Hello')).toBeTruthy();
   });
 });

@@ -57,7 +57,7 @@ export const Tab = ({ appearance, isSelected, onPress, title }: TabProps) => {
       onPressOut={onPressOut}
       selected={isSelected}
     >
-      <Box paddingBottom="md" flex={1}>
+      <Box paddingBottom="md">
         <AnimatedBox style={textStyle}>
           <Text
             color={

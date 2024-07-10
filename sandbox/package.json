@@ -12,7 +12,7 @@
   "dependencies": {
     "@react-native-community/datetimepicker": "7.7.0",
     "@ronradtke/react-native-markdown-display": "8.0.0",
-    "@shopify/restyle": "2.0.0",
+    "@shopify/restyle": "2.4.2",
     "dayjs": "1.11.10",
     "expo": "~50.0.19",
     "expo-font": "~11.10.3",

@@ -28,7 +28,7 @@ type TextVariantBold =
   | 'subBodyBold'
   | 'captionBold';
 
-export type TextVariants = TextVariantBold | TextVariantRegular;
+export type TextVariants = TextVariantBold | TextVariantRegular | 'defaults';
 
 const regulars: Record<TextVariantRegular, TextStyle> = {
   titleLarge: {
@@ -69,6 +69,11 @@ const regulars: Record<TextVariantRegular, TextStyle> = {
 };
 
 export const fonts: Record<TextVariants, TextStyle> = {
+  defaults: {
+    fontFamily: FontFamily.Default,
+    fontSize: 16,
+    lineHeight: 24,
+  },
   ...regulars,
   titleLargeBold: {
     ...regulars.titleLarge,

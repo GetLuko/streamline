@@ -29,7 +29,7 @@ I hope this email finds you well. It seems to be originating from your bathroom 
 
 describe('Markdown', () => {
   it('should render successfully', () => {
-    // WHen
+    // When
     const { getByText, getAllByText, queryByText } = renderWithProvider(
       <Markdown>{md}</Markdown>
     );

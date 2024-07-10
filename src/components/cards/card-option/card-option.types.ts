@@ -2,6 +2,7 @@ import { CardProps } from '../../../primitives/card/card.types';
 import { IconsName } from '../../../types';
 import { ButtonIconProps } from '../../buttons/button-icon/button-icon.types';
 import { SwitchProps } from '../../switch/switch';
+import { TagProps } from '../../tag/tag.types';
 
 export type CardOptionProps = Pick<
   CardProps,
@@ -23,4 +24,5 @@ export type CardOptionProps = Pick<
     isLoadingLabel?: boolean;
     label: string;
   };
+  tagOption?: TagProps;
 };

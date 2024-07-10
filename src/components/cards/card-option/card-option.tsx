@@ -22,6 +22,7 @@ export const CardOption = ({
   onPressOut,
   rightOption,
   switchOption,
+  tagOption,
   testID,
   title,
   value,
@@ -62,7 +63,7 @@ export const CardOption = ({
         value={value}
       />
       <Content title={title} description={description} />
-      <Footer switchOption={switchOption} />
+      <Footer switchOption={switchOption} tagOption={tagOption} />
     </Card>
   );
 };

@@ -9,9 +9,11 @@ type Props = Pick<CardOptionProps, 'description' | 'title'>;
 export const Content = ({ description, title }: Props) => {
   return (
     <Box paddingVertical="md">
-      <Text variant="titleSmallBold" color="GREY_1000">
-        {title}
-      </Text>
+      {title ? (
+        <Text variant="titleSmallBold" color="GREY_1000">
+          {title}
+        </Text>
+      ) : null}
       {description ? (
         <Text
           paddingTop={description ? 'xxs' : undefined}

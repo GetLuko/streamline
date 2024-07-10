@@ -114,6 +114,23 @@ export const CardOptionSandbox = () => {
         onChange: setValue1,
       }}
     />,
+    <CardOption
+      header="With tag"
+      value="Value"
+      iconName={ICON_NAME}
+      key="Without header"
+      description="Description"
+      onPress={ON_PRESS}
+      switchOption={{
+        label: 'Switch Value',
+        value: value1,
+        onChange: setValue1,
+      }}
+      tagOption={{
+        text: '2€50',
+        iconName: 'Tag',
+      }}
+    />,
   ];
 
   return <DocList docs={CARDS} margin="md" />;

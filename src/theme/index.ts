@@ -12,7 +12,7 @@ export { Appearance } from './appearance';
 export { fonts, TextVariants as TextVariant } from './fonts';
 
 export const baseTheme = {
-  textVariants: fonts,
+  textVariants: { ...fonts, defaults: fonts.body },
   colors: {
     ...colors.PRIMARY,
     ...colors.GREY,

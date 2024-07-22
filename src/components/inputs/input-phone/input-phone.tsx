@@ -19,6 +19,7 @@ export const InputPhone: FC<InputPhoneProps> = ({
   description,
   label,
   onValidChange,
+  inputRef,
   ...props
 }) => {
   const initialValue = props.defaultValue
@@ -74,6 +75,7 @@ export const InputPhone: FC<InputPhoneProps> = ({
             onChangeText={handleOnChangeText}
             value={inputValue}
             inputType="PHONE"
+            ref={inputRef}
           />
         </Box>
       </Box>

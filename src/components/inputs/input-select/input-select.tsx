@@ -2,6 +2,7 @@ import React from 'react';
 import { Pressable } from 'react-native-ama';
 
 import { InputText } from '../input-text/input-text';
+import { RefNativeTextInput } from '../input-text/types';
 
 export interface InputSelectProps {
   label: string;
@@ -13,6 +14,7 @@ export interface InputSelectProps {
   value?: string;
   onPress?: () => void;
   isFocused?: boolean;
+  inputRef?: (ref: RefNativeTextInput) => void;
 }
 
 export function InputSelect({
@@ -25,6 +27,7 @@ export function InputSelect({
   onPress,
   isFocused,
   isError,
+  inputRef,
 }: InputSelectProps) {
   return (
     <Pressable
@@ -44,6 +47,7 @@ export function InputSelect({
         value={value}
         isFocused={isFocused}
         isError={isError}
+        ref={inputRef}
       />
     </Pressable>
   );

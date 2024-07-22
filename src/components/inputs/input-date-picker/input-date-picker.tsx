@@ -5,6 +5,7 @@ import { DateFormat, formatDate } from '../../../utils/date';
 import { isAndroid } from '../../../utils/platform';
 import { DatePicker } from '../date-picker/date-picker';
 import { InputText } from '../input-text/input-text';
+import { RefNativeTextInput } from '../input-text/types';
 
 export interface InputDatePickerProps {
   label: string;
@@ -21,6 +22,7 @@ export interface InputDatePickerProps {
   onChange?: (date?: Date) => void;
   onFocus?: () => void;
   okLabelIOS?: string;
+  inputRef?: (ref: RefNativeTextInput) => void;
 }
 
 export function InputDatePicker({
@@ -38,6 +40,7 @@ export function InputDatePicker({
   minimumDate,
   okLabelIOS = 'OK',
   dateFormat = DateFormat.DATE_EN,
+  inputRef,
 }: InputDatePickerProps) {
   const [focused, setFocused] = React.useState(false);
   const [innerDate, setInnerDate] = React.useState(date);
@@ -92,6 +95,7 @@ export function InputDatePicker({
         isError={isError}
         isFocused={focused}
         value={dateString}
+        ref={inputRef}
       />
     </Pressable>
   );
